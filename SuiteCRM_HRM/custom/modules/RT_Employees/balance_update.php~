@@ -1,0 +1,19 @@
+<?php
+if (!defined('sugarEntry') || !sugarEntry) {
+    die('Not A Valid Entry Point');
+}
+
+class BalanceUpdate
+{
+    function update_balance($bean, $event, $arguments = null)
+    {
+        if (!isset($bean->fetched_row['id']))
+        {
+            $bean->annual_leave_balance= $bean->entitled_annual_leaves_c;
+            $bean->casual_leave_balance= $bean->entitled_casual_leaves_c;
+        }
+    }
+
+}
+
+?>

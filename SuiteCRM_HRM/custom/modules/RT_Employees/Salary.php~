@@ -1,0 +1,28 @@
+<?php
+if (!defined('sugarEntry') || !sugarEntry) {
+    die('Not A Valid Entry Point');
+}
+
+class Salary
+{
+    function serialize_salary(&$bean, $event, $arguments = null)
+    {
+        /*$salary = array();
+        $i = 0;
+        foreach ($bean->label_salary as $label) {
+            $j = $i + 1;
+            $salary[$label] = array(
+                'amount' => $bean->amount_salary[$i],
+                'taxable' => $_REQUEST['taxable_salary' . $j],
+            );
+            $i++;
+        }
+        $serialize_salary = serialize($salary);
+        $bean->salary = $serialize_salary;*/
+    }
+
+}
+
+?>
+	
+	

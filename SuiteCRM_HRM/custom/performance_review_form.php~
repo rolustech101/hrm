@@ -1,0 +1,24 @@
+<?php
+
+if(!defined('sugarEntry') || !sugarEntry) die('Not A Valid Entry Point');
+$form = '';
+
+for ($x=0;$x<$_REQUEST['t_count'];$x++){
+    $form .= 'Question: '.$_REQUEST['question'.$x]."\n".'Answer: ';
+    if(isset($_REQUEST['answers'.$x]) && !empty($_REQUEST['answers'.$x])){
+        $form .= $_REQUEST['answers'.$x]."\n";
+    }else{
+        $form .= $_REQUEST['multi_'.$x]."\n";
+    }
+}
+$date_entered = date("Y-m-d H:i:s");
+$bean = BeanFactory::newBean('RT_Performance_Reviews');
+$bean->name = 'Review From of '.$_POST['emp_name'].' '.$date_entered;
+$bean->description = $form;
+$bean->rt_emp_id = $_POST['emp_id'];
+$bean->save();
+
+echo "Thank You! for the Review";
+
+
+
