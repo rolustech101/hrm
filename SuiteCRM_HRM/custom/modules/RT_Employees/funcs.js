@@ -113,16 +113,20 @@ function get_filling_countries() {
 function get_non_filling_countries() {
     return ['PAKISTAN', 'UNITED KINGDOM','CANADA'];
 }
-function set_taxable(arg) {
-    alert('click!!!');
-    var bb = $('.taxable_chbox');
-    var check_arr = [];
-    $.each(bb,function(index,value){
-        console.log(value.checked);
-        check_arr.push(value.checked);
-    });
-    $('#taxable_status').val(check_arr);
-    return check_form("Edit View");
+function set_taxable(arg,formm) {
+
+	if (check_form('EditView')){
+		var bb = $('.taxable_chbox');
+		var check_arr = [];
+		$.each(bb,function(index,value){
+			console.log(value.checked);
+			check_arr.push(value.checked);
+		});
+		$('#taxable_status').val(check_arr);
+		SUGAR.ajaxUI.submitForm(formm);
+	}
+	return false;
+
 }
 $(document).ready(function () {
 	$('#primary_address_country').change(function () {

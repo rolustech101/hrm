@@ -1,0 +1,4 @@
+<?php
+$dictionary['RT_Employees']['fields']['entitled_casual_leaves_c']['required']=true;
+
+?>

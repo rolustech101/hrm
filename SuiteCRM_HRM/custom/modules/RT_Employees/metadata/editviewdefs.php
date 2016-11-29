@@ -14,7 +14,7 @@ array (
                 'buttons' =>
                     array (
                         0 => array (
-                            'customCode' => '<input type="submit" name="save" id="save" onClick="this.form.return_action.value=\'DetailView\'; this.form.action.value=\'Save\';  return set_taxable(\'EditView\');" value="Save">',
+                            'customCode' => '<input type="submit" name="save" id="save" onClick="var _form = document.getElementById(\'EditView\');_form.action.value = \'Save\';  return set_taxable(\'EditView\',_form);" value="Save">',
           ),
         ),
       ),
