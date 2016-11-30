@@ -1,5 +1,5 @@
 <?php
-// created: 2016-10-17 12:38:40
+// created: 2016-11-30 15:09:31
 $sugar_config = array (
   'addAjaxBannedModules' => 
   array (
@@ -7,6 +7,7 @@ $sugar_config = array (
   ),
   'admin_access_control' => false,
   'admin_export_only' => false,
+  'allow_sendmail_outbound' => true,
   'aod' => 
   array (
     'enable_aod' => true,
@@ -40,6 +41,10 @@ $sugar_config = array (
     array (
       'initialNumber' => '1',
     ),
+  ),
+  'base' => 
+  array (
+    'level' => 'fatal',
   ),
   'cache_dir' => 'cache/',
   'calculate_response_time' => true,
@@ -236,7 +241,7 @@ $sugar_config = array (
   'demoData' => 'no',
   'disable_convert_lead' => false,
   'disable_export' => false,
-  'disable_persistent_connections' => 'false',
+  'disable_persistent_connections' => false,
   'display_email_template_variable_chooser' => false,
   'display_inbound_email_buttons' => false,
   'dump_slow_queries' => false,
@@ -244,6 +249,7 @@ $sugar_config = array (
   'email_default_client' => 'sugar',
   'email_default_delete_attachments' => true,
   'email_default_editor' => 'html',
+  'email_xss' => 'YToxMzp7czo2OiJhcHBsZXQiO3M6NjoiYXBwbGV0IjtzOjQ6ImJhc2UiO3M6NDoiYmFzZSI7czo1OiJlbWJlZCI7czo1OiJlbWJlZCI7czo0OiJmb3JtIjtzOjQ6ImZvcm0iO3M6NToiZnJhbWUiO3M6NToiZnJhbWUiO3M6ODoiZnJhbWVzZXQiO3M6ODoiZnJhbWVzZXQiO3M6NjoiaWZyYW1lIjtzOjY6ImlmcmFtZSI7czo2OiJpbXBvcnQiO3M6ODoiXD9pbXBvcnQiO3M6NToibGF5ZXIiO3M6NToibGF5ZXIiO3M6NDoibGluayI7czo0OiJsaW5rIjtzOjY6Im9iamVjdCI7czo2OiJvYmplY3QiO3M6MzoieG1wIjtzOjM6InhtcCI7czo2OiJzY3JpcHQiO3M6Njoic2NyaXB0Ijt9',
   'enable_line_editing_detail' => true,
   'enable_line_editing_list' => true,
   'export_delimiter' => ',',
@@ -254,6 +260,7 @@ $sugar_config = array (
   'import_max_execution_time' => 3600,
   'import_max_records_per_file' => 100,
   'import_max_records_total_limit' => '',
+  'inbound_email_case_subject_macro' => '[CASE:%1]',
   'installer_locked' => true,
   'jobs' => 
   array (
@@ -261,7 +268,7 @@ $sugar_config = array (
     'max_retries' => 5,
     'timeout' => 86400,
   ),
-  'js_custom_version' => '',
+  'js_custom_version' => 1,
   'js_lang_version' => 1,
   'languages' => 
   array (

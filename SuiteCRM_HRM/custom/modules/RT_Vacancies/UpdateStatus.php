@@ -31,7 +31,6 @@ class UpdateStatus
                 return false;
             }
 
-            
             // initial setup
             $GLOBALS['log']->fatal('IN THE UPDATE FACEBOOK STATUS!!!!');
 

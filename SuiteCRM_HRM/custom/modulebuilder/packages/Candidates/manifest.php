@@ -63,9 +63,9 @@ $manifest = array (
   'icon' => '',
   'is_uninstallable' => true,
   'name' => 'Candidates',
-  'published_date' => '2016-10-20 10:11:50',
+  'published_date' => '2016-11-29 13:59:12',
   'type' => 'module',
-  'version' => 1476958310,
+  'version' => 1480427952,
   'remove_tables' => 'prompt',
 );
 

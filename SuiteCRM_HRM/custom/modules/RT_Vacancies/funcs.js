@@ -1,6 +1,6 @@
 $(document).ready(function () {
+	$("#job_level").parent().parent().hide();
 	$('#financial_area').change(function () {
-		alert('asd');
 		var financial_area = $(this).val();
 		switch(financial_area){
 			case 'finance':
@@ -25,11 +25,11 @@ $(document).ready(function () {
 				$("#job_level").html('');
 				break;
 		}
-
 	});
 	function list(ob)
 	{
-            $("#job_level").show();
+		$("#job_level").parent().parent().show();
+		// $("#job_level").show();
             $("#job_level").html(""); //reset child options
             for (var property in ob) {
                 if (ob.hasOwnProperty(property)) {

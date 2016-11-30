@@ -125,7 +125,8 @@ array (
           ),
           1 => 
           array (
-            'name' => 'rt_employees_documents_name',
+//            'name' => 'rt_employees_documents_name',
+            'name' => 'parent_name',
           ),
         ),
       ),

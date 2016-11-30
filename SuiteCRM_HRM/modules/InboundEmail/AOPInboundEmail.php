@@ -54,6 +54,7 @@ class AOPInboundEmail extends InboundEmail {
 
 
     function handleCreateCase($email, $userId) {
+        $GLOBALS['log']->fatal('in the handleCreateCase AOP');
         global $current_user, $mod_strings, $current_language;
         $mod_strings = return_module_language($current_language, "Emails");
         $GLOBALS['log']->debug('In handleCreateCase in AOPInboundEmail');
@@ -61,6 +62,7 @@ class AOPInboundEmail extends InboundEmail {
         $this->getCaseIdFromCaseNumber($email->name, $c);
 
         if (!$this->handleCaseAssignment($email) && $this->isMailBoxTypeCreateCase()) {
+            $GLOBALS['log']->fatal('in the handleCreateCase AOP');
             // create a case
             $GLOBALS['log']->debug('retrieveing email');
             $email->retrieve($email->id);

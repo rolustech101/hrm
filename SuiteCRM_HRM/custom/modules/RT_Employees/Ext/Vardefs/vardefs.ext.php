@@ -7,7 +7,7 @@ $dictionary['RT_Employees']['fields']['entitled_casual_leaves_c']['required']=tr
 
 
 
-// created: 2016-10-17 14:14:50
+/*// created: 2016-10-17 14:14:50
 $dictionary["RT_Employees"]["fields"]["rt_employees_documents"] = array (
   'name' => 'rt_employees_documents',
   'type' => 'link',
@@ -17,7 +17,7 @@ $dictionary["RT_Employees"]["fields"]["rt_employees_documents"] = array (
   'bean_name' => 'Document',
   'side' => 'right',
   'vname' => 'LBL_RT_EMPLOYEES_DOCUMENTS_FROM_DOCUMENTS_TITLE',
-);
+);*/
 
 
 // created: 2016-10-17 14:14:49

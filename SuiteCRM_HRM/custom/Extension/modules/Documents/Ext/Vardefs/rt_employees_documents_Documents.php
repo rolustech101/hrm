@@ -1,5 +1,5 @@
 <?php
-// created: 2016-10-17 14:14:50
+/*// created: 2016-10-17 14:14:50
 $dictionary["Document"]["fields"]["rt_employees_documents"] = array (
   'name' => 'rt_employees_documents',
   'type' => 'link',
@@ -35,4 +35,4 @@ $dictionary["Document"]["fields"]["rt_employees_documentsrt_employees_ida"] = ar
   'reportable' => false,
   'side' => 'right',
   'vname' => 'LBL_RT_EMPLOYEES_DOCUMENTS_FROM_DOCUMENTS_TITLE',
-);
+);*/

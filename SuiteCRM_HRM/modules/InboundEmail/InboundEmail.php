@@ -40,6 +40,7 @@ if(!defined('sugarEntry') || !sugarEntry) die('Not A Valid Entry Point');
 
 
 require_once('include/OutboundEmail/OutboundEmail.php');
+require_once('data/SugarBean.php');
 
 function this_callback($str) {
 	foreach($str as $match) {
@@ -2763,6 +2764,7 @@ class InboundEmail extends SugarBean {
 	} // fn
 
 	function handleCreateCase($email, $userId) {
+		$GLOBALS['log']->fatal('In the handleCreateCase() method!!!');
 		global $current_user, $mod_strings, $current_language;
 		$mod_strings = return_module_language($current_language, "Emails");
 		$GLOBALS['log']->debug('In handleCreateCase');
@@ -2777,6 +2779,7 @@ class InboundEmail extends SugarBean {
 			$c->description = $email->description;
 			$c->assigned_user_id = $userId;
 			$c->name = $email->name;
+			$GLOBALS['log']->fatal('in the if :::GOING TO CREATE CASE!!!!!!!!!!!!!!!!!!!!!');
 			$c->status = 'New';
 			$c->priority = 'P1';
 

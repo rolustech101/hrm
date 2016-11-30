@@ -137,6 +137,15 @@ $app_list_strings['RT_Qualifications_options'] = array(
 );
 
 
+
+$app_list_strings['moduleList']['Documents'] = 'Documents';
+$app_list_strings['Documents_options'] = array(
+    '' => '',
+    'RT_Employees' => 'Employee',
+    'RT_Candidates' => 'Candidate',
+);
+
+
 /*********************************************************************************
  * SugarCRM Community Edition is a customer relationship management program developed by
  * SugarCRM, Inc. Copyright (C) 2004-2013 SugarCRM Inc.

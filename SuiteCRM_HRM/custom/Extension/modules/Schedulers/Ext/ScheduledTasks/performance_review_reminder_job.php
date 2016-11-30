@@ -28,7 +28,7 @@ function performance_review_reminder_job()
             $sugar_email->IsHTML(true);
             $admin = new Administration();
             $admin->retrieveSettings();
-            $sugar_email->Subject = "Please Submit review of ".$name;
+            $sugar_email->Subject = "[CASE:Appraisal Due of".$name."]";
             $sugar_email->prepForOutbound();
             $sugar_email->setMailerForSystem();
             $sugar_email->From = $admin->settings['notify_fromaddress'];

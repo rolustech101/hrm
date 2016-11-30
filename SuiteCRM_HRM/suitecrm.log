@@ -1,30 +1,11 @@
-Tue Nov 29 18:37:37 2016 [641][1][FATAL] CLASS NAME
-Tue Nov 29 18:37:37 2016 [641][1][FATAL] ext_rest_facebook
-Tue Nov 29 18:37:37 2016 [641][1][FATAL] print_r($prop,1)
-Tue Nov 29 18:37:37 2016 [641][1][FATAL] Array
-(
-    [appid] => 323627451351772
-    [secret] => 85b2f5422afd161b3200d048880f3ec0
-)
-
-Tue Nov 29 18:37:37 2016 [641][1][FATAL] 323627451351772
-Tue Nov 29 18:45:22 2016 [3798][1][FATAL] CLASS NAME
-Tue Nov 29 18:45:22 2016 [3798][1][FATAL] ext_rest_facebook
-Tue Nov 29 18:45:22 2016 [3798][1][FATAL] IN THE UPDATE FACEBOOK STATUS!!!!
-Tue Nov 29 18:45:30 2016 [646][-none-][FATAL] hello in the send_post_facebook
-Tue Nov 29 18:45:30 2016 [646][-none-][FATAL] in the iffff
-Tue Nov 29 18:45:30 2016 [646][-none-][FATAL] before create_post
-Tue Nov 29 18:45:31 2016 [646][-none-][FATAL] print_r($resp,1)
-Tue Nov 29 18:45:31 2016 [646][-none-][FATAL] {"error":{"message":"Error validating access token: The session is invalid because the user logged out.","type":"OAuthException","code":190,"error_subcode":467,"fbtrace_id":"CP7ymegCrcv"}}
-Tue Nov 29 18:45:31 2016 [646][-none-][FATAL] after create_post
-Tue Nov 29 18:45:31 2016 [646][-none-][FATAL] hello in the send_post_facebook after success
-Tue Nov 29 18:46:35 2016 [1394][1][FATAL] CLASS NAME
-Tue Nov 29 18:46:35 2016 [1394][1][FATAL] ext_rest_facebook
-Tue Nov 29 18:46:35 2016 [1394][1][FATAL] IN THE UPDATE FACEBOOK STATUS!!!!
-Tue Nov 29 18:46:36 2016 [1394][-none-][FATAL] hello in the send_post_facebook
-Tue Nov 29 18:46:36 2016 [1394][-none-][FATAL] in the iffff
-Tue Nov 29 18:46:36 2016 [1394][-none-][FATAL] before create_post
-Tue Nov 29 18:46:38 2016 [1394][-none-][FATAL] print_r($resp,1)
-Tue Nov 29 18:46:38 2016 [1394][-none-][FATAL] {"id":"1257853747570705_1259059670783446"}
-Tue Nov 29 18:46:38 2016 [1394][-none-][FATAL] after create_post
-Tue Nov 29 18:46:38 2016 [1394][-none-][FATAL] hello in the send_post_facebook after success
+Wed Nov 30 19:45:01 2016 [2592][-none-][FATAL] Configuration variable date.timezone is not set, guessed timezone Asia/Karachi. Please set date.timezone="Asia/Karachi" in php.ini!
+Wed Nov 30 19:46:01 2016 [2616][-none-][FATAL] Configuration variable date.timezone is not set, guessed timezone Asia/Karachi. Please set date.timezone="Asia/Karachi" in php.ini!
+Wed Nov 30 19:47:01 2016 [2656][-none-][FATAL] Configuration variable date.timezone is not set, guessed timezone Asia/Karachi. Please set date.timezone="Asia/Karachi" in php.ini!
+Wed Nov 30 19:48:01 2016 [2688][-none-][FATAL] Configuration variable date.timezone is not set, guessed timezone Asia/Karachi. Please set date.timezone="Asia/Karachi" in php.ini!
+Wed Nov 30 19:49:01 2016 [2716][-none-][FATAL] Configuration variable date.timezone is not set, guessed timezone Asia/Karachi. Please set date.timezone="Asia/Karachi" in php.ini!
+Wed Nov 30 19:50:01 2016 [2828][-none-][FATAL] Configuration variable date.timezone is not set, guessed timezone Asia/Karachi. Please set date.timezone="Asia/Karachi" in php.ini!
+Wed Nov 30 19:51:02 2016 [2892][-none-][FATAL] Configuration variable date.timezone is not set, guessed timezone Asia/Karachi. Please set date.timezone="Asia/Karachi" in php.ini!
+Wed Nov 30 19:52:02 2016 [2946][-none-][FATAL] Configuration variable date.timezone is not set, guessed timezone Asia/Karachi. Please set date.timezone="Asia/Karachi" in php.ini!
+Wed Nov 30 19:53:01 2016 [2989][-none-][FATAL] Configuration variable date.timezone is not set, guessed timezone Asia/Karachi. Please set date.timezone="Asia/Karachi" in php.ini!
+Wed Nov 30 19:54:01 2016 [3009][-none-][FATAL] Configuration variable date.timezone is not set, guessed timezone Asia/Karachi. Please set date.timezone="Asia/Karachi" in php.ini!
+Wed Nov 30 19:55:01 2016 [3043][-none-][FATAL] Configuration variable date.timezone is not set, guessed timezone Asia/Karachi. Please set date.timezone="Asia/Karachi" in php.ini!
