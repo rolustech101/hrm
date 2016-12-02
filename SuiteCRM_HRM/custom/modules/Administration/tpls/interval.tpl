@@ -28,6 +28,14 @@
                     <input type="text" required name="noty_receiver_email" id="noty_receiver_email" value="{$noty_receiver_email}">
                 </td>
             </tr>
+            <tr>
+                <td>
+                    Email Subject Macro:
+                </td>
+                <td>
+                    <input type="text" required name="email_subject" id="email_subject" value="{$email_subject}">
+                </td>
+            </tr>
         </table>
         <input type="submit" id="submit-btn" value="Submit">
     </form>

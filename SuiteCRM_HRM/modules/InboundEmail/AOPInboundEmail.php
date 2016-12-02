@@ -62,13 +62,14 @@ class AOPInboundEmail extends InboundEmail {
         $this->getCaseIdFromCaseNumber($email->name, $c);
 
         if (!$this->handleCaseAssignment($email) && $this->isMailBoxTypeCreateCase()) {
-            $GLOBALS['log']->fatal('in the handleCreateCase AOP');
             // create a case
             $GLOBALS['log']->debug('retrieveing email');
             $email->retrieve($email->id);
             $c = new aCase();
 
             $notes = $email->get_linked_beans('notes','Notes');
+            $GLOBALS['log']->fatal('print_r($notes,1)');
+            $GLOBALS['log']->fatal(print_r($notes,1));
             $noteIds = array();
             foreach($notes as $note){
                 $noteIds[] = $note->id;
@@ -124,6 +125,7 @@ class AOPInboundEmail extends InboundEmail {
                     $c->contacts->add($contactIds);
                 } // if
             foreach($notes as $note){
+                $GLOBALS['log']->fatal('CREATING NOTES..............');
                 //Link notes to case also
                 $newNote = BeanFactory::newBean('Notes');
                 $newNote->name = $note->name;

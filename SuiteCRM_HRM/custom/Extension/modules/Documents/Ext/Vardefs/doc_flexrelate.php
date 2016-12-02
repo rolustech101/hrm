@@ -64,14 +64,14 @@ $dictionary['Document']['fields']['rt_employees'] = array(
     'source'=>'non-db',
     'vname'=>'LBL_RT_EEMPLOYEES',
 );
-$dictionary['Document']['fields']['rt_candidates'] = array(
-    'name' => 'rt_candidates',
+$dictionary['Document']['fields']['rt_job_application'] = array(
+    'name' => 'rt_job_application',
     'type' => 'link',
-    'relationship' => 'documents_rt_candidates',
-    'module'=>'RT_Candidates',
+    'relationship' => 'documents_rt_job_application',
+    'module'=>'RT_Job_Application',
     'bean_name'=>'Lead',
     'source'=>'non-db',
-    'vname'=>'LBL_RT_CANDIDATES',
+    'vname'=>'LBL_RT_Job_Application',
 );
 $dictionary['Document']['relationships']['documents_rt_employees'] = array(
     'lhs_module'		=> 'Documents',
@@ -84,14 +84,14 @@ $dictionary['Document']['relationships']['documents_rt_employees'] = array(
     'relationship_role_column'=>'parent_type',
     'relationship_role_column_value'=>'RT_Employees'
 );
-$dictionary['Document']['relationships']['documents_rt_candidates'] = array(
+$dictionary['Document']['relationships']['documents_rt_job_application'] = array(
     'lhs_module'		=> 'Documents',
     'lhs_table'			=> 'documents',
     'lhs_key'			=> 'parent_id',
-    'rhs_module'		=> 'RT_Candidates',
-    'rhs_table'			=> 'rt_candidates',
+    'rhs_module'		=> 'RT_Job_Application',
+    'rhs_table'			=> 'rt_job_application',
     'rhs_key'			=> 'id',
     'relationship_type'	=> 'one-to-many',
     'relationship_role_column'=>'parent_type',
-    'relationship_role_column_value'=>'RT_Candidates'
+    'relationship_role_column_value'=>'RT_Job_Application'
 );

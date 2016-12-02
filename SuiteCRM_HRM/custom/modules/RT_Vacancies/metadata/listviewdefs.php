@@ -17,7 +17,16 @@ array (
 //    'width' => '10%',
 //    'default' => true,
 //  ),
-  'DEPARTMENT_C' => 
+  'RT_JOB_APP_NAME' =>
+  array (
+    'type' => 'relate',
+    'default' => true,
+    'label' => 'LBL_JOB_APP_NAME_NAME',
+    'width' => '10%',
+      'link' => true,
+
+  ),
+  'DEPARTMENT_C' =>
   array (
     'type' => 'varchar',
     'default' => true,

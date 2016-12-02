@@ -1,11 +1,10 @@
-Wed Nov 30 19:45:01 2016 [2592][-none-][FATAL] Configuration variable date.timezone is not set, guessed timezone Asia/Karachi. Please set date.timezone="Asia/Karachi" in php.ini!
-Wed Nov 30 19:46:01 2016 [2616][-none-][FATAL] Configuration variable date.timezone is not set, guessed timezone Asia/Karachi. Please set date.timezone="Asia/Karachi" in php.ini!
-Wed Nov 30 19:47:01 2016 [2656][-none-][FATAL] Configuration variable date.timezone is not set, guessed timezone Asia/Karachi. Please set date.timezone="Asia/Karachi" in php.ini!
-Wed Nov 30 19:48:01 2016 [2688][-none-][FATAL] Configuration variable date.timezone is not set, guessed timezone Asia/Karachi. Please set date.timezone="Asia/Karachi" in php.ini!
-Wed Nov 30 19:49:01 2016 [2716][-none-][FATAL] Configuration variable date.timezone is not set, guessed timezone Asia/Karachi. Please set date.timezone="Asia/Karachi" in php.ini!
-Wed Nov 30 19:50:01 2016 [2828][-none-][FATAL] Configuration variable date.timezone is not set, guessed timezone Asia/Karachi. Please set date.timezone="Asia/Karachi" in php.ini!
-Wed Nov 30 19:51:02 2016 [2892][-none-][FATAL] Configuration variable date.timezone is not set, guessed timezone Asia/Karachi. Please set date.timezone="Asia/Karachi" in php.ini!
-Wed Nov 30 19:52:02 2016 [2946][-none-][FATAL] Configuration variable date.timezone is not set, guessed timezone Asia/Karachi. Please set date.timezone="Asia/Karachi" in php.ini!
-Wed Nov 30 19:53:01 2016 [2989][-none-][FATAL] Configuration variable date.timezone is not set, guessed timezone Asia/Karachi. Please set date.timezone="Asia/Karachi" in php.ini!
-Wed Nov 30 19:54:01 2016 [3009][-none-][FATAL] Configuration variable date.timezone is not set, guessed timezone Asia/Karachi. Please set date.timezone="Asia/Karachi" in php.ini!
-Wed Nov 30 19:55:01 2016 [3043][-none-][FATAL] Configuration variable date.timezone is not set, guessed timezone Asia/Karachi. Please set date.timezone="Asia/Karachi" in php.ini!
+Fri Dec  2 20:20:02 2016 [5758][-none-][FATAL] Configuration variable date.timezone is not set, guessed timezone Asia/Karachi. Please set date.timezone="Asia/Karachi" in php.ini!
+Fri Dec  2 20:20:06 2016 [5758][1][FATAL] -----> getNewMessageIds()
+Fri Dec  2 20:20:06 2016 [5758][1][FATAL] ----->  before return getNewMessageIds()
+Fri Dec  2 20:20:17 2016 [5758][1][FATAL] -----> getNewMessageIds()
+Fri Dec  2 20:20:17 2016 [5758][1][FATAL] ----->  before return getNewMessageIds()
+Fri Dec  2 20:21:01 2016 [5786][-none-][FATAL] Configuration variable date.timezone is not set, guessed timezone Asia/Karachi. Please set date.timezone="Asia/Karachi" in php.ini!
+Fri Dec  2 20:21:03 2016 [5786][1][FATAL] -----> getNewMessageIds()
+Fri Dec  2 20:21:03 2016 [5786][1][FATAL] ----->  before return getNewMessageIds()
+Fri Dec  2 20:21:06 2016 [5786][1][FATAL] -----> getNewMessageIds()
+Fri Dec  2 20:21:07 2016 [5786][1][FATAL] ----->  before return getNewMessageIds()

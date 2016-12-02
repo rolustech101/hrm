@@ -37,7 +37,7 @@ array (
         array(
             0 =>
                 array(
-                    0 => '',
+                    0 => 'rt_job_app_name',
                 ),
             1 =>
                 array(

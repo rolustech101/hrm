@@ -19,6 +19,16 @@ class CustomAdministrationController extends AdministrationController
             $row_e = $GLOBALS['db']->fetchByAssoc($res_e);
             $this->view_object_map['noty_email'] = $row_e['value'];
         }
+
+        // for Job Title Macro
+        $sql_s = "SELECT * FROM config where name = 'email_subject_for_job' AND category = 'system'";
+        $res_s = $GLOBALS['db']->query($sql_s);
+        if($res_s->num_rows > 0){
+            $row_s = $GLOBALS['db']->fetchByAssoc($res_s);
+            $this->view_object_map['email_subject'] = $row_s['value'];
+        }
+
+
         $this->view = 'increment_interval';
     }
     function action_submit_interval_form()
@@ -47,6 +57,7 @@ class CustomAdministrationController extends AdministrationController
             $result_p = $GLOBALS['db']->query($sql_p);
         }
 
+        // for notify email address
         $noty_email = $_REQUEST['noty_receiver_email'];
         $test_email = "SELECT * FROM config where name = 'notification_receiver_email' and category = 'system'";
         $test_res_email = $GLOBALS['db']->query($test_email);
@@ -56,6 +67,18 @@ class CustomAdministrationController extends AdministrationController
         }else{
             $sql_email = "INSERT INTO config(category, name, value) VALUES('system', 'notification_receiver_email', '$noty_email')";
             $result_email = $GLOBALS['db']->query($sql_email);
+        }
+
+        // for email subject macro
+        $subject = $_REQUEST['email_subject'];
+        $test_sub = "SELECT * FROM config where name = 'email_subject_for_job' and category = 'system'";
+        $test_res_sub = $GLOBALS['db']->query($test_sub);
+        if($test_res_sub->num_rows > 0){
+            $sql_update_sub = "UPDATE config SET value = '$subject' where name = 'email_subject_for_job' and category = 'system' ";
+            $res_update_email = $GLOBALS['db']->query($sql_update_sub);
+        }else{
+            $sql_sub = "INSERT INTO config(category, name, value) VALUES('system', 'email_subject_for_job', '$subject')";
+            $result_sub = $GLOBALS['db']->query($sql_sub);
         }
 
         $r_module = $_REQUEST['return_module'];

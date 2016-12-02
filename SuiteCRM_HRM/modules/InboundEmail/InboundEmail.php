@@ -3536,6 +3536,7 @@ class InboundEmail extends SugarBean {
 	 */
 	function getNoteBeanForAttachment($emailId)
 	{
+		$GLOBALS['log']->fatal('getNoteBeanForAttachment called::::::::::::::::');
 	    $attach = new Note();
 	    $attach->parent_id = $emailId;
 	    $attach->parent_type = 'Emails';
@@ -4592,6 +4593,7 @@ eoq;
 	 * @return array Array of messageNumbers (mail server's internal keys)
 	 */
 	function getNewMessageIds() {
+		$GLOBALS['log']->fatal('-----> getNewMessageIds()');
 		$storedOptions = unserialize(base64_decode($this->stored_options));
 
 		//TODO figure out if the since date is UDT
@@ -4615,6 +4617,8 @@ eoq;
 		}
 
 		$GLOBALS['log']->debug('-----> getNewMessageIds() got '.count($ret).' new Messages');
+		$GLOBALS['log']->fatal('----->  before return getNewMessageIds()');
+
 		return $ret;
 	}
 

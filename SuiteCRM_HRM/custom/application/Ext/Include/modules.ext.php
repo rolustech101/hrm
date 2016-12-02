@@ -33,6 +33,13 @@ $moduleList[] = 'RT_Qualifications';
 
  
  //WARNING: The contents of this file are auto-generated
+$beanList['RT_Job_Application'] = 'RT_Job_Application';
+$beanFiles['RT_Job_Application'] = 'modules/RT_Job_Application/RT_Job_Application.php';
+$moduleList[] = 'RT_Job_Application';
+
+
+ 
+ //WARNING: The contents of this file are auto-generated
 $beanList['RT_Increment_History'] = 'RT_Increment_History';
 $beanFiles['RT_Increment_History'] = 'modules/RT_Increment_History/RT_Increment_History.php';
 $moduleList[] = 'RT_Increment_History';
