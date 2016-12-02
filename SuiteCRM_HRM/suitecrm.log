@@ -8,3 +8,23 @@ Fri Dec  2 20:21:03 2016 [5786][1][FATAL] -----> getNewMessageIds()
 Fri Dec  2 20:21:03 2016 [5786][1][FATAL] ----->  before return getNewMessageIds()
 Fri Dec  2 20:21:06 2016 [5786][1][FATAL] -----> getNewMessageIds()
 Fri Dec  2 20:21:07 2016 [5786][1][FATAL] ----->  before return getNewMessageIds()
+Fri Dec  2 20:22:02 2016 [5850][-none-][FATAL] Configuration variable date.timezone is not set, guessed timezone Asia/Karachi. Please set date.timezone="Asia/Karachi" in php.ini!
+Fri Dec  2 20:22:04 2016 [5850][1][FATAL] -----> getNewMessageIds()
+Fri Dec  2 20:22:04 2016 [5850][1][FATAL] ----->  before return getNewMessageIds()
+Fri Dec  2 20:22:07 2016 [5850][1][FATAL] -----> getNewMessageIds()
+Fri Dec  2 20:22:07 2016 [5850][1][FATAL] ----->  before return getNewMessageIds()
+Fri Dec  2 20:23:02 2016 [5928][-none-][FATAL] Configuration variable date.timezone is not set, guessed timezone Asia/Karachi. Please set date.timezone="Asia/Karachi" in php.ini!
+Fri Dec  2 20:23:04 2016 [5928][1][FATAL] -----> getNewMessageIds()
+Fri Dec  2 20:23:04 2016 [5928][1][FATAL] ----->  before return getNewMessageIds()
+Fri Dec  2 20:23:07 2016 [5928][1][FATAL] -----> getNewMessageIds()
+Fri Dec  2 20:23:07 2016 [5928][1][FATAL] ----->  before return getNewMessageIds()
+Fri Dec  2 20:24:01 2016 [5980][-none-][FATAL] Configuration variable date.timezone is not set, guessed timezone Asia/Karachi. Please set date.timezone="Asia/Karachi" in php.ini!
+Fri Dec  2 20:24:04 2016 [5980][1][FATAL] -----> getNewMessageIds()
+Fri Dec  2 20:24:04 2016 [5980][1][FATAL] ----->  before return getNewMessageIds()
+Fri Dec  2 20:24:06 2016 [5980][1][FATAL] -----> getNewMessageIds()
+Fri Dec  2 20:24:07 2016 [5980][1][FATAL] ----->  before return getNewMessageIds()
+Fri Dec  2 20:25:01 2016 [6071][-none-][FATAL] Configuration variable date.timezone is not set, guessed timezone Asia/Karachi. Please set date.timezone="Asia/Karachi" in php.ini!
+Fri Dec  2 20:25:03 2016 [6071][1][FATAL] -----> getNewMessageIds()
+Fri Dec  2 20:25:04 2016 [6071][1][FATAL] ----->  before return getNewMessageIds()
+Fri Dec  2 20:25:06 2016 [6071][1][FATAL] -----> getNewMessageIds()
+Fri Dec  2 20:25:06 2016 [6071][1][FATAL] ----->  before return getNewMessageIds()
