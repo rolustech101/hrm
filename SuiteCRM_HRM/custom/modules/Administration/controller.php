@@ -28,6 +28,13 @@ class CustomAdministrationController extends AdministrationController
             $this->view_object_map['email_subject'] = $row_s['value'];
         }
 
+        // email subject separator
+        $sql_sep = "SELECT * FROM config where name = 'email_subject_separator' AND category = 'system'";
+        $res_sep = $GLOBALS['db']->query($sql_sep);
+        if($res_sep->num_rows > 0){
+            $row_sep = $GLOBALS['db']->fetchByAssoc($res_sep);
+            $this->view_object_map['email_subject_separator'] = $row_sep['value'];
+        }
 
         $this->view = 'increment_interval';
     }
@@ -79,6 +86,17 @@ class CustomAdministrationController extends AdministrationController
         }else{
             $sql_sub = "INSERT INTO config(category, name, value) VALUES('system', 'email_subject_for_job', '$subject')";
             $result_sub = $GLOBALS['db']->query($sql_sub);
+        }
+        // for email subject separator
+        $subject_sep = trim($_REQUEST['email_subject_separator']);
+        $test_sub_sep = "SELECT * FROM config where name = 'email_subject_separator' and category = 'system'";
+        $test_res_sub_sep = $GLOBALS['db']->query($test_sub_sep);
+        if($test_res_sub_sep->num_rows > 0){
+            $sql_update_sub_sep = "UPDATE config SET value = '$subject_sep' where name = 'email_subject_separator' and category = 'system' ";
+            $res_update_email_sep = $GLOBALS['db']->query($sql_update_sub_sep);
+        }else{
+            $sql_sub_sep = "INSERT INTO config(category, name, value) VALUES('system', 'email_subject_separator', '$subject_sep')";
+            $result_sub_sep = $GLOBALS['db']->query($sql_sub_sep);
         }
 
         $r_module = $_REQUEST['return_module'];

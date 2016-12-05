@@ -36,7 +36,7 @@ if (isset($accessToken)) {
 }*/
 global $sugar_config;
 $base_url = $sugar_config['site_url'];
-$_SESSION['facebook_access_token'] = 'EAACEdEose0cBAP5OserFJ2gg6qMUSp4QrOZCEXKjp6ZBDwHjuw3VSXZBp1LAZBDLRyYjYdaZAyWdfWdhvxuvR6f47K9MAcgaFxe6KAtZAWEa3nv0MExFOAoZAK7IwaISI10TxL3wgmZCYm9lxQh5veEmd5ZAWskIVJ1q2LnZBJIelq606GsXKMcMcL';
+$_SESSION['facebook_access_token'] = 'EAACEdEose0cBAPRv3jBA3Jcp94d5SrIHCRT62PXAWZBTZBhRKvQnRyOSLIqfFz7Mo8L4Qu0Gb3nosDAGsl0ABV4fpGumNFRvf9OodwlCxZBBm7SQNwVgfjrzJ5a3HKhKs0np2K4EF3xQi9rmNvC6pLF4XqMbw0yhgDZAu9CBZCiU4yjenPBKq';
 header("location:$base_url/index.php?entryPoint=send_post_facebook");
 
 ?>

@@ -38,4 +38,4 @@
  ********************************************************************************/
 
 
-$app_list_strings['moduleList']['RT_Vacancies'] = 'Vacancies';
+$app_list_strings['moduleList']['RT_Vacancies'] = 'Job Posting';

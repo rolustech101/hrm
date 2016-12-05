@@ -9,23 +9,15 @@ array (
     'default' => true,
     'link' => true,
   ),
-//  'A_JOBS_A_VACANCIES_NAME' =>
+//  'RT_JOB_APP_NAME' =>
 //  array (
 //    'type' => 'relate',
-//    'link' => 'a_jobs_a_vacancies',
-//    'label' => 'LBL_A_JOBS_A_VACANCIES_FROM_A_JOBS_TITLE',
-//    'width' => '10%',
 //    'default' => true,
+//    'label' => 'LBL_JOB_APP_NAME_NAME',
+//    'width' => '10%',
+//      'link' => true,
+//
 //  ),
-  'RT_JOB_APP_NAME' =>
-  array (
-    'type' => 'relate',
-    'default' => true,
-    'label' => 'LBL_JOB_APP_NAME_NAME',
-    'width' => '10%',
-      'link' => true,
-
-  ),
   'DEPARTMENT_C' =>
   array (
     'type' => 'varchar',

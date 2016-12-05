@@ -45,6 +45,7 @@ if (!defined('sugarEntry') || !sugarEntry) die('Not A Valid Entry Point');
  * Contributor(s): ______________________________________..
  ********************************************************************************/
 // EmailTemplate is used to store email email_template information.
+require_once 'data/SugarBean.php';
 class EmailTemplate extends SugarBean
 {
     var $field_name_map = array();

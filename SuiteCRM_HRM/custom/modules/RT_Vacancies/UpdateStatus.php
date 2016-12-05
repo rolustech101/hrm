@@ -41,11 +41,11 @@ class UpdateStatus
             ]);
             // generating login URL
             $helper = $fb->getRedirectLoginHelper();
-            $permissions = ['publish_pages', 'manage_pages']; // optional
+//            $permissions = ['publish_pages', 'manage_pages']; // optional
 //        $loginUrl = $helper->getLoginUrl('http://{your-website}/login-callback.php', $permissions);
             global $sugar_config;
             $base_url = $sugar_config['site_url'];
-            $loginUrl = $helper->getLoginUrl("$base_url/index.php?entryPoint=login_callback", $permissions);
+            $loginUrl = $helper->getLoginUrl("$base_url/index.php?entryPoint=login_callback");
 
 //            header("location:$loginUrl");
             SugarApplication::redirect($loginUrl);

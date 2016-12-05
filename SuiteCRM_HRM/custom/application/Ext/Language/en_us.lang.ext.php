@@ -415,7 +415,7 @@ $app_list_strings['moduleList']['RT_Increment_History'] = 'Increment History';
  ********************************************************************************/
 
 
-$app_list_strings['moduleList']['RT_Vacancies'] = 'Vacancies';
+$app_list_strings['moduleList']['RT_Vacancies'] = 'Job Posting';
 
 
 /*********************************************************************************

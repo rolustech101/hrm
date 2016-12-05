@@ -8,4 +8,5 @@ $mod_strings['LBL_EDUCATION'] = 'Education';
 $mod_strings['LBL_VISA_REQUIRED'] = 'Visa Required';
 $mod_strings['LBL_EMPLOYEMENT_INFORMATION'] = 'Employment';
 $mod_strings['LBL_ADDITIONAL_DETAIL_INFORMATION'] = 'Additional Details';
+$mod_strings['LBL_RT_JOB_APPLICATION_RT_CANDIDATES_FROM_RT_JOB_APPLICATION_TITLE'] = 'Job Applications';
 

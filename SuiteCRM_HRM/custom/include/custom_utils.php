@@ -1,6 +1,9 @@
 <?php
+require_once('include/SugarPHPMailer.php');
+require_once('modules/EmailTemplates/EmailTemplate.php');
 require_once 'modules/InboundEmail/InboundEmail.php';
 require_once 'include/clean.php';
+require_once 'custom/include/helpers/DocxConversion.php';
 function get_annual_balance($id)
 {
     $emp_sql = "select joining_date_c from rt_employees_cstm  where id_c = '$id'";
@@ -65,20 +68,103 @@ function get_non_filling_countries()
 {
     return ['PAKISTAN','UNITED KINGDOM','CANADA'];
 }
+function getCandidate($email)
+{
+    $sql = "select * from rt_candidates where last_name = '$email'";
+    $res = $GLOBALS['db']->query($sql);
+    if($res->num_rows > 1){
+        $GLOBALS['log']->fatal('Duplicate candidates exists please delete there should be unique names!');
+        return '';
+    }elseif($res->num_rows > 0 && $res->num_rows == 1){
+        $GLOBALS['log']->fatal('use existing candidate');
+        $row = $GLOBALS['db']->fetchByAssoc($res);
+        $cid = $row['id'];
+        $c = BeanFactory::getBean('RT_Candidates',$cid);
+    }else{
+        $GLOBALS['log']->fatal('creating new candidate');
+        $c = BeanFactory::newBean('RT_Candidates');
+    }
+    return $c;
+}
+function send_email($cand_id,$job_app_id,$job_post_id)
+{
+    global $sugar_config;
+    $base_url = $sugar_config['site_url'];
+    $candidate = $base_url."/index.php?module=RT_Candidates&return_module=RT_Candidates&action=DetailView&record=$cand_id";
+    $job_application = $base_url."/index.php?module=RT_Job_Application&return_module=RT_Job_Application&action=DetailView&record=$job_app_id";
+    if(!empty($job_post_id)){
+        $job_posting = $base_url."/index.php?module=RT_Vacancies&return_module=RT_Vacancies&action=DetailView&record=$job_post_id";
+    }else{
+        $job_posting = $base_url."/index.php?module=RT_Vacancies&action=index&return_module=RT_Vacancies&return_action=DetailView";
+    }
+
+    $sugar_email = new SugarPHPMailer();
+    $sugar_email->IsHTML(true);
+    $admin = new Administration();
+    $admin->retrieveSettings();
+
+    $sugar_email->prepForOutbound();
+    $sugar_email->setMailerForSystem();
+    $sugar_email->From = $admin->settings['notify_fromaddress'];
+    $sugar_email->FromName = $admin->settings['notify_fromname'];
+    $template_name = 'Job Application';
+    $template = new EmailTemplate();
+    $template->retrieve_by_string_fields(array('name' => $template_name,'type'=>'email'));
+    $sugar_email->Subject = $template->subject;
+    $GLOBALS['log']->fatal(print_r(from_html($template->body_html),1));
+    $template->body_html = str_replace('{cand}',"<a href='$candidate'>Candidate</a>",$template->body_html);
+    $template->body_html = str_replace('{posting}',"<a href='$job_posting'>Job Posting</a>",$template->body_html);
+    $template->body_html = str_replace('{job_app}',"<a href='$job_application'>Job Application</a>",$template->body_html);
+    $GLOBALS['log']->fatal('**************');
+    $GLOBALS['log']->fatal(print_r(from_html($template->body_html),1));
+
+    $sugar_email->Body = from_html($template->body_html);
+
+    $sql_e = "select * from config where name = 'notification_receiver_email' and category = 'system'";
+    $res_e = $GLOBALS['db']->query($sql_e);
+    if($res_e->num_rows > 0){
+        $row_e = $GLOBALS['db']->fetchByAssoc($res_e);
+        $to = $row_e['value'];
+        $sugar_email->AddAddress($to);
+    }else{
+        $GLOBALS['log']->fatal('Could not find notification_receiver_email in the system settings!');
+        return false;
+    }
+
+    if (!$sugar_email->Send()) {
+        $GLOBALS['log']->fatal("Could not send Mail:  " . $sugar_email->ErrorInfo);
+    }
+}
 function handleCreateCandidate($email,$job_title) {
+
     $GLOBALS['log']->fatal('in the handleCreateCandidate AOP husnain');
     global $current_user, $mod_strings, $current_language;
     $mod_strings = return_module_language($current_language, "Emails");
     $GLOBALS['log']->fatal('In handleCreateCase in AOPInboundEmail CUSTOMMMMM');
 
-//    if (!$this->handleCaseAssignment($email) && $this->isMailBoxTypeCreateCase()) {
-    if (true) {
         $GLOBALS['log']->fatal('AOP GOING TO create case!!!!');
         $GLOBALS['log']->debug('retrieveing email');
         $email->retrieve($email->id);
 
-        $c = BeanFactory::newBean('RT_Candidates');
-
+    if(!empty($email->reply_to_email)) {
+        $c = getCandidate($email->reply_to_email);
+        if(!empty($c)){
+            $c->last_name  = $email->reply_to_email;
+            $c->email1 = $email->reply_to_email;
+        }else{
+            $GLOBALS['log']->fatal('duplicate records exists!');
+            return false;
+        }
+    } else {
+        $c = getCandidate($email->from_addr);
+        if(!empty($c)){
+            $c->last_name  = $email->from_addr;
+            $c->email1   = $email->from_addr;
+        }else{
+            $GLOBALS['log']->fatal('Duplicate records exists!');
+            return false;
+        }
+    }
         $notes = $email->get_linked_beans('notes','Notes');
         $noteIds = array();
         foreach($notes as $note){
@@ -92,21 +178,17 @@ function handleCreateCandidate($email,$job_title) {
         }else{
             $c->description = $email->description;
         }
-//        $c->last_name = $email->name;
-        if(!empty($email->reply_to_email)) {
-            $c->last_name  = $email->reply_to_email;
-        } else {
-            $c->last_name  = $email->from_addr;
-        }
 
-        $c->phone_mobile = '123';
+//        $c->phone_mobile = '123';
         $c->save();
 
         $vacancy_bean = BeanFactory::getBean('RT_Vacancies');
-        $job_title = trim($job_title);
-        $vacancy_bean->retrieve_by_string_fields(array('name' => $job_title,'status_c'=>'new_position'));
-        $GLOBALS['log']->fatal('print_r($vacancy_bean,1)');
-        $GLOBALS['log']->fatal(print_r($vacancy_bean,1));
+        if(!empty($job_title)){
+            $job_title = trim($job_title);
+            $vacancy_bean->retrieve_by_string_fields(array('name' => $job_title,'status_c'=>'new_position'));
+            $GLOBALS['log']->fatal('print_r($vacancy_bean,1)');
+            $GLOBALS['log']->fatal(print_r($vacancy_bean,1));
+        }
         // create new job_application
         $GLOBALS['log']->fatal('create new job application');
 
@@ -119,7 +201,6 @@ function handleCreateCandidate($email,$job_title) {
 
         // relate vacancy to job application
 
-
         foreach($notes as $note){
 
             $GLOBALS['log']->fatal('create new note husnain');
@@ -129,16 +210,15 @@ function handleCreateCandidate($email,$job_title) {
             $newNote->file_mime_type = $note->file_mime_type;
             $newNote->filename = $note->filename;
             $newNote->parent_type = 'RT_Job_Application';
-            $newNote->parent_id = $c->id;
+            $newNote->parent_id = $new_job_application->id;
             $newNote->save();
             $srcFile = "upload://{$note->id}";
             $destFile = "upload://{$newNote->id}";
             copy($srcFile,$destFile);
         }
-    }
     echo "End of handle create Candidate\n";
     $GLOBALS['log']->fatal('END of handle create husnain');
-
+    send_email($c->id,$new_job_application->id,$vacancy_bean->id);
 
 } // fn
 ?>

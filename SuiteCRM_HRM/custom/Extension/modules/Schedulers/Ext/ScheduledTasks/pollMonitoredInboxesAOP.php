@@ -80,9 +80,7 @@ function pollMonitoredInboxesAOP()
                                     $userId = $assignManager->getNextAssignedUser();
                                     $GLOBALS['log']->debug('userId [ ' . $userId . ' ]');
                                     $email_subject = $ieX->email->name;
-                                    $arr = explode('|',$email_subject);
-                                    $subject = strtolower($arr[0]);
-                                    $job_title = strtolower($arr[1]);
+
                                     ///
                                     $sql_s = "SELECT * FROM config where name = 'email_subject_for_job' AND category = 'system'";
                                     $res_s = $GLOBALS['db']->query($sql_s);
@@ -93,8 +91,28 @@ function pollMonitoredInboxesAOP()
                                         $GLOBALS['log']->fatal('Job Macro enty is not defined in the system settings');
                                         return false;
                                     }
+                                    $email_subject = strtolower(trim($email_subject));
                                     $sub_macro = strtolower(trim($sub_macro));
-                                    if (strpos($subject, $sub_macro) !== false) {
+                                    if (strpos($email_subject, $sub_macro) !== false) {
+                                        ////
+                                        $GLOBALS['log']->fatal('It contains the ');
+                                        $sql_sep = "select * from config where name = 'email_subject_separator' and category = 'system'";
+                                        $res_sep = $GLOBALS['db']->query($sql_sep);
+                                        if($res_sep->num_rows > 0){
+                                            $row_sep = $GLOBALS['db']->fetchByAssoc($res_sep);
+                                            $separator = $row_sep['value'];
+                                            if (strpos($email_subject, $separator) !== false) {
+                                                $arr = explode($separator,$email_subject);
+                                                $subject = strtolower($arr[0]);
+                                                $job_title = strtolower($arr[1]);
+                                            }else{
+                                                $GLOBALS['log']->fatal('Email subject not includes the specified Separator!!!');
+                                                $job_title = '';
+                                            }
+                                        }else{
+                                            $GLOBALS['log']->fatal('System settings does not have entry for email_subject_separator');
+                                        }
+                                        ////
                                         require_once('custom/include/custom_utils.php');
                                         handleCreateCandidate($ieX->email,$job_title); // customizations
                                     }

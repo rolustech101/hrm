@@ -1,30 +1,139 @@
-Fri Dec  2 20:20:02 2016 [5758][-none-][FATAL] Configuration variable date.timezone is not set, guessed timezone Asia/Karachi. Please set date.timezone="Asia/Karachi" in php.ini!
-Fri Dec  2 20:20:06 2016 [5758][1][FATAL] -----> getNewMessageIds()
-Fri Dec  2 20:20:06 2016 [5758][1][FATAL] ----->  before return getNewMessageIds()
-Fri Dec  2 20:20:17 2016 [5758][1][FATAL] -----> getNewMessageIds()
-Fri Dec  2 20:20:17 2016 [5758][1][FATAL] ----->  before return getNewMessageIds()
-Fri Dec  2 20:21:01 2016 [5786][-none-][FATAL] Configuration variable date.timezone is not set, guessed timezone Asia/Karachi. Please set date.timezone="Asia/Karachi" in php.ini!
-Fri Dec  2 20:21:03 2016 [5786][1][FATAL] -----> getNewMessageIds()
-Fri Dec  2 20:21:03 2016 [5786][1][FATAL] ----->  before return getNewMessageIds()
-Fri Dec  2 20:21:06 2016 [5786][1][FATAL] -----> getNewMessageIds()
-Fri Dec  2 20:21:07 2016 [5786][1][FATAL] ----->  before return getNewMessageIds()
-Fri Dec  2 20:22:02 2016 [5850][-none-][FATAL] Configuration variable date.timezone is not set, guessed timezone Asia/Karachi. Please set date.timezone="Asia/Karachi" in php.ini!
-Fri Dec  2 20:22:04 2016 [5850][1][FATAL] -----> getNewMessageIds()
-Fri Dec  2 20:22:04 2016 [5850][1][FATAL] ----->  before return getNewMessageIds()
-Fri Dec  2 20:22:07 2016 [5850][1][FATAL] -----> getNewMessageIds()
-Fri Dec  2 20:22:07 2016 [5850][1][FATAL] ----->  before return getNewMessageIds()
-Fri Dec  2 20:23:02 2016 [5928][-none-][FATAL] Configuration variable date.timezone is not set, guessed timezone Asia/Karachi. Please set date.timezone="Asia/Karachi" in php.ini!
-Fri Dec  2 20:23:04 2016 [5928][1][FATAL] -----> getNewMessageIds()
-Fri Dec  2 20:23:04 2016 [5928][1][FATAL] ----->  before return getNewMessageIds()
-Fri Dec  2 20:23:07 2016 [5928][1][FATAL] -----> getNewMessageIds()
-Fri Dec  2 20:23:07 2016 [5928][1][FATAL] ----->  before return getNewMessageIds()
-Fri Dec  2 20:24:01 2016 [5980][-none-][FATAL] Configuration variable date.timezone is not set, guessed timezone Asia/Karachi. Please set date.timezone="Asia/Karachi" in php.ini!
-Fri Dec  2 20:24:04 2016 [5980][1][FATAL] -----> getNewMessageIds()
-Fri Dec  2 20:24:04 2016 [5980][1][FATAL] ----->  before return getNewMessageIds()
-Fri Dec  2 20:24:06 2016 [5980][1][FATAL] -----> getNewMessageIds()
-Fri Dec  2 20:24:07 2016 [5980][1][FATAL] ----->  before return getNewMessageIds()
-Fri Dec  2 20:25:01 2016 [6071][-none-][FATAL] Configuration variable date.timezone is not set, guessed timezone Asia/Karachi. Please set date.timezone="Asia/Karachi" in php.ini!
-Fri Dec  2 20:25:03 2016 [6071][1][FATAL] -----> getNewMessageIds()
-Fri Dec  2 20:25:04 2016 [6071][1][FATAL] ----->  before return getNewMessageIds()
-Fri Dec  2 20:25:06 2016 [6071][1][FATAL] -----> getNewMessageIds()
-Fri Dec  2 20:25:06 2016 [6071][1][FATAL] ----->  before return getNewMessageIds()
+Mon Dec  5 20:03:01 2016 [17248][-none-][FATAL] Configuration variable date.timezone is not set, guessed timezone Asia/Karachi. Please set date.timezone="Asia/Karachi" in php.ini!
+Mon Dec  5 20:03:03 2016 [17248][1][FATAL] -----> getNewMessageIds()
+Mon Dec  5 20:03:04 2016 [17248][1][FATAL] ----->  before return getNewMessageIds()
+Mon Dec  5 20:03:09 2016 [17248][1][FATAL] -----> getNewMessageIds()
+Mon Dec  5 20:03:09 2016 [17248][1][FATAL] ----->  before return getNewMessageIds()
+Mon Dec  5 20:03:11 2016 [17248][1][FATAL] It contains the 
+Mon Dec  5 20:03:11 2016 [17248][1][FATAL] Email subject not includes the specified Separator!!!
+Mon Dec  5 20:03:11 2016 [17248][1][FATAL] in the handleCreateCandidate AOP husnain
+Mon Dec  5 20:03:11 2016 [17248][1][FATAL] In handleCreateCase in AOPInboundEmail CUSTOMMMMM
+Mon Dec  5 20:03:11 2016 [17248][1][FATAL] AOP GOING TO create case!!!!
+Mon Dec  5 20:03:11 2016 [17248][1][FATAL] use existing candidate
+Mon Dec  5 20:03:11 2016 [17248][1][FATAL] print_r($notes,1)
+Mon Dec  5 20:03:11 2016 [17248][1][FATAL] Array
+(
+)
+
+Mon Dec  5 20:03:11 2016 [17248][1][FATAL] create new job application
+Mon Dec  5 20:03:11 2016 [17248][1][FATAL] END of handle create husnain
+Mon Dec  5 20:03:11 2016 [17248][1][FATAL] <div class="mozaik-inner" style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:rgb(68,68,68);padding:0px 30px;margin:0px;"><h2 style="font-family:Arial, Helvetica, sans-serif;font-size:18px;line-height:28.8px;color:#444444;padding:0px;margin:0px;">Hi</h2><p style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:#444444;padding:0px;margin:0px;">It is to inform that you received a new Job Application:</p><p style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:#444444;padding:0px;margin:0px;">Candidate:{cand}</p><p style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:#444444;padding:0px;margin:0px;">Job Application:{job_app}</p><p style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:#444444;padding:0px;margin:0px;">Job Posting:{posting}</p><p style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:#444444;padding:0px;margin:0px;"><br style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:rgb(68,68,68);padding:0px;margin:0px;" /></p><p style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:#444444;padding:0px;margin:0px;">Thanks</p><div class="mozaik-clear" style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:#444444;padding:0px;margin:0px;height:0px;"> <br style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:#444444;padding:0px;margin:0px;" /></div></div>
+Mon Dec  5 20:03:11 2016 [17248][1][FATAL] **************
+Mon Dec  5 20:03:11 2016 [17248][1][FATAL] <div class="mozaik-inner" style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:rgb(68,68,68);padding:0px 30px;margin:0px;"><h2 style="font-family:Arial, Helvetica, sans-serif;font-size:18px;line-height:28.8px;color:#444444;padding:0px;margin:0px;">Hi</h2><p style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:#444444;padding:0px;margin:0px;">It is to inform that you received a new Job Application:</p><p style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:#444444;padding:0px;margin:0px;">Candidate:<a href='http://localhost/git_hrm/hrm/SuiteCRM_HRM/index.php?module=RT_Candidates&return_module=RT_Candidates&action=DetailView&record=e0a4f790-35a0-a4cb-7d3b-58453eeda054'>Candidate</a></p><p style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:#444444;padding:0px;margin:0px;">Job Application:<a href='http://localhost/git_hrm/hrm/SuiteCRM_HRM/index.php?module=RT_Job_Application&return_module=RT_Job_Application&action=DetailView&record=adc0b7ff-a629-f200-369e-584581bd57f8'>Job Application</a></p><p style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:#444444;padding:0px;margin:0px;">Job Posting:<a href='http://localhost/git_hrm/hrm/SuiteCRM_HRM/index.php?module=RT_Vacancies&action=index&return_module=RT_Vacancies&return_action=DetailView'>Job Posting</a></p><p style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:#444444;padding:0px;margin:0px;"><br style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:rgb(68,68,68);padding:0px;margin:0px;" /></p><p style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:#444444;padding:0px;margin:0px;">Thanks</p><div class="mozaik-clear" style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:#444444;padding:0px;margin:0px;height:0px;"> <br style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:#444444;padding:0px;margin:0px;" /></div></div>
+Mon Dec  5 20:03:15 2016 [17248][1][FATAL] in the handleCreateCase AOP
+Mon Dec  5 20:03:15 2016 [17248][1][FATAL] print_r($notes,1)
+Mon Dec  5 20:03:15 2016 [17248][1][FATAL] Array
+(
+)
+
+Mon Dec  5 20:04:01 2016 [17302][-none-][FATAL] Configuration variable date.timezone is not set, guessed timezone Asia/Karachi. Please set date.timezone="Asia/Karachi" in php.ini!
+Mon Dec  5 20:04:04 2016 [17302][1][FATAL] -----> getNewMessageIds()
+Mon Dec  5 20:04:05 2016 [17302][1][FATAL] ----->  before return getNewMessageIds()
+Mon Dec  5 20:04:08 2016 [17302][1][FATAL] -----> getNewMessageIds()
+Mon Dec  5 20:04:08 2016 [17302][1][FATAL] ----->  before return getNewMessageIds()
+Mon Dec  5 20:05:02 2016 [17364][-none-][FATAL] Configuration variable date.timezone is not set, guessed timezone Asia/Karachi. Please set date.timezone="Asia/Karachi" in php.ini!
+Mon Dec  5 20:05:05 2016 [17364][1][FATAL] -----> getNewMessageIds()
+Mon Dec  5 20:05:06 2016 [17364][1][FATAL] ----->  before return getNewMessageIds()
+Mon Dec  5 20:05:11 2016 [17364][1][FATAL] It contains the 
+Mon Dec  5 20:05:11 2016 [17364][1][FATAL] Email subject not includes the specified Separator!!!
+Mon Dec  5 20:05:11 2016 [17364][1][FATAL] in the handleCreateCandidate AOP husnain
+Mon Dec  5 20:05:11 2016 [17364][1][FATAL] In handleCreateCase in AOPInboundEmail CUSTOMMMMM
+Mon Dec  5 20:05:11 2016 [17364][1][FATAL] AOP GOING TO create case!!!!
+Mon Dec  5 20:05:11 2016 [17364][1][FATAL] use existing candidate
+Mon Dec  5 20:05:11 2016 [17364][1][FATAL] print_r($notes,1)
+Mon Dec  5 20:05:11 2016 [17364][1][FATAL] Array
+(
+)
+
+Mon Dec  5 20:05:11 2016 [17364][1][FATAL] create new job application
+Mon Dec  5 20:05:11 2016 [17364][1][FATAL] END of handle create husnain
+Mon Dec  5 20:05:12 2016 [17364][1][FATAL] <div class="mozaik-inner" style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:rgb(68,68,68);padding:0px 30px;margin:0px;"><h2 style="font-family:Arial, Helvetica, sans-serif;font-size:18px;line-height:28.8px;color:#444444;padding:0px;margin:0px;">Hi</h2><p style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:#444444;padding:0px;margin:0px;">It is to inform that you received a new Job Application:</p><p style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:#444444;padding:0px;margin:0px;">Candidate:{cand}</p><p style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:#444444;padding:0px;margin:0px;">Job Application:{job_app}</p><p style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:#444444;padding:0px;margin:0px;">Job Posting:{posting}</p><p style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:#444444;padding:0px;margin:0px;"><br style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:rgb(68,68,68);padding:0px;margin:0px;" /></p><p style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:#444444;padding:0px;margin:0px;">Thanks</p><div class="mozaik-clear" style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:#444444;padding:0px;margin:0px;height:0px;"> <br style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:#444444;padding:0px;margin:0px;" /></div></div>
+Mon Dec  5 20:05:12 2016 [17364][1][FATAL] **************
+Mon Dec  5 20:05:12 2016 [17364][1][FATAL] <div class="mozaik-inner" style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:rgb(68,68,68);padding:0px 30px;margin:0px;"><h2 style="font-family:Arial, Helvetica, sans-serif;font-size:18px;line-height:28.8px;color:#444444;padding:0px;margin:0px;">Hi</h2><p style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:#444444;padding:0px;margin:0px;">It is to inform that you received a new Job Application:</p><p style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:#444444;padding:0px;margin:0px;">Candidate:<a href='http://localhost/git_hrm/hrm/SuiteCRM_HRM/index.php?module=RT_Candidates&return_module=RT_Candidates&action=DetailView&record=e0a4f790-35a0-a4cb-7d3b-58453eeda054'>Candidate</a></p><p style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:#444444;padding:0px;margin:0px;">Job Application:<a href='http://localhost/git_hrm/hrm/SuiteCRM_HRM/index.php?module=RT_Job_Application&return_module=RT_Job_Application&action=DetailView&record=bf148af1-2959-83c4-00fb-584582c702d6'>Job Application</a></p><p style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:#444444;padding:0px;margin:0px;">Job Posting:<a href='http://localhost/git_hrm/hrm/SuiteCRM_HRM/index.php?module=RT_Vacancies&action=index&return_module=RT_Vacancies&return_action=DetailView'>Job Posting</a></p><p style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:#444444;padding:0px;margin:0px;"><br style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:rgb(68,68,68);padding:0px;margin:0px;" /></p><p style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:#444444;padding:0px;margin:0px;">Thanks</p><div class="mozaik-clear" style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:#444444;padding:0px;margin:0px;height:0px;"> <br style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:#444444;padding:0px;margin:0px;" /></div></div>
+Mon Dec  5 20:05:15 2016 [17364][1][FATAL] in the handleCreateCase AOP
+Mon Dec  5 20:05:15 2016 [17364][1][FATAL] print_r($notes,1)
+Mon Dec  5 20:05:15 2016 [17364][1][FATAL] Array
+(
+)
+
+Mon Dec  5 20:05:36 2016 [17364][1][FATAL] -----> getNewMessageIds()
+Mon Dec  5 20:05:37 2016 [17364][1][FATAL] ----->  before return getNewMessageIds()
+Mon Dec  5 20:06:02 2016 [17511][-none-][FATAL] Configuration variable date.timezone is not set, guessed timezone Asia/Karachi. Please set date.timezone="Asia/Karachi" in php.ini!
+Mon Dec  5 20:06:07 2016 [17511][1][FATAL] -----> getNewMessageIds()
+Mon Dec  5 20:06:08 2016 [17511][1][FATAL] ----->  before return getNewMessageIds()
+Mon Dec  5 20:06:11 2016 [17511][1][FATAL] -----> getNewMessageIds()
+Mon Dec  5 20:06:11 2016 [17511][1][FATAL] ----->  before return getNewMessageIds()
+Mon Dec  5 20:07:01 2016 [17538][-none-][FATAL] Configuration variable date.timezone is not set, guessed timezone Asia/Karachi. Please set date.timezone="Asia/Karachi" in php.ini!
+Mon Dec  5 20:07:03 2016 [17538][1][FATAL] -----> getNewMessageIds()
+Mon Dec  5 20:07:03 2016 [17538][1][FATAL] ----->  before return getNewMessageIds()
+Mon Dec  5 20:07:06 2016 [17538][1][FATAL] -----> getNewMessageIds()
+Mon Dec  5 20:07:06 2016 [17538][1][FATAL] ----->  before return getNewMessageIds()
+Mon Dec  5 20:08:01 2016 [17566][-none-][FATAL] Configuration variable date.timezone is not set, guessed timezone Asia/Karachi. Please set date.timezone="Asia/Karachi" in php.ini!
+Mon Dec  5 20:08:04 2016 [17566][1][FATAL] -----> getNewMessageIds()
+Mon Dec  5 20:08:04 2016 [17566][1][FATAL] ----->  before return getNewMessageIds()
+Mon Dec  5 20:08:06 2016 [17566][1][FATAL] -----> getNewMessageIds()
+Mon Dec  5 20:08:07 2016 [17566][1][FATAL] ----->  before return getNewMessageIds()
+Mon Dec  5 20:09:01 2016 [17639][-none-][FATAL] Configuration variable date.timezone is not set, guessed timezone Asia/Karachi. Please set date.timezone="Asia/Karachi" in php.ini!
+Mon Dec  5 20:09:04 2016 [17639][1][FATAL] -----> getNewMessageIds()
+Mon Dec  5 20:09:05 2016 [17639][1][FATAL] ----->  before return getNewMessageIds()
+Mon Dec  5 20:09:07 2016 [17639][1][FATAL] -----> getNewMessageIds()
+Mon Dec  5 20:09:08 2016 [17639][1][FATAL] ----->  before return getNewMessageIds()
+Mon Dec  5 20:10:02 2016 [17685][-none-][FATAL] Configuration variable date.timezone is not set, guessed timezone Asia/Karachi. Please set date.timezone="Asia/Karachi" in php.ini!
+Mon Dec  5 20:10:07 2016 [17685][1][FATAL] -----> getNewMessageIds()
+Mon Dec  5 20:10:07 2016 [17685][1][FATAL] ----->  before return getNewMessageIds()
+Mon Dec  5 20:10:10 2016 [17685][1][FATAL] -----> getNewMessageIds()
+Mon Dec  5 20:10:10 2016 [17685][1][FATAL] ----->  before return getNewMessageIds()
+Mon Dec  5 20:11:01 2016 [17768][-none-][FATAL] Configuration variable date.timezone is not set, guessed timezone Asia/Karachi. Please set date.timezone="Asia/Karachi" in php.ini!
+Mon Dec  5 20:11:06 2016 [17768][1][FATAL] -----> getNewMessageIds()
+Mon Dec  5 20:11:07 2016 [17768][1][FATAL] ----->  before return getNewMessageIds()
+Mon Dec  5 20:11:09 2016 [17768][1][FATAL] -----> getNewMessageIds()
+Mon Dec  5 20:11:10 2016 [17768][1][FATAL] ----->  before return getNewMessageIds()
+Mon Dec  5 20:12:01 2016 [17790][-none-][FATAL] Configuration variable date.timezone is not set, guessed timezone Asia/Karachi. Please set date.timezone="Asia/Karachi" in php.ini!
+Mon Dec  5 20:12:06 2016 [17790][1][FATAL] -----> getNewMessageIds()
+Mon Dec  5 20:12:06 2016 [17790][1][FATAL] ----->  before return getNewMessageIds()
+Mon Dec  5 20:12:09 2016 [17790][1][FATAL] -----> getNewMessageIds()
+Mon Dec  5 20:12:09 2016 [17790][1][FATAL] ----->  before return getNewMessageIds()
+Mon Dec  5 20:13:01 2016 [17815][-none-][FATAL] Configuration variable date.timezone is not set, guessed timezone Asia/Karachi. Please set date.timezone="Asia/Karachi" in php.ini!
+Mon Dec  5 20:13:03 2016 [17815][1][FATAL] -----> getNewMessageIds()
+Mon Dec  5 20:13:04 2016 [17815][1][FATAL] ----->  before return getNewMessageIds()
+Mon Dec  5 20:13:06 2016 [17815][1][FATAL] -----> getNewMessageIds()
+Mon Dec  5 20:13:06 2016 [17815][1][FATAL] ----->  before return getNewMessageIds()
+Mon Dec  5 20:14:01 2016 [17838][-none-][FATAL] Configuration variable date.timezone is not set, guessed timezone Asia/Karachi. Please set date.timezone="Asia/Karachi" in php.ini!
+Mon Dec  5 20:14:06 2016 [17838][1][FATAL] -----> getNewMessageIds()
+Mon Dec  5 20:14:07 2016 [17838][1][FATAL] ----->  before return getNewMessageIds()
+Mon Dec  5 20:14:11 2016 [17838][1][FATAL] -----> getNewMessageIds()
+Mon Dec  5 20:14:11 2016 [17838][1][FATAL] ----->  before return getNewMessageIds()
+Mon Dec  5 20:15:01 2016 [17902][-none-][FATAL] Configuration variable date.timezone is not set, guessed timezone Asia/Karachi. Please set date.timezone="Asia/Karachi" in php.ini!
+Mon Dec  5 20:15:04 2016 [17902][1][FATAL] -----> getNewMessageIds()
+Mon Dec  5 20:15:04 2016 [17902][1][FATAL] ----->  before return getNewMessageIds()
+Mon Dec  5 20:15:06 2016 [17902][1][FATAL] -----> getNewMessageIds()
+Mon Dec  5 20:15:06 2016 [17902][1][FATAL] ----->  before return getNewMessageIds()
+Mon Dec  5 20:16:01 2016 [17925][-none-][FATAL] Configuration variable date.timezone is not set, guessed timezone Asia/Karachi. Please set date.timezone="Asia/Karachi" in php.ini!
+Mon Dec  5 20:16:04 2016 [17925][1][FATAL] -----> getNewMessageIds()
+Mon Dec  5 20:16:04 2016 [17925][1][FATAL] ----->  before return getNewMessageIds()
+Mon Dec  5 20:16:08 2016 [17925][1][FATAL] -----> getNewMessageIds()
+Mon Dec  5 20:16:08 2016 [17925][1][FATAL] ----->  before return getNewMessageIds()
+Mon Dec  5 20:17:01 2016 [17960][-none-][FATAL] Configuration variable date.timezone is not set, guessed timezone Asia/Karachi. Please set date.timezone="Asia/Karachi" in php.ini!
+Mon Dec  5 20:17:04 2016 [17960][1][FATAL] -----> getNewMessageIds()
+Mon Dec  5 20:17:09 2016 [17960][1][FATAL] ----->  before return getNewMessageIds()
+Mon Dec  5 20:17:20 2016 [17960][1][FATAL] -----> getNewMessageIds()
+Mon Dec  5 20:17:20 2016 [17960][1][FATAL] ----->  before return getNewMessageIds()
+Mon Dec  5 20:18:01 2016 [18004][-none-][FATAL] Configuration variable date.timezone is not set, guessed timezone Asia/Karachi. Please set date.timezone="Asia/Karachi" in php.ini!
+Mon Dec  5 20:18:10 2016 [18004][1][FATAL] -----> getNewMessageIds()
+Mon Dec  5 20:18:10 2016 [18004][1][FATAL] ----->  before return getNewMessageIds()
+Mon Dec  5 20:18:20 2016 [18004][1][FATAL] -----> getNewMessageIds()
+Mon Dec  5 20:18:20 2016 [18004][1][FATAL] ----->  before return getNewMessageIds()
+Mon Dec  5 20:19:01 2016 [18030][-none-][FATAL] Configuration variable date.timezone is not set, guessed timezone Asia/Karachi. Please set date.timezone="Asia/Karachi" in php.ini!
+Mon Dec  5 20:19:03 2016 [18030][1][FATAL] -----> getNewMessageIds()
+Mon Dec  5 20:19:05 2016 [18030][1][FATAL] ----->  before return getNewMessageIds()
+Mon Dec  5 20:19:07 2016 [18030][1][FATAL] -----> getNewMessageIds()
+Mon Dec  5 20:19:08 2016 [18030][1][FATAL] ----->  before return getNewMessageIds()
+Mon Dec  5 20:20:02 2016 [18055][-none-][FATAL] Configuration variable date.timezone is not set, guessed timezone Asia/Karachi. Please set date.timezone="Asia/Karachi" in php.ini!
+Mon Dec  5 20:20:08 2016 [18055][1][FATAL] -----> getNewMessageIds()
+Mon Dec  5 20:20:09 2016 [18055][1][FATAL] ----->  before return getNewMessageIds()
+Mon Dec  5 20:20:14 2016 [18055][1][FATAL] -----> getNewMessageIds()
+Mon Dec  5 20:20:14 2016 [18055][1][FATAL] ----->  before return getNewMessageIds()
+Mon Dec  5 20:21:01 2016 [18140][-none-][FATAL] Configuration variable date.timezone is not set, guessed timezone Asia/Karachi. Please set date.timezone="Asia/Karachi" in php.ini!
+Mon Dec  5 20:21:03 2016 [18140][1][FATAL] -----> getNewMessageIds()
+Mon Dec  5 20:21:04 2016 [18140][1][FATAL] ----->  before return getNewMessageIds()
+Mon Dec  5 20:21:06 2016 [18140][1][FATAL] -----> getNewMessageIds()
+Mon Dec  5 20:21:07 2016 [18140][1][FATAL] ----->  before return getNewMessageIds()

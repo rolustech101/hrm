@@ -36,6 +36,14 @@
                     <input type="text" required name="email_subject" id="email_subject" value="{$email_subject}">
                 </td>
             </tr>
+            <tr>
+                <td>
+                    Email Subject Separator:
+                </td>
+                <td>
+                    <input type="text" required name="email_subject_separator" id="email_subject_separator" value="{$email_subject_separator}">
+                </td>
+            </tr>
         </table>
         <input type="submit" id="submit-btn" value="Submit">
     </form>

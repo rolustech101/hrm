@@ -3536,7 +3536,7 @@ class InboundEmail extends SugarBean {
 	 */
 	function getNoteBeanForAttachment($emailId)
 	{
-		$GLOBALS['log']->fatal('getNoteBeanForAttachment called::::::::::::::::');
+		$GLOBALS['log']->fatal('creating notes getNoteBeanForAttachment called::::::::::::::::');
 	    $attach = new Note();
 	    $attach->parent_id = $emailId;
 	    $attach->parent_type = 'Emails';
@@ -4252,7 +4252,7 @@ class InboundEmail extends SugarBean {
 		global $sugar_config;
 		/* include PHP_Compat library; it auto-feels for PHP5's compiled convert_uuencode() function */
 		require_once('include/PHP_Compat/convert_uudecode.php');
-
+        $GLOBALS['log']->fatal('CREATING NOTES handleUUDecode');
 		$attach = new Note();
 		$attach->parent_id = $id;
 		$attach->parent_type = 'Emails';
