@@ -1,139 +1,181 @@
-Mon Dec  5 20:03:01 2016 [17248][-none-][FATAL] Configuration variable date.timezone is not set, guessed timezone Asia/Karachi. Please set date.timezone="Asia/Karachi" in php.ini!
-Mon Dec  5 20:03:03 2016 [17248][1][FATAL] -----> getNewMessageIds()
-Mon Dec  5 20:03:04 2016 [17248][1][FATAL] ----->  before return getNewMessageIds()
-Mon Dec  5 20:03:09 2016 [17248][1][FATAL] -----> getNewMessageIds()
-Mon Dec  5 20:03:09 2016 [17248][1][FATAL] ----->  before return getNewMessageIds()
-Mon Dec  5 20:03:11 2016 [17248][1][FATAL] It contains the 
-Mon Dec  5 20:03:11 2016 [17248][1][FATAL] Email subject not includes the specified Separator!!!
-Mon Dec  5 20:03:11 2016 [17248][1][FATAL] in the handleCreateCandidate AOP husnain
-Mon Dec  5 20:03:11 2016 [17248][1][FATAL] In handleCreateCase in AOPInboundEmail CUSTOMMMMM
-Mon Dec  5 20:03:11 2016 [17248][1][FATAL] AOP GOING TO create case!!!!
-Mon Dec  5 20:03:11 2016 [17248][1][FATAL] use existing candidate
-Mon Dec  5 20:03:11 2016 [17248][1][FATAL] print_r($notes,1)
-Mon Dec  5 20:03:11 2016 [17248][1][FATAL] Array
-(
-)
-
-Mon Dec  5 20:03:11 2016 [17248][1][FATAL] create new job application
-Mon Dec  5 20:03:11 2016 [17248][1][FATAL] END of handle create husnain
-Mon Dec  5 20:03:11 2016 [17248][1][FATAL] <div class="mozaik-inner" style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:rgb(68,68,68);padding:0px 30px;margin:0px;"><h2 style="font-family:Arial, Helvetica, sans-serif;font-size:18px;line-height:28.8px;color:#444444;padding:0px;margin:0px;">Hi</h2><p style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:#444444;padding:0px;margin:0px;">It is to inform that you received a new Job Application:</p><p style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:#444444;padding:0px;margin:0px;">Candidate:{cand}</p><p style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:#444444;padding:0px;margin:0px;">Job Application:{job_app}</p><p style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:#444444;padding:0px;margin:0px;">Job Posting:{posting}</p><p style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:#444444;padding:0px;margin:0px;"><br style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:rgb(68,68,68);padding:0px;margin:0px;" /></p><p style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:#444444;padding:0px;margin:0px;">Thanks</p><div class="mozaik-clear" style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:#444444;padding:0px;margin:0px;height:0px;"> <br style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:#444444;padding:0px;margin:0px;" /></div></div>
-Mon Dec  5 20:03:11 2016 [17248][1][FATAL] **************
-Mon Dec  5 20:03:11 2016 [17248][1][FATAL] <div class="mozaik-inner" style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:rgb(68,68,68);padding:0px 30px;margin:0px;"><h2 style="font-family:Arial, Helvetica, sans-serif;font-size:18px;line-height:28.8px;color:#444444;padding:0px;margin:0px;">Hi</h2><p style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:#444444;padding:0px;margin:0px;">It is to inform that you received a new Job Application:</p><p style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:#444444;padding:0px;margin:0px;">Candidate:<a href='http://localhost/git_hrm/hrm/SuiteCRM_HRM/index.php?module=RT_Candidates&return_module=RT_Candidates&action=DetailView&record=e0a4f790-35a0-a4cb-7d3b-58453eeda054'>Candidate</a></p><p style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:#444444;padding:0px;margin:0px;">Job Application:<a href='http://localhost/git_hrm/hrm/SuiteCRM_HRM/index.php?module=RT_Job_Application&return_module=RT_Job_Application&action=DetailView&record=adc0b7ff-a629-f200-369e-584581bd57f8'>Job Application</a></p><p style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:#444444;padding:0px;margin:0px;">Job Posting:<a href='http://localhost/git_hrm/hrm/SuiteCRM_HRM/index.php?module=RT_Vacancies&action=index&return_module=RT_Vacancies&return_action=DetailView'>Job Posting</a></p><p style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:#444444;padding:0px;margin:0px;"><br style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:rgb(68,68,68);padding:0px;margin:0px;" /></p><p style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:#444444;padding:0px;margin:0px;">Thanks</p><div class="mozaik-clear" style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:#444444;padding:0px;margin:0px;height:0px;"> <br style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:#444444;padding:0px;margin:0px;" /></div></div>
-Mon Dec  5 20:03:15 2016 [17248][1][FATAL] in the handleCreateCase AOP
-Mon Dec  5 20:03:15 2016 [17248][1][FATAL] print_r($notes,1)
-Mon Dec  5 20:03:15 2016 [17248][1][FATAL] Array
-(
-)
-
-Mon Dec  5 20:04:01 2016 [17302][-none-][FATAL] Configuration variable date.timezone is not set, guessed timezone Asia/Karachi. Please set date.timezone="Asia/Karachi" in php.ini!
-Mon Dec  5 20:04:04 2016 [17302][1][FATAL] -----> getNewMessageIds()
-Mon Dec  5 20:04:05 2016 [17302][1][FATAL] ----->  before return getNewMessageIds()
-Mon Dec  5 20:04:08 2016 [17302][1][FATAL] -----> getNewMessageIds()
-Mon Dec  5 20:04:08 2016 [17302][1][FATAL] ----->  before return getNewMessageIds()
-Mon Dec  5 20:05:02 2016 [17364][-none-][FATAL] Configuration variable date.timezone is not set, guessed timezone Asia/Karachi. Please set date.timezone="Asia/Karachi" in php.ini!
-Mon Dec  5 20:05:05 2016 [17364][1][FATAL] -----> getNewMessageIds()
-Mon Dec  5 20:05:06 2016 [17364][1][FATAL] ----->  before return getNewMessageIds()
-Mon Dec  5 20:05:11 2016 [17364][1][FATAL] It contains the 
-Mon Dec  5 20:05:11 2016 [17364][1][FATAL] Email subject not includes the specified Separator!!!
-Mon Dec  5 20:05:11 2016 [17364][1][FATAL] in the handleCreateCandidate AOP husnain
-Mon Dec  5 20:05:11 2016 [17364][1][FATAL] In handleCreateCase in AOPInboundEmail CUSTOMMMMM
-Mon Dec  5 20:05:11 2016 [17364][1][FATAL] AOP GOING TO create case!!!!
-Mon Dec  5 20:05:11 2016 [17364][1][FATAL] use existing candidate
-Mon Dec  5 20:05:11 2016 [17364][1][FATAL] print_r($notes,1)
-Mon Dec  5 20:05:11 2016 [17364][1][FATAL] Array
-(
-)
-
-Mon Dec  5 20:05:11 2016 [17364][1][FATAL] create new job application
-Mon Dec  5 20:05:11 2016 [17364][1][FATAL] END of handle create husnain
-Mon Dec  5 20:05:12 2016 [17364][1][FATAL] <div class="mozaik-inner" style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:rgb(68,68,68);padding:0px 30px;margin:0px;"><h2 style="font-family:Arial, Helvetica, sans-serif;font-size:18px;line-height:28.8px;color:#444444;padding:0px;margin:0px;">Hi</h2><p style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:#444444;padding:0px;margin:0px;">It is to inform that you received a new Job Application:</p><p style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:#444444;padding:0px;margin:0px;">Candidate:{cand}</p><p style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:#444444;padding:0px;margin:0px;">Job Application:{job_app}</p><p style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:#444444;padding:0px;margin:0px;">Job Posting:{posting}</p><p style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:#444444;padding:0px;margin:0px;"><br style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:rgb(68,68,68);padding:0px;margin:0px;" /></p><p style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:#444444;padding:0px;margin:0px;">Thanks</p><div class="mozaik-clear" style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:#444444;padding:0px;margin:0px;height:0px;"> <br style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:#444444;padding:0px;margin:0px;" /></div></div>
-Mon Dec  5 20:05:12 2016 [17364][1][FATAL] **************
-Mon Dec  5 20:05:12 2016 [17364][1][FATAL] <div class="mozaik-inner" style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:rgb(68,68,68);padding:0px 30px;margin:0px;"><h2 style="font-family:Arial, Helvetica, sans-serif;font-size:18px;line-height:28.8px;color:#444444;padding:0px;margin:0px;">Hi</h2><p style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:#444444;padding:0px;margin:0px;">It is to inform that you received a new Job Application:</p><p style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:#444444;padding:0px;margin:0px;">Candidate:<a href='http://localhost/git_hrm/hrm/SuiteCRM_HRM/index.php?module=RT_Candidates&return_module=RT_Candidates&action=DetailView&record=e0a4f790-35a0-a4cb-7d3b-58453eeda054'>Candidate</a></p><p style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:#444444;padding:0px;margin:0px;">Job Application:<a href='http://localhost/git_hrm/hrm/SuiteCRM_HRM/index.php?module=RT_Job_Application&return_module=RT_Job_Application&action=DetailView&record=bf148af1-2959-83c4-00fb-584582c702d6'>Job Application</a></p><p style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:#444444;padding:0px;margin:0px;">Job Posting:<a href='http://localhost/git_hrm/hrm/SuiteCRM_HRM/index.php?module=RT_Vacancies&action=index&return_module=RT_Vacancies&return_action=DetailView'>Job Posting</a></p><p style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:#444444;padding:0px;margin:0px;"><br style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:rgb(68,68,68);padding:0px;margin:0px;" /></p><p style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:#444444;padding:0px;margin:0px;">Thanks</p><div class="mozaik-clear" style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:#444444;padding:0px;margin:0px;height:0px;"> <br style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:#444444;padding:0px;margin:0px;" /></div></div>
-Mon Dec  5 20:05:15 2016 [17364][1][FATAL] in the handleCreateCase AOP
-Mon Dec  5 20:05:15 2016 [17364][1][FATAL] print_r($notes,1)
-Mon Dec  5 20:05:15 2016 [17364][1][FATAL] Array
-(
-)
-
-Mon Dec  5 20:05:36 2016 [17364][1][FATAL] -----> getNewMessageIds()
-Mon Dec  5 20:05:37 2016 [17364][1][FATAL] ----->  before return getNewMessageIds()
-Mon Dec  5 20:06:02 2016 [17511][-none-][FATAL] Configuration variable date.timezone is not set, guessed timezone Asia/Karachi. Please set date.timezone="Asia/Karachi" in php.ini!
-Mon Dec  5 20:06:07 2016 [17511][1][FATAL] -----> getNewMessageIds()
-Mon Dec  5 20:06:08 2016 [17511][1][FATAL] ----->  before return getNewMessageIds()
-Mon Dec  5 20:06:11 2016 [17511][1][FATAL] -----> getNewMessageIds()
-Mon Dec  5 20:06:11 2016 [17511][1][FATAL] ----->  before return getNewMessageIds()
-Mon Dec  5 20:07:01 2016 [17538][-none-][FATAL] Configuration variable date.timezone is not set, guessed timezone Asia/Karachi. Please set date.timezone="Asia/Karachi" in php.ini!
-Mon Dec  5 20:07:03 2016 [17538][1][FATAL] -----> getNewMessageIds()
-Mon Dec  5 20:07:03 2016 [17538][1][FATAL] ----->  before return getNewMessageIds()
-Mon Dec  5 20:07:06 2016 [17538][1][FATAL] -----> getNewMessageIds()
-Mon Dec  5 20:07:06 2016 [17538][1][FATAL] ----->  before return getNewMessageIds()
-Mon Dec  5 20:08:01 2016 [17566][-none-][FATAL] Configuration variable date.timezone is not set, guessed timezone Asia/Karachi. Please set date.timezone="Asia/Karachi" in php.ini!
-Mon Dec  5 20:08:04 2016 [17566][1][FATAL] -----> getNewMessageIds()
-Mon Dec  5 20:08:04 2016 [17566][1][FATAL] ----->  before return getNewMessageIds()
-Mon Dec  5 20:08:06 2016 [17566][1][FATAL] -----> getNewMessageIds()
-Mon Dec  5 20:08:07 2016 [17566][1][FATAL] ----->  before return getNewMessageIds()
-Mon Dec  5 20:09:01 2016 [17639][-none-][FATAL] Configuration variable date.timezone is not set, guessed timezone Asia/Karachi. Please set date.timezone="Asia/Karachi" in php.ini!
-Mon Dec  5 20:09:04 2016 [17639][1][FATAL] -----> getNewMessageIds()
-Mon Dec  5 20:09:05 2016 [17639][1][FATAL] ----->  before return getNewMessageIds()
-Mon Dec  5 20:09:07 2016 [17639][1][FATAL] -----> getNewMessageIds()
-Mon Dec  5 20:09:08 2016 [17639][1][FATAL] ----->  before return getNewMessageIds()
-Mon Dec  5 20:10:02 2016 [17685][-none-][FATAL] Configuration variable date.timezone is not set, guessed timezone Asia/Karachi. Please set date.timezone="Asia/Karachi" in php.ini!
-Mon Dec  5 20:10:07 2016 [17685][1][FATAL] -----> getNewMessageIds()
-Mon Dec  5 20:10:07 2016 [17685][1][FATAL] ----->  before return getNewMessageIds()
-Mon Dec  5 20:10:10 2016 [17685][1][FATAL] -----> getNewMessageIds()
-Mon Dec  5 20:10:10 2016 [17685][1][FATAL] ----->  before return getNewMessageIds()
-Mon Dec  5 20:11:01 2016 [17768][-none-][FATAL] Configuration variable date.timezone is not set, guessed timezone Asia/Karachi. Please set date.timezone="Asia/Karachi" in php.ini!
-Mon Dec  5 20:11:06 2016 [17768][1][FATAL] -----> getNewMessageIds()
-Mon Dec  5 20:11:07 2016 [17768][1][FATAL] ----->  before return getNewMessageIds()
-Mon Dec  5 20:11:09 2016 [17768][1][FATAL] -----> getNewMessageIds()
-Mon Dec  5 20:11:10 2016 [17768][1][FATAL] ----->  before return getNewMessageIds()
-Mon Dec  5 20:12:01 2016 [17790][-none-][FATAL] Configuration variable date.timezone is not set, guessed timezone Asia/Karachi. Please set date.timezone="Asia/Karachi" in php.ini!
-Mon Dec  5 20:12:06 2016 [17790][1][FATAL] -----> getNewMessageIds()
-Mon Dec  5 20:12:06 2016 [17790][1][FATAL] ----->  before return getNewMessageIds()
-Mon Dec  5 20:12:09 2016 [17790][1][FATAL] -----> getNewMessageIds()
-Mon Dec  5 20:12:09 2016 [17790][1][FATAL] ----->  before return getNewMessageIds()
-Mon Dec  5 20:13:01 2016 [17815][-none-][FATAL] Configuration variable date.timezone is not set, guessed timezone Asia/Karachi. Please set date.timezone="Asia/Karachi" in php.ini!
-Mon Dec  5 20:13:03 2016 [17815][1][FATAL] -----> getNewMessageIds()
-Mon Dec  5 20:13:04 2016 [17815][1][FATAL] ----->  before return getNewMessageIds()
-Mon Dec  5 20:13:06 2016 [17815][1][FATAL] -----> getNewMessageIds()
-Mon Dec  5 20:13:06 2016 [17815][1][FATAL] ----->  before return getNewMessageIds()
-Mon Dec  5 20:14:01 2016 [17838][-none-][FATAL] Configuration variable date.timezone is not set, guessed timezone Asia/Karachi. Please set date.timezone="Asia/Karachi" in php.ini!
-Mon Dec  5 20:14:06 2016 [17838][1][FATAL] -----> getNewMessageIds()
-Mon Dec  5 20:14:07 2016 [17838][1][FATAL] ----->  before return getNewMessageIds()
-Mon Dec  5 20:14:11 2016 [17838][1][FATAL] -----> getNewMessageIds()
-Mon Dec  5 20:14:11 2016 [17838][1][FATAL] ----->  before return getNewMessageIds()
-Mon Dec  5 20:15:01 2016 [17902][-none-][FATAL] Configuration variable date.timezone is not set, guessed timezone Asia/Karachi. Please set date.timezone="Asia/Karachi" in php.ini!
-Mon Dec  5 20:15:04 2016 [17902][1][FATAL] -----> getNewMessageIds()
-Mon Dec  5 20:15:04 2016 [17902][1][FATAL] ----->  before return getNewMessageIds()
-Mon Dec  5 20:15:06 2016 [17902][1][FATAL] -----> getNewMessageIds()
-Mon Dec  5 20:15:06 2016 [17902][1][FATAL] ----->  before return getNewMessageIds()
-Mon Dec  5 20:16:01 2016 [17925][-none-][FATAL] Configuration variable date.timezone is not set, guessed timezone Asia/Karachi. Please set date.timezone="Asia/Karachi" in php.ini!
-Mon Dec  5 20:16:04 2016 [17925][1][FATAL] -----> getNewMessageIds()
-Mon Dec  5 20:16:04 2016 [17925][1][FATAL] ----->  before return getNewMessageIds()
-Mon Dec  5 20:16:08 2016 [17925][1][FATAL] -----> getNewMessageIds()
-Mon Dec  5 20:16:08 2016 [17925][1][FATAL] ----->  before return getNewMessageIds()
-Mon Dec  5 20:17:01 2016 [17960][-none-][FATAL] Configuration variable date.timezone is not set, guessed timezone Asia/Karachi. Please set date.timezone="Asia/Karachi" in php.ini!
-Mon Dec  5 20:17:04 2016 [17960][1][FATAL] -----> getNewMessageIds()
-Mon Dec  5 20:17:09 2016 [17960][1][FATAL] ----->  before return getNewMessageIds()
-Mon Dec  5 20:17:20 2016 [17960][1][FATAL] -----> getNewMessageIds()
-Mon Dec  5 20:17:20 2016 [17960][1][FATAL] ----->  before return getNewMessageIds()
-Mon Dec  5 20:18:01 2016 [18004][-none-][FATAL] Configuration variable date.timezone is not set, guessed timezone Asia/Karachi. Please set date.timezone="Asia/Karachi" in php.ini!
-Mon Dec  5 20:18:10 2016 [18004][1][FATAL] -----> getNewMessageIds()
-Mon Dec  5 20:18:10 2016 [18004][1][FATAL] ----->  before return getNewMessageIds()
-Mon Dec  5 20:18:20 2016 [18004][1][FATAL] -----> getNewMessageIds()
-Mon Dec  5 20:18:20 2016 [18004][1][FATAL] ----->  before return getNewMessageIds()
-Mon Dec  5 20:19:01 2016 [18030][-none-][FATAL] Configuration variable date.timezone is not set, guessed timezone Asia/Karachi. Please set date.timezone="Asia/Karachi" in php.ini!
-Mon Dec  5 20:19:03 2016 [18030][1][FATAL] -----> getNewMessageIds()
-Mon Dec  5 20:19:05 2016 [18030][1][FATAL] ----->  before return getNewMessageIds()
-Mon Dec  5 20:19:07 2016 [18030][1][FATAL] -----> getNewMessageIds()
-Mon Dec  5 20:19:08 2016 [18030][1][FATAL] ----->  before return getNewMessageIds()
-Mon Dec  5 20:20:02 2016 [18055][-none-][FATAL] Configuration variable date.timezone is not set, guessed timezone Asia/Karachi. Please set date.timezone="Asia/Karachi" in php.ini!
-Mon Dec  5 20:20:08 2016 [18055][1][FATAL] -----> getNewMessageIds()
-Mon Dec  5 20:20:09 2016 [18055][1][FATAL] ----->  before return getNewMessageIds()
-Mon Dec  5 20:20:14 2016 [18055][1][FATAL] -----> getNewMessageIds()
-Mon Dec  5 20:20:14 2016 [18055][1][FATAL] ----->  before return getNewMessageIds()
-Mon Dec  5 20:21:01 2016 [18140][-none-][FATAL] Configuration variable date.timezone is not set, guessed timezone Asia/Karachi. Please set date.timezone="Asia/Karachi" in php.ini!
-Mon Dec  5 20:21:03 2016 [18140][1][FATAL] -----> getNewMessageIds()
-Mon Dec  5 20:21:04 2016 [18140][1][FATAL] ----->  before return getNewMessageIds()
-Mon Dec  5 20:21:06 2016 [18140][1][FATAL] -----> getNewMessageIds()
-Mon Dec  5 20:21:07 2016 [18140][1][FATAL] ----->  before return getNewMessageIds()
+Tue Dec  6 19:50:01 2016 [3075][-none-][FATAL] Configuration variable date.timezone is not set, guessed timezone Asia/Karachi. Please set date.timezone="Asia/Karachi" in php.ini!
+Tue Dec  6 19:50:06 2016 [3075][1][FATAL] -----> getNewMessageIds()
+Tue Dec  6 19:50:06 2016 [3075][1][FATAL] ----->  before return getNewMessageIds()
+Tue Dec  6 19:50:06 2016 [3075][1][FATAL] print_r($newMsgs,1)
+Tue Dec  6 19:50:06 2016 [3075][1][FATAL] 
+Tue Dec  6 19:51:01 2016 [3097][-none-][FATAL] Configuration variable date.timezone is not set, guessed timezone Asia/Karachi. Please set date.timezone="Asia/Karachi" in php.ini!
+Tue Dec  6 19:51:07 2016 [3097][1][FATAL] -----> getNewMessageIds()
+Tue Dec  6 19:51:08 2016 [3097][1][FATAL] ----->  before return getNewMessageIds()
+Tue Dec  6 19:51:08 2016 [3097][1][FATAL] print_r($newMsgs,1)
+Tue Dec  6 19:51:08 2016 [3097][1][FATAL] 
+Tue Dec  6 19:52:01 2016 [3135][-none-][FATAL] Configuration variable date.timezone is not set, guessed timezone Asia/Karachi. Please set date.timezone="Asia/Karachi" in php.ini!
+Tue Dec  6 19:52:05 2016 [3135][1][FATAL] -----> getNewMessageIds()
+Tue Dec  6 19:52:06 2016 [3135][1][FATAL] ----->  before return getNewMessageIds()
+Tue Dec  6 19:52:06 2016 [3135][1][FATAL] print_r($newMsgs,1)
+Tue Dec  6 19:52:06 2016 [3135][1][FATAL] 
+Tue Dec  6 19:52:34 2016 [2872][-none-][FATAL] use existing candidate
+Tue Dec  6 19:52:35 2016 [2872][-none-][FATAL] create new job application
+Tue Dec  6 19:52:36 2016 [2872][-none-][FATAL] create new note husnain
+Tue Dec  6 19:53:01 2016 [3185][-none-][FATAL] Configuration variable date.timezone is not set, guessed timezone Asia/Karachi. Please set date.timezone="Asia/Karachi" in php.ini!
+Tue Dec  6 19:53:06 2016 [3185][1][FATAL] -----> getNewMessageIds()
+Tue Dec  6 19:53:07 2016 [3185][1][FATAL] ----->  before return getNewMessageIds()
+Tue Dec  6 19:53:07 2016 [3185][1][FATAL] print_r($newMsgs,1)
+Tue Dec  6 19:53:07 2016 [3185][1][FATAL] 
+Tue Dec  6 19:54:01 2016 [3201][-none-][FATAL] Configuration variable date.timezone is not set, guessed timezone Asia/Karachi. Please set date.timezone="Asia/Karachi" in php.ini!
+Tue Dec  6 19:54:05 2016 [3201][1][FATAL] -----> getNewMessageIds()
+Tue Dec  6 19:54:06 2016 [3201][1][FATAL] ----->  before return getNewMessageIds()
+Tue Dec  6 19:54:06 2016 [3201][1][FATAL] print_r($newMsgs,1)
+Tue Dec  6 19:54:06 2016 [3201][1][FATAL] 
+Tue Dec  6 19:55:01 2016 [3228][-none-][FATAL] Configuration variable date.timezone is not set, guessed timezone Asia/Karachi. Please set date.timezone="Asia/Karachi" in php.ini!
+Tue Dec  6 19:55:06 2016 [3228][1][FATAL] -----> getNewMessageIds()
+Tue Dec  6 19:55:06 2016 [3228][1][FATAL] ----->  before return getNewMessageIds()
+Tue Dec  6 19:55:06 2016 [3228][1][FATAL] print_r($newMsgs,1)
+Tue Dec  6 19:55:06 2016 [3228][1][FATAL] 
+Tue Dec  6 19:55:28 2016 [1093][-none-][FATAL] use existing candidate
+Tue Dec  6 19:55:29 2016 [1093][-none-][FATAL] create new job application
+Tue Dec  6 19:55:30 2016 [1093][-none-][FATAL] create new note husnain
+Tue Dec  6 19:56:01 2016 [3273][-none-][FATAL] Configuration variable date.timezone is not set, guessed timezone Asia/Karachi. Please set date.timezone="Asia/Karachi" in php.ini!
+Tue Dec  6 19:56:10 2016 [3273][1][FATAL] -----> getNewMessageIds()
+Tue Dec  6 19:56:15 2016 [3273][1][FATAL] ----->  before return getNewMessageIds()
+Tue Dec  6 19:56:15 2016 [3273][1][FATAL] print_r($newMsgs,1)
+Tue Dec  6 19:56:15 2016 [3273][1][FATAL] 
+Tue Dec  6 19:57:01 2016 [3294][-none-][FATAL] Configuration variable date.timezone is not set, guessed timezone Asia/Karachi. Please set date.timezone="Asia/Karachi" in php.ini!
+Tue Dec  6 19:57:06 2016 [3294][1][FATAL] -----> getNewMessageIds()
+Tue Dec  6 19:57:07 2016 [3294][1][FATAL] ----->  before return getNewMessageIds()
+Tue Dec  6 19:57:07 2016 [3294][1][FATAL] print_r($newMsgs,1)
+Tue Dec  6 19:57:07 2016 [3294][1][FATAL] 
+Tue Dec  6 19:58:02 2016 [3336][-none-][FATAL] Configuration variable date.timezone is not set, guessed timezone Asia/Karachi. Please set date.timezone="Asia/Karachi" in php.ini!
+Tue Dec  6 19:58:07 2016 [3336][1][FATAL] -----> getNewMessageIds()
+Tue Dec  6 19:58:08 2016 [3336][1][FATAL] ----->  before return getNewMessageIds()
+Tue Dec  6 19:58:08 2016 [3336][1][FATAL] print_r($newMsgs,1)
+Tue Dec  6 19:58:08 2016 [3336][1][FATAL] 
+Tue Dec  6 19:59:01 2016 [3347][-none-][FATAL] Configuration variable date.timezone is not set, guessed timezone Asia/Karachi. Please set date.timezone="Asia/Karachi" in php.ini!
+Tue Dec  6 19:59:03 2016 [3347][1][FATAL] -----> getNewMessageIds()
+Tue Dec  6 19:59:03 2016 [3347][1][FATAL] ----->  before return getNewMessageIds()
+Tue Dec  6 19:59:03 2016 [3347][1][FATAL] print_r($newMsgs,1)
+Tue Dec  6 19:59:03 2016 [3347][1][FATAL] 
+Tue Dec  6 20:00:02 2016 [3366][-none-][FATAL] Configuration variable date.timezone is not set, guessed timezone Asia/Karachi. Please set date.timezone="Asia/Karachi" in php.ini!
+Tue Dec  6 20:00:02 2016 [3366][1][FATAL] birthday run!!!
+Tue Dec  6 20:00:02 2016 [3366][1][FATAL] hello >>>>>>>>>>
+Tue Dec  6 20:00:02 2016 [3366][1][FATAL] 2016-12-06
+Tue Dec  6 20:00:02 2016 [3366][1][FATAL] 1970-07-01
+Tue Dec  6 20:00:02 2016 [3366][1][FATAL] 1
+Tue Dec  6 20:00:02 2016 [3366][1][FATAL] 1970-07-01
+Tue Dec  6 20:00:02 2016 [3366][1][FATAL] <div class="mozaik-inner" style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:rgb(68,68,68);padding:0px 30px;margin:0px;"><h2 style="font-family:Arial, Helvetica, sans-serif;font-size:18px;line-height:28.8px;color:#444444;padding:0px;margin:0px;">Hi,</h2><p style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:#444444;padding:0px;margin:0px;">It is to inform that the Performance Review of the Employee {emp_name} is due.<br style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:rgb(68,68,68);padding:0px;margin:0px;" />Please submit the Performance Review.<br style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:rgb(68,68,68);padding:0px;margin:0px;" /><br style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:rgb(68,68,68);padding:0px;margin:0px;" />Thanks. <br style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:rgb(68,68,68);padding:0px;margin:0px;" /></p></div>
+Tue Dec  6 20:00:02 2016 [3366][1][FATAL] **************
+Tue Dec  6 20:00:02 2016 [3366][1][FATAL] <div class="mozaik-inner" style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:rgb(68,68,68);padding:0px 30px;margin:0px;"><h2 style="font-family:Arial, Helvetica, sans-serif;font-size:18px;line-height:28.8px;color:#444444;padding:0px;margin:0px;">Hi,</h2><p style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:#444444;padding:0px;margin:0px;">It is to inform that the Performance Review of the Employee hello abc is due.<br style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:rgb(68,68,68);padding:0px;margin:0px;" />Please submit the Performance Review.<br style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:rgb(68,68,68);padding:0px;margin:0px;" /><br style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:rgb(68,68,68);padding:0px;margin:0px;" />Thanks. <br style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:rgb(68,68,68);padding:0px;margin:0px;" /></p></div>
+Tue Dec  6 20:00:05 2016 [3366][1][FATAL] birthday run!!!
+Tue Dec  6 20:00:05 2016 [3366][1][FATAL] birthday run!!!
+Tue Dec  6 20:00:05 2016 [3366][1][FATAL] birthday run!!!
+Tue Dec  6 20:00:05 2016 [3366][1][FATAL] birthday run!!!
+Tue Dec  6 20:00:05 2016 [3366][1][FATAL] birthday run!!!
+Tue Dec  6 20:00:05 2016 [3366][1][FATAL] hello >>>>>>>>>>
+Tue Dec  6 20:00:05 2016 [3366][1][FATAL] 2016-12-06
+Tue Dec  6 20:00:05 2016 [3366][1][FATAL] 2013-03-04
+Tue Dec  6 20:00:05 2016 [3366][1][FATAL] 1
+Tue Dec  6 20:00:05 2016 [3366][1][FATAL] 2013-03-04
+Tue Dec  6 20:00:05 2016 [3366][1][FATAL] <div class="mozaik-inner" style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:rgb(68,68,68);padding:0px 30px;margin:0px;"><h2 style="font-family:Arial, Helvetica, sans-serif;font-size:18px;line-height:28.8px;color:#444444;padding:0px;margin:0px;">Hi,</h2><p style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:#444444;padding:0px;margin:0px;">It is to inform that the Performance Review of the Employee {emp_name} is due.<br style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:rgb(68,68,68);padding:0px;margin:0px;" />Please submit the Performance Review.<br style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:rgb(68,68,68);padding:0px;margin:0px;" /><br style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:rgb(68,68,68);padding:0px;margin:0px;" />Thanks. <br style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:rgb(68,68,68);padding:0px;margin:0px;" /></p></div>
+Tue Dec  6 20:00:05 2016 [3366][1][FATAL] **************
+Tue Dec  6 20:00:05 2016 [3366][1][FATAL] <div class="mozaik-inner" style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:rgb(68,68,68);padding:0px 30px;margin:0px;"><h2 style="font-family:Arial, Helvetica, sans-serif;font-size:18px;line-height:28.8px;color:#444444;padding:0px;margin:0px;">Hi,</h2><p style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:#444444;padding:0px;margin:0px;">It is to inform that the Performance Review of the Employee test all scheduler zzzz is due.<br style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:rgb(68,68,68);padding:0px;margin:0px;" />Please submit the Performance Review.<br style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:rgb(68,68,68);padding:0px;margin:0px;" /><br style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:rgb(68,68,68);padding:0px;margin:0px;" />Thanks. <br style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:rgb(68,68,68);padding:0px;margin:0px;" /></p></div>
+Tue Dec  6 20:00:09 2016 [3366][1][FATAL] birthday run!!!
+Tue Dec  6 20:00:09 2016 [3366][1][FATAL] hello >>>>>>>>>>
+Tue Dec  6 20:00:09 2016 [3366][1][FATAL] 2016-12-06
+Tue Dec  6 20:00:09 2016 [3366][1][FATAL] 2016-05-15
+Tue Dec  6 20:00:09 2016 [3366][1][FATAL] 1
+Tue Dec  6 20:00:09 2016 [3366][1][FATAL] 2016-05-15
+Tue Dec  6 20:00:10 2016 [3366][1][FATAL] <div class="mozaik-inner" style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:rgb(68,68,68);padding:0px 30px;margin:0px;"><h2 style="font-family:Arial, Helvetica, sans-serif;font-size:18px;line-height:28.8px;color:#444444;padding:0px;margin:0px;">Hi,</h2><p style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:#444444;padding:0px;margin:0px;">It is to inform that the Performance Review of the Employee {emp_name} is due.<br style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:rgb(68,68,68);padding:0px;margin:0px;" />Please submit the Performance Review.<br style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:rgb(68,68,68);padding:0px;margin:0px;" /><br style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:rgb(68,68,68);padding:0px;margin:0px;" />Thanks. <br style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:rgb(68,68,68);padding:0px;margin:0px;" /></p></div>
+Tue Dec  6 20:00:10 2016 [3366][1][FATAL] **************
+Tue Dec  6 20:00:10 2016 [3366][1][FATAL] <div class="mozaik-inner" style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:rgb(68,68,68);padding:0px 30px;margin:0px;"><h2 style="font-family:Arial, Helvetica, sans-serif;font-size:18px;line-height:28.8px;color:#444444;padding:0px;margin:0px;">Hi,</h2><p style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:#444444;padding:0px;margin:0px;">It is to inform that the Performance Review of the Employee today 15 is due.<br style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:rgb(68,68,68);padding:0px;margin:0px;" />Please submit the Performance Review.<br style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:rgb(68,68,68);padding:0px;margin:0px;" /><br style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:rgb(68,68,68);padding:0px;margin:0px;" />Thanks. <br style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:rgb(68,68,68);padding:0px;margin:0px;" /></p></div>
+Tue Dec  6 20:00:13 2016 [3366][1][FATAL] birthday run!!!
+Tue Dec  6 20:00:13 2016 [3366][1][FATAL] birthday run!!!
+Tue Dec  6 20:00:13 2016 [3366][1][FATAL] hello >>>>>>>>>>
+Tue Dec  6 20:00:13 2016 [3366][1][FATAL] 2016-12-06
+Tue Dec  6 20:00:13 2016 [3366][1][FATAL] 1970-07-01
+Tue Dec  6 20:00:13 2016 [3366][1][FATAL] 1
+Tue Dec  6 20:00:13 2016 [3366][1][FATAL] 1970-07-01
+Tue Dec  6 20:00:13 2016 [3366][1][FATAL] <div class="mozaik-inner" style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:rgb(68,68,68);padding:0px 30px;margin:0px;"><h2 style="font-family:Arial, Helvetica, sans-serif;font-size:18px;line-height:28.8px;color:#444444;padding:0px;margin:0px;">Hi,</h2><p style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:#444444;padding:0px;margin:0px;">It is to inform that the Performance Review of the Employee {emp_name} is due.<br style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:rgb(68,68,68);padding:0px;margin:0px;" />Please submit the Performance Review.<br style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:rgb(68,68,68);padding:0px;margin:0px;" /><br style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:rgb(68,68,68);padding:0px;margin:0px;" />Thanks. <br style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:rgb(68,68,68);padding:0px;margin:0px;" /></p></div>
+Tue Dec  6 20:00:13 2016 [3366][1][FATAL] **************
+Tue Dec  6 20:00:13 2016 [3366][1][FATAL] <div class="mozaik-inner" style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:rgb(68,68,68);padding:0px 30px;margin:0px;"><h2 style="font-family:Arial, Helvetica, sans-serif;font-size:18px;line-height:28.8px;color:#444444;padding:0px;margin:0px;">Hi,</h2><p style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:#444444;padding:0px;margin:0px;">It is to inform that the Performance Review of the Employee aaa 3435dfg ttt is due.<br style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:rgb(68,68,68);padding:0px;margin:0px;" />Please submit the Performance Review.<br style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:rgb(68,68,68);padding:0px;margin:0px;" /><br style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:rgb(68,68,68);padding:0px;margin:0px;" />Thanks. <br style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:rgb(68,68,68);padding:0px;margin:0px;" /></p></div>
+Tue Dec  6 20:00:16 2016 [3366][1][FATAL] birthday run!!!
+Tue Dec  6 20:00:16 2016 [3366][1][FATAL] birthday run!!!
+Tue Dec  6 20:00:16 2016 [3366][1][FATAL] birthday run!!!
+Tue Dec  6 20:00:16 2016 [3366][1][FATAL] hello >>>>>>>>>>
+Tue Dec  6 20:00:16 2016 [3366][1][FATAL] 2016-12-06
+Tue Dec  6 20:00:16 2016 [3366][1][FATAL] 1970-07-01
+Tue Dec  6 20:00:16 2016 [3366][1][FATAL] 1
+Tue Dec  6 20:00:16 2016 [3366][1][FATAL] 1970-07-01
+Tue Dec  6 20:00:16 2016 [3366][1][FATAL] <div class="mozaik-inner" style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:rgb(68,68,68);padding:0px 30px;margin:0px;"><h2 style="font-family:Arial, Helvetica, sans-serif;font-size:18px;line-height:28.8px;color:#444444;padding:0px;margin:0px;">Hi,</h2><p style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:#444444;padding:0px;margin:0px;">It is to inform that the Performance Review of the Employee {emp_name} is due.<br style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:rgb(68,68,68);padding:0px;margin:0px;" />Please submit the Performance Review.<br style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:rgb(68,68,68);padding:0px;margin:0px;" /><br style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:rgb(68,68,68);padding:0px;margin:0px;" />Thanks. <br style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:rgb(68,68,68);padding:0px;margin:0px;" /></p></div>
+Tue Dec  6 20:00:16 2016 [3366][1][FATAL] **************
+Tue Dec  6 20:00:16 2016 [3366][1][FATAL] <div class="mozaik-inner" style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:rgb(68,68,68);padding:0px 30px;margin:0px;"><h2 style="font-family:Arial, Helvetica, sans-serif;font-size:18px;line-height:28.8px;color:#444444;padding:0px;margin:0px;">Hi,</h2><p style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:#444444;padding:0px;margin:0px;">It is to inform that the Performance Review of the Employee hello xyz bbb is due.<br style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:rgb(68,68,68);padding:0px;margin:0px;" />Please submit the Performance Review.<br style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:rgb(68,68,68);padding:0px;margin:0px;" /><br style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:rgb(68,68,68);padding:0px;margin:0px;" />Thanks. <br style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:rgb(68,68,68);padding:0px;margin:0px;" /></p></div>
+Tue Dec  6 20:00:19 2016 [3366][1][FATAL] birthday run!!!
+Tue Dec  6 20:00:19 2016 [3366][1][FATAL] birthday run!!!
+Tue Dec  6 20:00:19 2016 [3366][1][FATAL] birthday run!!!
+Tue Dec  6 20:00:19 2016 [3366][1][FATAL] hello >>>>>>>>>>
+Tue Dec  6 20:00:19 2016 [3366][1][FATAL] 2016-12-06
+Tue Dec  6 20:00:19 2016 [3366][1][FATAL] 1970-07-01
+Tue Dec  6 20:00:19 2016 [3366][1][FATAL] 1
+Tue Dec  6 20:00:19 2016 [3366][1][FATAL] 1970-07-01
+Tue Dec  6 20:00:19 2016 [3366][1][FATAL] <div class="mozaik-inner" style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:rgb(68,68,68);padding:0px 30px;margin:0px;"><h2 style="font-family:Arial, Helvetica, sans-serif;font-size:18px;line-height:28.8px;color:#444444;padding:0px;margin:0px;">Hi,</h2><p style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:#444444;padding:0px;margin:0px;">It is to inform that the Performance Review of the Employee {emp_name} is due.<br style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:rgb(68,68,68);padding:0px;margin:0px;" />Please submit the Performance Review.<br style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:rgb(68,68,68);padding:0px;margin:0px;" /><br style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:rgb(68,68,68);padding:0px;margin:0px;" />Thanks. <br style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:rgb(68,68,68);padding:0px;margin:0px;" /></p></div>
+Tue Dec  6 20:00:19 2016 [3366][1][FATAL] **************
+Tue Dec  6 20:00:19 2016 [3366][1][FATAL] <div class="mozaik-inner" style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:rgb(68,68,68);padding:0px 30px;margin:0px;"><h2 style="font-family:Arial, Helvetica, sans-serif;font-size:18px;line-height:28.8px;color:#444444;padding:0px;margin:0px;">Hi,</h2><p style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:#444444;padding:0px;margin:0px;">It is to inform that the Performance Review of the Employee hello scheduler aaa is due.<br style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:rgb(68,68,68);padding:0px;margin:0px;" />Please submit the Performance Review.<br style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:rgb(68,68,68);padding:0px;margin:0px;" /><br style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:rgb(68,68,68);padding:0px;margin:0px;" />Thanks. <br style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:rgb(68,68,68);padding:0px;margin:0px;" /></p></div>
+Tue Dec  6 20:00:22 2016 [3366][1][FATAL] birthday run!!!
+Tue Dec  6 20:00:22 2016 [3366][1][FATAL] birthday run!!!
+Tue Dec  6 20:00:22 2016 [3366][1][FATAL] birthday run!!!
+Tue Dec  6 20:00:22 2016 [3366][1][FATAL] hello >>>>>>>>>>
+Tue Dec  6 20:00:22 2016 [3366][1][FATAL] 2016-12-06
+Tue Dec  6 20:00:22 2016 [3366][1][FATAL] 2011-06-22
+Tue Dec  6 20:00:22 2016 [3366][1][FATAL] 1
+Tue Dec  6 20:00:22 2016 [3366][1][FATAL] 2011-06-22
+Tue Dec  6 20:00:23 2016 [3366][1][FATAL] <div class="mozaik-inner" style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:rgb(68,68,68);padding:0px 30px;margin:0px;"><h2 style="font-family:Arial, Helvetica, sans-serif;font-size:18px;line-height:28.8px;color:#444444;padding:0px;margin:0px;">Hi,</h2><p style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:#444444;padding:0px;margin:0px;">It is to inform that the Performance Review of the Employee {emp_name} is due.<br style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:rgb(68,68,68);padding:0px;margin:0px;" />Please submit the Performance Review.<br style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:rgb(68,68,68);padding:0px;margin:0px;" /><br style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:rgb(68,68,68);padding:0px;margin:0px;" />Thanks. <br style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:rgb(68,68,68);padding:0px;margin:0px;" /></p></div>
+Tue Dec  6 20:00:23 2016 [3366][1][FATAL] **************
+Tue Dec  6 20:00:23 2016 [3366][1][FATAL] <div class="mozaik-inner" style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:rgb(68,68,68);padding:0px 30px;margin:0px;"><h2 style="font-family:Arial, Helvetica, sans-serif;font-size:18px;line-height:28.8px;color:#444444;padding:0px;margin:0px;">Hi,</h2><p style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:#444444;padding:0px;margin:0px;">It is to inform that the Performance Review of the Employee another twest shec aaa is due.<br style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:rgb(68,68,68);padding:0px;margin:0px;" />Please submit the Performance Review.<br style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:rgb(68,68,68);padding:0px;margin:0px;" /><br style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:rgb(68,68,68);padding:0px;margin:0px;" />Thanks. <br style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:rgb(68,68,68);padding:0px;margin:0px;" /></p></div>
+Tue Dec  6 20:00:32 2016 [3366][1][FATAL] -----> getNewMessageIds()
+Tue Dec  6 20:00:33 2016 [3366][1][FATAL] ----->  before return getNewMessageIds()
+Tue Dec  6 20:00:33 2016 [3366][1][FATAL] print_r($newMsgs,1)
+Tue Dec  6 20:00:33 2016 [3366][1][FATAL] 
+Tue Dec  6 20:01:01 2016 [3414][-none-][FATAL] Configuration variable date.timezone is not set, guessed timezone Asia/Karachi. Please set date.timezone="Asia/Karachi" in php.ini!
+Tue Dec  6 20:01:07 2016 [3414][1][FATAL] -----> getNewMessageIds()
+Tue Dec  6 20:01:07 2016 [3414][1][FATAL] ----->  before return getNewMessageIds()
+Tue Dec  6 20:01:07 2016 [3414][1][FATAL] print_r($newMsgs,1)
+Tue Dec  6 20:01:07 2016 [3414][1][FATAL] 
+Tue Dec  6 20:02:01 2016 [3611][-none-][FATAL] Configuration variable date.timezone is not set, guessed timezone Asia/Karachi. Please set date.timezone="Asia/Karachi" in php.ini!
+Tue Dec  6 20:02:04 2016 [3611][1][FATAL] -----> getNewMessageIds()
+Tue Dec  6 20:02:04 2016 [3611][1][FATAL] ----->  before return getNewMessageIds()
+Tue Dec  6 20:02:04 2016 [3611][1][FATAL] print_r($newMsgs,1)
+Tue Dec  6 20:02:04 2016 [3611][1][FATAL] 
+Tue Dec  6 20:03:02 2016 [3636][-none-][FATAL] Configuration variable date.timezone is not set, guessed timezone Asia/Karachi. Please set date.timezone="Asia/Karachi" in php.ini!
+Tue Dec  6 20:03:04 2016 [3636][1][FATAL] -----> getNewMessageIds()
+Tue Dec  6 20:03:04 2016 [3636][1][FATAL] ----->  before return getNewMessageIds()
+Tue Dec  6 20:03:04 2016 [3636][1][FATAL] print_r($newMsgs,1)
+Tue Dec  6 20:03:04 2016 [3636][1][FATAL] 
+Tue Dec  6 20:04:01 2016 [3663][-none-][FATAL] Configuration variable date.timezone is not set, guessed timezone Asia/Karachi. Please set date.timezone="Asia/Karachi" in php.ini!
+Tue Dec  6 20:04:05 2016 [3663][1][FATAL] -----> getNewMessageIds()
+Tue Dec  6 20:04:07 2016 [3663][1][FATAL] ----->  before return getNewMessageIds()
+Tue Dec  6 20:04:07 2016 [3663][1][FATAL] print_r($newMsgs,1)
+Tue Dec  6 20:04:07 2016 [3663][1][FATAL] 
+Tue Dec  6 20:05:01 2016 [3704][-none-][FATAL] Configuration variable date.timezone is not set, guessed timezone Asia/Karachi. Please set date.timezone="Asia/Karachi" in php.ini!
+Tue Dec  6 20:05:03 2016 [3704][1][FATAL] -----> getNewMessageIds()
+Tue Dec  6 20:05:04 2016 [3704][1][FATAL] ----->  before return getNewMessageIds()
+Tue Dec  6 20:05:04 2016 [3704][1][FATAL] print_r($newMsgs,1)
+Tue Dec  6 20:05:04 2016 [3704][1][FATAL] 
+Tue Dec  6 20:06:01 2016 [3853][-none-][FATAL] Configuration variable date.timezone is not set, guessed timezone Asia/Karachi. Please set date.timezone="Asia/Karachi" in php.ini!
+Tue Dec  6 20:06:12 2016 [3853][1][FATAL] -----> getNewMessageIds()
+Tue Dec  6 20:06:12 2016 [3853][1][FATAL] ----->  before return getNewMessageIds()
+Tue Dec  6 20:06:12 2016 [3853][1][FATAL] print_r($newMsgs,1)
+Tue Dec  6 20:06:12 2016 [3853][1][FATAL] 
+Tue Dec  6 20:07:01 2016 [874][-none-][FATAL] use existing candidate
+Tue Dec  6 20:07:01 2016 [3914][-none-][FATAL] Configuration variable date.timezone is not set, guessed timezone Asia/Karachi. Please set date.timezone="Asia/Karachi" in php.ini!
+Tue Dec  6 20:07:02 2016 [874][-none-][FATAL] create new job application
+Tue Dec  6 20:07:02 2016 [874][-none-][FATAL] create new note husnain
+Tue Dec  6 20:07:02 2016 [874][-none-][FATAL] <div class="mozaik-inner" style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:rgb(68,68,68);padding:0px 30px;margin:0px;"><h2 style="font-family:Arial, Helvetica, sans-serif;font-size:18px;line-height:28.8px;color:#444444;padding:0px;margin:0px;">Hi</h2><p style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:#444444;padding:0px;margin:0px;">It is to inform that you received a new Job Application:</p><p style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:#444444;padding:0px;margin:0px;">Candidate:{cand}</p><p style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:#444444;padding:0px;margin:0px;">Job Application:{job_app}</p><p style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:#444444;padding:0px;margin:0px;">Job Posting:{posting}</p><p style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:#444444;padding:0px;margin:0px;"><br style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:rgb(68,68,68);padding:0px;margin:0px;" /></p><p style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:#444444;padding:0px;margin:0px;">Thanks</p><div class="mozaik-clear" style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:#444444;padding:0px;margin:0px;height:0px;"> <br style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:#444444;padding:0px;margin:0px;" /></div></div>
+Tue Dec  6 20:07:02 2016 [874][-none-][FATAL] **************
+Tue Dec  6 20:07:02 2016 [874][-none-][FATAL] <div class="mozaik-inner" style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:rgb(68,68,68);padding:0px 30px;margin:0px;"><h2 style="font-family:Arial, Helvetica, sans-serif;font-size:18px;line-height:28.8px;color:#444444;padding:0px;margin:0px;">Hi</h2><p style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:#444444;padding:0px;margin:0px;">It is to inform that you received a new Job Application:</p><p style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:#444444;padding:0px;margin:0px;">Candidate:<a href='http://localhost/git_hrm/hrm/SuiteCRM_HRM/index.php?module=RT_Candidates&return_module=RT_Candidates&action=DetailView&record=73f60cad-412c-6a33-db2c-5846c9d54144'>Candidate</a></p><p style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:#444444;padding:0px;margin:0px;">Job Application:<a href='http://localhost/git_hrm/hrm/SuiteCRM_HRM/index.php?module=RT_Job_Application&return_module=RT_Job_Application&action=DetailView&record=443fdd7b-6e18-27dc-0664-5846d4d953dc'>Job Application</a></p><p style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:#444444;padding:0px;margin:0px;">Job Posting:<a href='http://localhost/git_hrm/hrm/SuiteCRM_HRM/index.php?module=RT_Vacancies&return_module=RT_Vacancies&action=DetailView&record=c03cd043-4000-5ef9-850f-58451e92a1b5'>Job Posting</a></p><p style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:#444444;padding:0px;margin:0px;"><br style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:rgb(68,68,68);padding:0px;margin:0px;" /></p><p style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:#444444;padding:0px;margin:0px;">Thanks</p><div class="mozaik-clear" style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:#444444;padding:0px;margin:0px;height:0px;"> <br style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:#444444;padding:0px;margin:0px;" /></div></div>
+Tue Dec  6 20:07:04 2016 [3914][1][FATAL] -----> getNewMessageIds()
+Tue Dec  6 20:07:04 2016 [3914][1][FATAL] ----->  before return getNewMessageIds()
+Tue Dec  6 20:07:04 2016 [3914][1][FATAL] print_r($newMsgs,1)
+Tue Dec  6 20:07:04 2016 [3914][1][FATAL] 
+Tue Dec  6 20:08:01 2016 [4072][-none-][FATAL] Configuration variable date.timezone is not set, guessed timezone Asia/Karachi. Please set date.timezone="Asia/Karachi" in php.ini!
+Tue Dec  6 20:08:04 2016 [4072][1][FATAL] -----> getNewMessageIds()
+Tue Dec  6 20:08:04 2016 [4072][1][FATAL] ----->  before return getNewMessageIds()
+Tue Dec  6 20:08:04 2016 [4072][1][FATAL] print_r($newMsgs,1)
+Tue Dec  6 20:08:04 2016 [4072][1][FATAL] 

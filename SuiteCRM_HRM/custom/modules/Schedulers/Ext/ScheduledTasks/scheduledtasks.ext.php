@@ -328,9 +328,14 @@ function pollMonitoredInboxesAOP()
                 if (!$ieX->isPop3Protocol()) {
                     $newMsgs = $ieX->getNewMessageIds();
                 }
+                $GLOBALS['log']->fatal('print_r($newMsgs,1)');
+                $GLOBALS['log']->fatal(print_r($newMsgs,1));
                 if (is_array($newMsgs)) {
                     $current = 1;
                     $total = count($newMsgs);
+                    $GLOBALS['log']->fatal('COUNT NEW MESSAGE');
+                    $GLOBALS['log']->fatal(count($newMsgs));
+
                     require_once("include/SugarFolders/SugarFolders.php");
                     $sugarFolder = new SugarFolder();
                     $groupFolderId = $ieX->groupfolder_id;

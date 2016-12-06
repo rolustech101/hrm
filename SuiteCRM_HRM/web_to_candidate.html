@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!--<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">-->
+    <title>Title</title>
+    <script type="text/javascript">
+        function ValidateEmail(mail)
+        {
+            var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+            if(re.test(mail)){
+                return true;
+            }else {
+                alert("You have entered an invalid email address!");
+                return false;
+            }
+            return false;
+        }
+    </script>
+</head>
+<body>
+<style type="text/css"><!--
+form#WebToCandidateForm, form#WebToCandidateForm * {
+    margin: 0;
+    padding: 0;
+    border: none;
+    color: #333;
+    font-size: 12px;
+    line-height: 1.6em;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+form#WebToCandidateForm {
+    float: left;
+    border: 1px solid #ccc;
+    margin: 10px;
+}
+
+form#WebToCandidateForm h1 {
+    font-size: 32px;
+    font-weight: bold;
+    background-color: rgb(60, 141, 188);
+    color: rgb(247, 247, 247);
+    padding: 10px 20px;
+}
+
+form#WebToCandidateForm h2 {
+    font-size: 24px;
+    font-weight: bold;
+    background-color: rgb(60, 141, 188);
+    color: rgb(247, 247, 247);
+    padding: 10px 20px;
+}
+
+form#WebToCandidateForm h3 {
+    font-size: 12px;
+    font-weight: bold;
+    padding: 10px 20px;
+}
+
+form#WebToCandidateForm h4 {
+    font-size: 10px;
+    font-weight: bold;
+    padding: 10px 20px;
+}
+
+form#WebToCandidateForm h5 {
+    font-size: 8px;
+    font-weight: bold;
+    padding: 10px 20px;
+}
+
+form#WebToCandidateForm h6 {
+    font-size: 6px;
+    font-weight: bold;
+    padding: 10px 20px;
+}
+
+form#WebToCandidateForm p {
+    padding: 10px 20px;
+}
+
+form#WebToCandidateForm input,
+form#WebToCandidateForm select,
+form#WebToCandidateForm textarea {
+    border: 1px solid #ccc;
+    display: block;
+    float: left;
+    min-width: 170px;
+    padding: 5px;
+}
+
+form#WebToCandidateForm select {
+    background-color: white;
+}
+
+form#WebToCandidateForm input[type="button"],
+form#WebToCandidateForm input[type="submit"] {
+    display: inline;
+    float: none;
+    padding: 5px 10px;
+    width: auto;
+    min-width: auto;
+}
+
+form#WebToCandidateForm input[type="checkbox"],
+form#WebToCandidateForm input[type="radio"] {
+    width: 18px;
+    min-width: auto;
+}
+
+form#WebToCandidateForm div.col {
+    display: block;
+    float: left;
+    width: 330px;
+    padding: 10px 20px;
+}
+form#WebToCandidateForm div.panel {
+    font-size: 18px;
+    font-weight: bold;
+    background-color: rgba(6, 6, 6, 0.61);
+    color: rgb(247, 247, 247);
+    padding: 8px 16px;
+}
+
+form#WebToCandidateForm div.clear {
+    display: block;
+    float: none;
+    clear: both;
+    height: 0px;
+    overflow: hidden;
+}
+
+form#WebToCandidateForm div.center {
+    text-align: center;
+}
+
+form#WebToCandidateForm div.buttons {
+    padding: 10px 0;
+    border-top: 1px solid #ccc;
+    background-color: #f7f7f7
+}
+
+form#WebToCandidateForm label {
+    display: block;
+    float: left;
+    width: 160px;
+    font-weight: bold;
+}
+
+form#WebToCandidateForm span.required {
+    color: #FF0000;
+}
+
+--></style>
+
+<form id="WebToCandidateForm"
+      action="http://localhost/git_hrm/hrm/SuiteCRM_HRM/index.php?entryPoint=WebToCandidateCapture"
+      method="POST" name="WebToCandidateForm" enctype="multipart/form-data" onsubmit="return ValidateEmail(document.getElementById('email1').value)">
+    <h2>Job Application Form</h2>
+    <p>Please fill The form fields</p>
+    <div class="panel">Contact Information</div>
+    <div class="row">
+        <div class="col"><label>First Name: </label><input name="first_name" id="first_name" type="text"/></div>
+        <div class="col"><label>Last Name: <span class="required">*</span></label>
+            <input name="last_name" id="last_name" type="text" required=""/></div>
+        <div class="clear">�</div>
+    </div>
+    <div class="row">
+        <div class="col"><label>Mobile Phone: <span class="required">*</span></label><input name="mobile_phone"
+                                                                                            id="mobile_phone"
+                                                                                            type="text" required=""/>
+        </div>
+        <div class="col"><label>Home Phone: </label>
+            <input name="home_phone" id="home_phone" type="text"/>
+        </div>
+        <div class="clear">�</div>
+    </div>
+    <div class="row">
+        <div class="col"><label>SSN: </label>
+            <input name="ssn" id="ssn" type="text"/>
+        </div>
+        <div class="col"><label>Do Not Call: </label><input name="do_not_call" id="do_not_call" type="checkbox"/></div>
+        <div class="clear">�</div>
+    </div>
+<div class="panel">Email</div>
+    <div class="row">
+        <div class="col"><label>Email Address: <span class="required">*</span></label><input name="email1" id="email1" type="email" required=""/></div>
+        <div class="col"><label>Other Email: </label><input name="email2" id="email2" type="email"/></div>
+        <div class="clear">�</div>
+    </div>
+    <div class="panel">Address</div>
+
+    <div class="row">
+        <div class="col"><label>Address Street: </label><input name="primary_address_street" id="primary_address_street"
+                                                                   type="text"/></div>
+        <div class="col"><label>Address City: </label><input name="primary_address_city"
+                                                                     id="primary_address_city" type="text"/></div>
+        <div class="clear">�</div>
+    </div>
+    <div class="row">
+        <div class="col"><label>Address State: </label><input name="primary_address_state" id="primary_address_state"
+                                                                  type="text"/></div>
+        <div class="col"><label>Address Postalcode: </label><input name="primary_address_postalcode" id="primary_address_postalcode" type="text"/>
+            <div class="clear">�</div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">�</div>
+        <div class="col"><label>Primary Address Country: </label><input name="primary_address_country"
+                                                                        id="primary_address_country" type="text"/></div>
+        <div class="clear">�</div>
+    </div>
+    <div class="panel">Emloyement</div>
+
+    <div class="row">
+        <div class="col"><label>Currently Employed: </label><input name="currently_employed" id="currently_employed" type="checkbox"/></div>
+        <div class="col"><label>Current Employer: </label><input name="current_employer"
+                                                                        id="current_employer" type="text"/></div>
+        <div class="clear">�</div>
+    </div>
+    <div class="row">
+        <div class="col">�</div>
+        <div class="col"><label>Years of Experience: </label><input name="years_of_experience"
+                                                                 id="years_of_experience" type="text"/></div>
+        <div class="clear">�</div>
+    </div>
+    <div class="panel">Additional Details</div>
+    <div class="row">
+        <div class="col"><label>US Citizen: </label><input name="us_citizen" id="us_citizen" type="checkbox"/></div>
+        <div class="col"><label>Visa Required: </label><input name="visa_required" id="visa_required" type="checkbox"/></div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <label>Education: </label>
+            <select name="education" id="education">
+                <option value="">--None--</option>
+                <option value="BA_BS">BA/BS</option>
+                <option value="hs_diploma">HS Diploma</option>
+                <option value="ma_ms_mba">MA/MS/MBA</option>
+                <option value="phd">Ph.D.</option>
+                <option value="post_doc">Post Doc</option>
+            </select>
+        </div>
+        <div class="row">
+            <div class="col">
+                <label>Upload Resume: <span class="required">*</span></label>
+                <input type="file" name="fileToUpload" id="fileToUpload" required="">
+            </div>
+
+        </div>
+        <div class="clear">�</div>
+    </div>
+    <input name="vacancy_id" id="vacancy_id" type="hidden" value="c03cd043-4000-5ef9-850f-58451e92a1b5"/>
+    <div class="row center buttons"><input class="button" name="Submit" type="submit" value="Submit"/></div>
+</form>
+</body>
+</html>

@@ -70,7 +70,8 @@ function get_non_filling_countries()
 }
 function getCandidate($email)
 {
-    $sql = "select * from rt_candidates where last_name = '$email'";
+//    $sql = "select * from rt_candidates where last_name = '$email'";
+    $sql = "select * from (select cand.id as cand_id, cand.phone_mobile,cand.phone_work,cand.phone_other,cand.phone_home,cand.phone_fax, e_add.id as e_id, e_add.email_address_id,e_add.bean_id from rt_candidates as cand inner join email_addr_bean_rel as e_add on e_add.bean_id = cand.id where cand.deleted = 0 AND e_add.deleted = 0 ) as tt inner join email_addresses as addresses on addresses.id = tt.email_address_id where addresses.email_address = '$email' AND addresses.deleted = 0";
     $res = $GLOBALS['db']->query($sql);
     if($res->num_rows > 1){
         $GLOBALS['log']->fatal('Duplicate candidates exists please delete there should be unique names!');
@@ -78,7 +79,7 @@ function getCandidate($email)
     }elseif($res->num_rows > 0 && $res->num_rows == 1){
         $GLOBALS['log']->fatal('use existing candidate');
         $row = $GLOBALS['db']->fetchByAssoc($res);
-        $cid = $row['id'];
+        $cid = $row['cand_id'];
         $c = BeanFactory::getBean('RT_Candidates',$cid);
     }else{
         $GLOBALS['log']->fatal('creating new candidate');
@@ -137,10 +138,9 @@ function send_email($cand_id,$job_app_id,$job_post_id)
 }
 function handleCreateCandidate($email,$job_title) {
 
-    $GLOBALS['log']->fatal('in the handleCreateCandidate AOP husnain');
+    $GLOBALS['log']->fatal('in the handleCreateCandidate AOP husnain UTILS');
     global $current_user, $mod_strings, $current_language;
     $mod_strings = return_module_language($current_language, "Emails");
-    $GLOBALS['log']->fatal('In handleCreateCase in AOPInboundEmail CUSTOMMMMM');
 
         $GLOBALS['log']->fatal('AOP GOING TO create case!!!!');
         $GLOBALS['log']->debug('retrieveing email');
@@ -204,9 +204,12 @@ function handleCreateCandidate($email,$job_title) {
         foreach($notes as $note){
 
             $GLOBALS['log']->fatal('create new note husnain');
+            $GLOBALS['log']->fatal('MIMEEEEEEEEE TYPEEEEE:::::::::::');
+            $GLOBALS['log']->fatal($note->file_mime_type);
 
             $newNote = BeanFactory::newBean('Notes');
             $newNote->name = $note->name;
+
             $newNote->file_mime_type = $note->file_mime_type;
             $newNote->filename = $note->filename;
             $newNote->parent_type = 'RT_Job_Application';
