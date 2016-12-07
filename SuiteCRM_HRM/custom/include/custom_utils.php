@@ -87,6 +87,62 @@ function getCandidate($email)
     }
     return $c;
 }
+function send_interview_mail($module, $name, $id, $date, $template_name, $job_app_id = '')
+{
+    $sugar_email = new SugarPHPMailer();
+    $sugar_email->IsHTML(true);
+    $admin = new Administration();
+    $admin->retrieveSettings();
+
+    $sugar_email->prepForOutbound();
+    $sugar_email->setMailerForSystem();
+    $sugar_email->From = $admin->settings['notify_fromaddress'];
+    $sugar_email->FromName = $admin->settings['notify_fromname'];
+    $template_name = $template_name;
+    $template = new EmailTemplate();
+    $template->retrieve_by_string_fields(array('name' => $template_name,'type'=>'email'));
+    $sugar_email->Subject = $template->subject;
+    $GLOBALS['log']->fatal(print_r(from_html($template->body_html),1));
+    if($module == 'RT_Candidates'){
+        $sql = "select * from (select cand.id as cand_id, cand.phone_mobile,cand.phone_work,cand.phone_other,cand.phone_home,cand.phone_fax, e_add.id as e_id, e_add.email_address_id,e_add.bean_id from rt_candidates as cand inner join email_addr_bean_rel as e_add on e_add.bean_id = cand.id where cand.deleted = 0 AND e_add.deleted = 0 ) as tt inner join email_addresses as addresses on addresses.id = tt.email_address_id where cand_id = '$id' and addresses.deleted = 0;";
+        $res = $GLOBALS['db']->query($sql);
+        if($res->num_rows > 1){
+            $GLOBALS['log']->fatal('candidate has many emails');
+        }elseif($res->num_rows > 0 && $res->num_rows == 1){
+            $row = $GLOBALS['db']->fetchByAssoc($res);
+            $c_email = $row['email_address'];
+        }else{
+            $GLOBALS['log']->fatal('Candidate does not have the Email Address');
+        }
+        $template->body_html = str_replace('{cand_name}',$name,$template->body_html);
+        $template->body_html = str_replace('{date}',$date,$template->body_html);
+        $GLOBALS['log']->fatal(print_r(from_html($template->body_html),1));
+    }elseif ($module == 'RT_Employees'){
+        $template->body_html = str_replace('{emp_name}',$name,$template->body_html);
+        $template->body_html = str_replace('{date}',$date,$template->body_html);
+//        $template->body_html = str_replace('{job_app}',$date,$template->body_html);
+    }else{
+        $GLOBALS['log']->fatal('Please Provide a valid module name');
+        die;
+    }
+
+    $sugar_email->Body = from_html($template->body_html);
+
+    $sql_e = "select * from config where name = 'notification_receiver_email' and category = 'system'";
+    $res_e = $GLOBALS['db']->query($sql_e);
+    if($res_e->num_rows > 0){
+        $row_e = $GLOBALS['db']->fetchByAssoc($res_e);
+        $to = $row_e['value'];
+        $sugar_email->AddAddress($to);
+    }else{
+        $GLOBALS['log']->fatal('Could not find notification_receiver_email in the system settings!');
+        return false;
+    }
+
+    if (!$sugar_email->Send()) {
+        $GLOBALS['log']->fatal("Could not send Mail:  " . $sugar_email->ErrorInfo);
+    }
+}
 function send_email($cand_id,$job_app_id,$job_post_id)
 {
     global $sugar_config;

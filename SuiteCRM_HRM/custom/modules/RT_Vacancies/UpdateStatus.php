@@ -45,7 +45,7 @@ class UpdateStatus
 //        $loginUrl = $helper->getLoginUrl('http://{your-website}/login-callback.php', $permissions);
             global $sugar_config;
             $base_url = $sugar_config['site_url'];
-            $loginUrl = $helper->getLoginUrl("$base_url/index.php?entryPoint=login_callback");
+            $loginUrl = $helper->getLoginUrl("$base_url/index.php?entryPoint=send_post_facebook");
 
 //            header("location:$loginUrl");
             SugarApplication::redirect($loginUrl);

@@ -38,8 +38,9 @@ if (!defined('sugarEntry') || !sugarEntry) die('Not A Valid Entry Point');
  * display the words  "Powered by SugarCRM" and "Supercharged by SuiteCRM".
  ********************************************************************************/
 
-$dictionary['contacts_bugs'] = array('table' => 'contacts_bugs'
-, 'fields' => array(
+$dictionary['contacts_bugs'] =
+    array('table' => 'contacts_bugs'
+    , 'fields' => array(
         array('name' => 'id', 'type' => 'varchar', 'len' => '36')
     , array('name' => 'contact_id', 'type' => 'varchar', 'len' => '36',)
     , array('name' => 'bug_id', 'type' => 'varchar', 'len' => '36',)
@@ -63,8 +64,8 @@ $dictionary['contacts_bugs'] = array('table' => 'contacts_bugs'
             'rhs_key' => 'id',
             'relationship_type' => 'many-to-many',
             'join_table' => 'contacts_bugs',
-            'join_key_lhs' => 'contact_id', 'join_key_rhs' => 'bug_id'))
-
+            'join_key_lhs' => 'contact_id',
+            'join_key_rhs' => 'bug_id'))
 
 )
 ?>

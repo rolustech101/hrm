@@ -40,6 +40,9 @@
 $module_name = 'RT_Job_Application';
 $viewdefs[$module_name]['DetailView'] = array(
 'templateMeta' => array('form' => array('buttons'=>array('EDIT', 'DUPLICATE', 'DELETE', 'FIND_DUPLICATES',
+    array (
+        'customCode' => '<input title="Click to Schedule Interview" class="button" type="button" name="schedule_interview" value="Schedule Interview" onclick="window.location = \'index.php?module=RT_Interviews&action=EditView&return_module=RT_Interviews&return_action=DetailView&from_job_app=true&job_app_id={$fields.id.value}\';">',
+    ),
                                                          )),
                         'maxColumns' => '2',
                         'widths' => array(

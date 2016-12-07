@@ -1,181 +1,2113 @@
-Tue Dec  6 19:50:01 2016 [3075][-none-][FATAL] Configuration variable date.timezone is not set, guessed timezone Asia/Karachi. Please set date.timezone="Asia/Karachi" in php.ini!
-Tue Dec  6 19:50:06 2016 [3075][1][FATAL] -----> getNewMessageIds()
-Tue Dec  6 19:50:06 2016 [3075][1][FATAL] ----->  before return getNewMessageIds()
-Tue Dec  6 19:50:06 2016 [3075][1][FATAL] print_r($newMsgs,1)
-Tue Dec  6 19:50:06 2016 [3075][1][FATAL] 
-Tue Dec  6 19:51:01 2016 [3097][-none-][FATAL] Configuration variable date.timezone is not set, guessed timezone Asia/Karachi. Please set date.timezone="Asia/Karachi" in php.ini!
-Tue Dec  6 19:51:07 2016 [3097][1][FATAL] -----> getNewMessageIds()
-Tue Dec  6 19:51:08 2016 [3097][1][FATAL] ----->  before return getNewMessageIds()
-Tue Dec  6 19:51:08 2016 [3097][1][FATAL] print_r($newMsgs,1)
-Tue Dec  6 19:51:08 2016 [3097][1][FATAL] 
-Tue Dec  6 19:52:01 2016 [3135][-none-][FATAL] Configuration variable date.timezone is not set, guessed timezone Asia/Karachi. Please set date.timezone="Asia/Karachi" in php.ini!
-Tue Dec  6 19:52:05 2016 [3135][1][FATAL] -----> getNewMessageIds()
-Tue Dec  6 19:52:06 2016 [3135][1][FATAL] ----->  before return getNewMessageIds()
-Tue Dec  6 19:52:06 2016 [3135][1][FATAL] print_r($newMsgs,1)
-Tue Dec  6 19:52:06 2016 [3135][1][FATAL] 
-Tue Dec  6 19:52:34 2016 [2872][-none-][FATAL] use existing candidate
-Tue Dec  6 19:52:35 2016 [2872][-none-][FATAL] create new job application
-Tue Dec  6 19:52:36 2016 [2872][-none-][FATAL] create new note husnain
-Tue Dec  6 19:53:01 2016 [3185][-none-][FATAL] Configuration variable date.timezone is not set, guessed timezone Asia/Karachi. Please set date.timezone="Asia/Karachi" in php.ini!
-Tue Dec  6 19:53:06 2016 [3185][1][FATAL] -----> getNewMessageIds()
-Tue Dec  6 19:53:07 2016 [3185][1][FATAL] ----->  before return getNewMessageIds()
-Tue Dec  6 19:53:07 2016 [3185][1][FATAL] print_r($newMsgs,1)
-Tue Dec  6 19:53:07 2016 [3185][1][FATAL] 
-Tue Dec  6 19:54:01 2016 [3201][-none-][FATAL] Configuration variable date.timezone is not set, guessed timezone Asia/Karachi. Please set date.timezone="Asia/Karachi" in php.ini!
-Tue Dec  6 19:54:05 2016 [3201][1][FATAL] -----> getNewMessageIds()
-Tue Dec  6 19:54:06 2016 [3201][1][FATAL] ----->  before return getNewMessageIds()
-Tue Dec  6 19:54:06 2016 [3201][1][FATAL] print_r($newMsgs,1)
-Tue Dec  6 19:54:06 2016 [3201][1][FATAL] 
-Tue Dec  6 19:55:01 2016 [3228][-none-][FATAL] Configuration variable date.timezone is not set, guessed timezone Asia/Karachi. Please set date.timezone="Asia/Karachi" in php.ini!
-Tue Dec  6 19:55:06 2016 [3228][1][FATAL] -----> getNewMessageIds()
-Tue Dec  6 19:55:06 2016 [3228][1][FATAL] ----->  before return getNewMessageIds()
-Tue Dec  6 19:55:06 2016 [3228][1][FATAL] print_r($newMsgs,1)
-Tue Dec  6 19:55:06 2016 [3228][1][FATAL] 
-Tue Dec  6 19:55:28 2016 [1093][-none-][FATAL] use existing candidate
-Tue Dec  6 19:55:29 2016 [1093][-none-][FATAL] create new job application
-Tue Dec  6 19:55:30 2016 [1093][-none-][FATAL] create new note husnain
-Tue Dec  6 19:56:01 2016 [3273][-none-][FATAL] Configuration variable date.timezone is not set, guessed timezone Asia/Karachi. Please set date.timezone="Asia/Karachi" in php.ini!
-Tue Dec  6 19:56:10 2016 [3273][1][FATAL] -----> getNewMessageIds()
-Tue Dec  6 19:56:15 2016 [3273][1][FATAL] ----->  before return getNewMessageIds()
-Tue Dec  6 19:56:15 2016 [3273][1][FATAL] print_r($newMsgs,1)
-Tue Dec  6 19:56:15 2016 [3273][1][FATAL] 
-Tue Dec  6 19:57:01 2016 [3294][-none-][FATAL] Configuration variable date.timezone is not set, guessed timezone Asia/Karachi. Please set date.timezone="Asia/Karachi" in php.ini!
-Tue Dec  6 19:57:06 2016 [3294][1][FATAL] -----> getNewMessageIds()
-Tue Dec  6 19:57:07 2016 [3294][1][FATAL] ----->  before return getNewMessageIds()
-Tue Dec  6 19:57:07 2016 [3294][1][FATAL] print_r($newMsgs,1)
-Tue Dec  6 19:57:07 2016 [3294][1][FATAL] 
-Tue Dec  6 19:58:02 2016 [3336][-none-][FATAL] Configuration variable date.timezone is not set, guessed timezone Asia/Karachi. Please set date.timezone="Asia/Karachi" in php.ini!
-Tue Dec  6 19:58:07 2016 [3336][1][FATAL] -----> getNewMessageIds()
-Tue Dec  6 19:58:08 2016 [3336][1][FATAL] ----->  before return getNewMessageIds()
-Tue Dec  6 19:58:08 2016 [3336][1][FATAL] print_r($newMsgs,1)
-Tue Dec  6 19:58:08 2016 [3336][1][FATAL] 
-Tue Dec  6 19:59:01 2016 [3347][-none-][FATAL] Configuration variable date.timezone is not set, guessed timezone Asia/Karachi. Please set date.timezone="Asia/Karachi" in php.ini!
-Tue Dec  6 19:59:03 2016 [3347][1][FATAL] -----> getNewMessageIds()
-Tue Dec  6 19:59:03 2016 [3347][1][FATAL] ----->  before return getNewMessageIds()
-Tue Dec  6 19:59:03 2016 [3347][1][FATAL] print_r($newMsgs,1)
-Tue Dec  6 19:59:03 2016 [3347][1][FATAL] 
-Tue Dec  6 20:00:02 2016 [3366][-none-][FATAL] Configuration variable date.timezone is not set, guessed timezone Asia/Karachi. Please set date.timezone="Asia/Karachi" in php.ini!
-Tue Dec  6 20:00:02 2016 [3366][1][FATAL] birthday run!!!
-Tue Dec  6 20:00:02 2016 [3366][1][FATAL] hello >>>>>>>>>>
-Tue Dec  6 20:00:02 2016 [3366][1][FATAL] 2016-12-06
-Tue Dec  6 20:00:02 2016 [3366][1][FATAL] 1970-07-01
-Tue Dec  6 20:00:02 2016 [3366][1][FATAL] 1
-Tue Dec  6 20:00:02 2016 [3366][1][FATAL] 1970-07-01
-Tue Dec  6 20:00:02 2016 [3366][1][FATAL] <div class="mozaik-inner" style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:rgb(68,68,68);padding:0px 30px;margin:0px;"><h2 style="font-family:Arial, Helvetica, sans-serif;font-size:18px;line-height:28.8px;color:#444444;padding:0px;margin:0px;">Hi,</h2><p style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:#444444;padding:0px;margin:0px;">It is to inform that the Performance Review of the Employee {emp_name} is due.<br style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:rgb(68,68,68);padding:0px;margin:0px;" />Please submit the Performance Review.<br style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:rgb(68,68,68);padding:0px;margin:0px;" /><br style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:rgb(68,68,68);padding:0px;margin:0px;" />Thanks. <br style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:rgb(68,68,68);padding:0px;margin:0px;" /></p></div>
-Tue Dec  6 20:00:02 2016 [3366][1][FATAL] **************
-Tue Dec  6 20:00:02 2016 [3366][1][FATAL] <div class="mozaik-inner" style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:rgb(68,68,68);padding:0px 30px;margin:0px;"><h2 style="font-family:Arial, Helvetica, sans-serif;font-size:18px;line-height:28.8px;color:#444444;padding:0px;margin:0px;">Hi,</h2><p style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:#444444;padding:0px;margin:0px;">It is to inform that the Performance Review of the Employee hello abc is due.<br style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:rgb(68,68,68);padding:0px;margin:0px;" />Please submit the Performance Review.<br style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:rgb(68,68,68);padding:0px;margin:0px;" /><br style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:rgb(68,68,68);padding:0px;margin:0px;" />Thanks. <br style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:rgb(68,68,68);padding:0px;margin:0px;" /></p></div>
-Tue Dec  6 20:00:05 2016 [3366][1][FATAL] birthday run!!!
-Tue Dec  6 20:00:05 2016 [3366][1][FATAL] birthday run!!!
-Tue Dec  6 20:00:05 2016 [3366][1][FATAL] birthday run!!!
-Tue Dec  6 20:00:05 2016 [3366][1][FATAL] birthday run!!!
-Tue Dec  6 20:00:05 2016 [3366][1][FATAL] birthday run!!!
-Tue Dec  6 20:00:05 2016 [3366][1][FATAL] hello >>>>>>>>>>
-Tue Dec  6 20:00:05 2016 [3366][1][FATAL] 2016-12-06
-Tue Dec  6 20:00:05 2016 [3366][1][FATAL] 2013-03-04
-Tue Dec  6 20:00:05 2016 [3366][1][FATAL] 1
-Tue Dec  6 20:00:05 2016 [3366][1][FATAL] 2013-03-04
-Tue Dec  6 20:00:05 2016 [3366][1][FATAL] <div class="mozaik-inner" style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:rgb(68,68,68);padding:0px 30px;margin:0px;"><h2 style="font-family:Arial, Helvetica, sans-serif;font-size:18px;line-height:28.8px;color:#444444;padding:0px;margin:0px;">Hi,</h2><p style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:#444444;padding:0px;margin:0px;">It is to inform that the Performance Review of the Employee {emp_name} is due.<br style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:rgb(68,68,68);padding:0px;margin:0px;" />Please submit the Performance Review.<br style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:rgb(68,68,68);padding:0px;margin:0px;" /><br style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:rgb(68,68,68);padding:0px;margin:0px;" />Thanks. <br style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:rgb(68,68,68);padding:0px;margin:0px;" /></p></div>
-Tue Dec  6 20:00:05 2016 [3366][1][FATAL] **************
-Tue Dec  6 20:00:05 2016 [3366][1][FATAL] <div class="mozaik-inner" style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:rgb(68,68,68);padding:0px 30px;margin:0px;"><h2 style="font-family:Arial, Helvetica, sans-serif;font-size:18px;line-height:28.8px;color:#444444;padding:0px;margin:0px;">Hi,</h2><p style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:#444444;padding:0px;margin:0px;">It is to inform that the Performance Review of the Employee test all scheduler zzzz is due.<br style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:rgb(68,68,68);padding:0px;margin:0px;" />Please submit the Performance Review.<br style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:rgb(68,68,68);padding:0px;margin:0px;" /><br style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:rgb(68,68,68);padding:0px;margin:0px;" />Thanks. <br style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:rgb(68,68,68);padding:0px;margin:0px;" /></p></div>
-Tue Dec  6 20:00:09 2016 [3366][1][FATAL] birthday run!!!
-Tue Dec  6 20:00:09 2016 [3366][1][FATAL] hello >>>>>>>>>>
-Tue Dec  6 20:00:09 2016 [3366][1][FATAL] 2016-12-06
-Tue Dec  6 20:00:09 2016 [3366][1][FATAL] 2016-05-15
-Tue Dec  6 20:00:09 2016 [3366][1][FATAL] 1
-Tue Dec  6 20:00:09 2016 [3366][1][FATAL] 2016-05-15
-Tue Dec  6 20:00:10 2016 [3366][1][FATAL] <div class="mozaik-inner" style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:rgb(68,68,68);padding:0px 30px;margin:0px;"><h2 style="font-family:Arial, Helvetica, sans-serif;font-size:18px;line-height:28.8px;color:#444444;padding:0px;margin:0px;">Hi,</h2><p style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:#444444;padding:0px;margin:0px;">It is to inform that the Performance Review of the Employee {emp_name} is due.<br style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:rgb(68,68,68);padding:0px;margin:0px;" />Please submit the Performance Review.<br style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:rgb(68,68,68);padding:0px;margin:0px;" /><br style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:rgb(68,68,68);padding:0px;margin:0px;" />Thanks. <br style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:rgb(68,68,68);padding:0px;margin:0px;" /></p></div>
-Tue Dec  6 20:00:10 2016 [3366][1][FATAL] **************
-Tue Dec  6 20:00:10 2016 [3366][1][FATAL] <div class="mozaik-inner" style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:rgb(68,68,68);padding:0px 30px;margin:0px;"><h2 style="font-family:Arial, Helvetica, sans-serif;font-size:18px;line-height:28.8px;color:#444444;padding:0px;margin:0px;">Hi,</h2><p style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:#444444;padding:0px;margin:0px;">It is to inform that the Performance Review of the Employee today 15 is due.<br style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:rgb(68,68,68);padding:0px;margin:0px;" />Please submit the Performance Review.<br style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:rgb(68,68,68);padding:0px;margin:0px;" /><br style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:rgb(68,68,68);padding:0px;margin:0px;" />Thanks. <br style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:rgb(68,68,68);padding:0px;margin:0px;" /></p></div>
-Tue Dec  6 20:00:13 2016 [3366][1][FATAL] birthday run!!!
-Tue Dec  6 20:00:13 2016 [3366][1][FATAL] birthday run!!!
-Tue Dec  6 20:00:13 2016 [3366][1][FATAL] hello >>>>>>>>>>
-Tue Dec  6 20:00:13 2016 [3366][1][FATAL] 2016-12-06
-Tue Dec  6 20:00:13 2016 [3366][1][FATAL] 1970-07-01
-Tue Dec  6 20:00:13 2016 [3366][1][FATAL] 1
-Tue Dec  6 20:00:13 2016 [3366][1][FATAL] 1970-07-01
-Tue Dec  6 20:00:13 2016 [3366][1][FATAL] <div class="mozaik-inner" style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:rgb(68,68,68);padding:0px 30px;margin:0px;"><h2 style="font-family:Arial, Helvetica, sans-serif;font-size:18px;line-height:28.8px;color:#444444;padding:0px;margin:0px;">Hi,</h2><p style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:#444444;padding:0px;margin:0px;">It is to inform that the Performance Review of the Employee {emp_name} is due.<br style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:rgb(68,68,68);padding:0px;margin:0px;" />Please submit the Performance Review.<br style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:rgb(68,68,68);padding:0px;margin:0px;" /><br style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:rgb(68,68,68);padding:0px;margin:0px;" />Thanks. <br style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:rgb(68,68,68);padding:0px;margin:0px;" /></p></div>
-Tue Dec  6 20:00:13 2016 [3366][1][FATAL] **************
-Tue Dec  6 20:00:13 2016 [3366][1][FATAL] <div class="mozaik-inner" style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:rgb(68,68,68);padding:0px 30px;margin:0px;"><h2 style="font-family:Arial, Helvetica, sans-serif;font-size:18px;line-height:28.8px;color:#444444;padding:0px;margin:0px;">Hi,</h2><p style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:#444444;padding:0px;margin:0px;">It is to inform that the Performance Review of the Employee aaa 3435dfg ttt is due.<br style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:rgb(68,68,68);padding:0px;margin:0px;" />Please submit the Performance Review.<br style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:rgb(68,68,68);padding:0px;margin:0px;" /><br style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:rgb(68,68,68);padding:0px;margin:0px;" />Thanks. <br style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:rgb(68,68,68);padding:0px;margin:0px;" /></p></div>
-Tue Dec  6 20:00:16 2016 [3366][1][FATAL] birthday run!!!
-Tue Dec  6 20:00:16 2016 [3366][1][FATAL] birthday run!!!
-Tue Dec  6 20:00:16 2016 [3366][1][FATAL] birthday run!!!
-Tue Dec  6 20:00:16 2016 [3366][1][FATAL] hello >>>>>>>>>>
-Tue Dec  6 20:00:16 2016 [3366][1][FATAL] 2016-12-06
-Tue Dec  6 20:00:16 2016 [3366][1][FATAL] 1970-07-01
-Tue Dec  6 20:00:16 2016 [3366][1][FATAL] 1
-Tue Dec  6 20:00:16 2016 [3366][1][FATAL] 1970-07-01
-Tue Dec  6 20:00:16 2016 [3366][1][FATAL] <div class="mozaik-inner" style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:rgb(68,68,68);padding:0px 30px;margin:0px;"><h2 style="font-family:Arial, Helvetica, sans-serif;font-size:18px;line-height:28.8px;color:#444444;padding:0px;margin:0px;">Hi,</h2><p style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:#444444;padding:0px;margin:0px;">It is to inform that the Performance Review of the Employee {emp_name} is due.<br style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:rgb(68,68,68);padding:0px;margin:0px;" />Please submit the Performance Review.<br style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:rgb(68,68,68);padding:0px;margin:0px;" /><br style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:rgb(68,68,68);padding:0px;margin:0px;" />Thanks. <br style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:rgb(68,68,68);padding:0px;margin:0px;" /></p></div>
-Tue Dec  6 20:00:16 2016 [3366][1][FATAL] **************
-Tue Dec  6 20:00:16 2016 [3366][1][FATAL] <div class="mozaik-inner" style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:rgb(68,68,68);padding:0px 30px;margin:0px;"><h2 style="font-family:Arial, Helvetica, sans-serif;font-size:18px;line-height:28.8px;color:#444444;padding:0px;margin:0px;">Hi,</h2><p style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:#444444;padding:0px;margin:0px;">It is to inform that the Performance Review of the Employee hello xyz bbb is due.<br style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:rgb(68,68,68);padding:0px;margin:0px;" />Please submit the Performance Review.<br style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:rgb(68,68,68);padding:0px;margin:0px;" /><br style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:rgb(68,68,68);padding:0px;margin:0px;" />Thanks. <br style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:rgb(68,68,68);padding:0px;margin:0px;" /></p></div>
-Tue Dec  6 20:00:19 2016 [3366][1][FATAL] birthday run!!!
-Tue Dec  6 20:00:19 2016 [3366][1][FATAL] birthday run!!!
-Tue Dec  6 20:00:19 2016 [3366][1][FATAL] birthday run!!!
-Tue Dec  6 20:00:19 2016 [3366][1][FATAL] hello >>>>>>>>>>
-Tue Dec  6 20:00:19 2016 [3366][1][FATAL] 2016-12-06
-Tue Dec  6 20:00:19 2016 [3366][1][FATAL] 1970-07-01
-Tue Dec  6 20:00:19 2016 [3366][1][FATAL] 1
-Tue Dec  6 20:00:19 2016 [3366][1][FATAL] 1970-07-01
-Tue Dec  6 20:00:19 2016 [3366][1][FATAL] <div class="mozaik-inner" style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:rgb(68,68,68);padding:0px 30px;margin:0px;"><h2 style="font-family:Arial, Helvetica, sans-serif;font-size:18px;line-height:28.8px;color:#444444;padding:0px;margin:0px;">Hi,</h2><p style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:#444444;padding:0px;margin:0px;">It is to inform that the Performance Review of the Employee {emp_name} is due.<br style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:rgb(68,68,68);padding:0px;margin:0px;" />Please submit the Performance Review.<br style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:rgb(68,68,68);padding:0px;margin:0px;" /><br style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:rgb(68,68,68);padding:0px;margin:0px;" />Thanks. <br style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:rgb(68,68,68);padding:0px;margin:0px;" /></p></div>
-Tue Dec  6 20:00:19 2016 [3366][1][FATAL] **************
-Tue Dec  6 20:00:19 2016 [3366][1][FATAL] <div class="mozaik-inner" style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:rgb(68,68,68);padding:0px 30px;margin:0px;"><h2 style="font-family:Arial, Helvetica, sans-serif;font-size:18px;line-height:28.8px;color:#444444;padding:0px;margin:0px;">Hi,</h2><p style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:#444444;padding:0px;margin:0px;">It is to inform that the Performance Review of the Employee hello scheduler aaa is due.<br style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:rgb(68,68,68);padding:0px;margin:0px;" />Please submit the Performance Review.<br style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:rgb(68,68,68);padding:0px;margin:0px;" /><br style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:rgb(68,68,68);padding:0px;margin:0px;" />Thanks. <br style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:rgb(68,68,68);padding:0px;margin:0px;" /></p></div>
-Tue Dec  6 20:00:22 2016 [3366][1][FATAL] birthday run!!!
-Tue Dec  6 20:00:22 2016 [3366][1][FATAL] birthday run!!!
-Tue Dec  6 20:00:22 2016 [3366][1][FATAL] birthday run!!!
-Tue Dec  6 20:00:22 2016 [3366][1][FATAL] hello >>>>>>>>>>
-Tue Dec  6 20:00:22 2016 [3366][1][FATAL] 2016-12-06
-Tue Dec  6 20:00:22 2016 [3366][1][FATAL] 2011-06-22
-Tue Dec  6 20:00:22 2016 [3366][1][FATAL] 1
-Tue Dec  6 20:00:22 2016 [3366][1][FATAL] 2011-06-22
-Tue Dec  6 20:00:23 2016 [3366][1][FATAL] <div class="mozaik-inner" style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:rgb(68,68,68);padding:0px 30px;margin:0px;"><h2 style="font-family:Arial, Helvetica, sans-serif;font-size:18px;line-height:28.8px;color:#444444;padding:0px;margin:0px;">Hi,</h2><p style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:#444444;padding:0px;margin:0px;">It is to inform that the Performance Review of the Employee {emp_name} is due.<br style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:rgb(68,68,68);padding:0px;margin:0px;" />Please submit the Performance Review.<br style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:rgb(68,68,68);padding:0px;margin:0px;" /><br style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:rgb(68,68,68);padding:0px;margin:0px;" />Thanks. <br style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:rgb(68,68,68);padding:0px;margin:0px;" /></p></div>
-Tue Dec  6 20:00:23 2016 [3366][1][FATAL] **************
-Tue Dec  6 20:00:23 2016 [3366][1][FATAL] <div class="mozaik-inner" style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:rgb(68,68,68);padding:0px 30px;margin:0px;"><h2 style="font-family:Arial, Helvetica, sans-serif;font-size:18px;line-height:28.8px;color:#444444;padding:0px;margin:0px;">Hi,</h2><p style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:#444444;padding:0px;margin:0px;">It is to inform that the Performance Review of the Employee another twest shec aaa is due.<br style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:rgb(68,68,68);padding:0px;margin:0px;" />Please submit the Performance Review.<br style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:rgb(68,68,68);padding:0px;margin:0px;" /><br style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:rgb(68,68,68);padding:0px;margin:0px;" />Thanks. <br style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:rgb(68,68,68);padding:0px;margin:0px;" /></p></div>
-Tue Dec  6 20:00:32 2016 [3366][1][FATAL] -----> getNewMessageIds()
-Tue Dec  6 20:00:33 2016 [3366][1][FATAL] ----->  before return getNewMessageIds()
-Tue Dec  6 20:00:33 2016 [3366][1][FATAL] print_r($newMsgs,1)
-Tue Dec  6 20:00:33 2016 [3366][1][FATAL] 
-Tue Dec  6 20:01:01 2016 [3414][-none-][FATAL] Configuration variable date.timezone is not set, guessed timezone Asia/Karachi. Please set date.timezone="Asia/Karachi" in php.ini!
-Tue Dec  6 20:01:07 2016 [3414][1][FATAL] -----> getNewMessageIds()
-Tue Dec  6 20:01:07 2016 [3414][1][FATAL] ----->  before return getNewMessageIds()
-Tue Dec  6 20:01:07 2016 [3414][1][FATAL] print_r($newMsgs,1)
-Tue Dec  6 20:01:07 2016 [3414][1][FATAL] 
-Tue Dec  6 20:02:01 2016 [3611][-none-][FATAL] Configuration variable date.timezone is not set, guessed timezone Asia/Karachi. Please set date.timezone="Asia/Karachi" in php.ini!
-Tue Dec  6 20:02:04 2016 [3611][1][FATAL] -----> getNewMessageIds()
-Tue Dec  6 20:02:04 2016 [3611][1][FATAL] ----->  before return getNewMessageIds()
-Tue Dec  6 20:02:04 2016 [3611][1][FATAL] print_r($newMsgs,1)
-Tue Dec  6 20:02:04 2016 [3611][1][FATAL] 
-Tue Dec  6 20:03:02 2016 [3636][-none-][FATAL] Configuration variable date.timezone is not set, guessed timezone Asia/Karachi. Please set date.timezone="Asia/Karachi" in php.ini!
-Tue Dec  6 20:03:04 2016 [3636][1][FATAL] -----> getNewMessageIds()
-Tue Dec  6 20:03:04 2016 [3636][1][FATAL] ----->  before return getNewMessageIds()
-Tue Dec  6 20:03:04 2016 [3636][1][FATAL] print_r($newMsgs,1)
-Tue Dec  6 20:03:04 2016 [3636][1][FATAL] 
-Tue Dec  6 20:04:01 2016 [3663][-none-][FATAL] Configuration variable date.timezone is not set, guessed timezone Asia/Karachi. Please set date.timezone="Asia/Karachi" in php.ini!
-Tue Dec  6 20:04:05 2016 [3663][1][FATAL] -----> getNewMessageIds()
-Tue Dec  6 20:04:07 2016 [3663][1][FATAL] ----->  before return getNewMessageIds()
-Tue Dec  6 20:04:07 2016 [3663][1][FATAL] print_r($newMsgs,1)
-Tue Dec  6 20:04:07 2016 [3663][1][FATAL] 
-Tue Dec  6 20:05:01 2016 [3704][-none-][FATAL] Configuration variable date.timezone is not set, guessed timezone Asia/Karachi. Please set date.timezone="Asia/Karachi" in php.ini!
-Tue Dec  6 20:05:03 2016 [3704][1][FATAL] -----> getNewMessageIds()
-Tue Dec  6 20:05:04 2016 [3704][1][FATAL] ----->  before return getNewMessageIds()
-Tue Dec  6 20:05:04 2016 [3704][1][FATAL] print_r($newMsgs,1)
-Tue Dec  6 20:05:04 2016 [3704][1][FATAL] 
-Tue Dec  6 20:06:01 2016 [3853][-none-][FATAL] Configuration variable date.timezone is not set, guessed timezone Asia/Karachi. Please set date.timezone="Asia/Karachi" in php.ini!
-Tue Dec  6 20:06:12 2016 [3853][1][FATAL] -----> getNewMessageIds()
-Tue Dec  6 20:06:12 2016 [3853][1][FATAL] ----->  before return getNewMessageIds()
-Tue Dec  6 20:06:12 2016 [3853][1][FATAL] print_r($newMsgs,1)
-Tue Dec  6 20:06:12 2016 [3853][1][FATAL] 
-Tue Dec  6 20:07:01 2016 [874][-none-][FATAL] use existing candidate
-Tue Dec  6 20:07:01 2016 [3914][-none-][FATAL] Configuration variable date.timezone is not set, guessed timezone Asia/Karachi. Please set date.timezone="Asia/Karachi" in php.ini!
-Tue Dec  6 20:07:02 2016 [874][-none-][FATAL] create new job application
-Tue Dec  6 20:07:02 2016 [874][-none-][FATAL] create new note husnain
-Tue Dec  6 20:07:02 2016 [874][-none-][FATAL] <div class="mozaik-inner" style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:rgb(68,68,68);padding:0px 30px;margin:0px;"><h2 style="font-family:Arial, Helvetica, sans-serif;font-size:18px;line-height:28.8px;color:#444444;padding:0px;margin:0px;">Hi</h2><p style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:#444444;padding:0px;margin:0px;">It is to inform that you received a new Job Application:</p><p style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:#444444;padding:0px;margin:0px;">Candidate:{cand}</p><p style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:#444444;padding:0px;margin:0px;">Job Application:{job_app}</p><p style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:#444444;padding:0px;margin:0px;">Job Posting:{posting}</p><p style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:#444444;padding:0px;margin:0px;"><br style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:rgb(68,68,68);padding:0px;margin:0px;" /></p><p style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:#444444;padding:0px;margin:0px;">Thanks</p><div class="mozaik-clear" style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:#444444;padding:0px;margin:0px;height:0px;"> <br style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:#444444;padding:0px;margin:0px;" /></div></div>
-Tue Dec  6 20:07:02 2016 [874][-none-][FATAL] **************
-Tue Dec  6 20:07:02 2016 [874][-none-][FATAL] <div class="mozaik-inner" style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:rgb(68,68,68);padding:0px 30px;margin:0px;"><h2 style="font-family:Arial, Helvetica, sans-serif;font-size:18px;line-height:28.8px;color:#444444;padding:0px;margin:0px;">Hi</h2><p style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:#444444;padding:0px;margin:0px;">It is to inform that you received a new Job Application:</p><p style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:#444444;padding:0px;margin:0px;">Candidate:<a href='http://localhost/git_hrm/hrm/SuiteCRM_HRM/index.php?module=RT_Candidates&return_module=RT_Candidates&action=DetailView&record=73f60cad-412c-6a33-db2c-5846c9d54144'>Candidate</a></p><p style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:#444444;padding:0px;margin:0px;">Job Application:<a href='http://localhost/git_hrm/hrm/SuiteCRM_HRM/index.php?module=RT_Job_Application&return_module=RT_Job_Application&action=DetailView&record=443fdd7b-6e18-27dc-0664-5846d4d953dc'>Job Application</a></p><p style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:#444444;padding:0px;margin:0px;">Job Posting:<a href='http://localhost/git_hrm/hrm/SuiteCRM_HRM/index.php?module=RT_Vacancies&return_module=RT_Vacancies&action=DetailView&record=c03cd043-4000-5ef9-850f-58451e92a1b5'>Job Posting</a></p><p style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:#444444;padding:0px;margin:0px;"><br style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:rgb(68,68,68);padding:0px;margin:0px;" /></p><p style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:#444444;padding:0px;margin:0px;">Thanks</p><div class="mozaik-clear" style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:#444444;padding:0px;margin:0px;height:0px;"> <br style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:#444444;padding:0px;margin:0px;" /></div></div>
-Tue Dec  6 20:07:04 2016 [3914][1][FATAL] -----> getNewMessageIds()
-Tue Dec  6 20:07:04 2016 [3914][1][FATAL] ----->  before return getNewMessageIds()
-Tue Dec  6 20:07:04 2016 [3914][1][FATAL] print_r($newMsgs,1)
-Tue Dec  6 20:07:04 2016 [3914][1][FATAL] 
-Tue Dec  6 20:08:01 2016 [4072][-none-][FATAL] Configuration variable date.timezone is not set, guessed timezone Asia/Karachi. Please set date.timezone="Asia/Karachi" in php.ini!
-Tue Dec  6 20:08:04 2016 [4072][1][FATAL] -----> getNewMessageIds()
-Tue Dec  6 20:08:04 2016 [4072][1][FATAL] ----->  before return getNewMessageIds()
-Tue Dec  6 20:08:04 2016 [4072][1][FATAL] print_r($newMsgs,1)
-Tue Dec  6 20:08:04 2016 [4072][1][FATAL] 
+Wed Dec  7 19:33:01 2016 [30178][-none-][FATAL] Configuration variable date.timezone is not set, guessed timezone Asia/Karachi. Please set date.timezone="Asia/Karachi" in php.ini!
+Wed Dec  7 19:33:06 2016 [30178][1][FATAL] -----> getNewMessageIds()
+Wed Dec  7 19:33:07 2016 [30178][1][FATAL] ----->  before return getNewMessageIds()
+Wed Dec  7 19:33:07 2016 [30178][1][FATAL] print_r($newMsgs,1)
+Wed Dec  7 19:33:07 2016 [30178][1][FATAL] 
+Wed Dec  7 19:33:57 2016 [30062][1][FATAL] mail_to_candidate HOOK!!!!!
+Wed Dec  7 19:33:57 2016 [30062][1][FATAL] RT_Interviews Object
+(
+    [new_schema] => 1
+    [module_dir] => RT_Interviews
+    [object_name] => RT_Interviews
+    [table_name] => rt_interviews
+    [importable] => 
+    [disable_row_level_security] => 1
+    [id] => aba33030-27de-bb4e-58a6-58481d626924
+    [name] => 
+    [date_entered] => 2016-12-07 14:33:57
+    [date_modified] => 2016-12-07 14:33:57
+    [modified_user_id] => 1
+    [modified_by_name] => admin
+    [created_by] => 1
+    [created_by_name] => 
+    [description] => 
+    [deleted] => 0
+    [created_by_link] => 
+    [modified_user_link] => 
+    [assigned_user_id] => 
+    [assigned_user_name] => 
+    [assigned_user_link] => 
+    [SecurityGroups] => 
+    [db] => MysqliManager Object
+        (
+            [dbType] => mysql
+            [variant] => mysqli
+            [priority] => 10
+            [label] => LBL_MYSQLI
+            [backendFunctions:protected] => Array
+                (
+                    [free_result] => mysqli_free_result
+                    [close] => mysqli_close
+                    [row_count] => mysqli_num_rows
+                    [affected_row_count] => mysqli_affected_rows
+                )
+
+            [dbName] => MySQL
+            [maxNameLengths:protected] => Array
+                (
+                    [table] => 64
+                    [column] => 64
+                    [index] => 64
+                    [alias] => 256
+                )
+
+            [type_map:protected] => Array
+                (
+                    [int] => int
+                    [double] => double
+                    [float] => float
+                    [uint] => int unsigned
+                    [ulong] => bigint unsigned
+                    [long] => bigint
+                    [short] => smallint
+                    [varchar] => varchar
+                    [text] => text
+                    [longtext] => longtext
+                    [date] => date
+                    [enum] => varchar
+                    [relate] => varchar
+                    [multienum] => text
+                    [html] => text
+                    [longhtml] => longtext
+                    [datetime] => datetime
+                    [datetimecombo] => datetime
+                    [time] => time
+                    [bool] => bool
+                    [tinyint] => tinyint
+                    [char] => char
+                    [blob] => blob
+                    [longblob] => longblob
+                    [currency] => decimal(26,6)
+                    [decimal] => decimal
+                    [decimal2] => decimal
+                    [id] => char(36)
+                    [url] => varchar
+                    [encrypt] => varchar
+                    [file] => varchar
+                    [decimal_tpl] => decimal(%d, %d)
+                )
+
+            [capabilities:protected] => Array
+                (
+                    [affected_rows] => 1
+                    [select_rows] => 1
+                    [inline_keys] => 1
+                    [create_user] => 1
+                    [fulltext] => 1
+                    [collation] => 1
+                    [create_db] => 1
+                    [disable_keys] => 1
+                )
+
+            [database] => mysqli Object
+                (
+                    [affected_rows] => 0
+                    [client_info] => mysqlnd 5.0.11-dev - 20120503 - $Id: 15d5c781cfcad91193dceae1d2cdd127674ddb3e $
+                    [client_version] => 50011
+                    [connect_errno] => 0
+                    [connect_error] => 
+                    [errno] => 0
+                    [error] => 
+                    [error_list] => Array
+                        (
+                        )
+
+                    [field_count] => 0
+                    [host_info] => Localhost via UNIX socket
+                    [info] => Records: 0  Duplicates: 0  Warnings: 0
+                    [insert_id] => 0
+                    [server_info] => 5.5.53-0ubuntu0.14.04.1
+                    [server_version] => 50553
+                    [stat] => Uptime: 179298  Threads: 3  Questions: 780844  Slow queries: 0  Opens: 9658  Flush tables: 1  Open tables: 400  Queries per second avg: 4.355
+                    [sqlstate] => 00000
+                    [protocol_version] => 10
+                    [thread_id] => 36766
+                    [warning_count] => 0
+                )
+
+            [dieOnError:protected] => 
+            [encode:protected] => 1
+            [query_time:protected] => 0.00056791305541992
+            [last_error:protected] => 
+            [lastResult:protected] => 
+            [preparedTokens:protected] => Array
+                (
+                )
+
+            [timedate:protected] => TimeDate Object
+                (
+                    [dbDayFormat] => Y-m-d
+                    [dbTimeFormat] => H:i:s
+                    [now:protected] => SugarDateTime Object
+                        (
+                            [formats:protected] => Array
+                                (
+                                    [sec] => s
+                                    [min] => i
+                                    [hour] => G
+                                    [zhour] => H
+                                    [day] => j
+                                    [zday] => d
+                                    [days_in_month] => t
+                                    [day_of_week] => w
+                                    [day_of_year] => z
+                                    [week] => W
+                                    [month] => n
+                                    [zmonth] => m
+                                    [year] => Y
+                                    [am_pm] => A
+                                    [hour_12] => g
+                                )
+
+                            [var_gets:protected] => Array
+                                (
+                                    [24_hour] => hour
+                                    [day_of_week] => day_of_week_long
+                                    [day_of_week_short] => day_of_week_short
+                                    [month_name] => month_long
+                                    [hour] => hour_12
+                                )
+
+                            [_strings:protected] => 
+                            [date] => 2016-12-07 14:33:57.000000
+                            [timezone_type] => 3
+                            [timezone] => UTC
+                        )
+
+                    [user:protected] => 
+                    [current_user_id:protected] => 1
+                    [current_user_tz:protected] => DateTimeZone Object
+                        (
+                            [timezone_type] => 3
+                            [timezone] => Asia/Karachi
+                        )
+
+                    [time_separator:protected] => 
+                    [always_db:protected] => 
+                    [allow_cache] => 1
+                    [date_expressions:protected] => Array
+                        (
+                            [yesterday] => Array
+                                (
+                                    [0] => -1 day
+                                    [1] => -1 day
+                                )
+
+                            [today] => Array
+                                (
+                                    [0] => 
+                                    [1] => 
+                                )
+
+                            [tomorrow] => Array
+                                (
+                                    [0] => +1 day
+                                    [1] => +1 day
+                                )
+
+                            [last_7_days] => Array
+                                (
+                                    [0] => -6 days
+                                    [1] => 
+                                )
+
+                            [next_7_days] => Array
+                                (
+                                    [0] => 
+                                    [1] => +6 days
+                                )
+
+                            [last_30_days] => Array
+                                (
+                                    [0] => -29 days
+                                    [1] => 
+                                )
+
+                            [next_30_days] => Array
+                                (
+                                    [0] => 
+                                    [1] => +29 days
+                                )
+
+                        )
+
+                )
+
+            [log:protected] => LoggerManager Object
+                (
+                    [_level:LoggerManager:private] => fatal
+                )
+
+            [type_class:protected] => Array
+                (
+                    [int] => int
+                    [double] => float
+                    [float] => float
+                    [uint] => int
+                    [ulong] => bigint
+                    [long] => bigint
+                    [short] => int
+                    [date] => date
+                    [datetime] => date
+                    [datetimecombo] => date
+                    [time] => time
+                    [bool] => bool
+                    [tinyint] => int
+                    [currency] => float
+                    [decimal] => float
+                    [decimal2] => float
+                )
+
+            [options:protected] => Array
+                (
+                    [persistent] => 1
+                    [autofree] => 
+                    [debug] => 0
+                    [ssl] => 
+                )
+
+            [standardQueries:protected] => Array
+                (
+                    [ALTER TABLE] => verifyAlterTable
+                    [DROP TABLE] => verifyDropTable
+                    [CREATE TABLE] => verifyCreateTable
+                    [INSERT INTO] => verifyInsertInto
+                    [UPDATE] => verifyUpdate
+                    [DELETE FROM] => verifyDeleteFrom
+                )
+
+            [helper] => MysqliManager Object
+ *RECURSION*
+            [connectOptions] => Array
+                (
+                    [db_host_name] => localhost
+                    [db_host_instance] => SQLEXPRESS
+                    [db_user_name] => root
+                    [db_password] => 123
+                    [db_name] => suitecrm_hrm
+                    [db_type] => mysql
+                    [db_port] => 
+                    [db_manager] => MysqliManager
+                )
+
+            [count_id] => 1
+            [references] => 38
+            [lastsql] => insert into securitygroups_records(id,securitygroup_id,record_id,module,date_modified,deleted) select distinct  uuid() ,u.securitygroup_id,'aba33030-27de-bb4e-58a6-58481d626924','RT_Interviews',CURDATE(),0 from securitygroups_users u inner join securitygroups g on u.securitygroup_id = g.id and g.deleted = 0 and (g.noninheritable is null or g.noninheritable <> 1) left join securitygroups_records d on d.securitygroup_id = u.securitygroup_id and d.record_id = 'aba33030-27de-bb4e-58a6-58481d626924' and d.module = 'RT_Interviews' and d.deleted = 0 where d.id is null and u.user_id = '1' and u.deleted = 0 and (u.noninheritable is null or u.noninheritable <> 1)
+        )
+
+    [new_with_id] => 
+    [disable_vardefs] => 
+    [new_assigned_user_name] => 
+    [processed_dates_times] => Array
+        (
+        )
+
+    [process_save_dates] => 1
+    [save_from_post] => 1
+    [duplicates_found] => 
+    [update_date_modified] => 1
+    [update_modified_by] => 1
+    [update_date_entered] => 
+    [set_created_by] => 1
+    [ungreedy_count] => 
+    [module_name] => RT_Interviews
+    [field_name_map] => Array
+        (
+            [id] => Array
+                (
+                    [name] => id
+                    [vname] => LBL_ID
+                    [type] => id
+                    [required] => 1
+                    [reportable] => 1
+                    [comment] => Unique identifier
+                    [inline_edit] => 
+                )
+
+            [name] => Array
+                (
+                    [name] => name
+                    [vname] => LBL_NAME
+                    [type] => name
+                    [link] => 1
+                    [dbType] => varchar
+                    [len] => 255
+                    [unified_search] => 1
+                    [full_text_search] => Array
+                        (
+                            [boost] => 3
+                        )
+
+                    [required] => 1
+                    [importable] => required
+                    [duplicate_merge] => enabled
+                    [merge_filter] => selected
+                )
+
+            [date_entered] => Array
+                (
+                    [name] => date_entered
+                    [vname] => LBL_DATE_ENTERED
+                    [type] => datetime
+                    [group] => created_by_name
+                    [comment] => Date record created
+                    [enable_range_search] => 1
+                    [options] => date_range_search_dom
+                    [inline_edit] => 
+                )
+
+            [date_modified] => Array
+                (
+                    [name] => date_modified
+                    [vname] => LBL_DATE_MODIFIED
+                    [type] => datetime
+                    [group] => modified_by_name
+                    [comment] => Date record last modified
+                    [enable_range_search] => 1
+                    [options] => date_range_search_dom
+                    [inline_edit] => 
+                )
+
+            [modified_user_id] => Array
+                (
+                    [name] => modified_user_id
+                    [rname] => user_name
+                    [id_name] => modified_user_id
+                    [vname] => LBL_MODIFIED
+                    [type] => assigned_user_name
+                    [table] => users
+                    [isnull] => false
+                    [group] => modified_by_name
+                    [dbType] => id
+                    [reportable] => 1
+                    [comment] => User who last modified record
+                    [massupdate] => 
+                    [inline_edit] => 
+                )
+
+            [modified_by_name] => Array
+                (
+                    [name] => modified_by_name
+                    [vname] => LBL_MODIFIED_NAME
+                    [type] => relate
+                    [reportable] => 
+                    [source] => non-db
+                    [rname] => user_name
+                    [table] => users
+                    [id_name] => modified_user_id
+                    [module] => Users
+                    [link] => modified_user_link
+                    [duplicate_merge] => disabled
+                    [massupdate] => 
+                    [inline_edit] => 
+                )
+
+            [created_by] => Array
+                (
+                    [name] => created_by
+                    [rname] => user_name
+                    [id_name] => modified_user_id
+                    [vname] => LBL_CREATED
+                    [type] => assigned_user_name
+                    [table] => users
+                    [isnull] => false
+                    [dbType] => id
+                    [group] => created_by_name
+                    [comment] => User who created record
+                    [massupdate] => 
+                    [inline_edit] => 
+                )
+
+            [created_by_name] => Array
+                (
+                    [name] => created_by_name
+                    [vname] => LBL_CREATED
+                    [type] => relate
+                    [reportable] => 
+                    [link] => created_by_link
+                    [rname] => user_name
+                    [source] => non-db
+                    [table] => users
+                    [id_name] => created_by
+                    [module] => Users
+                    [duplicate_merge] => disabled
+                    [importable] => false
+                    [massupdate] => 
+                    [inline_edit] => 
+                )
+
+            [description] => Array
+                (
+                    [name] => description
+                    [vname] => LBL_DESCRIPTION
+                    [type] => text
+                    [comment] => Full text of the note
+                    [rows] => 6
+                    [cols] => 80
+                )
+
+            [deleted] => Array
+                (
+                    [name] => deleted
+                    [vname] => LBL_DELETED
+                    [type] => bool
+                    [default] => 0
+                    [reportable] => 
+                    [comment] => Record deletion indicator
+                )
+
+            [created_by_link] => Array
+                (
+                    [name] => created_by_link
+                    [type] => link
+                    [relationship] => rt_interviews_created_by
+                    [vname] => LBL_CREATED_USER
+                    [link_type] => one
+                    [module] => Users
+                    [bean_name] => User
+                    [source] => non-db
+                )
+
+            [modified_user_link] => Array
+                (
+                    [name] => modified_user_link
+                    [type] => link
+                    [relationship] => rt_interviews_modified_user
+                    [vname] => LBL_MODIFIED_USER
+                    [link_type] => one
+                    [module] => Users
+                    [bean_name] => User
+                    [source] => non-db
+                )
+
+            [assigned_user_id] => Array
+                (
+                    [name] => assigned_user_id
+                    [rname] => user_name
+                    [id_name] => assigned_user_id
+                    [vname] => LBL_ASSIGNED_TO_ID
+                    [group] => assigned_user_name
+                    [type] => relate
+                    [table] => users
+                    [module] => Users
+                    [reportable] => 1
+                    [isnull] => false
+                    [dbType] => id
+                    [audited] => 1
+                    [comment] => User ID assigned to record
+                    [duplicate_merge] => disabled
+                )
+
+            [assigned_user_name] => Array
+                (
+                    [name] => assigned_user_name
+                    [link] => assigned_user_link
+                    [vname] => LBL_ASSIGNED_TO_NAME
+                    [rname] => user_name
+                    [type] => relate
+                    [reportable] => 
+                    [source] => non-db
+                    [table] => users
+                    [id_name] => assigned_user_id
+                    [module] => Users
+                    [duplicate_merge] => disabled
+                )
+
+            [assigned_user_link] => Array
+                (
+                    [name] => assigned_user_link
+                    [type] => link
+                    [relationship] => rt_interviews_assigned_user
+                    [vname] => LBL_ASSIGNED_TO_USER
+                    [link_type] => one
+                    [module] => Users
+                    [bean_name] => User
+                    [source] => non-db
+                    [duplicate_merge] => enabled
+                    [rname] => user_name
+                    [id_name] => assigned_user_id
+                    [table] => users
+                )
+
+            [SecurityGroups] => Array
+                (
+                    [name] => SecurityGroups
+                    [type] => link
+                    [relationship] => securitygroups_rt_interviews
+                    [module] => SecurityGroups
+                    [bean_name] => SecurityGroup
+                    [source] => non-db
+                    [vname] => LBL_SECURITYGROUPS
+                )
+
+            [rt_interviews_rt_employees_1] => Array
+                (
+                    [name] => rt_interviews_rt_employees_1
+                    [type] => link
+                    [relationship] => rt_interviews_rt_employees_1
+                    [source] => non-db
+                    [module] => RT_Employees
+                    [bean_name] => RT_Employees
+                    [vname] => LBL_RT_INTERVIEWS_RT_EMPLOYEES_1_FROM_RT_EMPLOYEES_TITLE
+                )
+
+            [rt_vacancy_name] => Array
+                (
+                    [required] => 
+                    [source] => non-db
+                    [name] => rt_vacancy_name
+                    [vname] => LBL_RT_VACANCY_NAME
+                    [type] => relate
+                    [rname] => name
+                    [id_name] => rt_vacancy_id
+                    [join_name] => rt_vacancies
+                    [link] => rt_vacancies
+                    [table] => rt_vacancies
+                    [isnull] => true
+                    [module] => RT_Vacancies
+                )
+
+            [rt_vacancy_id] => Array
+                (
+                    [name] => rt_vacancy_id
+                    [rname] => id
+                    [vname] => LBL_RT_VACANCY_ID
+                    [type] => id
+                    [table] => rt_vacancies
+                    [isnull] => true
+                    [module] => RT_Vacancies
+                    [dbType] => id
+                    [reportable] => 
+                    [massupdate] => 
+                    [duplicate_merge] => disabled
+                )
+
+            [rt_vacancies] => Array
+                (
+                    [name] => rt_vacancies
+                    [type] => link
+                    [relationship] => rt_interviews_rt_vacancies
+                    [module] => RT_Vacancies
+                    [bean_name] => RT_Vacancies
+                    [source] => non-db
+                    [vname] => LBL_RT_VACANCY
+                )
+
+            [rt_candidate_name] => Array
+                (
+                    [required] => 
+                    [source] => non-db
+                    [name] => rt_candidate_name
+                    [vname] => LBL_RT_CANDIDATE_NAME
+                    [type] => relate
+                    [rname] => name
+                    [id_name] => rt_candidate_id
+                    [join_name] => rt_candidates
+                    [link] => rt_candidates
+                    [table] => rt_candidates
+                    [isnull] => true
+                    [module] => RT_Candidates
+                )
+
+            [rt_candidate_id] => Array
+                (
+                    [name] => rt_candidate_id
+                    [rname] => id
+                    [vname] => LBL_RT_CANDIDATE_ID
+                    [type] => id
+                    [table] => rt_candidates
+                    [isnull] => true
+                    [module] => RT_Candidates
+                    [dbType] => id
+                    [reportable] => 
+                    [massupdate] => 
+                    [duplicate_merge] => disabled
+                )
+
+            [rt_candidates] => Array
+                (
+                    [name] => rt_candidates
+                    [type] => link
+                    [relationship] => rt_interviews_rt_candidates
+                    [module] => RT_Candidates
+                    [bean_name] => RT_Candidates
+                    [source] => non-db
+                    [vname] => LBL_RT_CANDIDATES
+                )
+
+            [comments_c] => Array
+                (
+                    [required] => 
+                    [source] => custom_fields
+                    [name] => comments_c
+                    [vname] => LBL_COMMENTS
+                    [type] => text
+                    [massupdate] => 0
+                    [default] => 
+                    [no_default] => 
+                    [comments] => 
+                    [help] => 
+                    [importable] => true
+                    [duplicate_merge] => disabled
+                    [duplicate_merge_dom_value] => 0
+                    [audited] => 
+                    [inline_edit] => 1
+                    [reportable] => 1
+                    [unified_search] => 
+                    [merge_filter] => disabled
+                    [size] => 20
+                    [studio] => visible
+                    [rows] => 4
+                    [cols] => 20
+                    [id] => RT_Interviewscomments_c
+                    [custom_module] => RT_Interviews
+                )
+
+            [date_of_interview_c] => Array
+                (
+                    [required] => 
+                    [source] => custom_fields
+                    [name] => date_of_interview_c
+                    [vname] => LBL_DATE_OF_INTERVIEW
+                    [type] => date
+                    [massupdate] => 0
+                    [default] => 
+                    [no_default] => 
+                    [comments] => 
+                    [help] => 
+                    [importable] => true
+                    [duplicate_merge] => disabled
+                    [duplicate_merge_dom_value] => 0
+                    [audited] => 
+                    [inline_edit] => 1
+                    [reportable] => 1
+                    [unified_search] => 
+                    [merge_filter] => disabled
+                    [size] => 20
+                    [enable_range_search] => 
+                    [display_default] => now
+                    [id] => RT_Interviewsdate_of_interview_c
+                    [custom_module] => RT_Interviews
+                )
+
+            [interviewer_c] => Array
+                (
+                    [required] => 1
+                    [source] => custom_fields
+                    [name] => interviewer_c
+                    [vname] => LBL_INTERVIEWER
+                    [type] => varchar
+                    [massupdate] => 0
+                    [default] => 
+                    [no_default] => 
+                    [comments] => 
+                    [help] => 
+                    [importable] => true
+                    [duplicate_merge] => disabled
+                    [duplicate_merge_dom_value] => 0
+                    [audited] => 
+                    [inline_edit] => 1
+                    [reportable] => 1
+                    [unified_search] => 
+                    [merge_filter] => disabled
+                    [len] => 255
+                    [size] => 20
+                    [id] => RT_Interviewsinterviewer_c
+                    [custom_module] => RT_Interviews
+                )
+
+            [interviewer_id_c] => Array
+                (
+                    [required] => 
+                    [source] => custom_fields
+                    [name] => interviewer_id_c
+                    [vname] => LBL_INTERVIEWER_ID
+                    [type] => varchar
+                    [massupdate] => 0
+                    [default] => 
+                    [no_default] => 
+                    [comments] => 
+                    [help] => 
+                    [importable] => true
+                    [duplicate_merge] => disabled
+                    [duplicate_merge_dom_value] => 0
+                    [audited] => 
+                    [inline_edit] => 1
+                    [reportable] => 1
+                    [unified_search] => 
+                    [merge_filter] => disabled
+                    [len] => 255
+                    [size] => 20
+                    [id] => RT_Interviewsinterviewer_id_c
+                    [custom_module] => RT_Interviews
+                )
+
+            [job_c] => Array
+                (
+                    [required] => 1
+                    [source] => custom_fields
+                    [name] => job_c
+                    [vname] => LBL_JOB
+                    [type] => varchar
+                    [massupdate] => 0
+                    [default] => 
+                    [no_default] => 
+                    [comments] => 
+                    [help] => 
+                    [importable] => true
+                    [duplicate_merge] => disabled
+                    [duplicate_merge_dom_value] => 0
+                    [audited] => 
+                    [inline_edit] => 1
+                    [reportable] => 1
+                    [unified_search] => 
+                    [merge_filter] => disabled
+                    [len] => 255
+                    [size] => 20
+                    [id] => RT_Interviewsjob_c
+                    [custom_module] => RT_Interviews
+                )
+
+            [score_c] => Array
+                (
+                    [required] => 
+                    [source] => custom_fields
+                    [name] => score_c
+                    [vname] => LBL_SCORE
+                    [type] => int
+                    [massupdate] => 0
+                    [default] => 
+                    [no_default] => 
+                    [comments] => 
+                    [help] => 
+                    [importable] => true
+                    [duplicate_merge] => disabled
+                    [duplicate_merge_dom_value] => 0
+                    [audited] => 
+                    [inline_edit] => 1
+                    [reportable] => 1
+                    [unified_search] => 
+                    [merge_filter] => disabled
+                    [len] => 255
+                    [size] => 20
+                    [enable_range_search] => 
+                    [disable_num_format] => 
+                    [min] => 0
+                    [max] => 
+                    [validation] => Array
+                        (
+                            [type] => range
+                            [min] => 0
+                            [max] => 
+                        )
+
+                    [id] => RT_Interviewsscore_c
+                    [custom_module] => RT_Interviews
+                )
+
+            [status_c] => Array
+                (
+                    [required] => 
+                    [source] => custom_fields
+                    [name] => status_c
+                    [vname] => LBL_STATUS
+                    [type] => enum
+                    [massupdate] => 0
+                    [default] => Approved
+                    [no_default] => 
+                    [comments] => 
+                    [help] => 
+                    [importable] => true
+                    [duplicate_merge] => disabled
+                    [duplicate_merge_dom_value] => 0
+                    [audited] => 1
+                    [inline_edit] => 1
+                    [reportable] => 1
+                    [unified_search] => 
+                    [merge_filter] => disabled
+                    [len] => 100
+                    [size] => 20
+                    [options] => interview_list
+                    [studio] => visible
+                    [dependency] => 
+                    [id] => RT_Interviewsstatus_c
+                    [custom_module] => RT_Interviews
+                )
+
+            [vacancy_c] => Array
+                (
+                    [required] => 1
+                    [source] => custom_fields
+                    [name] => vacancy_c
+                    [vname] => LBL_VACANCY
+                    [type] => enum
+                    [massupdate] => 0
+                    [default] => 
+                    [no_default] => 
+                    [comments] => 
+                    [help] => 
+                    [importable] => true
+                    [duplicate_merge] => disabled
+                    [duplicate_merge_dom_value] => 0
+                    [audited] => 
+                    [inline_edit] => 1
+                    [reportable] => 1
+                    [unified_search] => 
+                    [merge_filter] => disabled
+                    [len] => 100
+                    [size] => 20
+                    [options] => vacancy_list
+                    [studio] => visible
+                    [dependency] => 
+                    [id] => RT_Interviewsvacancy_c
+                    [custom_module] => RT_Interviews
+                )
+
+            [vacancy_name_c] => Array
+                (
+                    [required] => 
+                    [source] => custom_fields
+                    [name] => vacancy_name_c
+                    [vname] => LBL_VACANCY_NAME
+                    [type] => varchar
+                    [massupdate] => 0
+                    [default] => 
+                    [no_default] => 
+                    [comments] => 
+                    [help] => 
+                    [importable] => true
+                    [duplicate_merge] => disabled
+                    [duplicate_merge_dom_value] => 0
+                    [audited] => 
+                    [inline_edit] => 1
+                    [reportable] => 1
+                    [unified_search] => 
+                    [merge_filter] => disabled
+                    [len] => 255
+                    [size] => 20
+                    [id] => RT_Interviewsvacancy_name_c
+                    [custom_module] => RT_Interviews
+                )
+
+        )
+
+    [field_defs] => Array
+        (
+            [id] => Array
+                (
+                    [name] => id
+                    [vname] => LBL_ID
+                    [type] => id
+                    [required] => 1
+                    [reportable] => 1
+                    [comment] => Unique identifier
+                    [inline_edit] => 
+                )
+
+            [name] => Array
+                (
+                    [name] => name
+                    [vname] => LBL_NAME
+                    [type] => name
+                    [link] => 1
+                    [dbType] => varchar
+                    [len] => 255
+                    [unified_search] => 1
+                    [full_text_search] => Array
+                        (
+                            [boost] => 3
+                        )
+
+                    [required] => 1
+                    [importable] => required
+                    [duplicate_merge] => enabled
+                    [merge_filter] => selected
+                )
+
+            [date_entered] => Array
+                (
+                    [name] => date_entered
+                    [vname] => LBL_DATE_ENTERED
+                    [type] => datetime
+                    [group] => created_by_name
+                    [comment] => Date record created
+                    [enable_range_search] => 1
+                    [options] => date_range_search_dom
+                    [inline_edit] => 
+                )
+
+            [date_modified] => Array
+                (
+                    [name] => date_modified
+                    [vname] => LBL_DATE_MODIFIED
+                    [type] => datetime
+                    [group] => modified_by_name
+                    [comment] => Date record last modified
+                    [enable_range_search] => 1
+                    [options] => date_range_search_dom
+                    [inline_edit] => 
+                )
+
+            [modified_user_id] => Array
+                (
+                    [name] => modified_user_id
+                    [rname] => user_name
+                    [id_name] => modified_user_id
+                    [vname] => LBL_MODIFIED
+                    [type] => assigned_user_name
+                    [table] => users
+                    [isnull] => false
+                    [group] => modified_by_name
+                    [dbType] => id
+                    [reportable] => 1
+                    [comment] => User who last modified record
+                    [massupdate] => 
+                    [inline_edit] => 
+                )
+
+            [modified_by_name] => Array
+                (
+                    [name] => modified_by_name
+                    [vname] => LBL_MODIFIED_NAME
+                    [type] => relate
+                    [reportable] => 
+                    [source] => non-db
+                    [rname] => user_name
+                    [table] => users
+                    [id_name] => modified_user_id
+                    [module] => Users
+                    [link] => modified_user_link
+                    [duplicate_merge] => disabled
+                    [massupdate] => 
+                    [inline_edit] => 
+                )
+
+            [created_by] => Array
+                (
+                    [name] => created_by
+                    [rname] => user_name
+                    [id_name] => modified_user_id
+                    [vname] => LBL_CREATED
+                    [type] => assigned_user_name
+                    [table] => users
+                    [isnull] => false
+                    [dbType] => id
+                    [group] => created_by_name
+                    [comment] => User who created record
+                    [massupdate] => 
+                    [inline_edit] => 
+                )
+
+            [created_by_name] => Array
+                (
+                    [name] => created_by_name
+                    [vname] => LBL_CREATED
+                    [type] => relate
+                    [reportable] => 
+                    [link] => created_by_link
+                    [rname] => user_name
+                    [source] => non-db
+                    [table] => users
+                    [id_name] => created_by
+                    [module] => Users
+                    [duplicate_merge] => disabled
+                    [importable] => false
+                    [massupdate] => 
+                    [inline_edit] => 
+                )
+
+            [description] => Array
+                (
+                    [name] => description
+                    [vname] => LBL_DESCRIPTION
+                    [type] => text
+                    [comment] => Full text of the note
+                    [rows] => 6
+                    [cols] => 80
+                )
+
+            [deleted] => Array
+                (
+                    [name] => deleted
+                    [vname] => LBL_DELETED
+                    [type] => bool
+                    [default] => 0
+                    [reportable] => 
+                    [comment] => Record deletion indicator
+                )
+
+            [created_by_link] => Array
+                (
+                    [name] => created_by_link
+                    [type] => link
+                    [relationship] => rt_interviews_created_by
+                    [vname] => LBL_CREATED_USER
+                    [link_type] => one
+                    [module] => Users
+                    [bean_name] => User
+                    [source] => non-db
+                )
+
+            [modified_user_link] => Array
+                (
+                    [name] => modified_user_link
+                    [type] => link
+                    [relationship] => rt_interviews_modified_user
+                    [vname] => LBL_MODIFIED_USER
+                    [link_type] => one
+                    [module] => Users
+                    [bean_name] => User
+                    [source] => non-db
+                )
+
+            [assigned_user_id] => Array
+                (
+                    [name] => assigned_user_id
+                    [rname] => user_name
+                    [id_name] => assigned_user_id
+                    [vname] => LBL_ASSIGNED_TO_ID
+                    [group] => assigned_user_name
+                    [type] => relate
+                    [table] => users
+                    [module] => Users
+                    [reportable] => 1
+                    [isnull] => false
+                    [dbType] => id
+                    [audited] => 1
+                    [comment] => User ID assigned to record
+                    [duplicate_merge] => disabled
+                )
+
+            [assigned_user_name] => Array
+                (
+                    [name] => assigned_user_name
+                    [link] => assigned_user_link
+                    [vname] => LBL_ASSIGNED_TO_NAME
+                    [rname] => user_name
+                    [type] => relate
+                    [reportable] => 
+                    [source] => non-db
+                    [table] => users
+                    [id_name] => assigned_user_id
+                    [module] => Users
+                    [duplicate_merge] => disabled
+                )
+
+            [assigned_user_link] => Array
+                (
+                    [name] => assigned_user_link
+                    [type] => link
+                    [relationship] => rt_interviews_assigned_user
+                    [vname] => LBL_ASSIGNED_TO_USER
+                    [link_type] => one
+                    [module] => Users
+                    [bean_name] => User
+                    [source] => non-db
+                    [duplicate_merge] => enabled
+                    [rname] => user_name
+                    [id_name] => assigned_user_id
+                    [table] => users
+                )
+
+            [SecurityGroups] => Array
+                (
+                    [name] => SecurityGroups
+                    [type] => link
+                    [relationship] => securitygroups_rt_interviews
+                    [module] => SecurityGroups
+                    [bean_name] => SecurityGroup
+                    [source] => non-db
+                    [vname] => LBL_SECURITYGROUPS
+                )
+
+            [rt_interviews_rt_employees_1] => Array
+                (
+                    [name] => rt_interviews_rt_employees_1
+                    [type] => link
+                    [relationship] => rt_interviews_rt_employees_1
+                    [source] => non-db
+                    [module] => RT_Employees
+                    [bean_name] => RT_Employees
+                    [vname] => LBL_RT_INTERVIEWS_RT_EMPLOYEES_1_FROM_RT_EMPLOYEES_TITLE
+                )
+
+            [rt_vacancy_name] => Array
+                (
+                    [required] => 
+                    [source] => non-db
+                    [name] => rt_vacancy_name
+                    [vname] => LBL_RT_VACANCY_NAME
+                    [type] => relate
+                    [rname] => name
+                    [id_name] => rt_vacancy_id
+                    [join_name] => rt_vacancies
+                    [link] => rt_vacancies
+                    [table] => rt_vacancies
+                    [isnull] => true
+                    [module] => RT_Vacancies
+                )
+
+            [rt_vacancy_id] => Array
+                (
+                    [name] => rt_vacancy_id
+                    [rname] => id
+                    [vname] => LBL_RT_VACANCY_ID
+                    [type] => id
+                    [table] => rt_vacancies
+                    [isnull] => true
+                    [module] => RT_Vacancies
+                    [dbType] => id
+                    [reportable] => 
+                    [massupdate] => 
+                    [duplicate_merge] => disabled
+                )
+
+            [rt_vacancies] => Array
+                (
+                    [name] => rt_vacancies
+                    [type] => link
+                    [relationship] => rt_interviews_rt_vacancies
+                    [module] => RT_Vacancies
+                    [bean_name] => RT_Vacancies
+                    [source] => non-db
+                    [vname] => LBL_RT_VACANCY
+                )
+
+            [rt_candidate_name] => Array
+                (
+                    [required] => 
+                    [source] => non-db
+                    [name] => rt_candidate_name
+                    [vname] => LBL_RT_CANDIDATE_NAME
+                    [type] => relate
+                    [rname] => name
+                    [id_name] => rt_candidate_id
+                    [join_name] => rt_candidates
+                    [link] => rt_candidates
+                    [table] => rt_candidates
+                    [isnull] => true
+                    [module] => RT_Candidates
+                )
+
+            [rt_candidate_id] => Array
+                (
+                    [name] => rt_candidate_id
+                    [rname] => id
+                    [vname] => LBL_RT_CANDIDATE_ID
+                    [type] => id
+                    [table] => rt_candidates
+                    [isnull] => true
+                    [module] => RT_Candidates
+                    [dbType] => id
+                    [reportable] => 
+                    [massupdate] => 
+                    [duplicate_merge] => disabled
+                )
+
+            [rt_candidates] => Array
+                (
+                    [name] => rt_candidates
+                    [type] => link
+                    [relationship] => rt_interviews_rt_candidates
+                    [module] => RT_Candidates
+                    [bean_name] => RT_Candidates
+                    [source] => non-db
+                    [vname] => LBL_RT_CANDIDATES
+                )
+
+            [comments_c] => Array
+                (
+                    [required] => 
+                    [source] => custom_fields
+                    [name] => comments_c
+                    [vname] => LBL_COMMENTS
+                    [type] => text
+                    [massupdate] => 0
+                    [default] => 
+                    [no_default] => 
+                    [comments] => 
+                    [help] => 
+                    [importable] => true
+                    [duplicate_merge] => disabled
+                    [duplicate_merge_dom_value] => 0
+                    [audited] => 
+                    [inline_edit] => 1
+                    [reportable] => 1
+                    [unified_search] => 
+                    [merge_filter] => disabled
+                    [size] => 20
+                    [studio] => visible
+                    [rows] => 4
+                    [cols] => 20
+                    [id] => RT_Interviewscomments_c
+                    [custom_module] => RT_Interviews
+                )
+
+            [date_of_interview_c] => Array
+                (
+                    [required] => 
+                    [source] => custom_fields
+                    [name] => date_of_interview_c
+                    [vname] => LBL_DATE_OF_INTERVIEW
+                    [type] => date
+                    [massupdate] => 0
+                    [default] => 
+                    [no_default] => 
+                    [comments] => 
+                    [help] => 
+                    [importable] => true
+                    [duplicate_merge] => disabled
+                    [duplicate_merge_dom_value] => 0
+                    [audited] => 
+                    [inline_edit] => 1
+                    [reportable] => 1
+                    [unified_search] => 
+                    [merge_filter] => disabled
+                    [size] => 20
+                    [enable_range_search] => 
+                    [display_default] => now
+                    [id] => RT_Interviewsdate_of_interview_c
+                    [custom_module] => RT_Interviews
+                )
+
+            [interviewer_c] => Array
+                (
+                    [required] => 1
+                    [source] => custom_fields
+                    [name] => interviewer_c
+                    [vname] => LBL_INTERVIEWER
+                    [type] => varchar
+                    [massupdate] => 0
+                    [default] => 
+                    [no_default] => 
+                    [comments] => 
+                    [help] => 
+                    [importable] => true
+                    [duplicate_merge] => disabled
+                    [duplicate_merge_dom_value] => 0
+                    [audited] => 
+                    [inline_edit] => 1
+                    [reportable] => 1
+                    [unified_search] => 
+                    [merge_filter] => disabled
+                    [len] => 255
+                    [size] => 20
+                    [id] => RT_Interviewsinterviewer_c
+                    [custom_module] => RT_Interviews
+                )
+
+            [interviewer_id_c] => Array
+                (
+                    [required] => 
+                    [source] => custom_fields
+                    [name] => interviewer_id_c
+                    [vname] => LBL_INTERVIEWER_ID
+                    [type] => varchar
+                    [massupdate] => 0
+                    [default] => 
+                    [no_default] => 
+                    [comments] => 
+                    [help] => 
+                    [importable] => true
+                    [duplicate_merge] => disabled
+                    [duplicate_merge_dom_value] => 0
+                    [audited] => 
+                    [inline_edit] => 1
+                    [reportable] => 1
+                    [unified_search] => 
+                    [merge_filter] => disabled
+                    [len] => 255
+                    [size] => 20
+                    [id] => RT_Interviewsinterviewer_id_c
+                    [custom_module] => RT_Interviews
+                )
+
+            [job_c] => Array
+                (
+                    [required] => 1
+                    [source] => custom_fields
+                    [name] => job_c
+                    [vname] => LBL_JOB
+                    [type] => varchar
+                    [massupdate] => 0
+                    [default] => 
+                    [no_default] => 
+                    [comments] => 
+                    [help] => 
+                    [importable] => true
+                    [duplicate_merge] => disabled
+                    [duplicate_merge_dom_value] => 0
+                    [audited] => 
+                    [inline_edit] => 1
+                    [reportable] => 1
+                    [unified_search] => 
+                    [merge_filter] => disabled
+                    [len] => 255
+                    [size] => 20
+                    [id] => RT_Interviewsjob_c
+                    [custom_module] => RT_Interviews
+                )
+
+            [score_c] => Array
+                (
+                    [required] => 
+                    [source] => custom_fields
+                    [name] => score_c
+                    [vname] => LBL_SCORE
+                    [type] => int
+                    [massupdate] => 0
+                    [default] => 
+                    [no_default] => 
+                    [comments] => 
+                    [help] => 
+                    [importable] => true
+                    [duplicate_merge] => disabled
+                    [duplicate_merge_dom_value] => 0
+                    [audited] => 
+                    [inline_edit] => 1
+                    [reportable] => 1
+                    [unified_search] => 
+                    [merge_filter] => disabled
+                    [len] => 255
+                    [size] => 20
+                    [enable_range_search] => 
+                    [disable_num_format] => 
+                    [min] => 0
+                    [max] => 
+                    [validation] => Array
+                        (
+                            [type] => range
+                            [min] => 0
+                            [max] => 
+                        )
+
+                    [id] => RT_Interviewsscore_c
+                    [custom_module] => RT_Interviews
+                )
+
+            [status_c] => Array
+                (
+                    [required] => 
+                    [source] => custom_fields
+                    [name] => status_c
+                    [vname] => LBL_STATUS
+                    [type] => enum
+                    [massupdate] => 0
+                    [default] => Approved
+                    [no_default] => 
+                    [comments] => 
+                    [help] => 
+                    [importable] => true
+                    [duplicate_merge] => disabled
+                    [duplicate_merge_dom_value] => 0
+                    [audited] => 1
+                    [inline_edit] => 1
+                    [reportable] => 1
+                    [unified_search] => 
+                    [merge_filter] => disabled
+                    [len] => 100
+                    [size] => 20
+                    [options] => interview_list
+                    [studio] => visible
+                    [dependency] => 
+                    [id] => RT_Interviewsstatus_c
+                    [custom_module] => RT_Interviews
+                )
+
+            [vacancy_c] => Array
+                (
+                    [required] => 1
+                    [source] => custom_fields
+                    [name] => vacancy_c
+                    [vname] => LBL_VACANCY
+                    [type] => enum
+                    [massupdate] => 0
+                    [default] => 
+                    [no_default] => 
+                    [comments] => 
+                    [help] => 
+                    [importable] => true
+                    [duplicate_merge] => disabled
+                    [duplicate_merge_dom_value] => 0
+                    [audited] => 
+                    [inline_edit] => 1
+                    [reportable] => 1
+                    [unified_search] => 
+                    [merge_filter] => disabled
+                    [len] => 100
+                    [size] => 20
+                    [options] => vacancy_list
+                    [studio] => visible
+                    [dependency] => 
+                    [id] => RT_Interviewsvacancy_c
+                    [custom_module] => RT_Interviews
+                )
+
+            [vacancy_name_c] => Array
+                (
+                    [required] => 
+                    [source] => custom_fields
+                    [name] => vacancy_name_c
+                    [vname] => LBL_VACANCY_NAME
+                    [type] => varchar
+                    [massupdate] => 0
+                    [default] => 
+                    [no_default] => 
+                    [comments] => 
+                    [help] => 
+                    [importable] => true
+                    [duplicate_merge] => disabled
+                    [duplicate_merge_dom_value] => 0
+                    [audited] => 
+                    [inline_edit] => 1
+                    [reportable] => 1
+                    [unified_search] => 
+                    [merge_filter] => disabled
+                    [len] => 255
+                    [size] => 20
+                    [id] => RT_Interviewsvacancy_name_c
+                    [custom_module] => RT_Interviews
+                )
+
+        )
+
+    [custom_fields] => DynamicField Object
+        (
+            [use_existing_labels] => 
+            [base_path] => custom/Extension/modules/RT_Interviews/Ext/Vardefs
+            [db] => MysqliManager Object
+                (
+                    [dbType] => mysql
+                    [variant] => mysqli
+                    [priority] => 10
+                    [label] => LBL_MYSQLI
+                    [backendFunctions:protected] => Array
+                        (
+                            [free_result] => mysqli_free_result
+                            [close] => mysqli_close
+                            [row_count] => mysqli_num_rows
+                            [affected_row_count] => mysqli_affected_rows
+                        )
+
+                    [dbName] => MySQL
+                    [maxNameLengths:protected] => Array
+                        (
+                            [table] => 64
+                            [column] => 64
+                            [index] => 64
+                            [alias] => 256
+                        )
+
+                    [type_map:protected] => Array
+                        (
+                            [int] => int
+                            [double] => double
+                            [float] => float
+                            [uint] => int unsigned
+                            [ulong] => bigint unsigned
+                            [long] => bigint
+                            [short] => smallint
+                            [varchar] => varchar
+                            [text] => text
+                            [longtext] => longtext
+                            [date] => date
+                            [enum] => varchar
+                            [relate] => varchar
+                            [multienum] => text
+                            [html] => text
+                            [longhtml] => longtext
+                            [datetime] => datetime
+                            [datetimecombo] => datetime
+                            [time] => time
+                            [bool] => bool
+                            [tinyint] => tinyint
+                            [char] => char
+                            [blob] => blob
+                            [longblob] => longblob
+                            [currency] => decimal(26,6)
+                            [decimal] => decimal
+                            [decimal2] => decimal
+                            [id] => char(36)
+                            [url] => varchar
+                            [encrypt] => varchar
+                            [file] => varchar
+                            [decimal_tpl] => decimal(%d, %d)
+                        )
+
+                    [capabilities:protected] => Array
+                        (
+                            [affected_rows] => 1
+                            [select_rows] => 1
+                            [inline_keys] => 1
+                            [create_user] => 1
+                            [fulltext] => 1
+                            [collation] => 1
+                            [create_db] => 1
+                            [disable_keys] => 1
+                        )
+
+                    [database] => mysqli Object
+                        (
+                            [affected_rows] => -1
+                            [client_info] => mysqlnd 5.0.11-dev - 20120503 - $Id: 15d5c781cfcad91193dceae1d2cdd127674ddb3e $
+                            [client_version] => 50011
+                            [connect_errno] => 0
+                            [connect_error] => 
+                            [errno] => 0
+                            [error] => 
+                            [error_list] => Array
+                                (
+                                )
+
+                            [field_count] => 0
+                            [host_info] => Localhost via UNIX socket
+                            [info] => Records: 0  Duplicates: 0  Warnings: 0
+                            [insert_id] => 0
+                            [server_info] => 5.5.53-0ubuntu0.14.04.1
+                            [server_version] => 50553
+                            [stat] => Uptime: 179298  Threads: 3  Questions: 780845  Slow queries: 0  Opens: 9658  Flush tables: 1  Open tables: 400  Queries per second avg: 4.355
+                            [sqlstate] => 00000
+                            [protocol_version] => 10
+                            [thread_id] => 36766
+                            [warning_count] => 0
+                        )
+
+                    [dieOnError:protected] => 
+                    [encode:protected] => 1
+                    [query_time:protected] => 0.00056791305541992
+                    [last_error:protected] => 
+                    [lastResult:protected] => 
+                    [preparedTokens:protected] => Array
+                        (
+                        )
+
+                    [timedate:protected] => TimeDate Object
+                        (
+                            [dbDayFormat] => Y-m-d
+                            [dbTimeFormat] => H:i:s
+                            [now:protected] => SugarDateTime Object
+                                (
+                                    [formats:protected] => Array
+                                        (
+                                            [sec] => s
+                                            [min] => i
+                                            [hour] => G
+                                            [zhour] => H
+                                            [day] => j
+                                            [zday] => d
+                                            [days_in_month] => t
+                                            [day_of_week] => w
+                                            [day_of_year] => z
+                                            [week] => W
+                                            [month] => n
+                                            [zmonth] => m
+                                            [year] => Y
+                                            [am_pm] => A
+                                            [hour_12] => g
+                                        )
+
+                                    [var_gets:protected] => Array
+                                        (
+                                            [24_hour] => hour
+                                            [day_of_week] => day_of_week_long
+                                            [day_of_week_short] => day_of_week_short
+                                            [month_name] => month_long
+                                            [hour] => hour_12
+                                        )
+
+                                    [_strings:protected] => 
+                                    [date] => 2016-12-07 14:33:57.000000
+                                    [timezone_type] => 3
+                                    [timezone] => UTC
+                                )
+
+                            [user:protected] => 
+                            [current_user_id:protected] => 1
+                            [current_user_tz:protected] => DateTimeZone Object
+                                (
+                                    [timezone_type] => 3
+                                    [timezone] => Asia/Karachi
+                                )
+
+                            [time_separator:protected] => 
+                            [always_db:protected] => 
+                            [allow_cache] => 1
+                            [date_expressions:protected] => Array
+                                (
+                                    [yesterday] => Array
+                                        (
+                                            [0] => -1 day
+                                            [1] => -1 day
+                                        )
+
+                                    [today] => Array
+                                        (
+                                            [0] => 
+                                            [1] => 
+                                        )
+
+                                    [tomorrow] => Array
+                                        (
+                                            [0] => +1 day
+                                            [1] => +1 day
+                                        )
+
+                                    [last_7_days] => Array
+                                        (
+                                            [0] => -6 days
+                                            [1] => 
+                                        )
+
+                                    [next_7_days] => Array
+                                        (
+                                            [0] => 
+                                            [1] => +6 days
+                                        )
+
+                                    [last_30_days] => Array
+                                        (
+                                            [0] => -29 days
+                                            [1] => 
+                                        )
+
+                                    [next_30_days] => Array
+                                        (
+                                            [0] => 
+                                            [1] => +29 days
+                                        )
+
+                                )
+
+                        )
+
+                    [log:protected] => LoggerManager Object
+                        (
+                            [_level:LoggerManager:private] => fatal
+                        )
+
+                    [type_class:protected] => Array
+                        (
+                            [int] => int
+                            [double] => float
+                            [float] => float
+                            [uint] => int
+                            [ulong] => bigint
+                            [long] => bigint
+                            [short] => int
+                            [date] => date
+                            [datetime] => date
+                            [datetimecombo] => date
+                            [time] => time
+                            [bool] => bool
+                            [tinyint] => int
+                            [currency] => float
+                            [decimal] => float
+                            [decimal2] => float
+                        )
+
+                    [options:protected] => Array
+                        (
+                            [persistent] => 1
+                            [autofree] => 
+                            [debug] => 0
+                            [ssl] => 
+                        )
+
+                    [standardQueries:protected] => Array
+                        (
+                            [ALTER TABLE] => verifyAlterTable
+                            [DROP TABLE] => verifyDropTable
+                            [CREATE TABLE] => verifyCreateTable
+                            [INSERT INTO] => verifyInsertInto
+                            [UPDATE] => verifyUpdate
+                            [DELETE FROM] => verifyDeleteFrom
+                        )
+
+                    [helper] => MysqliManager Object
+ *RECURSION*
+                    [connectOptions] => Array
+                        (
+                            [db_host_name] => localhost
+                            [db_host_instance] => SQLEXPRESS
+                            [db_user_name] => root
+                            [db_password] => 123
+                            [db_name] => suitecrm_hrm
+                            [db_type] => mysql
+                            [db_port] => 
+                            [db_manager] => MysqliManager
+                        )
+
+                    [count_id] => 1
+                    [references] => 38
+                    [lastsql] => insert into securitygroups_records(id,securitygroup_id,record_id,module,date_modified,deleted) select distinct  uuid() ,u.securitygroup_id,'aba33030-27de-bb4e-58a6-58481d626924','RT_Interviews',CURDATE(),0 from securitygroups_users u inner join securitygroups g on u.securitygroup_id = g.id and g.deleted = 0 and (g.noninheritable is null or g.noninheritable <> 1) left join securitygroups_records d on d.securitygroup_id = u.securitygroup_id and d.record_id = 'aba33030-27de-bb4e-58a6-58481d626924' and d.module = 'RT_Interviews' and d.deleted = 0 where d.id is null and u.user_id = '1' and u.deleted = 0 and (u.noninheritable is null or u.noninheritable <> 1)
+                )
+
+            [bean] => RT_Interviews Object
+ *RECURSION*
+            [module] => RT_Interviews
+        )
+
+    [column_fields] => Array
+        (
+            [0] => id
+            [1] => name
+            [2] => date_entered
+            [3] => date_modified
+            [4] => modified_user_id
+            [5] => modified_by_name
+            [6] => created_by
+            [7] => created_by_name
+            [8] => description
+            [9] => deleted
+            [10] => created_by_link
+            [11] => modified_user_link
+            [12] => assigned_user_id
+            [13] => assigned_user_name
+            [14] => assigned_user_link
+            [15] => SecurityGroups
+            [16] => rt_interviews_rt_employees_1
+            [17] => rt_vacancy_name
+            [18] => rt_vacancy_id
+            [19] => rt_vacancies
+            [20] => rt_candidate_name
+            [21] => rt_candidate_id
+            [22] => rt_candidates
+            [23] => comments_c
+            [24] => date_of_interview_c
+            [25] => interviewer_c
+            [26] => interviewer_id_c
+            [27] => job_c
+            [28] => score_c
+            [29] => status_c
+            [30] => vacancy_c
+            [31] => vacancy_name_c
+        )
+
+    [list_fields] => Array
+        (
+        )
+
+    [additional_column_fields] => Array
+        (
+        )
+
+    [relationship_fields] => Array
+        (
+        )
+
+    [current_notify_user] => 
+    [fetched_row] => 
+    [fetched_rel_row] => Array
+        (
+        )
+
+    [layout_def] => 
+    [force_load_details] => 
+    [optimistic_lock] => 1
+    [disable_custom_fields] => 
+    [number_formatting_done] => 
+    [process_field_encrypted] => 
+    [acltype] => module
+    [additional_meta_fields] => Array
+        (
+        )
+
+    [special_notification] => 
+    [in_workflow] => 
+    [tracker_visibility] => 1
+    [listview_inner_join] => Array
+        (
+        )
+
+    [in_import] => 
+    [in_save] => 1
+    [logicHookDepth] => Array
+        (
+            [before_save] => 0
+            [after_save] => 1
+        )
+
+    [max_logic_depth:protected] => 10
+    [loaded_relationships:protected] => Array
+        (
+        )
+
+    [is_updated_dependent_fields:protected] => 
+    [required_fields] => Array
+        (
+            [id] => 1
+            [name] => 1
+            [interviewer_c] => 1
+            [job_c] => 1
+            [vacancy_c] => 1
+        )
+
+    [acl_fields] => 1
+    [date_of_interview_c] => 2016-12-07
+    [status_c] => scheduled
+    [rt_vacancy_name] => magento developer
+    [rt_vacancy_id] => c03cd043-4000-5ef9-850f-58451e92a1b5
+    [rt_candidate_name] => rthusnain789@gmail.com
+    [rt_candidate_id] => 6e6004ca-ddf3-a574-623f-5846ba782c68
+    [comments_c] => 
+    [score_c] => 9
+)
+
+Wed Dec  7 19:34:01 2016 [30212][-none-][FATAL] Configuration variable date.timezone is not set, guessed timezone Asia/Karachi. Please set date.timezone="Asia/Karachi" in php.ini!
+Wed Dec  7 19:34:06 2016 [30212][1][FATAL] -----> getNewMessageIds()
+Wed Dec  7 19:34:07 2016 [30212][1][FATAL] ----->  before return getNewMessageIds()
+Wed Dec  7 19:34:07 2016 [30212][1][FATAL] print_r($newMsgs,1)
+Wed Dec  7 19:34:07 2016 [30212][1][FATAL] 
+Wed Dec  7 19:35:01 2016 [30246][-none-][FATAL] Configuration variable date.timezone is not set, guessed timezone Asia/Karachi. Please set date.timezone="Asia/Karachi" in php.ini!
+Wed Dec  7 19:35:01 2016 [30246][1][FATAL] scheduler run and updated => 2acde7dc-f719-746c-4889-58480fc1dac8
+Wed Dec  7 19:35:01 2016 [30246][1][FATAL] scheduler run and updated => 7a1a7758-df71-f54b-0ff3-58480f2ac17c
+Wed Dec  7 19:35:05 2016 [30246][1][FATAL] -----> getNewMessageIds()
+Wed Dec  7 19:35:05 2016 [30246][1][FATAL] ----->  before return getNewMessageIds()
+Wed Dec  7 19:35:05 2016 [30246][1][FATAL] print_r($newMsgs,1)
+Wed Dec  7 19:35:05 2016 [30246][1][FATAL] 
+Wed Dec  7 19:36:01 2016 [30341][-none-][FATAL] Configuration variable date.timezone is not set, guessed timezone Asia/Karachi. Please set date.timezone="Asia/Karachi" in php.ini!
+Wed Dec  7 19:36:03 2016 [30341][1][FATAL] -----> getNewMessageIds()
+Wed Dec  7 19:36:04 2016 [30341][1][FATAL] ----->  before return getNewMessageIds()
+Wed Dec  7 19:36:04 2016 [30341][1][FATAL] print_r($newMsgs,1)
+Wed Dec  7 19:36:04 2016 [30341][1][FATAL] 
+Wed Dec  7 19:37:01 2016 [30360][-none-][FATAL] Configuration variable date.timezone is not set, guessed timezone Asia/Karachi. Please set date.timezone="Asia/Karachi" in php.ini!
+Wed Dec  7 19:37:07 2016 [30360][1][FATAL] -----> getNewMessageIds()
+Wed Dec  7 19:37:08 2016 [30360][1][FATAL] ----->  before return getNewMessageIds()
+Wed Dec  7 19:37:08 2016 [30360][1][FATAL] print_r($newMsgs,1)
+Wed Dec  7 19:37:08 2016 [30360][1][FATAL] 
+Wed Dec  7 19:38:01 2016 [30375][-none-][FATAL] Configuration variable date.timezone is not set, guessed timezone Asia/Karachi. Please set date.timezone="Asia/Karachi" in php.ini!
+Wed Dec  7 19:38:04 2016 [30375][1][FATAL] -----> getNewMessageIds()
+Wed Dec  7 19:38:04 2016 [30375][1][FATAL] ----->  before return getNewMessageIds()
+Wed Dec  7 19:38:04 2016 [30375][1][FATAL] print_r($newMsgs,1)
+Wed Dec  7 19:38:04 2016 [30375][1][FATAL] 
+Wed Dec  7 19:39:01 2016 [30407][-none-][FATAL] Configuration variable date.timezone is not set, guessed timezone Asia/Karachi. Please set date.timezone="Asia/Karachi" in php.ini!
+Wed Dec  7 19:39:04 2016 [30407][1][FATAL] -----> getNewMessageIds()
+Wed Dec  7 19:39:04 2016 [30407][1][FATAL] ----->  before return getNewMessageIds()
+Wed Dec  7 19:39:04 2016 [30407][1][FATAL] print_r($newMsgs,1)
+Wed Dec  7 19:39:04 2016 [30407][1][FATAL] 
+Wed Dec  7 19:40:02 2016 [30445][-none-][FATAL] Configuration variable date.timezone is not set, guessed timezone Asia/Karachi. Please set date.timezone="Asia/Karachi" in php.ini!
+Wed Dec  7 19:40:02 2016 [30445][1][FATAL] scheduler run and updated => 2acde7dc-f719-746c-4889-58480fc1dac8
+Wed Dec  7 19:40:02 2016 [30445][1][FATAL] scheduler run and updated => 7a1a7758-df71-f54b-0ff3-58480f2ac17c
+Wed Dec  7 19:40:04 2016 [30445][1][FATAL] -----> getNewMessageIds()
+Wed Dec  7 19:40:04 2016 [30445][1][FATAL] ----->  before return getNewMessageIds()
+Wed Dec  7 19:40:04 2016 [30445][1][FATAL] print_r($newMsgs,1)
+Wed Dec  7 19:40:04 2016 [30445][1][FATAL] 
+Wed Dec  7 19:41:02 2016 [30465][-none-][FATAL] Configuration variable date.timezone is not set, guessed timezone Asia/Karachi. Please set date.timezone="Asia/Karachi" in php.ini!
+Wed Dec  7 19:41:14 2016 [30465][1][FATAL] -----> getNewMessageIds()
+Wed Dec  7 19:41:14 2016 [30465][1][FATAL] ----->  before return getNewMessageIds()
+Wed Dec  7 19:41:14 2016 [30465][1][FATAL] print_r($newMsgs,1)
+Wed Dec  7 19:41:14 2016 [30465][1][FATAL] 
+Wed Dec  7 19:42:01 2016 [30493][-none-][FATAL] Configuration variable date.timezone is not set, guessed timezone Asia/Karachi. Please set date.timezone="Asia/Karachi" in php.ini!
+Wed Dec  7 19:42:03 2016 [30493][1][FATAL] -----> getNewMessageIds()
+Wed Dec  7 19:42:03 2016 [30493][1][FATAL] ----->  before return getNewMessageIds()
+Wed Dec  7 19:42:03 2016 [30493][1][FATAL] print_r($newMsgs,1)
+Wed Dec  7 19:42:03 2016 [30493][1][FATAL] 
+Wed Dec  7 19:43:02 2016 [30526][-none-][FATAL] Configuration variable date.timezone is not set, guessed timezone Asia/Karachi. Please set date.timezone="Asia/Karachi" in php.ini!
+Wed Dec  7 19:43:06 2016 [30526][1][FATAL] -----> getNewMessageIds()
+Wed Dec  7 19:43:07 2016 [30526][1][FATAL] ----->  before return getNewMessageIds()
+Wed Dec  7 19:43:07 2016 [30526][1][FATAL] print_r($newMsgs,1)
+Wed Dec  7 19:43:07 2016 [30526][1][FATAL] 
+Wed Dec  7 19:44:01 2016 [30554][-none-][FATAL] Configuration variable date.timezone is not set, guessed timezone Asia/Karachi. Please set date.timezone="Asia/Karachi" in php.ini!
+Wed Dec  7 19:44:06 2016 [30554][1][FATAL] -----> getNewMessageIds()
+Wed Dec  7 19:44:07 2016 [30554][1][FATAL] ----->  before return getNewMessageIds()
+Wed Dec  7 19:44:07 2016 [30554][1][FATAL] print_r($newMsgs,1)
+Wed Dec  7 19:44:07 2016 [30554][1][FATAL] 
+Wed Dec  7 19:45:01 2016 [30749][-none-][FATAL] Configuration variable date.timezone is not set, guessed timezone Asia/Karachi. Please set date.timezone="Asia/Karachi" in php.ini!
+Wed Dec  7 19:45:01 2016 [30749][1][FATAL] scheduler run and updated => 2acde7dc-f719-746c-4889-58480fc1dac8
+Wed Dec  7 19:45:01 2016 [30749][1][FATAL] scheduler run and updated => 7a1a7758-df71-f54b-0ff3-58480f2ac17c
+Wed Dec  7 19:45:06 2016 [30749][1][FATAL] -----> getNewMessageIds()
+Wed Dec  7 19:45:07 2016 [30749][1][FATAL] ----->  before return getNewMessageIds()
+Wed Dec  7 19:45:07 2016 [30749][1][FATAL] print_r($newMsgs,1)
+Wed Dec  7 19:45:07 2016 [30749][1][FATAL] 
+Wed Dec  7 19:46:01 2016 [30798][-none-][FATAL] Configuration variable date.timezone is not set, guessed timezone Asia/Karachi. Please set date.timezone="Asia/Karachi" in php.ini!
+Wed Dec  7 19:46:06 2016 [30798][1][FATAL] -----> getNewMessageIds()
+Wed Dec  7 19:46:07 2016 [30798][1][FATAL] ----->  before return getNewMessageIds()
+Wed Dec  7 19:46:07 2016 [30798][1][FATAL] print_r($newMsgs,1)
+Wed Dec  7 19:46:07 2016 [30798][1][FATAL] 
+Wed Dec  7 19:47:01 2016 [30832][-none-][FATAL] Configuration variable date.timezone is not set, guessed timezone Asia/Karachi. Please set date.timezone="Asia/Karachi" in php.ini!
+Wed Dec  7 19:47:06 2016 [30832][1][FATAL] -----> getNewMessageIds()
+Wed Dec  7 19:47:08 2016 [30832][1][FATAL] ----->  before return getNewMessageIds()
+Wed Dec  7 19:47:08 2016 [30832][1][FATAL] print_r($newMsgs,1)
+Wed Dec  7 19:47:08 2016 [30832][1][FATAL] 
+Wed Dec  7 19:48:01 2016 [30855][-none-][FATAL] Configuration variable date.timezone is not set, guessed timezone Asia/Karachi. Please set date.timezone="Asia/Karachi" in php.ini!
+Wed Dec  7 19:48:06 2016 [30855][1][FATAL] -----> getNewMessageIds()
+Wed Dec  7 19:48:07 2016 [30855][1][FATAL] ----->  before return getNewMessageIds()
+Wed Dec  7 19:48:07 2016 [30855][1][FATAL] print_r($newMsgs,1)
+Wed Dec  7 19:48:07 2016 [30855][1][FATAL] 
+Wed Dec  7 19:49:01 2016 [30885][-none-][FATAL] Configuration variable date.timezone is not set, guessed timezone Asia/Karachi. Please set date.timezone="Asia/Karachi" in php.ini!
+Wed Dec  7 19:49:06 2016 [30885][1][FATAL] -----> getNewMessageIds()
+Wed Dec  7 19:49:06 2016 [30885][1][FATAL] ----->  before return getNewMessageIds()
+Wed Dec  7 19:49:06 2016 [30885][1][FATAL] print_r($newMsgs,1)
+Wed Dec  7 19:49:06 2016 [30885][1][FATAL] 
+Wed Dec  7 19:50:01 2016 [30902][-none-][FATAL] Configuration variable date.timezone is not set, guessed timezone Asia/Karachi. Please set date.timezone="Asia/Karachi" in php.ini!
+Wed Dec  7 19:50:01 2016 [30902][1][FATAL] scheduler run and updated => 2acde7dc-f719-746c-4889-58480fc1dac8
+Wed Dec  7 19:50:01 2016 [30902][1][FATAL] scheduler run and updated => 7a1a7758-df71-f54b-0ff3-58480f2ac17c
+Wed Dec  7 19:50:03 2016 [30902][1][FATAL] -----> getNewMessageIds()
+Wed Dec  7 19:50:04 2016 [30902][1][FATAL] ----->  before return getNewMessageIds()
+Wed Dec  7 19:50:04 2016 [30902][1][FATAL] print_r($newMsgs,1)
+Wed Dec  7 19:50:04 2016 [30902][1][FATAL] 
+Wed Dec  7 19:51:01 2016 [30921][-none-][FATAL] Configuration variable date.timezone is not set, guessed timezone Asia/Karachi. Please set date.timezone="Asia/Karachi" in php.ini!
+Wed Dec  7 19:51:08 2016 [30921][1][FATAL] -----> getNewMessageIds()
+Wed Dec  7 19:51:09 2016 [30921][1][FATAL] ----->  before return getNewMessageIds()
+Wed Dec  7 19:51:09 2016 [30921][1][FATAL] print_r($newMsgs,1)
+Wed Dec  7 19:51:09 2016 [30921][1][FATAL] 
+Wed Dec  7 19:52:01 2016 [30948][-none-][FATAL] Configuration variable date.timezone is not set, guessed timezone Asia/Karachi. Please set date.timezone="Asia/Karachi" in php.ini!
+Wed Dec  7 19:52:04 2016 [30948][1][FATAL] -----> getNewMessageIds()
+Wed Dec  7 19:52:04 2016 [30948][1][FATAL] ----->  before return getNewMessageIds()
+Wed Dec  7 19:52:04 2016 [30948][1][FATAL] print_r($newMsgs,1)
+Wed Dec  7 19:52:04 2016 [30948][1][FATAL] 
+Wed Dec  7 19:53:01 2016 [30962][-none-][FATAL] Configuration variable date.timezone is not set, guessed timezone Asia/Karachi. Please set date.timezone="Asia/Karachi" in php.ini!
+Wed Dec  7 19:53:09 2016 [30962][1][FATAL] -----> getNewMessageIds()
+Wed Dec  7 19:53:12 2016 [30962][1][FATAL] ----->  before return getNewMessageIds()
+Wed Dec  7 19:53:12 2016 [30962][1][FATAL] print_r($newMsgs,1)
+Wed Dec  7 19:53:12 2016 [30962][1][FATAL] 
+Wed Dec  7 19:54:01 2016 [30974][-none-][FATAL] Configuration variable date.timezone is not set, guessed timezone Asia/Karachi. Please set date.timezone="Asia/Karachi" in php.ini!
+Wed Dec  7 19:54:04 2016 [30974][1][FATAL] -----> getNewMessageIds()
+Wed Dec  7 19:54:05 2016 [30974][1][FATAL] ----->  before return getNewMessageIds()
+Wed Dec  7 19:54:05 2016 [30974][1][FATAL] print_r($newMsgs,1)
+Wed Dec  7 19:54:05 2016 [30974][1][FATAL] 
+Wed Dec  7 19:55:02 2016 [30993][-none-][FATAL] Configuration variable date.timezone is not set, guessed timezone Asia/Karachi. Please set date.timezone="Asia/Karachi" in php.ini!
+Wed Dec  7 19:55:02 2016 [30993][1][FATAL] scheduler run and updated => 2acde7dc-f719-746c-4889-58480fc1dac8
+Wed Dec  7 19:55:02 2016 [30993][1][FATAL] scheduler run and updated => 7a1a7758-df71-f54b-0ff3-58480f2ac17c
+Wed Dec  7 19:55:12 2016 [30993][1][FATAL] -----> getNewMessageIds()
+Wed Dec  7 19:55:13 2016 [30993][1][FATAL] ----->  before return getNewMessageIds()
+Wed Dec  7 19:55:13 2016 [30993][1][FATAL] print_r($newMsgs,1)
+Wed Dec  7 19:55:13 2016 [30993][1][FATAL] 
+Wed Dec  7 19:56:01 2016 [31022][-none-][FATAL] Configuration variable date.timezone is not set, guessed timezone Asia/Karachi. Please set date.timezone="Asia/Karachi" in php.ini!
+Wed Dec  7 19:56:04 2016 [31022][1][FATAL] -----> getNewMessageIds()
+Wed Dec  7 19:56:04 2016 [31022][1][FATAL] ----->  before return getNewMessageIds()
+Wed Dec  7 19:56:04 2016 [31022][1][FATAL] print_r($newMsgs,1)
+Wed Dec  7 19:56:04 2016 [31022][1][FATAL] 
+Wed Dec  7 19:57:01 2016 [31044][-none-][FATAL] Configuration variable date.timezone is not set, guessed timezone Asia/Karachi. Please set date.timezone="Asia/Karachi" in php.ini!
+Wed Dec  7 19:57:06 2016 [31044][1][FATAL] -----> getNewMessageIds()
+Wed Dec  7 19:57:07 2016 [31044][1][FATAL] ----->  before return getNewMessageIds()
+Wed Dec  7 19:57:07 2016 [31044][1][FATAL] print_r($newMsgs,1)
+Wed Dec  7 19:57:07 2016 [31044][1][FATAL] 
+Wed Dec  7 19:58:01 2016 [31066][-none-][FATAL] Configuration variable date.timezone is not set, guessed timezone Asia/Karachi. Please set date.timezone="Asia/Karachi" in php.ini!
+Wed Dec  7 19:58:03 2016 [31066][1][FATAL] -----> getNewMessageIds()
+Wed Dec  7 19:58:04 2016 [31066][1][FATAL] ----->  before return getNewMessageIds()
+Wed Dec  7 19:58:04 2016 [31066][1][FATAL] print_r($newMsgs,1)
+Wed Dec  7 19:58:04 2016 [31066][1][FATAL] 
+Wed Dec  7 19:59:01 2016 [31086][-none-][FATAL] Configuration variable date.timezone is not set, guessed timezone Asia/Karachi. Please set date.timezone="Asia/Karachi" in php.ini!
+Wed Dec  7 19:59:06 2016 [31086][1][FATAL] -----> getNewMessageIds()
+Wed Dec  7 19:59:07 2016 [31086][1][FATAL] ----->  before return getNewMessageIds()
+Wed Dec  7 19:59:07 2016 [31086][1][FATAL] print_r($newMsgs,1)
+Wed Dec  7 19:59:07 2016 [31086][1][FATAL] 
+Wed Dec  7 20:00:01 2016 [31109][-none-][FATAL] Configuration variable date.timezone is not set, guessed timezone Asia/Karachi. Please set date.timezone="Asia/Karachi" in php.ini!
+Wed Dec  7 20:00:01 2016 [31109][1][FATAL] scheduler run and updated => 2acde7dc-f719-746c-4889-58480fc1dac8
+Wed Dec  7 20:00:01 2016 [31109][1][FATAL] scheduler run and updated => 7a1a7758-df71-f54b-0ff3-58480f2ac17c
+Wed Dec  7 20:00:01 2016 [31109][1][FATAL] birthday run!!!
+Wed Dec  7 20:00:01 2016 [31109][1][FATAL] hello >>>>>>>>>>
+Wed Dec  7 20:00:01 2016 [31109][1][FATAL] 2016-12-07
+Wed Dec  7 20:00:01 2016 [31109][1][FATAL] 1970-07-01
+Wed Dec  7 20:00:01 2016 [31109][1][FATAL] 1
+Wed Dec  7 20:00:01 2016 [31109][1][FATAL] 1970-07-01
+Wed Dec  7 20:00:01 2016 [31109][1][FATAL] <div class="mozaik-inner" style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:rgb(68,68,68);padding:0px 30px;margin:0px;"><h2 style="font-family:Arial, Helvetica, sans-serif;font-size:18px;line-height:28.8px;color:#444444;padding:0px;margin:0px;">Hi,</h2><p style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:#444444;padding:0px;margin:0px;">It is to inform that the Performance Review of the Employee {emp_name} is due.<br style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:rgb(68,68,68);padding:0px;margin:0px;" />Please submit the Performance Review.<br style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:rgb(68,68,68);padding:0px;margin:0px;" /><br style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:rgb(68,68,68);padding:0px;margin:0px;" />Thanks. <br style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:rgb(68,68,68);padding:0px;margin:0px;" /></p></div>
+Wed Dec  7 20:00:01 2016 [31109][1][FATAL] **************
+Wed Dec  7 20:00:01 2016 [31109][1][FATAL] <div class="mozaik-inner" style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:rgb(68,68,68);padding:0px 30px;margin:0px;"><h2 style="font-family:Arial, Helvetica, sans-serif;font-size:18px;line-height:28.8px;color:#444444;padding:0px;margin:0px;">Hi,</h2><p style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:#444444;padding:0px;margin:0px;">It is to inform that the Performance Review of the Employee hello abc is due.<br style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:rgb(68,68,68);padding:0px;margin:0px;" />Please submit the Performance Review.<br style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:rgb(68,68,68);padding:0px;margin:0px;" /><br style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:rgb(68,68,68);padding:0px;margin:0px;" />Thanks. <br style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:rgb(68,68,68);padding:0px;margin:0px;" /></p></div>
+Wed Dec  7 20:00:05 2016 [31109][1][FATAL] birthday run!!!
+Wed Dec  7 20:00:05 2016 [31109][1][FATAL] birthday run!!!
+Wed Dec  7 20:00:05 2016 [31109][1][FATAL] birthday run!!!
+Wed Dec  7 20:00:05 2016 [31109][1][FATAL] birthday run!!!
+Wed Dec  7 20:00:05 2016 [31109][1][FATAL] birthday run!!!
+Wed Dec  7 20:00:05 2016 [31109][1][FATAL] birthday run!!!
+Wed Dec  7 20:00:05 2016 [31109][1][FATAL] hello >>>>>>>>>>
+Wed Dec  7 20:00:05 2016 [31109][1][FATAL] 2016-12-07
+Wed Dec  7 20:00:05 2016 [31109][1][FATAL] 2013-03-04
+Wed Dec  7 20:00:05 2016 [31109][1][FATAL] 1
+Wed Dec  7 20:00:05 2016 [31109][1][FATAL] 2013-03-04
+Wed Dec  7 20:00:05 2016 [31109][1][FATAL] <div class="mozaik-inner" style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:rgb(68,68,68);padding:0px 30px;margin:0px;"><h2 style="font-family:Arial, Helvetica, sans-serif;font-size:18px;line-height:28.8px;color:#444444;padding:0px;margin:0px;">Hi,</h2><p style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:#444444;padding:0px;margin:0px;">It is to inform that the Performance Review of the Employee {emp_name} is due.<br style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:rgb(68,68,68);padding:0px;margin:0px;" />Please submit the Performance Review.<br style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:rgb(68,68,68);padding:0px;margin:0px;" /><br style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:rgb(68,68,68);padding:0px;margin:0px;" />Thanks. <br style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:rgb(68,68,68);padding:0px;margin:0px;" /></p></div>
+Wed Dec  7 20:00:05 2016 [31109][1][FATAL] **************
+Wed Dec  7 20:00:05 2016 [31109][1][FATAL] <div class="mozaik-inner" style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:rgb(68,68,68);padding:0px 30px;margin:0px;"><h2 style="font-family:Arial, Helvetica, sans-serif;font-size:18px;line-height:28.8px;color:#444444;padding:0px;margin:0px;">Hi,</h2><p style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:#444444;padding:0px;margin:0px;">It is to inform that the Performance Review of the Employee test all scheduler zzzz is due.<br style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:rgb(68,68,68);padding:0px;margin:0px;" />Please submit the Performance Review.<br style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:rgb(68,68,68);padding:0px;margin:0px;" /><br style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:rgb(68,68,68);padding:0px;margin:0px;" />Thanks. <br style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:rgb(68,68,68);padding:0px;margin:0px;" /></p></div>
+Wed Dec  7 20:00:09 2016 [31109][1][FATAL] birthday run!!!
+Wed Dec  7 20:00:09 2016 [31109][1][FATAL] hello >>>>>>>>>>
+Wed Dec  7 20:00:09 2016 [31109][1][FATAL] 2016-12-07
+Wed Dec  7 20:00:09 2016 [31109][1][FATAL] 2016-05-15
+Wed Dec  7 20:00:09 2016 [31109][1][FATAL] 1
+Wed Dec  7 20:00:09 2016 [31109][1][FATAL] 2016-05-15
+Wed Dec  7 20:00:09 2016 [31109][1][FATAL] <div class="mozaik-inner" style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:rgb(68,68,68);padding:0px 30px;margin:0px;"><h2 style="font-family:Arial, Helvetica, sans-serif;font-size:18px;line-height:28.8px;color:#444444;padding:0px;margin:0px;">Hi,</h2><p style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:#444444;padding:0px;margin:0px;">It is to inform that the Performance Review of the Employee {emp_name} is due.<br style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:rgb(68,68,68);padding:0px;margin:0px;" />Please submit the Performance Review.<br style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:rgb(68,68,68);padding:0px;margin:0px;" /><br style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:rgb(68,68,68);padding:0px;margin:0px;" />Thanks. <br style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:rgb(68,68,68);padding:0px;margin:0px;" /></p></div>
+Wed Dec  7 20:00:09 2016 [31109][1][FATAL] **************
+Wed Dec  7 20:00:09 2016 [31109][1][FATAL] <div class="mozaik-inner" style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:rgb(68,68,68);padding:0px 30px;margin:0px;"><h2 style="font-family:Arial, Helvetica, sans-serif;font-size:18px;line-height:28.8px;color:#444444;padding:0px;margin:0px;">Hi,</h2><p style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:#444444;padding:0px;margin:0px;">It is to inform that the Performance Review of the Employee today 15 is due.<br style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:rgb(68,68,68);padding:0px;margin:0px;" />Please submit the Performance Review.<br style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:rgb(68,68,68);padding:0px;margin:0px;" /><br style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:rgb(68,68,68);padding:0px;margin:0px;" />Thanks. <br style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:rgb(68,68,68);padding:0px;margin:0px;" /></p></div>
+Wed Dec  7 20:00:12 2016 [31109][1][FATAL] birthday run!!!
+Wed Dec  7 20:00:12 2016 [31109][1][FATAL] birthday run!!!
+Wed Dec  7 20:00:12 2016 [31109][1][FATAL] birthday run!!!
+Wed Dec  7 20:00:12 2016 [31109][1][FATAL] hello >>>>>>>>>>
+Wed Dec  7 20:00:12 2016 [31109][1][FATAL] 2016-12-07
+Wed Dec  7 20:00:12 2016 [31109][1][FATAL] 1970-07-01
+Wed Dec  7 20:00:12 2016 [31109][1][FATAL] 1
+Wed Dec  7 20:00:12 2016 [31109][1][FATAL] 1970-07-01
+Wed Dec  7 20:00:12 2016 [31109][1][FATAL] <div class="mozaik-inner" style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:rgb(68,68,68);padding:0px 30px;margin:0px;"><h2 style="font-family:Arial, Helvetica, sans-serif;font-size:18px;line-height:28.8px;color:#444444;padding:0px;margin:0px;">Hi,</h2><p style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:#444444;padding:0px;margin:0px;">It is to inform that the Performance Review of the Employee {emp_name} is due.<br style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:rgb(68,68,68);padding:0px;margin:0px;" />Please submit the Performance Review.<br style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:rgb(68,68,68);padding:0px;margin:0px;" /><br style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:rgb(68,68,68);padding:0px;margin:0px;" />Thanks. <br style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:rgb(68,68,68);padding:0px;margin:0px;" /></p></div>
+Wed Dec  7 20:00:12 2016 [31109][1][FATAL] **************
+Wed Dec  7 20:00:12 2016 [31109][1][FATAL] <div class="mozaik-inner" style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:rgb(68,68,68);padding:0px 30px;margin:0px;"><h2 style="font-family:Arial, Helvetica, sans-serif;font-size:18px;line-height:28.8px;color:#444444;padding:0px;margin:0px;">Hi,</h2><p style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:#444444;padding:0px;margin:0px;">It is to inform that the Performance Review of the Employee aaa 3435dfg ttt is due.<br style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:rgb(68,68,68);padding:0px;margin:0px;" />Please submit the Performance Review.<br style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:rgb(68,68,68);padding:0px;margin:0px;" /><br style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:rgb(68,68,68);padding:0px;margin:0px;" />Thanks. <br style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:rgb(68,68,68);padding:0px;margin:0px;" /></p></div>
+Wed Dec  7 20:00:16 2016 [31109][1][FATAL] birthday run!!!
+Wed Dec  7 20:00:16 2016 [31109][1][FATAL] birthday run!!!
+Wed Dec  7 20:00:16 2016 [31109][1][FATAL] birthday run!!!
+Wed Dec  7 20:00:16 2016 [31109][1][FATAL] hello >>>>>>>>>>
+Wed Dec  7 20:00:16 2016 [31109][1][FATAL] 2016-12-07
+Wed Dec  7 20:00:16 2016 [31109][1][FATAL] 1970-07-01
+Wed Dec  7 20:00:16 2016 [31109][1][FATAL] 1
+Wed Dec  7 20:00:16 2016 [31109][1][FATAL] 1970-07-01
+Wed Dec  7 20:00:16 2016 [31109][1][FATAL] <div class="mozaik-inner" style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:rgb(68,68,68);padding:0px 30px;margin:0px;"><h2 style="font-family:Arial, Helvetica, sans-serif;font-size:18px;line-height:28.8px;color:#444444;padding:0px;margin:0px;">Hi,</h2><p style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:#444444;padding:0px;margin:0px;">It is to inform that the Performance Review of the Employee {emp_name} is due.<br style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:rgb(68,68,68);padding:0px;margin:0px;" />Please submit the Performance Review.<br style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:rgb(68,68,68);padding:0px;margin:0px;" /><br style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:rgb(68,68,68);padding:0px;margin:0px;" />Thanks. <br style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:rgb(68,68,68);padding:0px;margin:0px;" /></p></div>
+Wed Dec  7 20:00:16 2016 [31109][1][FATAL] **************
+Wed Dec  7 20:00:16 2016 [31109][1][FATAL] <div class="mozaik-inner" style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:rgb(68,68,68);padding:0px 30px;margin:0px;"><h2 style="font-family:Arial, Helvetica, sans-serif;font-size:18px;line-height:28.8px;color:#444444;padding:0px;margin:0px;">Hi,</h2><p style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:#444444;padding:0px;margin:0px;">It is to inform that the Performance Review of the Employee hello xyz bbb is due.<br style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:rgb(68,68,68);padding:0px;margin:0px;" />Please submit the Performance Review.<br style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:rgb(68,68,68);padding:0px;margin:0px;" /><br style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:rgb(68,68,68);padding:0px;margin:0px;" />Thanks. <br style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:rgb(68,68,68);padding:0px;margin:0px;" /></p></div>
+Wed Dec  7 20:00:19 2016 [31109][1][FATAL] birthday run!!!
+Wed Dec  7 20:00:19 2016 [31109][1][FATAL] birthday run!!!
+Wed Dec  7 20:00:19 2016 [31109][1][FATAL] birthday run!!!
+Wed Dec  7 20:00:19 2016 [31109][1][FATAL] hello >>>>>>>>>>
+Wed Dec  7 20:00:19 2016 [31109][1][FATAL] 2016-12-07
+Wed Dec  7 20:00:19 2016 [31109][1][FATAL] 1970-07-01
+Wed Dec  7 20:00:19 2016 [31109][1][FATAL] 1
+Wed Dec  7 20:00:19 2016 [31109][1][FATAL] 1970-07-01
+Wed Dec  7 20:00:19 2016 [31109][1][FATAL] <div class="mozaik-inner" style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:rgb(68,68,68);padding:0px 30px;margin:0px;"><h2 style="font-family:Arial, Helvetica, sans-serif;font-size:18px;line-height:28.8px;color:#444444;padding:0px;margin:0px;">Hi,</h2><p style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:#444444;padding:0px;margin:0px;">It is to inform that the Performance Review of the Employee {emp_name} is due.<br style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:rgb(68,68,68);padding:0px;margin:0px;" />Please submit the Performance Review.<br style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:rgb(68,68,68);padding:0px;margin:0px;" /><br style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:rgb(68,68,68);padding:0px;margin:0px;" />Thanks. <br style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:rgb(68,68,68);padding:0px;margin:0px;" /></p></div>
+Wed Dec  7 20:00:19 2016 [31109][1][FATAL] **************
+Wed Dec  7 20:00:19 2016 [31109][1][FATAL] <div class="mozaik-inner" style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:rgb(68,68,68);padding:0px 30px;margin:0px;"><h2 style="font-family:Arial, Helvetica, sans-serif;font-size:18px;line-height:28.8px;color:#444444;padding:0px;margin:0px;">Hi,</h2><p style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:#444444;padding:0px;margin:0px;">It is to inform that the Performance Review of the Employee hello scheduler aaa is due.<br style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:rgb(68,68,68);padding:0px;margin:0px;" />Please submit the Performance Review.<br style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:rgb(68,68,68);padding:0px;margin:0px;" /><br style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:rgb(68,68,68);padding:0px;margin:0px;" />Thanks. <br style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:rgb(68,68,68);padding:0px;margin:0px;" /></p></div>
+Wed Dec  7 20:00:23 2016 [31109][1][FATAL] birthday run!!!
+Wed Dec  7 20:00:23 2016 [31109][1][FATAL] birthday run!!!
+Wed Dec  7 20:00:23 2016 [31109][1][FATAL] birthday run!!!
+Wed Dec  7 20:00:23 2016 [31109][1][FATAL] hello >>>>>>>>>>
+Wed Dec  7 20:00:23 2016 [31109][1][FATAL] 2016-12-07
+Wed Dec  7 20:00:23 2016 [31109][1][FATAL] 2011-06-22
+Wed Dec  7 20:00:23 2016 [31109][1][FATAL] 1
+Wed Dec  7 20:00:23 2016 [31109][1][FATAL] 2011-06-22
+Wed Dec  7 20:00:23 2016 [31109][1][FATAL] <div class="mozaik-inner" style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:rgb(68,68,68);padding:0px 30px;margin:0px;"><h2 style="font-family:Arial, Helvetica, sans-serif;font-size:18px;line-height:28.8px;color:#444444;padding:0px;margin:0px;">Hi,</h2><p style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:#444444;padding:0px;margin:0px;">It is to inform that the Performance Review of the Employee {emp_name} is due.<br style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:rgb(68,68,68);padding:0px;margin:0px;" />Please submit the Performance Review.<br style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:rgb(68,68,68);padding:0px;margin:0px;" /><br style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:rgb(68,68,68);padding:0px;margin:0px;" />Thanks. <br style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:rgb(68,68,68);padding:0px;margin:0px;" /></p></div>
+Wed Dec  7 20:00:23 2016 [31109][1][FATAL] **************
+Wed Dec  7 20:00:23 2016 [31109][1][FATAL] <div class="mozaik-inner" style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:rgb(68,68,68);padding:0px 30px;margin:0px;"><h2 style="font-family:Arial, Helvetica, sans-serif;font-size:18px;line-height:28.8px;color:#444444;padding:0px;margin:0px;">Hi,</h2><p style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:#444444;padding:0px;margin:0px;">It is to inform that the Performance Review of the Employee another twest shec aaa is due.<br style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:rgb(68,68,68);padding:0px;margin:0px;" />Please submit the Performance Review.<br style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:rgb(68,68,68);padding:0px;margin:0px;" /><br style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:rgb(68,68,68);padding:0px;margin:0px;" />Thanks. <br style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:rgb(68,68,68);padding:0px;margin:0px;" /></p></div>
+Wed Dec  7 20:00:30 2016 [31109][1][FATAL] -----> getNewMessageIds()
+Wed Dec  7 20:00:31 2016 [31109][1][FATAL] ----->  before return getNewMessageIds()
+Wed Dec  7 20:00:31 2016 [31109][1][FATAL] print_r($newMsgs,1)
+Wed Dec  7 20:00:31 2016 [31109][1][FATAL] 
+Wed Dec  7 20:01:01 2016 [31141][-none-][FATAL] Configuration variable date.timezone is not set, guessed timezone Asia/Karachi. Please set date.timezone="Asia/Karachi" in php.ini!
+Wed Dec  7 20:01:02 2016 [31141][1][FATAL] birthday run!!!
+Wed Dec  7 20:01:02 2016 [31141][1][FATAL] <div class="mozaik-inner" style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:rgb(68,68,68);padding:0px 30px;margin:0px;"><h2 style="font-family:Arial, Helvetica, sans-serif;font-size:18px;line-height:28.8px;color:#444444;padding:0px;margin:0px;">{emp_name},</h2><p style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:#444444;padding:0px;margin:0px;">Happy Birthday! Many happy returns of the day.</p><div class="mozaik-clear" style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:rgb(68,68,68);padding:0px;margin:0px;height:0px;"> <br style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:rgb(68,68,68);padding:0px;margin:0px;" /></div></div>
+Wed Dec  7 20:01:02 2016 [31141][1][FATAL] **************
+Wed Dec  7 20:01:02 2016 [31141][1][FATAL] <div class="mozaik-inner" style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:rgb(68,68,68);padding:0px 30px;margin:0px;"><h2 style="font-family:Arial, Helvetica, sans-serif;font-size:18px;line-height:28.8px;color:#444444;padding:0px;margin:0px;">test  interviewer,</h2><p style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:#444444;padding:0px;margin:0px;">Happy Birthday! Many happy returns of the day.</p><div class="mozaik-clear" style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:rgb(68,68,68);padding:0px;margin:0px;height:0px;"> <br style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:rgb(68,68,68);padding:0px;margin:0px;" /></div></div>
+Wed Dec  7 20:01:05 2016 [31141][1][FATAL] birthday run!!!
+Wed Dec  7 20:01:05 2016 [31141][1][FATAL] <div class="mozaik-inner" style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:rgb(68,68,68);padding:0px 30px;margin:0px;"><h2 style="font-family:Arial, Helvetica, sans-serif;font-size:18px;line-height:28.8px;color:#444444;padding:0px;margin:0px;">{emp_name},</h2><p style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:#444444;padding:0px;margin:0px;">Happy Birthday! Many happy returns of the day.</p><div class="mozaik-clear" style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:rgb(68,68,68);padding:0px;margin:0px;height:0px;"> <br style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:rgb(68,68,68);padding:0px;margin:0px;" /></div></div>
+Wed Dec  7 20:01:05 2016 [31141][1][FATAL] **************
+Wed Dec  7 20:01:05 2016 [31141][1][FATAL] <div class="mozaik-inner" style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:rgb(68,68,68);padding:0px 30px;margin:0px;"><h2 style="font-family:Arial, Helvetica, sans-serif;font-size:18px;line-height:28.8px;color:#444444;padding:0px;margin:0px;">hello senior dev,</h2><p style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:#444444;padding:0px;margin:0px;">Happy Birthday! Many happy returns of the day.</p><div class="mozaik-clear" style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:rgb(68,68,68);padding:0px;margin:0px;height:0px;"> <br style="font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:22.4px;color:rgb(68,68,68);padding:0px;margin:0px;" /></div></div>
+Wed Dec  7 20:01:10 2016 [31141][1][FATAL] -----> getNewMessageIds()
+Wed Dec  7 20:01:11 2016 [31141][1][FATAL] ----->  before return getNewMessageIds()
+Wed Dec  7 20:01:11 2016 [31141][1][FATAL] print_r($newMsgs,1)
+Wed Dec  7 20:01:11 2016 [31141][1][FATAL] 
+Wed Dec  7 20:02:01 2016 [31185][-none-][FATAL] Configuration variable date.timezone is not set, guessed timezone Asia/Karachi. Please set date.timezone="Asia/Karachi" in php.ini!
+Wed Dec  7 20:02:06 2016 [31185][1][FATAL] -----> getNewMessageIds()
+Wed Dec  7 20:02:06 2016 [31185][1][FATAL] ----->  before return getNewMessageIds()
+Wed Dec  7 20:02:06 2016 [31185][1][FATAL] print_r($newMsgs,1)
+Wed Dec  7 20:02:06 2016 [31185][1][FATAL] 
+Wed Dec  7 20:03:02 2016 [31214][-none-][FATAL] Configuration variable date.timezone is not set, guessed timezone Asia/Karachi. Please set date.timezone="Asia/Karachi" in php.ini!
+Wed Dec  7 20:03:07 2016 [31214][1][FATAL] -----> getNewMessageIds()
+Wed Dec  7 20:03:07 2016 [31214][1][FATAL] ----->  before return getNewMessageIds()
+Wed Dec  7 20:03:07 2016 [31214][1][FATAL] print_r($newMsgs,1)
+Wed Dec  7 20:03:07 2016 [31214][1][FATAL] 
+Wed Dec  7 20:04:01 2016 [31235][-none-][FATAL] Configuration variable date.timezone is not set, guessed timezone Asia/Karachi. Please set date.timezone="Asia/Karachi" in php.ini!
+Wed Dec  7 20:04:06 2016 [31235][1][FATAL] -----> getNewMessageIds()
+Wed Dec  7 20:04:06 2016 [31235][1][FATAL] ----->  before return getNewMessageIds()
+Wed Dec  7 20:04:06 2016 [31235][1][FATAL] print_r($newMsgs,1)
+Wed Dec  7 20:04:06 2016 [31235][1][FATAL] 
+Wed Dec  7 20:05:01 2016 [31252][-none-][FATAL] Configuration variable date.timezone is not set, guessed timezone Asia/Karachi. Please set date.timezone="Asia/Karachi" in php.ini!
+Wed Dec  7 20:05:01 2016 [31252][1][FATAL] scheduler run and updated => 2acde7dc-f719-746c-4889-58480fc1dac8
+Wed Dec  7 20:05:01 2016 [31252][1][FATAL] scheduler run and updated => 7a1a7758-df71-f54b-0ff3-58480f2ac17c
+Wed Dec  7 20:05:06 2016 [31252][1][FATAL] -----> getNewMessageIds()
+Wed Dec  7 20:05:07 2016 [31252][1][FATAL] ----->  before return getNewMessageIds()
+Wed Dec  7 20:05:07 2016 [31252][1][FATAL] print_r($newMsgs,1)
+Wed Dec  7 20:05:07 2016 [31252][1][FATAL] 

@@ -10,6 +10,13 @@ $moduleList[] = 'RT_Vacancies';
 
  
  //WARNING: The contents of this file are auto-generated
+$beanList['RT_Interviews'] = 'RT_Interviews';
+$beanFiles['RT_Interviews'] = 'modules/RT_Interviews/RT_Interviews.php';
+$moduleList[] = 'RT_Interviews';
+
+
+ 
+ //WARNING: The contents of this file are auto-generated
 $beanList['RT_Candidates'] = 'RT_Candidates';
 $beanFiles['RT_Candidates'] = 'modules/RT_Candidates/RT_Candidates.php';
 $moduleList[] = 'RT_Candidates';
