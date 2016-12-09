@@ -10,6 +10,13 @@ $moduleList[] = 'RT_Vacancies';
 
  
  //WARNING: The contents of this file are auto-generated
+$beanList['RT_Jobs'] = 'RT_Jobs';
+$beanFiles['RT_Jobs'] = 'modules/RT_Jobs/RT_Jobs.php';
+$moduleList[] = 'RT_Jobs';
+
+
+ 
+ //WARNING: The contents of this file are auto-generated
 $beanList['RT_Interviews'] = 'RT_Interviews';
 $beanFiles['RT_Interviews'] = 'modules/RT_Interviews/RT_Interviews.php';
 $moduleList[] = 'RT_Interviews';
@@ -94,6 +101,13 @@ $moduleList[] = 'RT_Bonus';
 $beanList['RT_Departments'] = 'RT_Departments';
 $beanFiles['RT_Departments'] = 'modules/RT_Departments/RT_Departments.php';
 $moduleList[] = 'RT_Departments';
+
+
+ 
+ //WARNING: The contents of this file are auto-generated
+$beanList['RT_Job_Offers'] = 'RT_Job_Offers';
+$beanFiles['RT_Job_Offers'] = 'modules/RT_Job_Offers/RT_Job_Offers.php';
+$moduleList[] = 'RT_Job_Offers';
 
 
  

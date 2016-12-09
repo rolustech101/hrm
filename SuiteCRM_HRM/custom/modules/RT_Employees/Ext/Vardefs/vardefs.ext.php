@@ -329,4 +329,9 @@ $dictionary["RT_Employees"]["fields"]["rt_departments_rt_employeesrt_departments
   'vname' => 'LBL_RT_DEPARTMENTS_RT_EMPLOYEES_FROM_RT_EMPLOYEES_TITLE',
 );
 
+
+
+$dictionary["RT_Employees"]["fields"]["email1"]['required'] = true;
+
+
 ?>

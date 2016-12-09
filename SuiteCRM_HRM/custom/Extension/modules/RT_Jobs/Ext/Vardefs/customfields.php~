@@ -1,0 +1,52 @@
+<?php
+$dictionary['a_Employees']['fields']['employee_id'] = array (
+    'name' => 'employee_id',
+    'type' => 'link',
+    'relationship' => 'employees_issues', 
+    'module'=>'a_Issues',
+    'source'=>'non-db',
+	'vname'=>'LBL_EMPLOYEE_NAME',
+     );
+$dictionary['a_Employees']['relationships']['employees_issues'] = array(
+        'lhs_module'=> 'a_Employees',
+        'lhs_table'=> 'a_employees',
+        'lhs_key' => 'id',
+        'rhs_module'=> 'a_Issues',
+        'rhs_table'=> 'a_issues',
+        'rhs_key' => 'employee_id',
+        'relationship_type'=>'one-to-many'
+    ); 
+$dictionary['a_Employees']['fields']['salary'] = array (
+    'name' => 'salary',
+    'type' => 'varchar',
+	'vname'=>'LBL_SALARY',
+     );
+$dictionary['a_Employees']['fields']['amount_salary'] = array (
+    'name' => 'amount_salary',
+    'type' => 'varchar',
+	'source' => 'non-db',
+	'vname'=>'LBL_AMOUNT_SALARY',
+     );
+$dictionary['a_Employees']['fields']['label_salary'] = array (
+    'name' => 'label_salary',
+    'type' => 'varchar',
+	'source' => 'non-db',
+	'vname'=>'LBL_LABEL_SALARY',
+     );	
+$dictionary['a_Employees']['fields']['taxable_salary'] = array (
+    'name' => 'taxable_salary',
+    'type' => 'bool',
+	'source' => 'non-db',
+	'vname'=>'LBL_TAXABLE_SALARY',
+     );	
+$dictionary['a_Employees']['fields']['tax'] = array (
+    'name' => 'tax',
+    'type' => 'varchar',
+	'vname'=>'LBL_TAX',
+     );
+$dictionary['a_Employees']['fields']['provident_fund'] = array (
+    'name' => 'provident_fund',
+    'type' => 'varchar',
+	'vname'=>'LBL_PROVIDENT_FUND',
+     );	 
+?>

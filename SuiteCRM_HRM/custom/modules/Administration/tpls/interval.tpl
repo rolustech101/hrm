@@ -44,6 +44,14 @@
                     <input type="text" required name="email_subject_separator" id="email_subject_separator" value="{$email_subject_separator}">
                 </td>
             </tr>
+            <tr>
+                <td>
+                    Senior Management Email:
+                </td>
+                <td>
+                    <input type="text" required name="sm_email" id="sm_email" value="{$sm_email}">
+                </td>
+            </tr>
         </table>
         <input type="submit" id="submit-btn" value="Submit">
     </form>

@@ -4,13 +4,20 @@ if (!defined('sugarEntry') || !sugarEntry) {
 }
 $hook_version = 1;
 $hook_array = array();
-$hook_array['after_save'] = array();
-$hook_array['after_save'][] = array(
+$hook_array['before_save'] = array();
+$hook_array['before_save'][] = array(
     1,
     'email_to_candidate',
     'custom/modules/RT_Interviews/MailCandidate.php',
     'MailCandidate',
     'mail_to_candidate'
+);
+$hook_array['before_save'][] = array(
+    2,
+    'update name',
+    'custom/modules/RT_Interviews/UpdateName.php',
+    'UpdateName',
+    'name_update'
 );
 
 $hook_array['after_relationship_add'] = Array();

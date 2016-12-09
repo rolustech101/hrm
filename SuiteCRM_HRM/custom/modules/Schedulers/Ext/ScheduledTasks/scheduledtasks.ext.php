@@ -2,6 +2,151 @@
  //WARNING: The contents of this file are auto-generated
 
 
+function offer_job($job)
+{
+    global $timedate;
+
+    $GLOBALS['log']->fatal('offer_job JOB!!!!!!!!!!!!!!!!');
+    $data = json_decode(html_entity_decode($job->data), true);
+    if (!empty($data)) {
+        $GLOBALS['log']->fatal('offer_job JOB IFFFFFFF');
+        $GLOBALS['log']->fatal(print_r($data, 1));
+        $emailObj = new Email();
+        $defaults = $emailObj->getSystemDefaultEmail();
+        $mail = new SugarPHPMailer();
+        $mail->IsHTML(true);
+        $mail->setMailerForSystem();
+        $mail->From = $defaults['email'];
+        $mail->FromName = $defaults['name'];
+        $template_name = $data['template_name'];
+        $template = new EmailTemplate();
+        $template->retrieve_by_string_fields(array('name' => $template_name, 'type' => 'email'));
+        $mail->Subject = $template->subject;
+
+        $to = [];
+        $GLOBALS['log']->fatal('IN THE CANDIDATE IFFFFFF');
+
+        $sql = "select * from (select cand.id as cand_id, cand.phone_mobile,cand.phone_work,cand.phone_other,cand.phone_home,cand.phone_fax, e_add.id as e_id, e_add.email_address_id,e_add.bean_id from rt_candidates as cand inner join email_addr_bean_rel as e_add on e_add.bean_id = cand.id where cand.deleted = 0 AND e_add.deleted = 0 ) as tt inner join email_addresses as addresses on addresses.id = tt.email_address_id where cand_id = '{$data['id']}' and addresses.deleted = 0";
+        $res = $GLOBALS['db']->query($sql);
+        if ($res->num_rows > 1) {
+            $GLOBALS['log']->fatal('candidate has many emails');
+        } elseif ($res->num_rows > 0 && $res->num_rows == 1) {
+            $row = $GLOBALS['db']->fetchByAssoc($res);
+            $to[] = $row['email_address'];
+        } else {
+            $GLOBALS['log']->fatal('Candidate does not have the Email Address');
+        }
+
+        $sql_e = "select * from config where name = 'sm_email' and category = 'system'";
+        $res_e = $GLOBALS['db']->query($sql_e);
+        if($res_e->num_rows > 0){
+            $row_e = $GLOBALS['db']->fetchByAssoc($res_e);
+            $to[] = $row_e['value'];
+        }
+
+        $GLOBALS['log']->fatal('TTTTTTTTTTTTTTTTTTTTTTOOOOOOOOOOOOOOOOOOOOOO');
+        $GLOBALS['log']->fatal(print_r($to,1));
+        $template->body_html = str_replace('{name}', $data['candidate_name'], $template->body_html);
+
+        $mail->Body = from_html($template->body_html);
+        $mail->prepForOutbound();
+
+        foreach ($to as $item) {
+            $mail->AddAddress($item);
+            $mail->Send();
+        }
+        return true;
+//        if (!$mail->Send()) {
+//            $GLOBALS['log']->fatal("Could not send Mail:  " . $mail->ErrorInfo);
+//        } else {
+//            return true;
+//        }
+
+    }
+    return false;
+}
+
+function candi_inter($job){
+    $GLOBALS['log']->fatal('INTERVIEW JOB!!!!!!!!!!!!!!!!');
+//    $GLOBALS['log']->fatal(print_r(json_decode($job->data,true),1));
+    $GLOBALS['log']->fatal(print_r($job->data,1));
+
+    $data = json_decode(html_entity_decode($job->data),true);
+    $GLOBALS['log']->fatal('CHECK EMPTYYYY!!!!!!!!!!!!!!!!!!!!!!!!');
+    $GLOBALS['log']->fatal(print_r($data,1));
+
+    if (!empty($data))
+    {
+        $GLOBALS['log']->fatal('INTERVIEW JOB IFFFFFFF');
+        $GLOBALS['log']->fatal(print_r($data,1));
+        $emailObj = new Email();
+        $defaults = $emailObj->getSystemDefaultEmail();
+        $mail = new SugarPHPMailer();
+        $mail->IsHTML(true);
+        $mail->setMailerForSystem();
+        $mail->From = $defaults['email'];
+        $mail->FromName = $defaults['name'];
+        $template_name = $data['template_name'];
+        $template = new EmailTemplate();
+        $template->retrieve_by_string_fields(array('name' => $template_name,'type'=>'email'));
+        $mail->Subject = $template->subject;
+
+        if($data['module'] == 'RT_Candidates'){
+
+            $GLOBALS['log']->fatal('IN THE CANDIDATE IFFFFFF');
+
+            $sql = "select * from (select cand.id as cand_id, cand.phone_mobile,cand.phone_work,cand.phone_other,cand.phone_home,cand.phone_fax, e_add.id as e_id, e_add.email_address_id,e_add.bean_id from rt_candidates as cand inner join email_addr_bean_rel as e_add on e_add.bean_id = cand.id where cand.deleted = 0 AND e_add.deleted = 0 ) as tt inner join email_addresses as addresses on addresses.id = tt.email_address_id where cand_id = '{$data['id']}' and addresses.deleted = 0";
+            $res = $GLOBALS['db']->query($sql);
+            if($res->num_rows > 1){
+                $GLOBALS['log']->fatal('candidate has many emails');
+            }elseif($res->num_rows > 0 && $res->num_rows == 1){
+                $row = $GLOBALS['db']->fetchByAssoc($res);
+                $to = $row['email_address'];
+            }else{
+                $GLOBALS['log']->fatal('Candidate does not have the Email Address');
+            }
+            $template->body_html = str_replace('{cand_name}',$data['candidate_name'],$template->body_html);
+            $template->body_html = str_replace('{date}',$data['interview_date'],$template->body_html);
+
+        }elseif ($data['module'] == 'RT_Employees'){
+
+            $sql = "select * from (select emp.id as emp_id, e_add.id as e_id, e_add.email_address_id,e_add.bean_id from rt_employees as emp inner join email_addr_bean_rel as e_add on e_add.bean_id = emp.id where emp.deleted = 0 AND e_add.deleted = 0 ) as tt inner join email_addresses as addresses on addresses.id = tt.email_address_id where emp_id = '{$data['id']}' and addresses.deleted = 0";
+            $res = $GLOBALS['db']->query($sql);
+            if($res->num_rows > 1){
+                $GLOBALS['log']->fatal('Employee has many emails');
+            }elseif($res->num_rows > 0 && $res->num_rows == 1){
+                $row = $GLOBALS['db']->fetchByAssoc($res);
+                $to = $row['email_address'];
+            }else{
+                $GLOBALS['log']->fatal('Employee does not have the Email Address');
+            }
+
+            $template->body_html = str_replace('{emp_name}',$data['employee_name'],$template->body_html);
+            $template->body_html = str_replace('{date}',$data['interview_date'],$template->body_html);
+//        $template->body_html = str_replace('{job_app}',$date,$template->body_html);
+        }else{
+            $GLOBALS['log']->fatal('Please provide a valid Module Name!');
+            return false;
+        }
+
+        $mail->Body = from_html($template->body_html);
+        $mail->prepForOutbound();
+        $mail->AddAddress($to);
+
+        if (!$mail->Send()) {
+            $GLOBALS['log']->fatal("Could not send Mail:  " . $mail->ErrorInfo);
+        }else{
+            return true;
+        }
+//        if($mail->Send())
+//        {
+//            //return true for completed
+//            return true;
+//        }
+    }
+    return false;
+}
+
 require_once('include/SugarPHPMailer.php');
 require_once('modules/EmailTemplates/EmailTemplate.php');
 require_once('custom/include/custom_utils.php');
@@ -282,6 +427,158 @@ function performance_review_reminder_job()
     }
 
     return true;
+}
+
+function interview_job($job){
+    global $timedate;
+
+    $GLOBALS['log']->fatal('INTERVIEW JOB!!!!!!!!!!!!!!!!');
+    $data = json_decode(html_entity_decode($job->data),true);
+    if (!empty($data))
+    {
+        $GLOBALS['log']->fatal('INTERVIEW JOB IFFFFFFF');
+        $GLOBALS['log']->fatal(print_r($data,1));
+        $emailObj = new Email();
+        $defaults = $emailObj->getSystemDefaultEmail();
+        $mail = new SugarPHPMailer();
+        $mail->IsHTML(true);
+        $mail->setMailerForSystem();
+        $mail->From = $defaults['email'];
+        $mail->FromName = $defaults['name'];
+        $template_name = $data['template_name'];
+        $template = new EmailTemplate();
+        $template->retrieve_by_string_fields(array('name' => $template_name,'type'=>'email'));
+        $mail->Subject = $template->subject;
+
+        if($data['module'] == 'RT_Candidates'){
+
+            $GLOBALS['log']->fatal('IN THE CANDIDATE IFFFFFF');
+
+            $sql = "select * from (select cand.id as cand_id, cand.phone_mobile,cand.phone_work,cand.phone_other,cand.phone_home,cand.phone_fax, e_add.id as e_id, e_add.email_address_id,e_add.bean_id from rt_candidates as cand inner join email_addr_bean_rel as e_add on e_add.bean_id = cand.id where cand.deleted = 0 AND e_add.deleted = 0 ) as tt inner join email_addresses as addresses on addresses.id = tt.email_address_id where cand_id = '{$data['id']}' and addresses.deleted = 0";
+            $res = $GLOBALS['db']->query($sql);
+            if($res->num_rows > 1){
+                $GLOBALS['log']->fatal('candidate has many emails');
+            }elseif($res->num_rows > 0 && $res->num_rows == 1){
+                $row = $GLOBALS['db']->fetchByAssoc($res);
+                $to = $row['email_address'];
+            }else{
+                $GLOBALS['log']->fatal('Candidate does not have the Email Address');
+            }
+            $db_date = $data['interview_date'];
+            $local_date = $timedate->to_display_date_time($db_date);
+            $newDate = date("F j, Y, g:i a", strtotime($local_date));
+            $template->body_html = str_replace('{cand_name}',$data['candidate_name'],$template->body_html);
+            $template->body_html = str_replace('{date}',$newDate,$template->body_html);
+
+        }elseif ($data['module'] == 'RT_Employees'){
+
+            $sql = "select * from (select emp.id as emp_id, e_add.id as e_id, e_add.email_address_id,e_add.bean_id from rt_employees as emp inner join email_addr_bean_rel as e_add on e_add.bean_id = emp.id where emp.deleted = 0 AND e_add.deleted = 0 ) as tt inner join email_addresses as addresses on addresses.id = tt.email_address_id where emp_id = '{$data['id']}' and addresses.deleted = 0";
+            $res = $GLOBALS['db']->query($sql);
+            if($res->num_rows > 1){
+                $GLOBALS['log']->fatal('Employee has many emails');
+            }elseif($res->num_rows > 0 && $res->num_rows == 1){
+                $row = $GLOBALS['db']->fetchByAssoc($res);
+                $to = $row['email_address'];
+            }else{
+                $GLOBALS['log']->fatal('Employee does not have the Email Address');
+            }
+
+            $db_date = $data['interview_date'];
+          $GLOBALS['log']->fatal($data['interview_date']);
+//            $local_date = $timedate->to_display_date_time($db_date);
+//            $GLOBALS['log']->fatal('$local_date');
+//            $GLOBALS['log']->fatal($local_date);
+
+            $newDate = date("F j, Y, g:i a", strtotime($db_date));
+//            $GLOBALS['log']->fatal('$tt');
+//            $GLOBALS['log']->fatal($tt);
+            
+//            $newDate = date("F j, Y, g:i a", strtotime($local_date));
+//            $GLOBALS['log']->fatal('$newDate');
+//            $GLOBALS['log']->fatal($newDate);
+            $template->body_html = str_replace('{emp_name}',$data['employee_name'],$template->body_html);
+            $template->body_html = str_replace('{date}',$newDate,$template->body_html);
+            $template->body_html = str_replace('{cand_name}',$data['candidate_name'],$template->body_html);
+
+            $job_id = $data['job_id'];
+            global $sugar_config;
+            $base_url = $sugar_config['site_url'];
+            $job_application = $base_url."/index.php?module=RT_Job_Application&return_module=RT_Job_Application&action=DetailView&record=$job_id";
+            $link = "<a href='$job_application'>Job Apllication</a>";
+            $template->body_html = str_replace('{job_app}',$link,$template->body_html);
+        }else{
+            $GLOBALS['log']->fatal('Please provide a valid Module Name!');
+            return false;
+        }
+
+        $mail->Body = from_html($template->body_html);
+        $mail->prepForOutbound();
+        $mail->AddAddress($to);
+
+        if (!$mail->Send()) {
+            $GLOBALS['log']->fatal("Could not send Mail:  " . $mail->ErrorInfo);
+        }else{
+            return true;
+        }
+
+    }
+    return false;
+}
+
+function offer_status($job)
+{
+    $GLOBALS['log']->fatal('offer_job JOB!!!!!!!!!!!!!!!!');
+    $data = json_decode(html_entity_decode($job->data), true);
+    if (!empty($data)) {
+        $GLOBALS['log']->fatal('offer_accepted JOB IFFFFFFF');
+        $GLOBALS['log']->fatal(print_r($data, 1));
+        $emailObj = new Email();
+        $defaults = $emailObj->getSystemDefaultEmail();
+        $mail = new SugarPHPMailer();
+        $mail->IsHTML(true);
+        $mail->setMailerForSystem();
+        $mail->From = $defaults['email'];
+        $mail->FromName = $defaults['name'];
+        $template_name = $data['template_name'];
+        $template = new EmailTemplate();
+        $template->retrieve_by_string_fields(array('name' => $template_name, 'type' => 'email'));
+        $mail->Subject = $template->subject;
+
+        $to = [];
+        $sql_hr = "select * from config where name = 'notification_receiver_email' and category = 'system'";
+        $res_hr = $GLOBALS['db']->query($sql_hr);
+        if($res_hr->num_rows > 0){
+            $row_hr = $GLOBALS['db']->fetchByAssoc($res_hr);
+            $to[] = $row_hr['value'];
+        }
+        $sql_e = "select * from config where name = 'sm_email' and category = 'system'";
+        $res_e = $GLOBALS['db']->query($sql_e);
+        if($res_e->num_rows > 0){
+            $row_e = $GLOBALS['db']->fetchByAssoc($res_e);
+            $to[] = $row_e['value'];
+        }
+
+        $GLOBALS['log']->fatal('TTTTTTTTTTTTTTTTTTTTTTOOOOOOOOOOOOOOOOOOOOOO');
+        $GLOBALS['log']->fatal(print_r($to,1));
+        $template->body_html = str_replace('{name}', $data['candidate_name'], $template->body_html);
+        $template->body_html = str_replace('{status}', $data['status'], $template->body_html);
+
+        $mail->Body = from_html($template->body_html);
+        $mail->prepForOutbound();
+
+        foreach ($to as $item) {
+            $mail->AddAddress($item);
+            $mail->Send();
+        }
+        return true;
+//        if (!$mail->Send()) {
+//            $GLOBALS['log']->fatal("Could not send Mail:  " . $mail->ErrorInfo);
+//        } else {
+//            return true;
+//        }
+
+    }
+    return false;
 }
 
 

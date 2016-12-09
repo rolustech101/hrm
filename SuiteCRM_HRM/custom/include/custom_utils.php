@@ -87,8 +87,10 @@ function getCandidate($email)
     }
     return $c;
 }
-function send_interview_mail($module, $name, $id, $date, $template_name, $job_app_id = '')
+function send_interview_mail($module, $name, $id, $date, $template, $job_app_id = '')
 {
+    $GLOBALS['log']->fatal('MODULEEEEEEEEE NAMEEEEEEEEEEEEE');
+    $GLOBALS['log']->fatal($module);
     $sugar_email = new SugarPHPMailer();
     $sugar_email->IsHTML(true);
     $admin = new Administration();
@@ -98,26 +100,40 @@ function send_interview_mail($module, $name, $id, $date, $template_name, $job_ap
     $sugar_email->setMailerForSystem();
     $sugar_email->From = $admin->settings['notify_fromaddress'];
     $sugar_email->FromName = $admin->settings['notify_fromname'];
-    $template_name = $template_name;
+    $template_name = $template;
     $template = new EmailTemplate();
     $template->retrieve_by_string_fields(array('name' => $template_name,'type'=>'email'));
     $sugar_email->Subject = $template->subject;
     $GLOBALS['log']->fatal(print_r(from_html($template->body_html),1));
     if($module == 'RT_Candidates'){
-        $sql = "select * from (select cand.id as cand_id, cand.phone_mobile,cand.phone_work,cand.phone_other,cand.phone_home,cand.phone_fax, e_add.id as e_id, e_add.email_address_id,e_add.bean_id from rt_candidates as cand inner join email_addr_bean_rel as e_add on e_add.bean_id = cand.id where cand.deleted = 0 AND e_add.deleted = 0 ) as tt inner join email_addresses as addresses on addresses.id = tt.email_address_id where cand_id = '$id' and addresses.deleted = 0;";
+        $sql = "select * from (select cand.id as cand_id, cand.phone_mobile,cand.phone_work,cand.phone_other,cand.phone_home,cand.phone_fax, e_add.id as e_id, e_add.email_address_id,e_add.bean_id from rt_candidates as cand inner join email_addr_bean_rel as e_add on e_add.bean_id = cand.id where cand.deleted = 0 AND e_add.deleted = 0 ) as tt inner join email_addresses as addresses on addresses.id = tt.email_address_id where cand_id = '$id' and addresses.deleted = 0";
         $res = $GLOBALS['db']->query($sql);
         if($res->num_rows > 1){
             $GLOBALS['log']->fatal('candidate has many emails');
         }elseif($res->num_rows > 0 && $res->num_rows == 1){
             $row = $GLOBALS['db']->fetchByAssoc($res);
-            $c_email = $row['email_address'];
+            $cand_mail = $row['email_address'];
         }else{
             $GLOBALS['log']->fatal('Candidate does not have the Email Address');
         }
         $template->body_html = str_replace('{cand_name}',$name,$template->body_html);
         $template->body_html = str_replace('{date}',$date,$template->body_html);
-        $GLOBALS['log']->fatal(print_r(from_html($template->body_html),1));
+//        $GLOBALS['log']->fatal(print_r(from_html($template->body_html),1));
     }elseif ($module == 'RT_Employees'){
+        $sql = "select * from (select emp.id as emp_id, e_add.id as e_id, e_add.email_address_id,e_add.bean_id from rt_employees as emp inner join email_addr_bean_rel as e_add on e_add.bean_id = emp.id where emp.deleted = 0 AND e_add.deleted = 0 ) as tt inner join email_addresses as addresses on addresses.id = tt.email_address_id where emp_id = '$id' and addresses.deleted = 0";
+        $res = $GLOBALS['db']->query($sql);
+        if($res->num_rows > 1){
+            $GLOBALS['log']->fatal('Employee has many emails');
+        }elseif($res->num_rows > 0 && $res->num_rows == 1){
+            $row = $GLOBALS['db']->fetchByAssoc($res);
+            $iv_mail = $row['email_address'];
+            $GLOBALS['log']->fatal('$iv_mail');
+            $GLOBALS['log']->fatal($iv_mail);
+
+        }else{
+            $GLOBALS['log']->fatal('Employee does not have the Email Address');
+        }
+
         $template->body_html = str_replace('{emp_name}',$name,$template->body_html);
         $template->body_html = str_replace('{date}',$date,$template->body_html);
 //        $template->body_html = str_replace('{job_app}',$date,$template->body_html);
@@ -128,15 +144,12 @@ function send_interview_mail($module, $name, $id, $date, $template_name, $job_ap
 
     $sugar_email->Body = from_html($template->body_html);
 
-    $sql_e = "select * from config where name = 'notification_receiver_email' and category = 'system'";
-    $res_e = $GLOBALS['db']->query($sql_e);
-    if($res_e->num_rows > 0){
-        $row_e = $GLOBALS['db']->fetchByAssoc($res_e);
-        $to = $row_e['value'];
+    if($module == 'RT_Employees'){
+        $to = $iv_mail;
         $sugar_email->AddAddress($to);
-    }else{
-        $GLOBALS['log']->fatal('Could not find notification_receiver_email in the system settings!');
-        return false;
+    }elseif ($module == 'RT_Candidates'){
+        $to = $cand_mail;
+        $sugar_email->AddAddress($to);
     }
 
     if (!$sugar_email->Send()) {

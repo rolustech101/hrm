@@ -22,6 +22,7 @@ class AdministrationViewIncrement_Interval extends SugarView {
         $this->ss->assign('provident_fund', $this->view_object_map['p_fund']);
         $this->ss->assign('noty_receiver_email', $this->view_object_map['noty_email']);
         $this->ss->assign('email_subject',$this->view_object_map['email_subject']);
+        $this->ss->assign('sm_email',$this->view_object_map['sm_email']);
         $this->ss->assign('email_subject_separator',$this->view_object_map['email_subject_separator']);
         echo $this->ss->fetch("custom/modules/Administration/tpls/interval.tpl");
 //        echo "ny custom view";

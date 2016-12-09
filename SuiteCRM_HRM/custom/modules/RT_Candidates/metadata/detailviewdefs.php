@@ -40,6 +40,9 @@
 $module_name = 'RT_Candidates';
 $viewdefs[$module_name]['DetailView'] = array(
 'templateMeta' => array('form' => array('buttons'=>array('EDIT', 'DUPLICATE', 'DELETE', 'FIND_DUPLICATES',
+    array (
+        'customCode' => '<input title="Click to Offer Job" class="button" type="button" name="offer_job" value="Offer Job" onclick="create_job_offer(\'{$fields.id.value}\')">',
+    ),
                                                         ),
                                        ),
                         'maxColumns' => '2', 
@@ -47,6 +50,13 @@ $viewdefs[$module_name]['DetailView'] = array(
                                         array('label' => '10', 'field' => '30'), 
                                         array('label' => '10', 'field' => '30')
                                         ),
+    'includes' =>
+        array (
+            0 =>
+                array (
+                    'file' => 'custom/modules/RT_Candidates/funcs.js',
+                ),
+        ),
                         ),
 'panels' =>array (
 

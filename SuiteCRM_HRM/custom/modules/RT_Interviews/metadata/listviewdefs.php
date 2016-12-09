@@ -25,7 +25,7 @@ array (
     'label' => 'LBL_VACANCY_NAME',
     'width' => '10%',
   ),
-  'DATE_OF_INTERVIEW_C' => 
+  'DATE_OF_INTERVIEW' =>
   array (
     'type' => 'date',
     'default' => true,

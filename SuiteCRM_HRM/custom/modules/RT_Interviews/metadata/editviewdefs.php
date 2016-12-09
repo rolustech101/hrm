@@ -47,7 +47,7 @@ array (
         array (
           0 => 
           array (
-            'name' => 'date_of_interview_c',
+            'name' => 'date_of_interview',
             'label' => 'LBL_DATE_OF_INTERVIEW',
           ),
             1 => array(),

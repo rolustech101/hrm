@@ -54,6 +54,9 @@ $viewdefs [$module_name] =
                                     array(
                                         0 => 'name',
                                     ),
+                                12 => array(
+                                    0 => 'job_name',
+                                ),
                                 2 =>
                                     array(
                                         0 =>

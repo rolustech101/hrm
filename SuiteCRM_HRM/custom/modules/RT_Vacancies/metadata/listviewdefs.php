@@ -9,15 +9,14 @@ array (
     'default' => true,
     'link' => true,
   ),
-//  'RT_JOB_APP_NAME' =>
-//  array (
-//    'type' => 'relate',
-//    'default' => true,
-//    'label' => 'LBL_JOB_APP_NAME_NAME',
-//    'width' => '10%',
-//      'link' => true,
-//
-//  ),
+  'JOB_NAME' =>
+  array (
+    'type' => 'relate',
+    'default' => true,
+    'label' => 'LBL_JOB_NAME',
+    'width' => '10%',
+    'link' => true,
+  ),
   'DEPARTMENT_C' =>
   array (
     'type' => 'varchar',
