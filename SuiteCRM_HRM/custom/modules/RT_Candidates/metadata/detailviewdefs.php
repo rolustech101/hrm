@@ -39,11 +39,16 @@
 
 $module_name = 'RT_Candidates';
 $viewdefs[$module_name]['DetailView'] = array(
-'templateMeta' => array('form' => array('buttons'=>array('EDIT', 'DUPLICATE', 'DELETE', 'FIND_DUPLICATES',
+'templateMeta' => array('form' => array(
+    'buttons'=>array('EDIT', 'DUPLICATE', 'DELETE', 'FIND_DUPLICATES',
     array (
-        'customCode' => '<input title="Click to Offer Job" class="button" type="button" name="offer_job" value="Offer Job" onclick="create_job_offer(\'{$fields.id.value}\')">',
+        'customCode' => '{if $fields.is_offered.value == 0}<input title="Click to Offer Job" class="button" type="button" name="offer_job" value="Offer Job" onclick="create_job_offer(\'{$fields.id.value}\')">{/if}',
+    ),
+    array (
+        'customCode' => '{if $fields.is_offered.value == 1 && $fields.is_converted.value == 0}<input title="Convert Candidate into Employee" class="button" type="button" name="convert_btn" value="Convert Candidate" onclick="convert_candidate(\'{$fields.id.value}\')">{/if}',
     ),
                                                         ),
+    'headerTpl' => 'custom/modules/RT_Candidates/tpls/DetailViewHeader.tpl',
                                        ),
                         'maxColumns' => '2', 
                         'widths' => array(
@@ -122,7 +127,7 @@ $viewdefs[$module_name]['DetailView'] = array(
                 ),
                 'do_not_call',
             ),
-            array('assigned_user_name', ''),
+            array('cnic', ''),
 
             array(
                 'email1'),

@@ -1,138 +1,468 @@
-Fri Dec  9 20:01:01 2016 [31673][-none-][FATAL] Configuration variable date.timezone is not set, guessed timezone Asia/Karachi. Please set date.timezone="Asia/Karachi" in php.ini!
-Fri Dec  9 20:01:04 2016 [31673][1][FATAL] -----> getNewMessageIds()
-Fri Dec  9 20:01:04 2016 [31673][1][FATAL] ----->  before return getNewMessageIds()
-Fri Dec  9 20:01:04 2016 [31673][1][FATAL] print_r($newMsgs,1)
-Fri Dec  9 20:01:04 2016 [31673][1][FATAL] 
-Fri Dec  9 20:02:01 2016 [31696][-none-][FATAL] Configuration variable date.timezone is not set, guessed timezone Asia/Karachi. Please set date.timezone="Asia/Karachi" in php.ini!
-Fri Dec  9 20:02:08 2016 [31696][1][FATAL] -----> getNewMessageIds()
-Fri Dec  9 20:02:08 2016 [31696][1][FATAL] ----->  before return getNewMessageIds()
-Fri Dec  9 20:02:08 2016 [31696][1][FATAL] print_r($newMsgs,1)
-Fri Dec  9 20:02:08 2016 [31696][1][FATAL] 
-Fri Dec  9 20:03:01 2016 [31723][-none-][FATAL] Configuration variable date.timezone is not set, guessed timezone Asia/Karachi. Please set date.timezone="Asia/Karachi" in php.ini!
-Fri Dec  9 20:03:06 2016 [31723][1][FATAL] -----> getNewMessageIds()
-Fri Dec  9 20:03:07 2016 [31723][1][FATAL] ----->  before return getNewMessageIds()
-Fri Dec  9 20:03:07 2016 [31723][1][FATAL] print_r($newMsgs,1)
-Fri Dec  9 20:03:07 2016 [31723][1][FATAL] 
-Fri Dec  9 20:04:02 2016 [31788][-none-][FATAL] Configuration variable date.timezone is not set, guessed timezone Asia/Karachi. Please set date.timezone="Asia/Karachi" in php.ini!
-Fri Dec  9 20:04:08 2016 [31788][1][FATAL] -----> getNewMessageIds()
-Fri Dec  9 20:04:08 2016 [31788][1][FATAL] ----->  before return getNewMessageIds()
-Fri Dec  9 20:04:08 2016 [31788][1][FATAL] print_r($newMsgs,1)
-Fri Dec  9 20:04:08 2016 [31788][1][FATAL] 
-Fri Dec  9 20:05:01 2016 [31826][-none-][FATAL] Configuration variable date.timezone is not set, guessed timezone Asia/Karachi. Please set date.timezone="Asia/Karachi" in php.ini!
-Fri Dec  9 20:05:03 2016 [31826][1][FATAL] -----> getNewMessageIds()
-Fri Dec  9 20:05:03 2016 [31826][1][FATAL] ----->  before return getNewMessageIds()
-Fri Dec  9 20:05:03 2016 [31826][1][FATAL] print_r($newMsgs,1)
-Fri Dec  9 20:05:03 2016 [31826][1][FATAL] 
-Fri Dec  9 20:05:49 2016 [29763][1][FATAL] print_r($vacancies)
-Fri Dec  9 20:05:49 2016 [29763][1][FATAL] 1
-Fri Dec  9 20:05:49 2016 [29763][1][FATAL] JJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJ
-Fri Dec  9 20:05:49 2016 [29763][1][FATAL] Queued JOBBB!!!!!!!!!!
-Fri Dec  9 20:06:01 2016 [32073][-none-][FATAL] Configuration variable date.timezone is not set, guessed timezone Asia/Karachi. Please set date.timezone="Asia/Karachi" in php.ini!
-Fri Dec  9 20:06:01 2016 [32073][1][FATAL] offer_job JOB!!!!!!!!!!!!!!!!
-Fri Dec  9 20:06:01 2016 [32073][1][FATAL] offer_job JOB IFFFFFFF
-Fri Dec  9 20:06:01 2016 [32073][1][FATAL] Array
+Tue Dec 13 18:57:01 2016 [21835][-none-][FATAL] Configuration variable date.timezone is not set, guessed timezone Asia/Karachi. Please set date.timezone="Asia/Karachi" in php.ini!
+Tue Dec 13 18:57:03 2016 [21835][1][FATAL] -----> getNewMessageIds()
+Tue Dec 13 18:57:03 2016 [21835][1][FATAL] ----->  before return getNewMessageIds()
+Tue Dec 13 18:57:03 2016 [21835][1][FATAL] print_r($newMsgs,1)
+Tue Dec 13 18:57:03 2016 [21835][1][FATAL] 
+Tue Dec 13 18:58:01 2016 [21871][-none-][FATAL] Configuration variable date.timezone is not set, guessed timezone Asia/Karachi. Please set date.timezone="Asia/Karachi" in php.ini!
+Tue Dec 13 18:58:03 2016 [21871][1][FATAL] -----> getNewMessageIds()
+Tue Dec 13 18:58:04 2016 [21871][1][FATAL] ----->  before return getNewMessageIds()
+Tue Dec 13 18:58:04 2016 [21871][1][FATAL] print_r($newMsgs,1)
+Tue Dec 13 18:58:04 2016 [21871][1][FATAL] 
+Tue Dec 13 18:59:02 2016 [21918][-none-][FATAL] Configuration variable date.timezone is not set, guessed timezone Asia/Karachi. Please set date.timezone="Asia/Karachi" in php.ini!
+Tue Dec 13 18:59:07 2016 [21918][1][FATAL] -----> getNewMessageIds()
+Tue Dec 13 18:59:07 2016 [21918][1][FATAL] ----->  before return getNewMessageIds()
+Tue Dec 13 18:59:07 2016 [21918][1][FATAL] print_r($newMsgs,1)
+Tue Dec 13 18:59:07 2016 [21918][1][FATAL] 
+Tue Dec 13 19:00:02 2016 [21988][-none-][FATAL] Configuration variable date.timezone is not set, guessed timezone Asia/Karachi. Please set date.timezone="Asia/Karachi" in php.ini!
+Tue Dec 13 19:00:02 2016 [21988][1][FATAL] scheduler run and updated => 269e809f-fc7d-2375-5a4f-584fcc7f8c8b
+Tue Dec 13 19:00:02 2016 [21988][1][FATAL] scheduler run and updated => 35947e4f-29fe-d8e6-7702-584fd181c51d
+Tue Dec 13 19:00:02 2016 [21988][1][FATAL] scheduler run and updated => 36ef4c1c-e9f0-d300-f26e-584fc0bc3d4c
+Tue Dec 13 19:00:02 2016 [21988][1][FATAL] scheduler run and updated => 6b630cb2-d86b-0b86-9324-584fcdba925e
+Tue Dec 13 19:00:02 2016 [21988][1][FATAL] scheduler run and updated => a8c03af2-49f9-0bf8-e1d3-584fcef70c97
+Tue Dec 13 19:00:02 2016 [21988][1][FATAL] scheduler run and updated => c9aea3c8-1e5e-2906-15a7-584fce17e64a
+Tue Dec 13 19:00:02 2016 [21988][1][FATAL] scheduler run and updated => dd9d1542-2d53-0864-84ef-584ff910a0c8
+Tue Dec 13 19:00:02 2016 [21988][1][FATAL] scheduler run and updated => dfa85405-53fd-13ec-4f4b-584faa2e66f3
+Tue Dec 13 19:00:04 2016 [21988][1][FATAL] -----> getNewMessageIds()
+Tue Dec 13 19:00:04 2016 [21988][1][FATAL] ----->  before return getNewMessageIds()
+Tue Dec 13 19:00:04 2016 [21988][1][FATAL] print_r($newMsgs,1)
+Tue Dec 13 19:00:04 2016 [21988][1][FATAL] 
+Tue Dec 13 19:01:01 2016 [22029][-none-][FATAL] Configuration variable date.timezone is not set, guessed timezone Asia/Karachi. Please set date.timezone="Asia/Karachi" in php.ini!
+Tue Dec 13 19:01:03 2016 [22029][1][FATAL] -----> getNewMessageIds()
+Tue Dec 13 19:01:03 2016 [22029][1][FATAL] ----->  before return getNewMessageIds()
+Tue Dec 13 19:01:03 2016 [22029][1][FATAL] print_r($newMsgs,1)
+Tue Dec 13 19:01:03 2016 [22029][1][FATAL] 
+Tue Dec 13 19:02:01 2016 [22094][-none-][FATAL] Configuration variable date.timezone is not set, guessed timezone Asia/Karachi. Please set date.timezone="Asia/Karachi" in php.ini!
+Tue Dec 13 19:02:05 2016 [22094][1][FATAL] -----> getNewMessageIds()
+Tue Dec 13 19:02:05 2016 [22094][1][FATAL] ----->  before return getNewMessageIds()
+Tue Dec 13 19:02:05 2016 [22094][1][FATAL] print_r($newMsgs,1)
+Tue Dec 13 19:02:05 2016 [22094][1][FATAL] 
+Tue Dec 13 19:03:01 2016 [22142][-none-][FATAL] Configuration variable date.timezone is not set, guessed timezone Asia/Karachi. Please set date.timezone="Asia/Karachi" in php.ini!
+Tue Dec 13 19:03:06 2016 [22142][1][FATAL] -----> getNewMessageIds()
+Tue Dec 13 19:03:07 2016 [22142][1][FATAL] ----->  before return getNewMessageIds()
+Tue Dec 13 19:03:07 2016 [22142][1][FATAL] print_r($newMsgs,1)
+Tue Dec 13 19:03:07 2016 [22142][1][FATAL] 
+Tue Dec 13 19:04:01 2016 [22181][-none-][FATAL] Configuration variable date.timezone is not set, guessed timezone Asia/Karachi. Please set date.timezone="Asia/Karachi" in php.ini!
+Tue Dec 13 19:04:06 2016 [22181][1][FATAL] -----> getNewMessageIds()
+Tue Dec 13 19:04:07 2016 [22181][1][FATAL] ----->  before return getNewMessageIds()
+Tue Dec 13 19:04:07 2016 [22181][1][FATAL] print_r($newMsgs,1)
+Tue Dec 13 19:04:07 2016 [22181][1][FATAL] 
+Tue Dec 13 19:05:01 2016 [22213][-none-][FATAL] Configuration variable date.timezone is not set, guessed timezone Asia/Karachi. Please set date.timezone="Asia/Karachi" in php.ini!
+Tue Dec 13 19:05:01 2016 [22213][1][FATAL] scheduler run and updated => 269e809f-fc7d-2375-5a4f-584fcc7f8c8b
+Tue Dec 13 19:05:01 2016 [22213][1][FATAL] scheduler run and updated => 35947e4f-29fe-d8e6-7702-584fd181c51d
+Tue Dec 13 19:05:01 2016 [22213][1][FATAL] scheduler run and updated => 36ef4c1c-e9f0-d300-f26e-584fc0bc3d4c
+Tue Dec 13 19:05:01 2016 [22213][1][FATAL] scheduler run and updated => 6b630cb2-d86b-0b86-9324-584fcdba925e
+Tue Dec 13 19:05:01 2016 [22213][1][FATAL] scheduler run and updated => a8c03af2-49f9-0bf8-e1d3-584fcef70c97
+Tue Dec 13 19:05:01 2016 [22213][1][FATAL] scheduler run and updated => c9aea3c8-1e5e-2906-15a7-584fce17e64a
+Tue Dec 13 19:05:01 2016 [22213][1][FATAL] scheduler run and updated => dd9d1542-2d53-0864-84ef-584ff910a0c8
+Tue Dec 13 19:05:01 2016 [22213][1][FATAL] scheduler run and updated => dfa85405-53fd-13ec-4f4b-584faa2e66f3
+Tue Dec 13 19:05:03 2016 [22213][1][FATAL] -----> getNewMessageIds()
+Tue Dec 13 19:05:04 2016 [22213][1][FATAL] ----->  before return getNewMessageIds()
+Tue Dec 13 19:05:04 2016 [22213][1][FATAL] print_r($newMsgs,1)
+Tue Dec 13 19:05:04 2016 [22213][1][FATAL] 
+Tue Dec 13 19:06:01 2016 [22541][-none-][FATAL] Configuration variable date.timezone is not set, guessed timezone Asia/Karachi. Please set date.timezone="Asia/Karachi" in php.ini!
+Tue Dec 13 19:06:06 2016 [22541][1][FATAL] -----> getNewMessageIds()
+Tue Dec 13 19:06:07 2016 [22541][1][FATAL] ----->  before return getNewMessageIds()
+Tue Dec 13 19:06:07 2016 [22541][1][FATAL] print_r($newMsgs,1)
+Tue Dec 13 19:06:07 2016 [22541][1][FATAL] 
+Tue Dec 13 19:07:01 2016 [22555][-none-][FATAL] Configuration variable date.timezone is not set, guessed timezone Asia/Karachi. Please set date.timezone="Asia/Karachi" in php.ini!
+Tue Dec 13 19:07:10 2016 [22555][1][FATAL] -----> getNewMessageIds()
+Tue Dec 13 19:07:10 2016 [22555][1][FATAL] ----->  before return getNewMessageIds()
+Tue Dec 13 19:07:10 2016 [22555][1][FATAL] print_r($newMsgs,1)
+Tue Dec 13 19:07:10 2016 [22555][1][FATAL] 
+Tue Dec 13 19:08:01 2016 [22571][-none-][FATAL] Configuration variable date.timezone is not set, guessed timezone Asia/Karachi. Please set date.timezone="Asia/Karachi" in php.ini!
+Tue Dec 13 19:08:10 2016 [22571][1][FATAL] -----> getNewMessageIds()
+Tue Dec 13 19:08:11 2016 [22571][1][FATAL] ----->  before return getNewMessageIds()
+Tue Dec 13 19:08:11 2016 [22571][1][FATAL] print_r($newMsgs,1)
+Tue Dec 13 19:08:11 2016 [22571][1][FATAL] 
+Tue Dec 13 19:09:01 2016 [22596][-none-][FATAL] Configuration variable date.timezone is not set, guessed timezone Asia/Karachi. Please set date.timezone="Asia/Karachi" in php.ini!
+Tue Dec 13 19:09:10 2016 [22596][1][FATAL] -----> getNewMessageIds()
+Tue Dec 13 19:09:16 2016 [22596][1][FATAL] ----->  before return getNewMessageIds()
+Tue Dec 13 19:09:16 2016 [22596][1][FATAL] print_r($newMsgs,1)
+Tue Dec 13 19:09:16 2016 [22596][1][FATAL] 
+Tue Dec 13 19:10:01 2016 [22630][-none-][FATAL] Configuration variable date.timezone is not set, guessed timezone Asia/Karachi. Please set date.timezone="Asia/Karachi" in php.ini!
+Tue Dec 13 19:10:01 2016 [22630][1][FATAL] scheduler run and updated => 269e809f-fc7d-2375-5a4f-584fcc7f8c8b
+Tue Dec 13 19:10:01 2016 [22630][1][FATAL] scheduler run and updated => 35947e4f-29fe-d8e6-7702-584fd181c51d
+Tue Dec 13 19:10:01 2016 [22630][1][FATAL] scheduler run and updated => 36ef4c1c-e9f0-d300-f26e-584fc0bc3d4c
+Tue Dec 13 19:10:01 2016 [22630][1][FATAL] scheduler run and updated => 6b630cb2-d86b-0b86-9324-584fcdba925e
+Tue Dec 13 19:10:01 2016 [22630][1][FATAL] scheduler run and updated => a8c03af2-49f9-0bf8-e1d3-584fcef70c97
+Tue Dec 13 19:10:01 2016 [22630][1][FATAL] scheduler run and updated => c9aea3c8-1e5e-2906-15a7-584fce17e64a
+Tue Dec 13 19:10:01 2016 [22630][1][FATAL] scheduler run and updated => dd9d1542-2d53-0864-84ef-584ff910a0c8
+Tue Dec 13 19:10:01 2016 [22630][1][FATAL] scheduler run and updated => dfa85405-53fd-13ec-4f4b-584faa2e66f3
+Tue Dec 13 19:10:06 2016 [22630][1][FATAL] -----> getNewMessageIds()
+Tue Dec 13 19:10:06 2016 [22630][1][FATAL] ----->  before return getNewMessageIds()
+Tue Dec 13 19:10:06 2016 [22630][1][FATAL] print_r($newMsgs,1)
+Tue Dec 13 19:10:06 2016 [22630][1][FATAL] 
+Tue Dec 13 19:11:01 2016 [22657][-none-][FATAL] Configuration variable date.timezone is not set, guessed timezone Asia/Karachi. Please set date.timezone="Asia/Karachi" in php.ini!
+Tue Dec 13 19:11:10 2016 [22657][1][FATAL] -----> getNewMessageIds()
+Tue Dec 13 19:11:11 2016 [22657][1][FATAL] ----->  before return getNewMessageIds()
+Tue Dec 13 19:11:11 2016 [22657][1][FATAL] print_r($newMsgs,1)
+Tue Dec 13 19:11:11 2016 [22657][1][FATAL] 
+Tue Dec 13 19:12:02 2016 [22710][-none-][FATAL] Configuration variable date.timezone is not set, guessed timezone Asia/Karachi. Please set date.timezone="Asia/Karachi" in php.ini!
+Tue Dec 13 19:12:07 2016 [22710][1][FATAL] -----> getNewMessageIds()
+Tue Dec 13 19:12:08 2016 [22710][1][FATAL] ----->  before return getNewMessageIds()
+Tue Dec 13 19:12:08 2016 [22710][1][FATAL] print_r($newMsgs,1)
+Tue Dec 13 19:12:08 2016 [22710][1][FATAL] 
+Tue Dec 13 19:13:01 2016 [22865][-none-][FATAL] Configuration variable date.timezone is not set, guessed timezone Asia/Karachi. Please set date.timezone="Asia/Karachi" in php.ini!
+Tue Dec 13 19:13:09 2016 [22865][1][FATAL] -----> getNewMessageIds()
+Tue Dec 13 19:13:09 2016 [22865][1][FATAL] ----->  before return getNewMessageIds()
+Tue Dec 13 19:13:09 2016 [22865][1][FATAL] print_r($newMsgs,1)
+Tue Dec 13 19:13:09 2016 [22865][1][FATAL] 
+Tue Dec 13 19:14:01 2016 [22879][-none-][FATAL] Configuration variable date.timezone is not set, guessed timezone Asia/Karachi. Please set date.timezone="Asia/Karachi" in php.ini!
+Tue Dec 13 19:14:04 2016 [22879][1][FATAL] -----> getNewMessageIds()
+Tue Dec 13 19:14:05 2016 [22879][1][FATAL] ----->  before return getNewMessageIds()
+Tue Dec 13 19:14:05 2016 [22879][1][FATAL] print_r($newMsgs,1)
+Tue Dec 13 19:14:05 2016 [22879][1][FATAL] 
+Tue Dec 13 19:15:01 2016 [22919][-none-][FATAL] Configuration variable date.timezone is not set, guessed timezone Asia/Karachi. Please set date.timezone="Asia/Karachi" in php.ini!
+Tue Dec 13 19:15:01 2016 [22919][1][FATAL] scheduler run and updated => 269e809f-fc7d-2375-5a4f-584fcc7f8c8b
+Tue Dec 13 19:15:01 2016 [22919][1][FATAL] scheduler run and updated => 35947e4f-29fe-d8e6-7702-584fd181c51d
+Tue Dec 13 19:15:01 2016 [22919][1][FATAL] scheduler run and updated => 36ef4c1c-e9f0-d300-f26e-584fc0bc3d4c
+Tue Dec 13 19:15:01 2016 [22919][1][FATAL] scheduler run and updated => 6b630cb2-d86b-0b86-9324-584fcdba925e
+Tue Dec 13 19:15:01 2016 [22919][1][FATAL] scheduler run and updated => a8c03af2-49f9-0bf8-e1d3-584fcef70c97
+Tue Dec 13 19:15:01 2016 [22919][1][FATAL] scheduler run and updated => c9aea3c8-1e5e-2906-15a7-584fce17e64a
+Tue Dec 13 19:15:01 2016 [22919][1][FATAL] scheduler run and updated => dd9d1542-2d53-0864-84ef-584ff910a0c8
+Tue Dec 13 19:15:01 2016 [22919][1][FATAL] scheduler run and updated => dfa85405-53fd-13ec-4f4b-584faa2e66f3
+Tue Dec 13 19:15:04 2016 [22919][1][FATAL] -----> getNewMessageIds()
+Tue Dec 13 19:15:05 2016 [22919][1][FATAL] ----->  before return getNewMessageIds()
+Tue Dec 13 19:15:05 2016 [22919][1][FATAL] print_r($newMsgs,1)
+Tue Dec 13 19:15:05 2016 [22919][1][FATAL] 
+Tue Dec 13 19:16:01 2016 [22941][-none-][FATAL] Configuration variable date.timezone is not set, guessed timezone Asia/Karachi. Please set date.timezone="Asia/Karachi" in php.ini!
+Tue Dec 13 19:16:06 2016 [22941][1][FATAL] -----> getNewMessageIds()
+Tue Dec 13 19:16:06 2016 [22941][1][FATAL] ----->  before return getNewMessageIds()
+Tue Dec 13 19:16:06 2016 [22941][1][FATAL] print_r($newMsgs,1)
+Tue Dec 13 19:16:06 2016 [22941][1][FATAL] 
+Tue Dec 13 19:17:01 2016 [22995][-none-][FATAL] Configuration variable date.timezone is not set, guessed timezone Asia/Karachi. Please set date.timezone="Asia/Karachi" in php.ini!
+Tue Dec 13 19:17:17 2016 [22995][1][FATAL] -----> getNewMessageIds()
+Tue Dec 13 19:17:18 2016 [22995][1][FATAL] ----->  before return getNewMessageIds()
+Tue Dec 13 19:17:18 2016 [22995][1][FATAL] print_r($newMsgs,1)
+Tue Dec 13 19:17:18 2016 [22995][1][FATAL] 
+Tue Dec 13 19:18:01 2016 [23014][-none-][FATAL] Configuration variable date.timezone is not set, guessed timezone Asia/Karachi. Please set date.timezone="Asia/Karachi" in php.ini!
+Tue Dec 13 19:18:04 2016 [23014][1][FATAL] -----> getNewMessageIds()
+Tue Dec 13 19:18:04 2016 [23014][1][FATAL] ----->  before return getNewMessageIds()
+Tue Dec 13 19:18:04 2016 [23014][1][FATAL] print_r($newMsgs,1)
+Tue Dec 13 19:18:04 2016 [23014][1][FATAL] 
+Tue Dec 13 19:19:01 2016 [23026][-none-][FATAL] Configuration variable date.timezone is not set, guessed timezone Asia/Karachi. Please set date.timezone="Asia/Karachi" in php.ini!
+Tue Dec 13 19:19:03 2016 [23026][1][FATAL] -----> getNewMessageIds()
+Tue Dec 13 19:19:03 2016 [23026][1][FATAL] ----->  before return getNewMessageIds()
+Tue Dec 13 19:19:03 2016 [23026][1][FATAL] print_r($newMsgs,1)
+Tue Dec 13 19:19:03 2016 [23026][1][FATAL] 
+Tue Dec 13 19:20:01 2016 [23052][-none-][FATAL] Configuration variable date.timezone is not set, guessed timezone Asia/Karachi. Please set date.timezone="Asia/Karachi" in php.ini!
+Tue Dec 13 19:20:02 2016 [23052][1][FATAL] scheduler run and updated => 269e809f-fc7d-2375-5a4f-584fcc7f8c8b
+Tue Dec 13 19:20:02 2016 [23052][1][FATAL] scheduler run and updated => 35947e4f-29fe-d8e6-7702-584fd181c51d
+Tue Dec 13 19:20:02 2016 [23052][1][FATAL] scheduler run and updated => 36ef4c1c-e9f0-d300-f26e-584fc0bc3d4c
+Tue Dec 13 19:20:02 2016 [23052][1][FATAL] scheduler run and updated => 6b630cb2-d86b-0b86-9324-584fcdba925e
+Tue Dec 13 19:20:02 2016 [23052][1][FATAL] scheduler run and updated => a8c03af2-49f9-0bf8-e1d3-584fcef70c97
+Tue Dec 13 19:20:02 2016 [23052][1][FATAL] scheduler run and updated => c9aea3c8-1e5e-2906-15a7-584fce17e64a
+Tue Dec 13 19:20:02 2016 [23052][1][FATAL] scheduler run and updated => dd9d1542-2d53-0864-84ef-584ff910a0c8
+Tue Dec 13 19:20:02 2016 [23052][1][FATAL] scheduler run and updated => dfa85405-53fd-13ec-4f4b-584faa2e66f3
+Tue Dec 13 19:20:04 2016 [23052][1][FATAL] -----> getNewMessageIds()
+Tue Dec 13 19:20:05 2016 [23052][1][FATAL] ----->  before return getNewMessageIds()
+Tue Dec 13 19:20:05 2016 [23052][1][FATAL] print_r($newMsgs,1)
+Tue Dec 13 19:20:05 2016 [23052][1][FATAL] 
+Tue Dec 13 19:21:02 2016 [23101][-none-][FATAL] Configuration variable date.timezone is not set, guessed timezone Asia/Karachi. Please set date.timezone="Asia/Karachi" in php.ini!
+Tue Dec 13 19:21:05 2016 [23101][1][FATAL] -----> getNewMessageIds()
+Tue Dec 13 19:21:05 2016 [23101][1][FATAL] ----->  before return getNewMessageIds()
+Tue Dec 13 19:21:05 2016 [23101][1][FATAL] print_r($newMsgs,1)
+Tue Dec 13 19:21:05 2016 [23101][1][FATAL] 
+Tue Dec 13 19:22:01 2016 [23143][-none-][FATAL] Configuration variable date.timezone is not set, guessed timezone Asia/Karachi. Please set date.timezone="Asia/Karachi" in php.ini!
+Tue Dec 13 19:22:04 2016 [23143][1][FATAL] -----> getNewMessageIds()
+Tue Dec 13 19:22:04 2016 [23143][1][FATAL] ----->  before return getNewMessageIds()
+Tue Dec 13 19:22:04 2016 [23143][1][FATAL] print_r($newMsgs,1)
+Tue Dec 13 19:22:04 2016 [23143][1][FATAL] 
+Tue Dec 13 19:23:01 2016 [23167][-none-][FATAL] Configuration variable date.timezone is not set, guessed timezone Asia/Karachi. Please set date.timezone="Asia/Karachi" in php.ini!
+Tue Dec 13 19:23:03 2016 [23167][1][FATAL] -----> getNewMessageIds()
+Tue Dec 13 19:23:03 2016 [23167][1][FATAL] ----->  before return getNewMessageIds()
+Tue Dec 13 19:23:03 2016 [23167][1][FATAL] print_r($newMsgs,1)
+Tue Dec 13 19:23:03 2016 [23167][1][FATAL] 
+Tue Dec 13 19:24:01 2016 [23196][-none-][FATAL] Configuration variable date.timezone is not set, guessed timezone Asia/Karachi. Please set date.timezone="Asia/Karachi" in php.ini!
+Tue Dec 13 19:24:05 2016 [23196][1][FATAL] -----> getNewMessageIds()
+Tue Dec 13 19:24:06 2016 [23196][1][FATAL] ----->  before return getNewMessageIds()
+Tue Dec 13 19:24:06 2016 [23196][1][FATAL] print_r($newMsgs,1)
+Tue Dec 13 19:24:06 2016 [23196][1][FATAL] 
+Tue Dec 13 19:25:01 2016 [23229][-none-][FATAL] Configuration variable date.timezone is not set, guessed timezone Asia/Karachi. Please set date.timezone="Asia/Karachi" in php.ini!
+Tue Dec 13 19:25:01 2016 [23229][1][FATAL] scheduler run and updated => 269e809f-fc7d-2375-5a4f-584fcc7f8c8b
+Tue Dec 13 19:25:01 2016 [23229][1][FATAL] scheduler run and updated => 35947e4f-29fe-d8e6-7702-584fd181c51d
+Tue Dec 13 19:25:01 2016 [23229][1][FATAL] scheduler run and updated => 36ef4c1c-e9f0-d300-f26e-584fc0bc3d4c
+Tue Dec 13 19:25:01 2016 [23229][1][FATAL] scheduler run and updated => 6b630cb2-d86b-0b86-9324-584fcdba925e
+Tue Dec 13 19:25:01 2016 [23229][1][FATAL] scheduler run and updated => a8c03af2-49f9-0bf8-e1d3-584fcef70c97
+Tue Dec 13 19:25:01 2016 [23229][1][FATAL] scheduler run and updated => c9aea3c8-1e5e-2906-15a7-584fce17e64a
+Tue Dec 13 19:25:01 2016 [23229][1][FATAL] scheduler run and updated => dd9d1542-2d53-0864-84ef-584ff910a0c8
+Tue Dec 13 19:25:01 2016 [23229][1][FATAL] scheduler run and updated => dfa85405-53fd-13ec-4f4b-584faa2e66f3
+Tue Dec 13 19:25:06 2016 [23229][1][FATAL] -----> getNewMessageIds()
+Tue Dec 13 19:25:06 2016 [23229][1][FATAL] ----->  before return getNewMessageIds()
+Tue Dec 13 19:25:06 2016 [23229][1][FATAL] print_r($newMsgs,1)
+Tue Dec 13 19:25:06 2016 [23229][1][FATAL] 
+Tue Dec 13 19:26:01 2016 [23250][-none-][FATAL] Configuration variable date.timezone is not set, guessed timezone Asia/Karachi. Please set date.timezone="Asia/Karachi" in php.ini!
+Tue Dec 13 19:26:06 2016 [23250][1][FATAL] -----> getNewMessageIds()
+Tue Dec 13 19:26:07 2016 [23250][1][FATAL] ----->  before return getNewMessageIds()
+Tue Dec 13 19:26:07 2016 [23250][1][FATAL] print_r($newMsgs,1)
+Tue Dec 13 19:26:07 2016 [23250][1][FATAL] 
+Tue Dec 13 19:27:01 2016 [23287][-none-][FATAL] Configuration variable date.timezone is not set, guessed timezone Asia/Karachi. Please set date.timezone="Asia/Karachi" in php.ini!
+Tue Dec 13 19:27:06 2016 [23287][1][FATAL] -----> getNewMessageIds()
+Tue Dec 13 19:27:07 2016 [23287][1][FATAL] ----->  before return getNewMessageIds()
+Tue Dec 13 19:27:07 2016 [23287][1][FATAL] print_r($newMsgs,1)
+Tue Dec 13 19:27:07 2016 [23287][1][FATAL] 
+Tue Dec 13 19:28:01 2016 [23311][-none-][FATAL] Configuration variable date.timezone is not set, guessed timezone Asia/Karachi. Please set date.timezone="Asia/Karachi" in php.ini!
+Tue Dec 13 19:28:03 2016 [23311][1][FATAL] -----> getNewMessageIds()
+Tue Dec 13 19:28:05 2016 [23311][1][FATAL] ----->  before return getNewMessageIds()
+Tue Dec 13 19:28:05 2016 [23311][1][FATAL] print_r($newMsgs,1)
+Tue Dec 13 19:28:05 2016 [23311][1][FATAL] 
+Tue Dec 13 19:29:01 2016 [23346][-none-][FATAL] Configuration variable date.timezone is not set, guessed timezone Asia/Karachi. Please set date.timezone="Asia/Karachi" in php.ini!
+Tue Dec 13 19:29:09 2016 [23346][1][FATAL] -----> getNewMessageIds()
+Tue Dec 13 19:29:09 2016 [23346][1][FATAL] ----->  before return getNewMessageIds()
+Tue Dec 13 19:29:09 2016 [23346][1][FATAL] print_r($newMsgs,1)
+Tue Dec 13 19:29:09 2016 [23346][1][FATAL] 
+Tue Dec 13 19:30:01 2016 [23413][-none-][FATAL] Configuration variable date.timezone is not set, guessed timezone Asia/Karachi. Please set date.timezone="Asia/Karachi" in php.ini!
+Tue Dec 13 19:30:02 2016 [23413][1][FATAL] scheduler run and updated => 269e809f-fc7d-2375-5a4f-584fcc7f8c8b
+Tue Dec 13 19:30:02 2016 [23413][1][FATAL] scheduler run and updated => 35947e4f-29fe-d8e6-7702-584fd181c51d
+Tue Dec 13 19:30:02 2016 [23413][1][FATAL] scheduler run and updated => 36ef4c1c-e9f0-d300-f26e-584fc0bc3d4c
+Tue Dec 13 19:30:02 2016 [23413][1][FATAL] scheduler run and updated => 6b630cb2-d86b-0b86-9324-584fcdba925e
+Tue Dec 13 19:30:02 2016 [23413][1][FATAL] scheduler run and updated => a8c03af2-49f9-0bf8-e1d3-584fcef70c97
+Tue Dec 13 19:30:02 2016 [23413][1][FATAL] scheduler run and updated => c9aea3c8-1e5e-2906-15a7-584fce17e64a
+Tue Dec 13 19:30:02 2016 [23413][1][FATAL] scheduler run and updated => dd9d1542-2d53-0864-84ef-584ff910a0c8
+Tue Dec 13 19:30:02 2016 [23413][1][FATAL] scheduler run and updated => dfa85405-53fd-13ec-4f4b-584faa2e66f3
+Tue Dec 13 19:30:06 2016 [23413][1][FATAL] -----> getNewMessageIds()
+Tue Dec 13 19:30:06 2016 [23413][1][FATAL] ----->  before return getNewMessageIds()
+Tue Dec 13 19:30:06 2016 [23413][1][FATAL] print_r($newMsgs,1)
+Tue Dec 13 19:30:06 2016 [23413][1][FATAL] 
+Tue Dec 13 19:31:01 2016 [23457][-none-][FATAL] Configuration variable date.timezone is not set, guessed timezone Asia/Karachi. Please set date.timezone="Asia/Karachi" in php.ini!
+Tue Dec 13 19:31:03 2016 [23457][1][FATAL] -----> getNewMessageIds()
+Tue Dec 13 19:31:03 2016 [23457][1][FATAL] ----->  before return getNewMessageIds()
+Tue Dec 13 19:31:03 2016 [23457][1][FATAL] print_r($newMsgs,1)
+Tue Dec 13 19:31:03 2016 [23457][1][FATAL] 
+Tue Dec 13 19:32:01 2016 [23490][-none-][FATAL] Configuration variable date.timezone is not set, guessed timezone Asia/Karachi. Please set date.timezone="Asia/Karachi" in php.ini!
+Tue Dec 13 19:32:06 2016 [23490][1][FATAL] -----> getNewMessageIds()
+Tue Dec 13 19:32:06 2016 [23490][1][FATAL] ----->  before return getNewMessageIds()
+Tue Dec 13 19:32:06 2016 [23490][1][FATAL] print_r($newMsgs,1)
+Tue Dec 13 19:32:06 2016 [23490][1][FATAL] 
+Tue Dec 13 19:33:01 2016 [23509][-none-][FATAL] Configuration variable date.timezone is not set, guessed timezone Asia/Karachi. Please set date.timezone="Asia/Karachi" in php.ini!
+Tue Dec 13 19:33:03 2016 [23509][1][FATAL] -----> getNewMessageIds()
+Tue Dec 13 19:33:03 2016 [23509][1][FATAL] ----->  before return getNewMessageIds()
+Tue Dec 13 19:33:03 2016 [23509][1][FATAL] print_r($newMsgs,1)
+Tue Dec 13 19:33:03 2016 [23509][1][FATAL] 
+Tue Dec 13 19:34:01 2016 [23540][-none-][FATAL] Configuration variable date.timezone is not set, guessed timezone Asia/Karachi. Please set date.timezone="Asia/Karachi" in php.ini!
+Tue Dec 13 19:34:06 2016 [23540][1][FATAL] -----> getNewMessageIds()
+Tue Dec 13 19:34:07 2016 [23540][1][FATAL] ----->  before return getNewMessageIds()
+Tue Dec 13 19:34:07 2016 [23540][1][FATAL] print_r($newMsgs,1)
+Tue Dec 13 19:34:07 2016 [23540][1][FATAL] 
+Tue Dec 13 19:35:01 2016 [23588][-none-][FATAL] Configuration variable date.timezone is not set, guessed timezone Asia/Karachi. Please set date.timezone="Asia/Karachi" in php.ini!
+Tue Dec 13 19:35:11 2016 [23588][1][FATAL] -----> getNewMessageIds()
+Tue Dec 13 19:35:14 2016 [23588][1][FATAL] ----->  before return getNewMessageIds()
+Tue Dec 13 19:35:14 2016 [23588][1][FATAL] print_r($newMsgs,1)
+Tue Dec 13 19:35:14 2016 [23588][1][FATAL] 
+Tue Dec 13 19:35:16 2016 [23588][1][FATAL] scheduler run and updated => 269e809f-fc7d-2375-5a4f-584fcc7f8c8b
+Tue Dec 13 19:35:16 2016 [23588][1][FATAL] scheduler run and updated => 35947e4f-29fe-d8e6-7702-584fd181c51d
+Tue Dec 13 19:35:16 2016 [23588][1][FATAL] scheduler run and updated => 36ef4c1c-e9f0-d300-f26e-584fc0bc3d4c
+Tue Dec 13 19:35:16 2016 [23588][1][FATAL] scheduler run and updated => 6b630cb2-d86b-0b86-9324-584fcdba925e
+Tue Dec 13 19:35:16 2016 [23588][1][FATAL] scheduler run and updated => a8c03af2-49f9-0bf8-e1d3-584fcef70c97
+Tue Dec 13 19:35:16 2016 [23588][1][FATAL] scheduler run and updated => c9aea3c8-1e5e-2906-15a7-584fce17e64a
+Tue Dec 13 19:35:16 2016 [23588][1][FATAL] scheduler run and updated => dd9d1542-2d53-0864-84ef-584ff910a0c8
+Tue Dec 13 19:35:16 2016 [23588][1][FATAL] scheduler run and updated => dfa85405-53fd-13ec-4f4b-584faa2e66f3
+Tue Dec 13 19:36:01 2016 [23984][-none-][FATAL] Configuration variable date.timezone is not set, guessed timezone Asia/Karachi. Please set date.timezone="Asia/Karachi" in php.ini!
+Tue Dec 13 19:36:05 2016 [23984][1][FATAL] -----> getNewMessageIds()
+Tue Dec 13 19:36:06 2016 [23984][1][FATAL] ----->  before return getNewMessageIds()
+Tue Dec 13 19:36:06 2016 [23984][1][FATAL] print_r($newMsgs,1)
+Tue Dec 13 19:36:06 2016 [23984][1][FATAL] 
+Tue Dec 13 19:37:01 2016 [24009][-none-][FATAL] Configuration variable date.timezone is not set, guessed timezone Asia/Karachi. Please set date.timezone="Asia/Karachi" in php.ini!
+Tue Dec 13 19:37:15 2016 [24009][1][FATAL] -----> getNewMessageIds()
+Tue Dec 13 19:37:15 2016 [24009][1][FATAL] ----->  before return getNewMessageIds()
+Tue Dec 13 19:37:15 2016 [24009][1][FATAL] print_r($newMsgs,1)
+Tue Dec 13 19:37:15 2016 [24009][1][FATAL] 
+Tue Dec 13 19:38:01 2016 [24032][-none-][FATAL] Configuration variable date.timezone is not set, guessed timezone Asia/Karachi. Please set date.timezone="Asia/Karachi" in php.ini!
+Tue Dec 13 19:38:06 2016 [24032][1][FATAL] -----> getNewMessageIds()
+Tue Dec 13 19:38:07 2016 [24032][1][FATAL] ----->  before return getNewMessageIds()
+Tue Dec 13 19:38:07 2016 [24032][1][FATAL] print_r($newMsgs,1)
+Tue Dec 13 19:38:07 2016 [24032][1][FATAL] 
+Tue Dec 13 19:39:01 2016 [24053][-none-][FATAL] Configuration variable date.timezone is not set, guessed timezone Asia/Karachi. Please set date.timezone="Asia/Karachi" in php.ini!
+Tue Dec 13 19:39:07 2016 [24053][1][FATAL] -----> getNewMessageIds()
+Tue Dec 13 19:39:07 2016 [24053][1][FATAL] ----->  before return getNewMessageIds()
+Tue Dec 13 19:39:07 2016 [24053][1][FATAL] print_r($newMsgs,1)
+Tue Dec 13 19:39:07 2016 [24053][1][FATAL] 
+Tue Dec 13 19:40:01 2016 [24094][-none-][FATAL] Configuration variable date.timezone is not set, guessed timezone Asia/Karachi. Please set date.timezone="Asia/Karachi" in php.ini!
+Tue Dec 13 19:40:01 2016 [24094][1][FATAL] scheduler run and updated => 269e809f-fc7d-2375-5a4f-584fcc7f8c8b
+Tue Dec 13 19:40:01 2016 [24094][1][FATAL] scheduler run and updated => 35947e4f-29fe-d8e6-7702-584fd181c51d
+Tue Dec 13 19:40:01 2016 [24094][1][FATAL] scheduler run and updated => 36ef4c1c-e9f0-d300-f26e-584fc0bc3d4c
+Tue Dec 13 19:40:01 2016 [24094][1][FATAL] scheduler run and updated => 6b630cb2-d86b-0b86-9324-584fcdba925e
+Tue Dec 13 19:40:01 2016 [24094][1][FATAL] scheduler run and updated => a8c03af2-49f9-0bf8-e1d3-584fcef70c97
+Tue Dec 13 19:40:01 2016 [24094][1][FATAL] scheduler run and updated => c9aea3c8-1e5e-2906-15a7-584fce17e64a
+Tue Dec 13 19:40:01 2016 [24094][1][FATAL] scheduler run and updated => dd9d1542-2d53-0864-84ef-584ff910a0c8
+Tue Dec 13 19:40:01 2016 [24094][1][FATAL] scheduler run and updated => dfa85405-53fd-13ec-4f4b-584faa2e66f3
+Tue Dec 13 19:40:04 2016 [24094][1][FATAL] -----> getNewMessageIds()
+Tue Dec 13 19:40:04 2016 [24094][1][FATAL] ----->  before return getNewMessageIds()
+Tue Dec 13 19:40:04 2016 [24094][1][FATAL] print_r($newMsgs,1)
+Tue Dec 13 19:40:04 2016 [24094][1][FATAL] 
+Tue Dec 13 19:41:01 2016 [24160][-none-][FATAL] Configuration variable date.timezone is not set, guessed timezone Asia/Karachi. Please set date.timezone="Asia/Karachi" in php.ini!
+Tue Dec 13 19:41:06 2016 [24160][1][FATAL] -----> getNewMessageIds()
+Tue Dec 13 19:41:07 2016 [24160][1][FATAL] ----->  before return getNewMessageIds()
+Tue Dec 13 19:41:07 2016 [24160][1][FATAL] print_r($newMsgs,1)
+Tue Dec 13 19:41:07 2016 [24160][1][FATAL] 
+Tue Dec 13 19:42:02 2016 [24187][-none-][FATAL] Configuration variable date.timezone is not set, guessed timezone Asia/Karachi. Please set date.timezone="Asia/Karachi" in php.ini!
+Tue Dec 13 19:42:06 2016 [24187][1][FATAL] -----> getNewMessageIds()
+Tue Dec 13 19:42:07 2016 [24187][1][FATAL] ----->  before return getNewMessageIds()
+Tue Dec 13 19:42:07 2016 [24187][1][FATAL] print_r($newMsgs,1)
+Tue Dec 13 19:42:07 2016 [24187][1][FATAL] 
+Tue Dec 13 19:43:01 2016 [24213][-none-][FATAL] Configuration variable date.timezone is not set, guessed timezone Asia/Karachi. Please set date.timezone="Asia/Karachi" in php.ini!
+Tue Dec 13 19:43:04 2016 [24213][1][FATAL] -----> getNewMessageIds()
+Tue Dec 13 19:43:04 2016 [24213][1][FATAL] ----->  before return getNewMessageIds()
+Tue Dec 13 19:43:04 2016 [24213][1][FATAL] print_r($newMsgs,1)
+Tue Dec 13 19:43:04 2016 [24213][1][FATAL] 
+Tue Dec 13 19:44:01 2016 [24232][-none-][FATAL] Configuration variable date.timezone is not set, guessed timezone Asia/Karachi. Please set date.timezone="Asia/Karachi" in php.ini!
+Tue Dec 13 19:44:06 2016 [24232][1][FATAL] -----> getNewMessageIds()
+Tue Dec 13 19:44:06 2016 [24232][1][FATAL] ----->  before return getNewMessageIds()
+Tue Dec 13 19:44:06 2016 [24232][1][FATAL] print_r($newMsgs,1)
+Tue Dec 13 19:44:06 2016 [24232][1][FATAL] 
+Tue Dec 13 19:45:01 2016 [24252][-none-][FATAL] Configuration variable date.timezone is not set, guessed timezone Asia/Karachi. Please set date.timezone="Asia/Karachi" in php.ini!
+Tue Dec 13 19:45:01 2016 [24252][1][FATAL] scheduler run and updated => 269e809f-fc7d-2375-5a4f-584fcc7f8c8b
+Tue Dec 13 19:45:01 2016 [24252][1][FATAL] scheduler run and updated => 35947e4f-29fe-d8e6-7702-584fd181c51d
+Tue Dec 13 19:45:01 2016 [24252][1][FATAL] scheduler run and updated => 36ef4c1c-e9f0-d300-f26e-584fc0bc3d4c
+Tue Dec 13 19:45:01 2016 [24252][1][FATAL] scheduler run and updated => 6b630cb2-d86b-0b86-9324-584fcdba925e
+Tue Dec 13 19:45:01 2016 [24252][1][FATAL] scheduler run and updated => a8c03af2-49f9-0bf8-e1d3-584fcef70c97
+Tue Dec 13 19:45:01 2016 [24252][1][FATAL] scheduler run and updated => c9aea3c8-1e5e-2906-15a7-584fce17e64a
+Tue Dec 13 19:45:01 2016 [24252][1][FATAL] scheduler run and updated => dd9d1542-2d53-0864-84ef-584ff910a0c8
+Tue Dec 13 19:45:01 2016 [24252][1][FATAL] scheduler run and updated => dfa85405-53fd-13ec-4f4b-584faa2e66f3
+Tue Dec 13 19:45:07 2016 [24252][1][FATAL] -----> getNewMessageIds()
+Tue Dec 13 19:45:07 2016 [24252][1][FATAL] ----->  before return getNewMessageIds()
+Tue Dec 13 19:45:07 2016 [24252][1][FATAL] print_r($newMsgs,1)
+Tue Dec 13 19:45:07 2016 [24252][1][FATAL] 
+Tue Dec 13 19:46:01 2016 [24275][-none-][FATAL] Configuration variable date.timezone is not set, guessed timezone Asia/Karachi. Please set date.timezone="Asia/Karachi" in php.ini!
+Tue Dec 13 19:46:04 2016 [24275][1][FATAL] -----> getNewMessageIds()
+Tue Dec 13 19:46:04 2016 [24275][1][FATAL] ----->  before return getNewMessageIds()
+Tue Dec 13 19:46:04 2016 [24275][1][FATAL] print_r($newMsgs,1)
+Tue Dec 13 19:46:04 2016 [24275][1][FATAL] 
+Tue Dec 13 19:47:01 2016 [24305][-none-][FATAL] Configuration variable date.timezone is not set, guessed timezone Asia/Karachi. Please set date.timezone="Asia/Karachi" in php.ini!
+Tue Dec 13 19:47:04 2016 [24305][1][FATAL] -----> getNewMessageIds()
+Tue Dec 13 19:47:07 2016 [24305][1][FATAL] ----->  before return getNewMessageIds()
+Tue Dec 13 19:47:07 2016 [24305][1][FATAL] print_r($newMsgs,1)
+Tue Dec 13 19:47:07 2016 [24305][1][FATAL] 
+Tue Dec 13 19:48:01 2016 [24344][-none-][FATAL] Configuration variable date.timezone is not set, guessed timezone Asia/Karachi. Please set date.timezone="Asia/Karachi" in php.ini!
+Tue Dec 13 19:48:07 2016 [24344][1][FATAL] -----> getNewMessageIds()
+Tue Dec 13 19:48:07 2016 [24344][1][FATAL] ----->  before return getNewMessageIds()
+Tue Dec 13 19:48:07 2016 [24344][1][FATAL] print_r($newMsgs,1)
+Tue Dec 13 19:48:07 2016 [24344][1][FATAL] 
+Tue Dec 13 19:49:01 2016 [24366][-none-][FATAL] Configuration variable date.timezone is not set, guessed timezone Asia/Karachi. Please set date.timezone="Asia/Karachi" in php.ini!
+Tue Dec 13 19:49:06 2016 [24366][1][FATAL] -----> getNewMessageIds()
+Tue Dec 13 19:49:07 2016 [24366][1][FATAL] ----->  before return getNewMessageIds()
+Tue Dec 13 19:49:07 2016 [24366][1][FATAL] print_r($newMsgs,1)
+Tue Dec 13 19:49:07 2016 [24366][1][FATAL] 
+Tue Dec 13 19:50:01 2016 [24433][-none-][FATAL] Configuration variable date.timezone is not set, guessed timezone Asia/Karachi. Please set date.timezone="Asia/Karachi" in php.ini!
+Tue Dec 13 19:50:01 2016 [24433][1][FATAL] scheduler run and updated => 269e809f-fc7d-2375-5a4f-584fcc7f8c8b
+Tue Dec 13 19:50:01 2016 [24433][1][FATAL] scheduler run and updated => 35947e4f-29fe-d8e6-7702-584fd181c51d
+Tue Dec 13 19:50:01 2016 [24433][1][FATAL] scheduler run and updated => 36ef4c1c-e9f0-d300-f26e-584fc0bc3d4c
+Tue Dec 13 19:50:01 2016 [24433][1][FATAL] scheduler run and updated => 6b630cb2-d86b-0b86-9324-584fcdba925e
+Tue Dec 13 19:50:01 2016 [24433][1][FATAL] scheduler run and updated => a8c03af2-49f9-0bf8-e1d3-584fcef70c97
+Tue Dec 13 19:50:01 2016 [24433][1][FATAL] scheduler run and updated => c9aea3c8-1e5e-2906-15a7-584fce17e64a
+Tue Dec 13 19:50:01 2016 [24433][1][FATAL] scheduler run and updated => dd9d1542-2d53-0864-84ef-584ff910a0c8
+Tue Dec 13 19:50:01 2016 [24433][1][FATAL] scheduler run and updated => dfa85405-53fd-13ec-4f4b-584faa2e66f3
+Tue Dec 13 19:50:06 2016 [24433][1][FATAL] -----> getNewMessageIds()
+Tue Dec 13 19:50:07 2016 [24433][1][FATAL] ----->  before return getNewMessageIds()
+Tue Dec 13 19:50:07 2016 [24433][1][FATAL] print_r($newMsgs,1)
+Tue Dec 13 19:50:07 2016 [24433][1][FATAL] 
+Tue Dec 13 19:51:01 2016 [24454][-none-][FATAL] Configuration variable date.timezone is not set, guessed timezone Asia/Karachi. Please set date.timezone="Asia/Karachi" in php.ini!
+Tue Dec 13 19:51:06 2016 [24454][1][FATAL] -----> getNewMessageIds()
+Tue Dec 13 19:51:06 2016 [24454][1][FATAL] ----->  before return getNewMessageIds()
+Tue Dec 13 19:51:06 2016 [24454][1][FATAL] print_r($newMsgs,1)
+Tue Dec 13 19:51:06 2016 [24454][1][FATAL] 
+Tue Dec 13 19:52:01 2016 [24482][-none-][FATAL] Configuration variable date.timezone is not set, guessed timezone Asia/Karachi. Please set date.timezone="Asia/Karachi" in php.ini!
+Tue Dec 13 19:52:06 2016 [24482][1][FATAL] -----> getNewMessageIds()
+Tue Dec 13 19:52:06 2016 [24482][1][FATAL] ----->  before return getNewMessageIds()
+Tue Dec 13 19:52:06 2016 [24482][1][FATAL] print_r($newMsgs,1)
+Tue Dec 13 19:52:06 2016 [24482][1][FATAL] 
+Tue Dec 13 19:53:02 2016 [24501][-none-][FATAL] Configuration variable date.timezone is not set, guessed timezone Asia/Karachi. Please set date.timezone="Asia/Karachi" in php.ini!
+Tue Dec 13 19:53:08 2016 [24501][1][FATAL] -----> getNewMessageIds()
+Tue Dec 13 19:53:09 2016 [24501][1][FATAL] ----->  before return getNewMessageIds()
+Tue Dec 13 19:53:09 2016 [24501][1][FATAL] print_r($newMsgs,1)
+Tue Dec 13 19:53:09 2016 [24501][1][FATAL] 
+Tue Dec 13 19:54:01 2016 [24533][-none-][FATAL] Configuration variable date.timezone is not set, guessed timezone Asia/Karachi. Please set date.timezone="Asia/Karachi" in php.ini!
+Tue Dec 13 19:54:06 2016 [24533][1][FATAL] -----> getNewMessageIds()
+Tue Dec 13 19:54:16 2016 [24533][1][FATAL] ----->  before return getNewMessageIds()
+Tue Dec 13 19:54:16 2016 [24533][1][FATAL] print_r($newMsgs,1)
+Tue Dec 13 19:54:16 2016 [24533][1][FATAL] 
+Tue Dec 13 19:55:02 2016 [24556][-none-][FATAL] Configuration variable date.timezone is not set, guessed timezone Asia/Karachi. Please set date.timezone="Asia/Karachi" in php.ini!
+Tue Dec 13 19:55:02 2016 [24556][1][FATAL] scheduler run and updated => 269e809f-fc7d-2375-5a4f-584fcc7f8c8b
+Tue Dec 13 19:55:02 2016 [24556][1][FATAL] scheduler run and updated => 35947e4f-29fe-d8e6-7702-584fd181c51d
+Tue Dec 13 19:55:02 2016 [24556][1][FATAL] scheduler run and updated => 36ef4c1c-e9f0-d300-f26e-584fc0bc3d4c
+Tue Dec 13 19:55:02 2016 [24556][1][FATAL] scheduler run and updated => 6b630cb2-d86b-0b86-9324-584fcdba925e
+Tue Dec 13 19:55:02 2016 [24556][1][FATAL] scheduler run and updated => a8c03af2-49f9-0bf8-e1d3-584fcef70c97
+Tue Dec 13 19:55:02 2016 [24556][1][FATAL] scheduler run and updated => c9aea3c8-1e5e-2906-15a7-584fce17e64a
+Tue Dec 13 19:55:02 2016 [24556][1][FATAL] scheduler run and updated => dd9d1542-2d53-0864-84ef-584ff910a0c8
+Tue Dec 13 19:55:02 2016 [24556][1][FATAL] scheduler run and updated => dfa85405-53fd-13ec-4f4b-584faa2e66f3
+Tue Dec 13 19:55:04 2016 [24556][1][FATAL] -----> getNewMessageIds()
+Tue Dec 13 19:55:04 2016 [24556][1][FATAL] ----->  before return getNewMessageIds()
+Tue Dec 13 19:55:04 2016 [24556][1][FATAL] print_r($newMsgs,1)
+Tue Dec 13 19:55:04 2016 [24556][1][FATAL] 
+Tue Dec 13 19:56:01 2016 [24586][-none-][FATAL] Configuration variable date.timezone is not set, guessed timezone Asia/Karachi. Please set date.timezone="Asia/Karachi" in php.ini!
+Tue Dec 13 19:56:09 2016 [24586][1][FATAL] -----> getNewMessageIds()
+Tue Dec 13 19:56:10 2016 [24586][1][FATAL] ----->  before return getNewMessageIds()
+Tue Dec 13 19:56:10 2016 [24586][1][FATAL] print_r($newMsgs,1)
+Tue Dec 13 19:56:10 2016 [24586][1][FATAL] 
+Tue Dec 13 19:57:01 2016 [24617][-none-][FATAL] Configuration variable date.timezone is not set, guessed timezone Asia/Karachi. Please set date.timezone="Asia/Karachi" in php.ini!
+Tue Dec 13 19:57:06 2016 [24617][1][FATAL] -----> getNewMessageIds()
+Tue Dec 13 19:57:07 2016 [24617][1][FATAL] ----->  before return getNewMessageIds()
+Tue Dec 13 19:57:07 2016 [24617][1][FATAL] print_r($newMsgs,1)
+Tue Dec 13 19:57:07 2016 [24617][1][FATAL] 
+Tue Dec 13 19:58:02 2016 [24643][-none-][FATAL] Configuration variable date.timezone is not set, guessed timezone Asia/Karachi. Please set date.timezone="Asia/Karachi" in php.ini!
+Tue Dec 13 19:58:04 2016 [24643][1][FATAL] -----> getNewMessageIds()
+Tue Dec 13 19:58:04 2016 [24643][1][FATAL] ----->  before return getNewMessageIds()
+Tue Dec 13 19:58:04 2016 [24643][1][FATAL] print_r($newMsgs,1)
+Tue Dec 13 19:58:04 2016 [24643][1][FATAL] 
+Tue Dec 13 19:58:45 2016 [22686][1][FATAL] CLASS NAME
+Tue Dec 13 19:58:45 2016 [22686][1][FATAL] ext_rest_facebook
+Tue Dec 13 19:58:45 2016 [22686][1][FATAL] IN THE UPDATE FACEBOOK STATUS!!!!
+Tue Dec 13 19:59:01 2016 [24670][-none-][FATAL] Configuration variable date.timezone is not set, guessed timezone Asia/Karachi. Please set date.timezone="Asia/Karachi" in php.ini!
+Tue Dec 13 19:59:02 2016 [24670][1][FATAL] job_posted JOB!!!!!!!!!!!!!!!!
+Tue Dec 13 19:59:18 2016 [24670][1][FATAL] -----> getNewMessageIds()
+Tue Dec 13 19:59:19 2016 [24670][1][FATAL] ----->  before return getNewMessageIds()
+Tue Dec 13 19:59:19 2016 [24670][1][FATAL] print_r($newMsgs,1)
+Tue Dec 13 19:59:19 2016 [24670][1][FATAL] Array
 (
-    [id] => 6e6004ca-ddf3-a574-623f-5846ba782c68
-    [candidate_name] => rthusnain789@gmail.com
-    [template_name] => job offered
+    [0] => 89
 )
 
-Fri Dec  9 20:06:01 2016 [32073][1][FATAL] IN THE CANDIDATE IFFFFFF
-Fri Dec  9 20:06:01 2016 [32073][1][FATAL] TTTTTTTTTTTTTTTTTTTTTTOOOOOOOOOOOOOOOOOOOOOO
-Fri Dec  9 20:06:01 2016 [32073][1][FATAL] Array
-(
-    [0] => rthusnain789@gmail.com
-    [1] => husnain.zaheer840@gmail.com
-)
-
-Fri Dec  9 20:06:26 2016 [32073][1][FATAL] -----> getNewMessageIds()
-Fri Dec  9 20:06:27 2016 [32073][1][FATAL] ----->  before return getNewMessageIds()
-Fri Dec  9 20:06:27 2016 [32073][1][FATAL] print_r($newMsgs,1)
-Fri Dec  9 20:06:27 2016 [32073][1][FATAL] Array
-(
-    [0] => 93
-    [1] => 94
-)
-
-Fri Dec  9 20:06:27 2016 [32073][1][FATAL] COUNT NEW MESSAGE
-Fri Dec  9 20:06:27 2016 [32073][1][FATAL] 2
-Fri Dec  9 20:06:30 2016 [32073][1][FATAL] in the handleCreateCase AOP
-Fri Dec  9 20:06:30 2016 [32073][1][FATAL] print_r($notes,1)
-Fri Dec  9 20:06:30 2016 [32073][1][FATAL] Array
+Tue Dec 13 19:59:19 2016 [24670][1][FATAL] COUNT NEW MESSAGE
+Tue Dec 13 19:59:19 2016 [24670][1][FATAL] 1
+Tue Dec 13 19:59:23 2016 [24670][1][FATAL] in the handleCreateCase AOP
+Tue Dec 13 19:59:23 2016 [24670][1][FATAL] print_r($notes,1)
+Tue Dec 13 19:59:23 2016 [24670][1][FATAL] Array
 (
 )
 
-Fri Dec  9 20:06:54 2016 [32073][1][FATAL] in the handleCreateCase AOP
-Fri Dec  9 20:06:54 2016 [32073][1][FATAL] print_r($notes,1)
-Fri Dec  9 20:06:54 2016 [32073][1][FATAL] Array
+Tue Dec 13 20:00:02 2016 [24701][-none-][FATAL] Configuration variable date.timezone is not set, guessed timezone Asia/Karachi. Please set date.timezone="Asia/Karachi" in php.ini!
+Tue Dec 13 20:00:02 2016 [24701][1][FATAL] scheduler run and updated => 269e809f-fc7d-2375-5a4f-584fcc7f8c8b
+Tue Dec 13 20:00:02 2016 [24701][1][FATAL] scheduler run and updated => 35947e4f-29fe-d8e6-7702-584fd181c51d
+Tue Dec 13 20:00:02 2016 [24701][1][FATAL] scheduler run and updated => 36ef4c1c-e9f0-d300-f26e-584fc0bc3d4c
+Tue Dec 13 20:00:02 2016 [24701][1][FATAL] scheduler run and updated => 6b630cb2-d86b-0b86-9324-584fcdba925e
+Tue Dec 13 20:00:02 2016 [24701][1][FATAL] scheduler run and updated => a8c03af2-49f9-0bf8-e1d3-584fcef70c97
+Tue Dec 13 20:00:02 2016 [24701][1][FATAL] scheduler run and updated => c9aea3c8-1e5e-2906-15a7-584fce17e64a
+Tue Dec 13 20:00:02 2016 [24701][1][FATAL] scheduler run and updated => dd9d1542-2d53-0864-84ef-584ff910a0c8
+Tue Dec 13 20:00:02 2016 [24701][1][FATAL] scheduler run and updated => dfa85405-53fd-13ec-4f4b-584faa2e66f3
+Tue Dec 13 20:00:04 2016 [24701][1][FATAL] -----> getNewMessageIds()
+Tue Dec 13 20:00:04 2016 [24701][1][FATAL] ----->  before return getNewMessageIds()
+Tue Dec 13 20:00:04 2016 [24701][1][FATAL] print_r($newMsgs,1)
+Tue Dec 13 20:00:04 2016 [24701][1][FATAL] 
+Tue Dec 13 20:01:02 2016 [24791][-none-][FATAL] Configuration variable date.timezone is not set, guessed timezone Asia/Karachi. Please set date.timezone="Asia/Karachi" in php.ini!
+Tue Dec 13 20:01:02 2016 [24791][1][FATAL] job_posted JOB!!!!!!!!!!!!!!!!
+Tue Dec 13 20:01:16 2016 [24791][1][FATAL] -----> getNewMessageIds()
+Tue Dec 13 20:01:17 2016 [24791][1][FATAL] ----->  before return getNewMessageIds()
+Tue Dec 13 20:01:17 2016 [24791][1][FATAL] print_r($newMsgs,1)
+Tue Dec 13 20:01:17 2016 [24791][1][FATAL] Array
+(
+    [0] => 90
+)
+
+Tue Dec 13 20:01:17 2016 [24791][1][FATAL] COUNT NEW MESSAGE
+Tue Dec 13 20:01:17 2016 [24791][1][FATAL] 1
+Tue Dec 13 20:01:21 2016 [24791][1][FATAL] in the handleCreateCase AOP
+Tue Dec 13 20:01:21 2016 [24791][1][FATAL] print_r($notes,1)
+Tue Dec 13 20:01:21 2016 [24791][1][FATAL] Array
 (
 )
 
-Fri Dec  9 20:07:01 2016 [32100][-none-][FATAL] Configuration variable date.timezone is not set, guessed timezone Asia/Karachi. Please set date.timezone="Asia/Karachi" in php.ini!
-Fri Dec  9 20:07:45 2016 [31615][1][FATAL] JJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJ
-Fri Dec  9 20:07:45 2016 [31615][1][FATAL] Queued JOBBB!!!!!!!!!!
-Fri Dec  9 20:08:01 2016 [32132][-none-][FATAL] Configuration variable date.timezone is not set, guessed timezone Asia/Karachi. Please set date.timezone="Asia/Karachi" in php.ini!
-Fri Dec  9 20:08:05 2016 [32132][1][FATAL] -----> getNewMessageIds()
-Fri Dec  9 20:08:06 2016 [32132][1][FATAL] ----->  before return getNewMessageIds()
-Fri Dec  9 20:08:06 2016 [32132][1][FATAL] print_r($newMsgs,1)
-Fri Dec  9 20:08:06 2016 [32132][1][FATAL] 
-Fri Dec  9 20:09:01 2016 [32173][-none-][FATAL] Configuration variable date.timezone is not set, guessed timezone Asia/Karachi. Please set date.timezone="Asia/Karachi" in php.ini!
-Fri Dec  9 20:09:06 2016 [32173][1][FATAL] -----> getNewMessageIds()
-Fri Dec  9 20:09:07 2016 [32173][1][FATAL] ----->  before return getNewMessageIds()
-Fri Dec  9 20:09:07 2016 [32173][1][FATAL] print_r($newMsgs,1)
-Fri Dec  9 20:09:07 2016 [32173][1][FATAL] 
-Fri Dec  9 20:10:01 2016 [32221][-none-][FATAL] Configuration variable date.timezone is not set, guessed timezone Asia/Karachi. Please set date.timezone="Asia/Karachi" in php.ini!
-Fri Dec  9 20:10:08 2016 [32221][1][FATAL] -----> getNewMessageIds()
-Fri Dec  9 20:10:09 2016 [32221][1][FATAL] ----->  before return getNewMessageIds()
-Fri Dec  9 20:10:09 2016 [32221][1][FATAL] print_r($newMsgs,1)
-Fri Dec  9 20:10:09 2016 [32221][1][FATAL] 
-Fri Dec  9 20:11:01 2016 [32259][-none-][FATAL] Configuration variable date.timezone is not set, guessed timezone Asia/Karachi. Please set date.timezone="Asia/Karachi" in php.ini!
-Fri Dec  9 20:11:06 2016 [32259][1][FATAL] -----> getNewMessageIds()
-Fri Dec  9 20:11:09 2016 [32259][1][FATAL] ----->  before return getNewMessageIds()
-Fri Dec  9 20:11:09 2016 [32259][1][FATAL] print_r($newMsgs,1)
-Fri Dec  9 20:11:09 2016 [32259][1][FATAL] 
-Fri Dec  9 20:12:01 2016 [32323][-none-][FATAL] Configuration variable date.timezone is not set, guessed timezone Asia/Karachi. Please set date.timezone="Asia/Karachi" in php.ini!
-Fri Dec  9 20:12:07 2016 [32323][1][FATAL] -----> getNewMessageIds()
-Fri Dec  9 20:12:08 2016 [32323][1][FATAL] ----->  before return getNewMessageIds()
-Fri Dec  9 20:12:08 2016 [32323][1][FATAL] print_r($newMsgs,1)
-Fri Dec  9 20:12:08 2016 [32323][1][FATAL] 
-Fri Dec  9 20:13:01 2016 [32368][-none-][FATAL] Configuration variable date.timezone is not set, guessed timezone Asia/Karachi. Please set date.timezone="Asia/Karachi" in php.ini!
-Fri Dec  9 20:13:03 2016 [32368][1][FATAL] -----> getNewMessageIds()
-Fri Dec  9 20:13:03 2016 [32368][1][FATAL] ----->  before return getNewMessageIds()
-Fri Dec  9 20:13:03 2016 [32368][1][FATAL] print_r($newMsgs,1)
-Fri Dec  9 20:13:03 2016 [32368][1][FATAL] 
-Fri Dec  9 20:14:02 2016 [32395][-none-][FATAL] Configuration variable date.timezone is not set, guessed timezone Asia/Karachi. Please set date.timezone="Asia/Karachi" in php.ini!
-Fri Dec  9 20:14:04 2016 [32395][1][FATAL] -----> getNewMessageIds()
-Fri Dec  9 20:14:04 2016 [32395][1][FATAL] ----->  before return getNewMessageIds()
-Fri Dec  9 20:14:04 2016 [32395][1][FATAL] print_r($newMsgs,1)
-Fri Dec  9 20:14:04 2016 [32395][1][FATAL] 
-Fri Dec  9 20:15:01 2016 [32424][-none-][FATAL] Configuration variable date.timezone is not set, guessed timezone Asia/Karachi. Please set date.timezone="Asia/Karachi" in php.ini!
-Fri Dec  9 20:15:04 2016 [32424][1][FATAL] -----> getNewMessageIds()
-Fri Dec  9 20:15:04 2016 [32424][1][FATAL] ----->  before return getNewMessageIds()
-Fri Dec  9 20:15:04 2016 [32424][1][FATAL] print_r($newMsgs,1)
-Fri Dec  9 20:15:04 2016 [32424][1][FATAL] 
-Fri Dec  9 20:16:01 2016 [32464][-none-][FATAL] Configuration variable date.timezone is not set, guessed timezone Asia/Karachi. Please set date.timezone="Asia/Karachi" in php.ini!
-Fri Dec  9 20:16:04 2016 [32464][1][FATAL] -----> getNewMessageIds()
-Fri Dec  9 20:16:04 2016 [32464][1][FATAL] ----->  before return getNewMessageIds()
-Fri Dec  9 20:16:04 2016 [32464][1][FATAL] print_r($newMsgs,1)
-Fri Dec  9 20:16:04 2016 [32464][1][FATAL] 
-Fri Dec  9 20:17:01 2016 [32504][-none-][FATAL] Configuration variable date.timezone is not set, guessed timezone Asia/Karachi. Please set date.timezone="Asia/Karachi" in php.ini!
-Fri Dec  9 20:17:04 2016 [32504][1][FATAL] -----> getNewMessageIds()
-Fri Dec  9 20:17:04 2016 [32504][1][FATAL] ----->  before return getNewMessageIds()
-Fri Dec  9 20:17:04 2016 [32504][1][FATAL] print_r($newMsgs,1)
-Fri Dec  9 20:17:04 2016 [32504][1][FATAL] 
-Fri Dec  9 20:18:01 2016 [32535][-none-][FATAL] Configuration variable date.timezone is not set, guessed timezone Asia/Karachi. Please set date.timezone="Asia/Karachi" in php.ini!
-Fri Dec  9 20:18:10 2016 [32535][1][FATAL] -----> getNewMessageIds()
-Fri Dec  9 20:18:11 2016 [32535][1][FATAL] ----->  before return getNewMessageIds()
-Fri Dec  9 20:18:11 2016 [32535][1][FATAL] print_r($newMsgs,1)
-Fri Dec  9 20:18:11 2016 [32535][1][FATAL] 
-Fri Dec  9 20:19:01 2016 [32575][-none-][FATAL] Configuration variable date.timezone is not set, guessed timezone Asia/Karachi. Please set date.timezone="Asia/Karachi" in php.ini!
-Fri Dec  9 20:19:06 2016 [32575][1][FATAL] -----> getNewMessageIds()
-Fri Dec  9 20:19:06 2016 [32575][1][FATAL] ----->  before return getNewMessageIds()
-Fri Dec  9 20:19:06 2016 [32575][1][FATAL] print_r($newMsgs,1)
-Fri Dec  9 20:19:06 2016 [32575][1][FATAL] 
-Fri Dec  9 20:20:02 2016 [32614][-none-][FATAL] Configuration variable date.timezone is not set, guessed timezone Asia/Karachi. Please set date.timezone="Asia/Karachi" in php.ini!
-Fri Dec  9 20:20:11 2016 [32614][1][FATAL] -----> getNewMessageIds()
-Fri Dec  9 20:20:12 2016 [32614][1][FATAL] ----->  before return getNewMessageIds()
-Fri Dec  9 20:20:12 2016 [32614][1][FATAL] print_r($newMsgs,1)
-Fri Dec  9 20:20:12 2016 [32614][1][FATAL] 
+Tue Dec 13 20:02:01 2016 [24948][-none-][FATAL] Configuration variable date.timezone is not set, guessed timezone Asia/Karachi. Please set date.timezone="Asia/Karachi" in php.ini!
+Tue Dec 13 20:02:03 2016 [24948][1][FATAL] -----> getNewMessageIds()
+Tue Dec 13 20:02:04 2016 [24948][1][FATAL] ----->  before return getNewMessageIds()
+Tue Dec 13 20:02:04 2016 [24948][1][FATAL] print_r($newMsgs,1)
+Tue Dec 13 20:02:04 2016 [24948][1][FATAL] 
+Tue Dec 13 20:03:01 2016 [24996][-none-][FATAL] Configuration variable date.timezone is not set, guessed timezone Asia/Karachi. Please set date.timezone="Asia/Karachi" in php.ini!
+Tue Dec 13 20:03:05 2016 [24996][1][FATAL] -----> getNewMessageIds()
+Tue Dec 13 20:03:08 2016 [24996][1][FATAL] ----->  before return getNewMessageIds()
+Tue Dec 13 20:03:08 2016 [24996][1][FATAL] print_r($newMsgs,1)
+Tue Dec 13 20:03:08 2016 [24996][1][FATAL] 

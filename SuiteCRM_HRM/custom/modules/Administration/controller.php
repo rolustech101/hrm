@@ -35,11 +35,13 @@ class CustomAdministrationController extends AdministrationController
             $row_sep = $GLOBALS['db']->fetchByAssoc($res_sep);
             $this->view_object_map['email_subject_separator'] = $row_sep['value'];
         }
+
         $sql_sm = "SELECT * FROM config where name = 'sm_email' AND category = 'system'";
         $res_sm = $GLOBALS['db']->query($sql_sm);
         if($res_sm->num_rows > 0){
             $row_sm = $GLOBALS['db']->fetchByAssoc($res_sm);
-            $this->view_object_map['sm_email'] = $row_sm['value'];
+            $emails = explode(',',$row_sm['value']);
+            $this->view_object_map['sm_email'] = $emails;
         }
 
         $this->view = 'increment_interval';
@@ -106,14 +108,22 @@ class CustomAdministrationController extends AdministrationController
         }
 
 
-        $subject_sm = trim($_REQUEST['sm_email']);
+        $email_sm = $_REQUEST['sm_email'];
+        $email_address = '';
+        foreach ($email_sm as $item){
+            $email_address .= $item.',';
+        }
+        $email_address = rtrim($email_address,',');
+
+        /////////////////////////////////////////////
+//        $email_sm = trim($_REQUEST['sm_email']);
         $test_sm = "SELECT * FROM config where name = 'sm_email' and category = 'system'";
         $test_res_sm = $GLOBALS['db']->query($test_sm);
         if($test_res_sm->num_rows > 0){
-            $sql_update_sm = "UPDATE config SET value = '$subject_sm' where name = 'sm_email' and category = 'system' ";
+            $sql_update_sm = "UPDATE config SET value = '$email_address' where name = 'sm_email' and category = 'system'";
             $res_update_email_sm = $GLOBALS['db']->query($sql_update_sm);
         }else{
-            $sql_sub_sm = "INSERT INTO config(category, name, value) VALUES('system', 'sm_email', '$subject_sm')";
+            $sql_sub_sm = "INSERT INTO config(category, name, value) VALUES('system', 'sm_email', '$email_address')";
             $result_sub_sep = $GLOBALS['db']->query($sql_sub_sm);
         }
 

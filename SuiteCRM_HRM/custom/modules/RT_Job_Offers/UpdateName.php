@@ -15,10 +15,6 @@ class UpdateName
 
 
         if($bean->status == 'accepted'){
-
-            // convert candidate into employee
-
-
             $job = new SchedulersJob();
             $job->name = "Job Accepted";
             $arr = [];

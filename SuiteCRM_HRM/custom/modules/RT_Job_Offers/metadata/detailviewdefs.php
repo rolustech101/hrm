@@ -40,12 +40,19 @@
 $module_name = 'RT_Job_Offers';
 $viewdefs[$module_name]['DetailView'] = array(
 'templateMeta' => array('form' => array('buttons'=>array('EDIT', 'DUPLICATE', 'DELETE', 'FIND_DUPLICATES',
+  
                                                          )),
                         'maxColumns' => '2',
                         'widths' => array(
                                         array('label' => '10', 'field' => '30'),
                                         array('label' => '10', 'field' => '30')
                                         ),
+    'includes' =>
+        array (
+                array (
+                    'file' => 'custom/modules/RT_Job_Offers/funcs.js',
+                ),
+        ),
                         ),
 
 'panels' =>array (

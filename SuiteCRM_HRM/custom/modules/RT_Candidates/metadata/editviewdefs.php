@@ -79,7 +79,7 @@ $viewdefs[$module_name]['EditView'] = array(
     ),
     
     array (
-      'assigned_user_name',
+      'cnic',
     	'do_not_call',
     ),
 

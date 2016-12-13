@@ -1,0 +1,14 @@
+function convert_candidate(candidate_id,job_offer) {
+    
+    $.ajax({
+        type: "POST",
+        url: "index.php?module=RT_Candidates&action=convert_cand&candidate_id="+candidate_id+'&job_offer_id='+job_offer,
+        success: function(result){
+         alert('Successfully Converted to Employee!');
+        },
+        error:function (res) {
+            alert('Something wrong with the request');
+        }
+    });
+    
+}
