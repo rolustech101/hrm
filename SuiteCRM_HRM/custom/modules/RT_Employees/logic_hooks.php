@@ -29,6 +29,13 @@ $hook_array['before_save'][] = array(
     'SalaryUpdate',
     'update_salary'
 );
+$hook_array['before_save'][] = array(
+    4,
+    'Notify About new employee creation',
+    'custom/modules/RT_Employees/EmployeeNotification.php',
+    'EmployeeNotification',
+    'send_mail'
+);
 $hook_array['after_retrieve'][] = array(
     1,
     'unserialize_salary',
