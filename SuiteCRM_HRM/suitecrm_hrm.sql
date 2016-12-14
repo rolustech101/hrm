@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Dec 02, 2016 at 08:24 PM
+-- Generation Time: Dec 14, 2016 at 12:37 PM
 -- Server version: 5.5.53-0ubuntu0.14.04.1
 -- PHP Version: 5.5.36
 
@@ -1833,7 +1833,7 @@ CREATE TABLE IF NOT EXISTS `campaigns` (
   PRIMARY KEY (`id`),
   KEY `camp_auto_tracker_key` (`tracker_key`),
   KEY `idx_campaign_name` (`name`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
 
 -- --------------------------------------------------------
 
@@ -1940,7 +1940,7 @@ CREATE TABLE IF NOT EXISTS `cases` (
   KEY `idx_case_name` (`name`),
   KEY `idx_account_id` (`account_id`),
   KEY `idx_cases_stat_del` (`assigned_user_id`,`status`,`deleted`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=924 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=1207 ;
 
 -- --------------------------------------------------------
 
@@ -4434,6 +4434,10 @@ CREATE TABLE IF NOT EXISTS `rt_candidates` (
   `us_citizen` tinyint(1) DEFAULT '0',
   `education` varchar(255) DEFAULT NULL,
   `visa_required` tinyint(1) DEFAULT '0',
+  `is_converted` tinyint(1) DEFAULT '0',
+  `cnic` varchar(255) DEFAULT NULL,
+  `is_offered` tinyint(1) DEFAULT '0',
+  `employee_id` char(36) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -4877,6 +4881,127 @@ CREATE TABLE IF NOT EXISTS `rt_increment_history_rt_employees_c` (
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `rt_interviews`
+--
+
+CREATE TABLE IF NOT EXISTS `rt_interviews` (
+  `id` char(36) NOT NULL,
+  `name` varchar(255) DEFAULT NULL,
+  `date_entered` datetime DEFAULT NULL,
+  `date_modified` datetime DEFAULT NULL,
+  `modified_user_id` char(36) DEFAULT NULL,
+  `created_by` char(36) DEFAULT NULL,
+  `description` text,
+  `deleted` tinyint(1) DEFAULT '0',
+  `assigned_user_id` char(36) DEFAULT NULL,
+  `rt_vacancy_id` char(36) DEFAULT NULL,
+  `rt_candidate_id` char(36) DEFAULT NULL,
+  `is_set` tinyint(1) DEFAULT '0',
+  `date_of_interview` datetime DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `rt_interviews_audit`
+--
+
+CREATE TABLE IF NOT EXISTS `rt_interviews_audit` (
+  `id` char(36) NOT NULL,
+  `parent_id` char(36) NOT NULL,
+  `date_created` datetime DEFAULT NULL,
+  `created_by` varchar(36) DEFAULT NULL,
+  `field_name` varchar(100) DEFAULT NULL,
+  `data_type` varchar(100) DEFAULT NULL,
+  `before_value_string` varchar(255) DEFAULT NULL,
+  `after_value_string` varchar(255) DEFAULT NULL,
+  `before_value_text` text,
+  `after_value_text` text,
+  PRIMARY KEY (`id`),
+  KEY `idx_rt_interviews_parent_id` (`parent_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `rt_interviews_cstm`
+--
+
+CREATE TABLE IF NOT EXISTS `rt_interviews_cstm` (
+  `id_c` char(36) NOT NULL,
+  `comments_c` text,
+  `date_of_interview_c` date DEFAULT NULL,
+  `interviewer_c` varchar(255) DEFAULT NULL,
+  `interviewer_id_c` varchar(255) DEFAULT NULL,
+  `job_c` varchar(255) DEFAULT NULL,
+  `score_c` int(255) DEFAULT NULL,
+  `status_c` varchar(100) DEFAULT 'Approved',
+  `vacancy_c` varchar(100) DEFAULT NULL,
+  `vacancy_name_c` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id_c`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `rt_interviews_rt_employees_1_c`
+--
+
+CREATE TABLE IF NOT EXISTS `rt_interviews_rt_employees_1_c` (
+  `id` varchar(36) NOT NULL,
+  `date_modified` datetime DEFAULT NULL,
+  `deleted` tinyint(1) DEFAULT '0',
+  `rt_interviews_rt_employees_1rt_interviews_ida` varchar(36) DEFAULT NULL,
+  `rt_interviews_rt_employees_1rt_employees_idb` varchar(36) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `rt_interviews_rt_employees_1_alt` (`rt_interviews_rt_employees_1rt_interviews_ida`,`rt_interviews_rt_employees_1rt_employees_idb`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `rt_jobs`
+--
+
+CREATE TABLE IF NOT EXISTS `rt_jobs` (
+  `id` char(36) NOT NULL,
+  `name` varchar(255) DEFAULT NULL,
+  `date_entered` datetime DEFAULT NULL,
+  `date_modified` datetime DEFAULT NULL,
+  `modified_user_id` char(36) DEFAULT NULL,
+  `created_by` char(36) DEFAULT NULL,
+  `description` text,
+  `deleted` tinyint(1) DEFAULT '0',
+  `assigned_user_id` char(36) DEFAULT NULL,
+  `job_type` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `rt_jobs_audit`
+--
+
+CREATE TABLE IF NOT EXISTS `rt_jobs_audit` (
+  `id` char(36) NOT NULL,
+  `parent_id` char(36) NOT NULL,
+  `date_created` datetime DEFAULT NULL,
+  `created_by` varchar(36) DEFAULT NULL,
+  `field_name` varchar(100) DEFAULT NULL,
+  `data_type` varchar(100) DEFAULT NULL,
+  `before_value_string` varchar(255) DEFAULT NULL,
+  `after_value_string` varchar(255) DEFAULT NULL,
+  `before_value_text` text,
+  `after_value_text` text,
+  PRIMARY KEY (`id`),
+  KEY `idx_rt_jobs_parent_id` (`parent_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `rt_job_application`
 --
 
@@ -4897,7 +5022,7 @@ CREATE TABLE IF NOT EXISTS `rt_job_application` (
   `rt_vacancy_id` char(36) DEFAULT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `job_application_number` (`job_application_number`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=359 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=440 ;
 
 --
 -- Triggers `rt_job_application`
@@ -4932,6 +5057,50 @@ CREATE TABLE IF NOT EXISTS `rt_job_application_audit` (
   `after_value_text` text,
   PRIMARY KEY (`id`),
   KEY `idx_rt_job_application_parent_id` (`parent_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `rt_job_offers`
+--
+
+CREATE TABLE IF NOT EXISTS `rt_job_offers` (
+  `id` char(36) NOT NULL,
+  `name` varchar(255) DEFAULT NULL,
+  `date_entered` datetime DEFAULT NULL,
+  `date_modified` datetime DEFAULT NULL,
+  `modified_user_id` char(36) DEFAULT NULL,
+  `created_by` char(36) DEFAULT NULL,
+  `description` text,
+  `deleted` tinyint(1) DEFAULT '0',
+  `assigned_user_id` char(36) DEFAULT NULL,
+  `status` varchar(255) DEFAULT NULL,
+  `date_offered` date DEFAULT NULL,
+  `rt_job_id` char(36) DEFAULT NULL,
+  `rt_candidate_id` char(36) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `rt_job_offers_audit`
+--
+
+CREATE TABLE IF NOT EXISTS `rt_job_offers_audit` (
+  `id` char(36) NOT NULL,
+  `parent_id` char(36) NOT NULL,
+  `date_created` datetime DEFAULT NULL,
+  `created_by` varchar(36) DEFAULT NULL,
+  `field_name` varchar(100) DEFAULT NULL,
+  `data_type` varchar(100) DEFAULT NULL,
+  `before_value_string` varchar(255) DEFAULT NULL,
+  `after_value_string` varchar(255) DEFAULT NULL,
+  `before_value_text` text,
+  `after_value_text` text,
+  PRIMARY KEY (`id`),
+  KEY `idx_rt_job_offers_parent_id` (`parent_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
@@ -5343,6 +5512,7 @@ CREATE TABLE IF NOT EXISTS `rt_vacancies` (
   `educational_requirement` text,
   `job_type` varchar(255) DEFAULT NULL,
   `rt_job_app_id` char(36) DEFAULT NULL,
+  `rt_job_id` char(36) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -5663,7 +5833,7 @@ CREATE TABLE IF NOT EXISTS `tracker` (
   KEY `idx_tracker_userid_itemid_vis` (`user_id`,`item_id`,`visible`),
   KEY `idx_tracker_monitor_id` (`monitor_id`),
   KEY `idx_tracker_date_modified` (`date_modified`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=1156 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=1777 ;
 
 -- --------------------------------------------------------
 
