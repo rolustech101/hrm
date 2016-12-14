@@ -54,7 +54,7 @@ class RT_EmployeesViewEdit extends ViewEdit
  	 */
  	public function display() 
  	{
-        $this->ev->process();
+//        $this->ev->process();
 		$this->ss->assign("ID", $this->bean->id);
 		$this->ss->assign("TAX", $this->bean->tax);
 		if(!empty($this->bean->salary)){
@@ -102,8 +102,8 @@ EOQ;
 
 //		$this->ss->fetch("custom/modules/RT_Employees/tpls/Editfooter.tpl");
         $this->ss->assign("tr_table", $tr_table);
-        echo $this->ev->display($this->showTitle);
-
+//        echo $this->ev->display($this->showTitle);
+		parent::display();
 
     }
 }

@@ -46,6 +46,7 @@ class RT_EmployeesViewDetail extends ViewDetail{
 	
  	function display(){
 
+		$this->ss->force_compile = true;
 		$salaries = $this->bean->salary;
 		$tr_table = '';
 		global $mod_strings;
@@ -82,15 +83,12 @@ class RT_EmployeesViewDetail extends ViewDetail{
             </tr>
 EOQ;
 		}
-//		die;
 		$this->ss->assign("TAX", $this->bean->tax);
 		$this->ss->assign("tr_table", $tr_table);
 		if(!empty($this->bean->salary)){			
 			$this->ss->assign("salary", $this->bean->salary);
 			$this->ss->fetch("custom/modules/RT_Employees/tpls/Detailfooter.tpl");
-		}/*
-		$this->bean->casual_leave_balance = get_casual_balance($this->bean->id);
-		$this->bean->annual_leave_balance = get_annual_balance($this->bean->id);*/
+		}
 
 		parent::display();
 	}
