@@ -11,4 +11,5 @@ $mod_strings['LBL_ADDITIONAL_DETAIL_INFORMATION'] = 'Additional Details';
 $mod_strings['LBL_RT_JOB_APPLICATION_RT_CANDIDATES_FROM_RT_JOB_APPLICATION_TITLE'] = 'Job Applications';
 $mod_strings['LBL_RT_JOB_OFFERS_RT_CANDIDATES_JOB_OFFERS_TITLE'] = 'Job Offers';
 $mod_strings['LBL_CNIC'] = 'CNIC';
+$mod_strings['LBL_RT_QUALIFICATIONS_FROM_QUALIFICATIONS_TITLE'] = 'Qualifications';
 
