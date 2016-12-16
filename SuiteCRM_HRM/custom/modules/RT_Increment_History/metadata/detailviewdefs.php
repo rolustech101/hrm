@@ -15,7 +15,7 @@ array (
           2 => 'DELETE',
           3 =>
           array (
-            'customCode' => '<input title="Click to Apply Increment" class="button" type="button" name="apply" value="Apply" onclick="applyincrement(\'{$fields.id.value}\', \'{$fields.rt_increment_history_rt_employeesrt_employees_ida.value}\', \'{$fields.increment_date_c.value}\')">',
+            'customCode' => '<input title="Click to Apply Increment" class="button" type="button" name="apply" value="Apply" onclick="applyincrement(\'{$fields.id.value}\', \'{$fields.rt_increment_history_rt_employeesrt_employees_ida.value}\', \'{$fields.increment_date_c.value}\',\'{$fields.increment_type.value}\')">',
           ),
         ),
       ),
@@ -61,24 +61,32 @@ array (
         array (
           0 => 
           array (
+              'name' => 'increment_type',
+              'label' => 'LBL_INCREMENT_TYPE',
+          ),
+        ),
+          3 =>
+        array (
+          0 =>
+          array (
             'name' => 'increment_c',
             'label' => 'LBL_INCREMENT',
           ),
         ),
-        3 => 
+        4 =>
         array (
           0 => 
           array (
             'name' => 'increment_date_c',
             'label' => 'LBL_INCREMENT_DATE',
           ),
-          1 => 
+          1 =>
           array (
             'name' => 'status_c',
             'label' => 'LBL_STATUS',
           ),
         ),
-        4 => 
+        5 =>
         array (
           0 => 
           array (
@@ -86,7 +94,7 @@ array (
             'label' => 'LBL_NEXT_INCREMENT',
           ),
         ),
-        5 => 
+        6 =>
         array (
           0 => 'description',
         ),

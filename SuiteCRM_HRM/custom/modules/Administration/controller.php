@@ -44,6 +44,14 @@ class CustomAdministrationController extends AdministrationController
             $this->view_object_map['sm_email'] = $emails;
         }
 
+        $sql_st = "SELECT * FROM config where name = 'salary_types' AND category = 'system'";
+        $res_st = $GLOBALS['db']->query($sql_st);
+        if($res_st->num_rows > 0){
+            $row_st = $GLOBALS['db']->fetchByAssoc($res_st);
+            $types = explode(',',$row_st['value']);
+            $this->view_object_map['salary_types'] = $types;
+        }
+
         $this->view = 'increment_interval';
     }
     function action_submit_interval_form()
@@ -124,7 +132,26 @@ class CustomAdministrationController extends AdministrationController
             $res_update_email_sm = $GLOBALS['db']->query($sql_update_sm);
         }else{
             $sql_sub_sm = "INSERT INTO config(category, name, value) VALUES('system', 'sm_email', '$email_address')";
-            $result_sub_sep = $GLOBALS['db']->query($sql_sub_sm);
+            $result_sub_sm = $GLOBALS['db']->query($sql_sub_sm);
+        }
+
+        $sal_type = $_REQUEST['salary_types'];
+        $types = '';
+        foreach ($sal_type as $item){
+            $types.= $item.',';
+        }
+        $types = rtrim($types,',');
+
+        /////////////////////////////////////////////
+//        $email_sm = trim($_REQUEST['sm_email']);
+        $test_st = "SELECT * FROM config where name = 'salary_types' and category = 'system'";
+        $test_res_st = $GLOBALS['db']->query($test_st);
+        if($test_res_st->num_rows > 0){
+            $sql_update_st = "UPDATE config SET value = '$types' where name = 'salary_types' and category = 'system'";
+            $res_update_type_st = $GLOBALS['db']->query($sql_update_st);
+        }else{
+            $sql_sub_st = "INSERT INTO config(category, name, value) VALUES('system', 'salary_types', '$types')";
+            $result_sub_sm = $GLOBALS['db']->query($sql_sub_st);
         }
 
         $r_module = $_REQUEST['return_module'];

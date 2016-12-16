@@ -68,6 +68,20 @@
                     </table>
                 </td>
             </tr>
+            <tr>
+                <td valign="top" id='_label' width='12.5%' scope="row">
+                    Add Salary types:
+                </td>
+                <td valign="top" width='37.5%' colspan='3'>
+                    <input tabindex="130" type="button" value="Add" onclick="addSalary()"><br>
+                    <table id="salary_table">
+                        <tr>
+                            <td></td>
+                        </tr>
+                        {$tr_types}
+                    </table>
+                </td>
+            </tr>
         </table>
         <input type="submit" id="submit-btn" value="Submit">
     </form>

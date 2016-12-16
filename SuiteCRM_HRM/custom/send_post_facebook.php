@@ -7,13 +7,13 @@ if (!session_id()) {
     session_start();
 }
 require_once('php-graph-sdk-5.4/src/Facebook/autoload.php');
-echo 'in the entrypoint of send post!!!';
 $GLOBALS['log']->fatal("hello in the send_post_facebook");
 
 
-isset($_SESSION['vacancy_name']) && !empty($_SESSION['vacancy_name']) ? $vacancy_name = $_SESSION['vacancy_name'] : $vacancy_name = 'empty';
-isset($_SESSION['positions']) && !empty($_SESSION['positions']) ? $positions = $_SESSION['positions'] : $positions = 'empyy';
-isset($_SESSION['requirement']) && !empty($_SESSION['requirement']) ? $requirement = $_SESSION['requirement'] : $requirement = 'empty';
+isset($_SESSION['vacancy_name']) && !empty($_SESSION['vacancy_name']) ? $vacancy_name = $_SESSION['vacancy_name'] : $vacancy_name = 'n/a';
+isset($_SESSION['positions']) && !empty($_SESSION['positions']) ? $positions = $_SESSION['positions'] : $positions = 'n/a';
+isset($_SESSION['requirement']) && !empty($_SESSION['requirement']) ? $requirement = $_SESSION['requirement'] : $requirement = 'n/a';
+isset($_SESSION['last_date']) && !empty($_SESSION['last_date']) ? $last_date = $_SESSION['last_date'] : $last_date = 'n/a';
 $sql = "SELECT * FROM config WHERE category = 'system' AND name = 'rt_page'";
 $result = $GLOBALS['db']->query($sql);
 if ($result->num_rows > 0) {
@@ -24,7 +24,7 @@ if ($result->num_rows > 0) {
     return false;
 }
 
-$message = "Rolustech is looking for an ideal $vacancy_name \nJob Description:\n$requirement\n Total Position: $positions";
+$message = "Rolustech is looking for an ideal $vacancy_name \nJob Description:\n$requirement\n Total Position: $positions\nLast Date To Apply: $last_date";
 
 require_once('include/connectors/sources/SourceFactory.php');
 

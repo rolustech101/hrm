@@ -45,12 +45,15 @@ if(!defined('sugarEntry') || !sugarEntry) die('Not A Valid Entry Point');
 		$ss->assign("JOINING", $emp->joining_date_c);
 		$ss->assign("GROSS_PAY", $total_salary);
 		$ss->assign("SALARY", $salary);
-		$tax = $rows['tax']*12;
-		
+		$new_tax = get_tax_calculation($id);
+//		$tax = $rows['tax']*12;
+		$tax = $new_tax*12;
+
 		$ss->assign("PROVIDENT", $rows['provident']);
 		$ss->assign("TAX", $tax);
 		
-		$pmtax = $rows['tax'];
+//		$pmtax = $rows['tax'];
+		$pmtax = $new_tax;
 		$net_salary = $rows['salary_paid'];
 		$ss->assign("NET_SALARY", $net_salary);
 		

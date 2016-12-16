@@ -60,6 +60,10 @@ class RT_EmployeesViewEdit extends ViewEdit
 		if(!empty($this->bean->salary)){
 			$this->ss->assign("salary", $this->bean->salary);
 		}
+		/////////////
+
+
+		/////////////////
 		$salaries = $this->bean->salary;
 		$tax = $this->bean->tax;
 		global $mod_strings;
@@ -67,6 +71,18 @@ class RT_EmployeesViewEdit extends ViewEdit
 		$tr_table = '';
 		$counter = 1;
 		foreach ($salaries as $key => $value){
+
+            $list = get_salary_selectlist();
+            $sal_options = "<select name='label_salary[]' id = 'label_salary'>";
+            foreach ($list as $keyy => $valuee) {
+                $GLOBALS['log']->fatal($keyy.' => '.$valuee);
+                if($key == $keyy){
+                    $sal_options .= ("<option value='$keyy' selected>". $valuee ."</option>");
+                }else{
+                    $sal_options .= ("<option value='$keyy'>". $valuee ."</option>");
+                }
+            }
+            $sal_options .= "</select>";
 //            print_r($salaries);
 //            echo '________________________________________________________';
 			$checked = '';
@@ -80,8 +96,7 @@ class RT_EmployeesViewEdit extends ViewEdit
                 <table>
                     <tr>
                         <td width="12.5%" valign="top" scope="row">Label:</td>
-                        <td width="33.5%" valign="top" colspan="3"><input type="text" name="label_salary[]"
-                                                                          id="label_salary" value="$key"></td>
+                        <td width="33.5%" valign="top" colspan="3">$sal_options</td>
                     </tr>
                     <tr>
                         <td width="12.5%" valign="top" scope="row">Amount:</td>

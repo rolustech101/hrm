@@ -36,5 +36,13 @@ class RT_EmployeesController extends SugarController{
 		echo json_encode($tax_data);
 		die();
 	}
+	public function action_get_increment_options()
+	{
+		ob_clean();
+		$list = get_salary_selectlist();
+		echo json_encode($list);
+		die();
+	}
+
 }
 	

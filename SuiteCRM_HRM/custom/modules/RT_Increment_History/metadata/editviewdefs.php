@@ -37,12 +37,21 @@ array (
         array (
           0 => 
           array (
+            'name' => 'increment_type',
+            'label' => 'LBL_INCREMENT_TYPE',
+          ),
+          1 => '',
+        ),
+          2 =>
+        array (
+          0 =>
+          array (
             'name' => 'increment_c',
             'label' => 'LBL_INCREMENT',
           ),
           1 => '',
         ),
-        2 => 
+        3 =>
         array (
           0 => 
           array (
@@ -51,7 +60,7 @@ array (
           ),
           1 => '',
         ),
-        3 => 
+        4 =>
         array (
           0 => 'description',
         ),

@@ -4,6 +4,7 @@ $(document).ready(function () {
 		var financial_area = $(this).val();
 		switch(financial_area){
 			case 'finance':
+				alert('finance!!!');
 				list(SUGAR.language.languages.app_list_strings['fn_list']);
 				break;
 			case 'human_resources':
@@ -28,6 +29,7 @@ $(document).ready(function () {
 	});
 	function list(ob)
 	{
+		console.log(ob);
 		$("#job_level").parent().parent().show();
 		// $("#job_level").show();
             $("#job_level").html(""); //reset child options

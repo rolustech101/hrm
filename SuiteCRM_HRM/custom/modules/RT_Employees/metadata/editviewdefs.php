@@ -143,6 +143,12 @@ array (
             'name' => 'rt_departments_rt_employees_name',
           ),
         ),
+          9 => array(
+            0 => array(
+                'name' => 'filling_status',
+            ),
+              1 => array(),
+          ),
       ),
       'lbl_email_addresses' => 
       array (

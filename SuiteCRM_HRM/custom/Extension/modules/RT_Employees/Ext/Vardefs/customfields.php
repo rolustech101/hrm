@@ -54,6 +54,12 @@ $dictionary['RT_Employees']['fields']['rtemployee_id'] = array (
 	'type' => 'varchar',
 	'vname'=>'LBL_RTEMPLOYEE_ID',
 );
+$dictionary['RT_Employees']['fields']['filling_status'] = array (
+	'name' => 'filling_status',
+	'type' => 'enum',
+	'options' => 'filling_status_list',
+	'vname'=>'LBL_FILLING_STATUS',
+);
 $dictionary['RT_Employees']['fields']['appraisal_date'] = array (
 	'name' => 'appraisal_date',
 	'type' => 'date',

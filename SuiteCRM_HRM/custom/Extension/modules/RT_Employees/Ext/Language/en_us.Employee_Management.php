@@ -16,4 +16,5 @@ $mod_strings['LBL_ANNUAL_LEAVE_BALANCE'] = 'Annual leave balance';
 $mod_strings['LBL_RTEMPLOYEE_ID'] = 'Employee ID';
 $mod_strings['LBL_RT_QUALIFICATIONS'] = 'Qualifications';
 $mod_strings['LBL_RT_QUALIFICATIONS_FROM_QUALIFICATIONS_TITLE'] = 'Qualifications';
+$mod_strings['LBL_FILLING_STATUS'] = 'Filling Status';
 
