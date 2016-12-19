@@ -55,5 +55,6 @@ $mod_strings = array (
   'LBL_TAX' => 'Tax(Rs)',
   'LBL_PROVIDENT_FUND' => 'Provident Fund (%)',
   'LBL_RT_EMPLOYEES_A_DEDUCTABLES_FROM_A_DEDUCTABLES_TITLE' => 'Loan/Deductables',
+  'RT_EMPLOYEES_RT_JOB_NAME_C' => 'Job Name',
 );
 ?>
