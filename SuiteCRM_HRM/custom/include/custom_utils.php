@@ -351,7 +351,7 @@ function handleCreateCandidate($email, $job_title)
 //        $c->phone_mobile = '123';
     $c->save();
 
-    $vacancy_bean = BeanFactory::getBean('RT_Vacancies',null,['order_by' => 'date_entered DESC']);
+    $vacancy_bean = BeanFactory::getBean('RT_Vacancies',null,['order_by' => 'date_entered ASC']);
     if (!empty($job_title)) {
         $job_title = trim($job_title);
         $vacancy_bean->retrieve_by_string_fields(array('name' => $job_title, 'status_c' => 'new_position'));
