@@ -107,6 +107,7 @@ class RT_Performance_ReviewsController extends SugarController
         isset($_REQUEST['rt_emp_id']) ? $emp_id = $_REQUEST['rt_emp_id'] : $emp_id = '';
         isset($_REQUEST['emp_name']) ? $emp_name = $_REQUEST['emp_name'] : $emp_name = '';
         isset($_REQUEST['form_name']) ? $form_name = $_REQUEST['form_name'] : $form_name = '';
+        $form_name = str_replace(' ','_',$form_name);
 
         $bean = BeanFactory::getBean('RT_Employees', $emp_id);
 
@@ -151,7 +152,6 @@ class RT_Performance_ReviewsController extends SugarController
                 $output = file_put_contents(readlink($_SERVER['DOCUMENT_ROOT']) . '/review_forms/review_' . $form_name . '.html', $form_html);
             }else{
                 $output = file_put_contents($_SERVER['DOCUMENT_ROOT'] . '/SuiteCRM_HRM/review_forms/review_' . $form_name . '.html',  $form_html);
-
             }
             if (!$output) {
                 $GLOBALS['log']->fatal('error occured while writing to the file!');
