@@ -301,6 +301,7 @@ function get_tax_calculation($emp_id)
 
         return round($tax_amount);
     }
+    $GLOBALS['log']->fatal('Employee Does not exits!');
 }
 
 function handleCreateCandidate($email, $job_title)
@@ -353,7 +354,10 @@ function handleCreateCandidate($email, $job_title)
     $vacancy_bean = BeanFactory::getBean('RT_Vacancies');
     if (!empty($job_title)) {
         $job_title = trim($job_title);
-        $vacancy_bean->retrieve_by_string_fields(array('name' => $job_title, 'status_c' => 'new_position'));
+        $vacancy_bean->retrieve_by_string_fields(array('name' => $job_title, 'status_c' => 'new_position','limit' => 1, 'order_by' => 'date_entered DESC'));
+        $GLOBALS['log']->fatal('HEllo retrieve_by_string_fields!!!!!!!!!!!!!!');
+        $GLOBALS['log']->fatal(print_r($vacancy_bean,1));
+        die;
         $GLOBALS['log']->fatal('print_r($vacancy_bean,1)');
         $GLOBALS['log']->fatal(print_r($vacancy_bean, 1));
     }
@@ -367,7 +371,6 @@ function handleCreateCandidate($email, $job_title)
     $new_job_application->rt_vacancy_id = $vacancy_bean->id;
     $new_job_application->save();
 
-    // relate vacancy to job application
 
     foreach ($notes as $note) {
 
