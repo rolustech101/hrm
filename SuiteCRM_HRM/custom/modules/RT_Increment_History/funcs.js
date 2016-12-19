@@ -1,10 +1,12 @@
 function applyincrement(rid, eid, inc_date,inc_type){
-
-	alert(inc_type);
 	var handleSuccess = function(o)
 	{
 		if(o.responseText !== undefined)
 		{
+			if(o.responseText == 'no'){
+				alert(inc_type+" Salary Type is not defined for this Employee!\n" +
+					"Tip:Please try any other type or define this type in employee");
+			}
 			window.location.reload();
 		}
 	};

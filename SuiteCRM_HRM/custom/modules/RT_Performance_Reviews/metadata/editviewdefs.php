@@ -37,7 +37,7 @@ array (
         0 => 
         array (
           0 => 'name',
-          1 => 'assigned_user_name',
+          1 => '',
         ),
         1 => 
         array (

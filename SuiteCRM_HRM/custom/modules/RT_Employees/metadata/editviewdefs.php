@@ -198,7 +198,12 @@ array (
       array (
         1 => 
         array (
-          0 => 
+          0 =>
+          array (
+            'name' => 'rt_employees_rt_jobs_name_c',
+            'label' => 'RT_EMPLOYEES_RT_JOB_NAME_C',
+          ),
+            1 =>
           array (
             'name' => 'joining_date_c',
             'label' => 'LBL_JOINING_DATE',

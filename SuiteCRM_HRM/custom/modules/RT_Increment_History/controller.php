@@ -46,17 +46,26 @@ class RT_Increment_HistoryController extends SugarController{
 		$GLOBALS['log']->fatal('print_r($inc_type,1)');
 		$GLOBALS['log']->fatal($inc_type);
 
+		$is_exists = false;
 		foreach ($unserialized_sal as $key => $value){
 			if(strtolower($key) == strtolower($inc_type)){
+				$is_exists = true;
 				$unserialized_sal[$key]['amount'] += $increment;
 			}
 		}
-		$updated_serialize = serialize($unserialized_sal);
+		if($is_exists){
+			$updated_serialize = serialize($unserialized_sal);
 
-		$GLOBALS['log']->fatal(print_r(serialize($unserialized_sal),1));
+			$GLOBALS['log']->fatal(print_r(serialize($unserialized_sal),1));
 
-		$sql_up = "update rt_employees set salary = '$updated_serialize'  where id = '$eid'";
-		$res_up = $GLOBALS['db']->query($sql_up);
+			$sql_up = "update rt_employees set salary = '$updated_serialize'  where id = '$eid'";
+			$res_up = $GLOBALS['db']->query($sql_up);
+			echo 'yes';
+		}else{
+			$GLOBALS['log']->fatal("$inc_type is not exists for this Employee");
+			echo 'no';
+		}
+
 
 
 		die();

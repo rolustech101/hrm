@@ -107,8 +107,6 @@ function get_non_filling_countries() {
 function set_taxable(arg, formm) {
 
     if (check_form('EditView')) {
-
-        alert('hello');
         var file_status = $('#filling_status').val();
         var disply = $("#filling_status").css('display');
         if (disply == 'none') {
