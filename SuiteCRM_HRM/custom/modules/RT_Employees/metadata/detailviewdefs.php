@@ -189,7 +189,9 @@ array (
         array (
           0 => 
           array (
-            'name' => 'RT_jobs_RT_employees_name',
+            'name' => 'rt_employees_rt_jobs_name_c',
+              'label' => 'RT_EMPLOYEES_RT_JOB_NAME_C',
+
           ),
           1 => 'department',
         ),
@@ -235,7 +237,12 @@ array (
         ),
         4 => 
         array (
-          0 => 'description',
+            0 =>
+            array (
+                'name' => 'rt_employees_rt_employees_name',
+                'label' => 'LBL_RT_EMPLOYEES_RT_EMPLOYEES_NAME',
+            ),
+          1 => 'description',
         ),
         5 => 
         array (

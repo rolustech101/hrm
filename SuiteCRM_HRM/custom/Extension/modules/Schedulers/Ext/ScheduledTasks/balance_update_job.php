@@ -3,7 +3,7 @@
 array_push($job_strings, 'balance_update_job');
 function balance_update_job()
 {
-   $sql = "select id, date_format(joining_date_c ,'%m-%d') as joining_date, annual_leave_balance, casual_leave_balance,entitled_annual_leaves_c,entitled_casual_leaves_c from rt_employees inner join rt_employees_cstm ON id = id_c where date_format(joining_date_c ,'%m-%d') = date_format(now() ,'%m-%d')";
+   $sql = "select id, date_format(joining_date_c ,'%m-%d') as joining_date, annual_leave_balance, casual_leave_balance,entitled_annual_leaves_c,entitled_casual_leaves_c from rt_employees inner join rt_employees_cstm ON id = id_c where date_format(joining_date_c ,'%m-%d') = date_format(now() ,'%m-%d') and rt_employees.deleted = 0";
     $res = $GLOBALS['db']->query($sql);
     while($row = $GLOBALS['db']->fetchByAssoc($res)){
         $entilted_annual = $row['entitled_annual_leaves_c'];
