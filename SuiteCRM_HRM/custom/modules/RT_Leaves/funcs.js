@@ -60,7 +60,6 @@ function custom_function(view) {
     }else {
         alert('You can only create Leaves for Employee\'s Current year');
         return false;
-
     }
 }
 $(document).ready(function(){

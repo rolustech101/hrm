@@ -40,7 +40,7 @@
         </tr>
         <tr>
             <td width="1%" valign="top" scope="row">{$MOD.LBL_TAX}:</td>
-            <td width="33.5%" valign="top" colspan="3"><input type="text" name="tax" id="tax" required
+            <td width="33.5%" valign="top" colspan="3"><input type="text" name="tax" id="tax"
                                                               value="{$TAX}">&nbsp;<input type="button"
                                                                                           id="calculate_tax"
                                                                                           onclick="calculateTax()"

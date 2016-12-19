@@ -41,7 +41,7 @@ if(!defined('sugarEntry') || !sugarEntry) die('Not A Valid Entry Point');
 		$ss->assign("ANNUAL", $rows['annual_leaves']);
 		$ss->assign("NAME",$emp->name);
 		$ss->assign("EMP_NO", $emp->rtemployee_id);
-//		$ss->assign("DESIGNATION", $emp->rel_fields_before_value['a_jobs_a_employees_name']);
+		$ss->assign("DESIGNATION", $emp->rt_employees_rt_jobs_name_c);
 		$ss->assign("JOINING", $emp->joining_date_c);
 		$ss->assign("GROSS_PAY", $total_salary);
 		$ss->assign("SALARY", $salary);

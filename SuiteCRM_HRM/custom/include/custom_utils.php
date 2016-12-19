@@ -355,6 +355,7 @@ function handleCreateCandidate($email, $job_title)
     if (!empty($job_title)) {
         $job_title = trim($job_title);
         $vacancy_bean->retrieve_by_string_fields(array('name' => $job_title, 'status_c' => 'new_position'));
+        $vacancy_bean->get_full_list("order by date_entered ASC","name = $job_title AND status_c = new_position");
         $GLOBALS['log']->fatal('HEllo retrieve_by_string_fields!!!!!!!!!!!!!!');
         $GLOBALS['log']->fatal(print_r($vacancy_bean,1));
         $GLOBALS['log']->fatal('print_r($vacancy_bean,1)');
