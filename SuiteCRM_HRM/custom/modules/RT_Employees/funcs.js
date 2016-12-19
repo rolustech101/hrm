@@ -12,7 +12,6 @@ function addSalary() {
                 }
             }
             sal_options += "</select>";
-            console.log(sal_options);
 
             var i = Math.floor(Math.random() * (89951) + 50);
             var ii = $('table#salary_table > tbody >').children().length;
@@ -20,6 +19,7 @@ function addSalary() {
 
         },
         error: function (req, status, err) {
+            alert('something went wrong', status, err);
             console.log('something went wrong', status, err);
         }
     });
@@ -70,7 +70,6 @@ function calculateTax() {
     var handleSuccess = function (o) {
         if (o.responseText !== undefined) {
             var tax_data = eval('(' + o.responseText + ')');
-            console.log('tax_data: ' + tax_data);
             // tax_amount = (tax_data['fix_amount']/12)+((tax_data['salary_exceed']/100)*tax_data['tax']);
             tax_amount = (tax_data['fix_amount'] / 12) + ((tax_data['salary_exceed'] / 100) * tax_data['tax']) / 12;
             // tax_amount = tax_amount/12;
@@ -136,7 +135,6 @@ function set_taxable(arg, formm) {
             return false;
         }
         if (collec.length > 0) {
-            // alert('Please Calculate the Tax of the salary!\nTip:just click on Calculate Tax button');
             $("#tax").prop('required', true);
         }
 
@@ -145,7 +143,6 @@ function set_taxable(arg, formm) {
         var bb = $('.taxable_chbox');
         var check_arr = [];
         $.each(bb, function (index, value) {
-            console.log(value.checked);
             check_arr.push(value.checked);
         });
         $('#taxable_status').val(check_arr);
@@ -186,7 +183,6 @@ $(document).ready(function () {
             $("#filling_status").html(""); //reset child options
             for (var property in ob) {
                 if (ob.hasOwnProperty(property)) {
-                    console.log(property);
                     // $("#countries_filling_s").append("<option value=\""+property+"\">"+ob[property]+"</option>");
                     $("#filling_status").append("<option value=\"" + property + "\">" + ob[property] + "</option>");
                 }
