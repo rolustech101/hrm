@@ -148,7 +148,7 @@ class RT_Performance_ReviewsController extends SugarController
             $form_html .= '</form>';
             $form_html .= '</body></html>';
             if(is_link($_SERVER['DOCUMENT_ROOT'])){
-                $output = file_put_contents(readlink($_SERVER['DOCUMENT_ROOT']) . '/SuiteCRM_HRM/review_forms/review_' . $form_name . '.html', $form_html);
+                $output = file_put_contents(readlink($_SERVER['DOCUMENT_ROOT']) . '/review_forms/review_' . $form_name . '.html', $form_html);
             }else{
                 $output = file_put_contents($_SERVER['DOCUMENT_ROOT'] . '/SuiteCRM_HRM/review_forms/review_' . $form_name . '.html',  $form_html);
 
