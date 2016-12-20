@@ -1,5 +1,4 @@
 function getEntitledHolidays(id) {
-    console.log("HEllo");
     $.ajax({
         type: "POST",
         url: "index.php?module=RT_Leaves&action=getleaves_balance&employee_id="+id,
@@ -48,19 +47,54 @@ function count_no_of_days() {
     }
     document.getElementById('count_days_c').value = diffDays+1;
 }
-function custom_function(view) {
-    alert($('#emp_date_of_joining').val()+' '+document.getElementById('from_date_c').value+' '+document.getElementById('to_date_c').value);
+function custom_function(view,formm) {
+
+    var emp_id = $('#rt_employees_rt_leavesrt_employees_ida').val();
+    var emp_doj = $('#emp_date_of_joining').val();
+    var emp_name = $('#rt_employees_rt_leaves_name').val();
+    var annual_balance = $('#annual_leave_balance').val();
+    var casual_balance = $('#casual_leave_balance').val();
+    var leave_type = $('#leave_type_c').val();
+    var no_of_days = $('#count_days_c').val();
+    var leave_status = $('#status_c').val();
     var join_date = $('#emp_date_of_joining').val();
     var year_start = new Date(join_date.replace(join_date.substr(6),new Date().getFullYear()));
     var year_end = new Date(join_date.replace(join_date.substr(6),new Date().getFullYear()+1));
     var from_date = new Date(document.getElementById('from_date_c').value);
     var to_date = new Date(document.getElementById('to_date_c').value);
     if((from_date > year_start && from_date < year_end) && (to_date > year_start && to_date < year_end)){
-        var _form = document.getElementById('EditView'); _form.action.value='Save'; if(check_form('EditView'))SUGAR.ajaxUI.submitForm(_form);return false;
+
     }else {
         alert('You can only create Leaves for Employee\'s Current year');
         return false;
     }
+    if (check_form('EditView')) {
+        $.ajax({
+            type: "POST",
+            url: "index.php?module=RT_Leaves&action=validate_leaves",
+            data: {emp_id:emp_id,no_of_days:no_of_days,leave_type:leave_type,leave_status:leave_status},
+            dataType: "json",
+            success: function(result){
+                if(result.statuss == 'success'){
+                    SUGAR.ajaxUI.submitForm(formm);
+                    return true;
+                }else {
+                    var is_confirmed = confirm('You do not have sufficient balance for '+leave_type+ ' Leaves\n continue anyway');
+                    if(is_confirmed){
+                        SUGAR.ajaxUI.submitForm(formm);
+                        return true;
+                    }
+                    return false;
+                }
+            },
+            error:function (res) {
+                alert('Something wrong with the request');
+                return false;
+            }
+        });
+    }
+    return false;
+
 }
 $(document).ready(function(){
     $('#count_days_c').val('2');

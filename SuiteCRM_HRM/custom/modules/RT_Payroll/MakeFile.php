@@ -138,6 +138,7 @@ class MakeFile{
                 $casual_l = $rows['entitled_casual_leaves_c'];
                 $casual_b = get_casual_b($id);
                 $annual_b = get_annual_b($id);
+                $GLOBALS['log']->fatal('Annual_b =>'.$annual_b,' Casual_b => '.$casual_b);
                 $salary_paid = $total_salary - $rows['tax'] - $provident;
                 $tax = $rows['tax'];
                 $p_track_sql = "INSERT INTO rt_pay_track(id, date_entered, employee_id, payroll_id, month, year, salary, bonus, tax, provident, casual_leaves, annual_leaves, casual_balance, annual_balance, salary_paid)

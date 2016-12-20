@@ -55,50 +55,17 @@ class RT_LeavesViewEdit extends ViewEdit
  	 */
  	public function display() 
  	{
-        $this->ev->process();
-		//echo '<pre>';
-		//print_r($this->bean);
-		//echo $this->bean->number_of_days_c;
-				//$beanList = $this->bean->get_linked_beans('a_employees_a_leaves','a_Leaves');
-				//if(!empty($beanList))
-				//{
-					//foreach($beanList as $list)
-					//{
-				/*	$lea = new a_Leaves();
-					//$le = $lea->retrieve($this->bean->id);
+		$id = $this->bean->rt_employees_rt_leavesrt_employees_ida;
+        $GLOBALS['log']->fatal('in view');
+        $GLOBALS['log']->fatal($id);
+		$bean_emp = BeanFactory::getBean('RT_Employees', $id);
+		$this->bean->annual_leave_balance = $bean_emp->annual_leave_balance;
+		$this->bean->casual_leave_balance = $bean_emp->casual_leave_balance;
+        $GLOBALS['log']->fatal($this->bean->annual_leave_balance);
+        $GLOBALS['log']->fatal($this->bean->annual_leave_balance);
 
-					echo $this->bean->number_of_days_c;
-					//foreach($le as $list)
-					//{
-						if($list->leave_type_c=="Annual"){
-							$fdate = $list->from_date_c;
-							$todate = $list->to_date_c;
-							echo $fdate." ";
-							echo $todate." ";
-							$start_ts = strtotime($fdate);
-							$end_ts = strtotime($todate);
-							$diff = $end_ts - $start_ts;
-							$noofdaysannual = $noofdaysannual + round($diff / 86400);
-						}
-						if($list->leave_type_c=="Casual"){
-							$fdate = $list->from_date_c;
-							$todate = $list->to_date_c;
-							echo $fdate." ";
-							echo $todate." ";
-							$start_ts = strtotime($fdate);
-							$end_ts = strtotime($todate);
-							$diff = $end_ts - $start_ts;
-							$noofdayscasual = $noofdayscasual + round($diff / 86400);
-						}
-					//}
-				//}*/
-			//echo '<pre>';
-			//print_r($this->bean);
-				//$emp = new a_Employees();
-				//$emp->retrieve($this->bean->a_emploabafyees_ida);
-				//echo $emp->date_of_birth_c;
-		echo $this->ev->display($this->showTitle);
-//		echo '<script type="text/javascript" src="custom/modules/RT_Leaves/funcs.js"></script>';
+        parent::display();
+
  	}
 
 }

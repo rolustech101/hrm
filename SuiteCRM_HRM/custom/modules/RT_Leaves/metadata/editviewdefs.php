@@ -12,12 +12,12 @@ array (
                 'buttons' =>
                     array (
                         0 => array (
-                            'customCode' => "<input type='submit' name='save' id='save' value='Save' onClick=\"this.form.return_action.value='DetailView'; this.form.action.value='Save'; return custom_function('editView');\" />",
+                            'customCode' => '<input type="submit" name="save" id="save" onClick="var _form = document.getElementById(\'EditView\');_form.action.value = \'Save\';  return custom_function(\'EditView\',_form);" value="Save">',
           ),
         ),
                 'hidden' =>
                     array (
-                        'customCode' => '<input type="hidden" id="emp_date_of_joining" name="emp_date_of_joining" value="" />',
+                        'customCode' => '<input type="hidden" id="emp_date_of_joining" name="emp_date_of_joining" value="" /> <input type="hidden" id="subtract_from" name="subtract_from" value="" />',
                     ),
       ),
       'widths' => 
