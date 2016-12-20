@@ -376,9 +376,6 @@ function handleCreateCandidate($email, $job_title)
 //        $GLOBALS['log']->fatal(print_r($vacancy_bean, 1));
         die;
     }*/
-    $GLOBALS['log']->fatal('$vacancy_id');
-    $GLOBALS['log']->fatal($vacancy_id);
-    die;
     // create new job_application
     $GLOBALS['log']->fatal('create new job application');
 
