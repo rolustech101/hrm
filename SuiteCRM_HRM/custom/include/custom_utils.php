@@ -354,7 +354,7 @@ function handleCreateCandidate($email, $job_title)
     $vacancy_bean = BeanFactory::getBean('RT_Vacancies');
     if (!empty($job_title)) {
         $job_title = trim($job_title);
-        $vacancy_bean->retrieve_by_string_fields(array('name' => $job_title, 'status_c' => 'new_position'));
+        $vacancy_bean->retrieve_by_string_fields(array('name' => $job_title, 'status_c' => 'new_position','order by' => 'date_entered DESC','limit' => 1));
 //        $vacancy_bean->get_full_list("order by date_entered ASC","name = $job_title AND status_c = new_position");
         $GLOBALS['log']->fatal('HEllo retrieve_by_string_fields!!!!!!!!!!!!!!');
         foreach ($vacancy_bean as $value){
