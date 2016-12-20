@@ -350,6 +350,14 @@ function handleCreateCandidate($email, $job_title)
 
 //        $c->phone_mobile = '123';
     $c->save();
+    $vacancy_id = '';
+    $sql = "select * from rt_vacancies inner join rt_vacancies_cstm on id = id_c where name = '$job_title' and  status_c = 'new_position' and deleted = 0 order by date_entered DESC limit 1";
+    $res = $GLOBALS['db']->query($sql);
+    if($res->num_rows > 0){
+        $row = $GLOBALS['db']->fetchByAssoc($res);
+        $vacancy_id = $row['id'];
+
+    }
 
     $vacancy_bean = BeanFactory::getBean('RT_Vacancies');
     if (!empty($job_title)) {
@@ -373,7 +381,8 @@ function handleCreateCandidate($email, $job_title)
     $new_job_application->status = 'new';
     $new_job_application->parent_type = 'RT_Candidates';
     $new_job_application->parent_id = $c->id;
-    $new_job_application->rt_vacancy_id = $vacancy_bean->id;
+//    $new_job_application->rt_vacancy_id = $vacancy_bean->id;
+    $new_job_application->rt_vacancy_id = $vacancy_id;
     $new_job_application->save();
 
 
@@ -397,7 +406,8 @@ function handleCreateCandidate($email, $job_title)
     }
     echo "End of handle create Candidate\n";
     $GLOBALS['log']->fatal('END of handle create husnain');
-    send_email($c->id, $new_job_application->id, $vacancy_bean->id);
+//    send_email($c->id, $new_job_application->id, $vacancy_bean->id);
+    send_email($c->id, $new_job_application->id, $vacancy_id);
 
 } // fn
 ?>
