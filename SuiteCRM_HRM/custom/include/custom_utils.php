@@ -351,15 +351,17 @@ function handleCreateCandidate($email, $job_title)
 //        $c->phone_mobile = '123';
     $c->save();
     $vacancy_id = '';
-    $sql = "select * from rt_vacancies inner join rt_vacancies_cstm on id = id_c where name = '$job_title' and  status_c = 'new_position' and deleted = 0 order by date_entered DESC limit 1";
-    $res = $GLOBALS['db']->query($sql);
-    if($res->num_rows > 0){
-        $row = $GLOBALS['db']->fetchByAssoc($res);
-        $vacancy_id = $row['id'];
-
+    if (!empty($job_title)) {
+        $sql = "select * from rt_vacancies inner join rt_vacancies_cstm on id = id_c where name = '$job_title' and  status_c = 'new_position' and deleted = 0 order by date_entered DESC limit 1";
+        $res = $GLOBALS['db']->query($sql);
+        if($res->num_rows > 0){
+            $row = $GLOBALS['db']->fetchByAssoc($res);
+            $vacancy_id = $row['id'];
+        }
     }
 
-    $vacancy_bean = BeanFactory::getBean('RT_Vacancies');
+
+    /*$vacancy_bean = BeanFactory::getBean('RT_Vacancies');
     if (!empty($job_title)) {
         $job_title = trim($job_title);
 //        $vacancy_bean->retrieve_by_string_fields(array('name' => $job_title, 'status_c' => 'new_position'));
@@ -373,7 +375,10 @@ function handleCreateCandidate($email, $job_title)
 //        $GLOBALS['log']->fatal('print_r($vacancy_bean,1)');
 //        $GLOBALS['log']->fatal(print_r($vacancy_bean, 1));
         die;
-    }
+    }*/
+    $GLOBALS['log']->fatal('$vacancy_id');
+    $GLOBALS['log']->fatal($vacancy_id);
+    die;
     // create new job_application
     $GLOBALS['log']->fatal('create new job application');
 
