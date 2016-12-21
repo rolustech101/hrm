@@ -58,9 +58,6 @@ class RT_Increment_HistoryController extends SugarController{
 			$GLOBALS['log']->fatal("$inc_type is not exists for this Employee");
 			echo 'no';
 		}
-
-
-
 		die();
 	}
 	

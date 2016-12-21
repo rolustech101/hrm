@@ -50,10 +50,15 @@ $listViewDefs[$module_name] = array(
         'default' => true,
         'related_fields' => array('first_name', 'last_name', 'salutation'),
 		),
+	'PHONE_MOBILE' => array(
+		'width' => '10',
+		'label' => 'LBL_MOBILE_PHONE',
+		'default' => true,
+		),
 	'PHONE_WORK' => array(
 		'width' => '15%', 
 		'label' => 'LBL_OFFICE_PHONE',
-        'default' => true),
+        'default' => false),
 	'EMAIL1' => array(
 		'width' => '15%',
 		'label' => 'LBL_EMAIL_ADDRESS',
@@ -72,9 +77,7 @@ $listViewDefs[$module_name] = array(
     'PHONE_HOME' => array(
         'width' => '10', 
         'label' => 'LBL_HOME_PHONE'),
-    'PHONE_MOBILE' => array(
-        'width' => '10', 
-        'label' => 'LBL_MOBILE_PHONE'),
+
     'PHONE_OTHER' => array(
         'width' => '10', 
         'label' => 'LBL_WORK_PHONE'),

@@ -25,7 +25,6 @@ class UpdateEntitledLeaves
     {
         $id = $bean->rt_employees_rt_leavesrt_employees_ida;
         $emp_bean = BeanFactory::getBean('RT_Employees', $id);
-
         if ($bean->leave_type_c == 'Annual') {
             $annual_leaves = get_annual_balance($id);
             $annual_total = $annual_leaves + $bean->count_days_c;
