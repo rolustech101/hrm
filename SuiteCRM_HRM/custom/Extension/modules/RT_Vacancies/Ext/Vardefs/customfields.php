@@ -70,6 +70,7 @@ $dictionary['RT_Vacancies']['fields']['skills_required'] = array (
     'vname'=>'LBL_SKILLS_REQUIRED',
     'rows' => 5,
     'cols' => 80,
+    'required' => true,
 );
 $dictionary['RT_Vacancies']['fields']['educational_requirement'] = array (
     'name' => 'educational_requirement',
@@ -77,6 +78,7 @@ $dictionary['RT_Vacancies']['fields']['educational_requirement'] = array (
     'vname'=>'LBL_SKILLS_REQUIRED',
     'rows' => 5,
     'cols' => 80,
+    'required' => true,
 );
 
 

@@ -9,7 +9,6 @@ class UnSerializeSalary
     {
         $salary = $bean->salary;
         $bean->salary = unserialize(html_entity_decode(stripslashes($salary)));
-
     }
 
 }

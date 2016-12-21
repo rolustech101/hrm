@@ -9,7 +9,10 @@ class Salary
     {
         $salary = array();
         $i = 0;
+        $GLOBALS['log']->fatal('print_r********************,1)');
+        $GLOBALS['log']->fatal(print_r($_REQUEST['amount_salary'],1));
         if(!empty($_REQUEST['amount_salary'])){
+            $GLOBALS['log']->fatal('we are now updating salary!!!!!!!!!!!!!!');
             $taxable_chk = $_REQUEST['taxable_status'];
             $taxable_chk = explode(',',$taxable_chk);
             foreach ($bean->label_salary as $label) {
@@ -27,7 +30,19 @@ class Salary
             }
             $serialize_salary = serialize($salary);
             $bean->salary = $serialize_salary;
+
         }
+        $GLOBALS['log']->fatal('HELLO SALRY!!!!!');
+        $GLOBALS['log']->fatal(print_r($bean->salary,1));
+
+        $is_seialized = unserialize(html_entity_decode(stripslashes($bean->salary)));
+        if($is_seialized == false){
+            if(!empty($bean->salary)){
+                $bean->salary = serialize($bean->salary);
+//            $bean->salary = serialize($bean->salary);
+            }
+        }
+
     }
 }
 

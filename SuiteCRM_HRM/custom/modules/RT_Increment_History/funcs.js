@@ -6,6 +6,7 @@ function applyincrement(rid, eid, inc_date,inc_type){
 			if(o.responseText == 'no'){
 				alert(inc_type+" Salary Type is not defined for this Employee!\n" +
 					"Tip:Please try any other type or define this type in employee");
+				return false;
 			}
 			window.location.reload();
 		}

@@ -15,6 +15,8 @@ class UpdateStatus
             $vacancy_name = $bean->name;
             $last_date = $bean->close_date;
             $positions = $bean->positions_c;
+            $skills_required = $bean->skills_required;
+            $edu_required = $bean->educational_requirement;
             if (isset($bean->description) && !empty($bean->description)) {
                 $requirement = $bean->description;
             } else {
@@ -23,6 +25,8 @@ class UpdateStatus
             $_SESSION['vacancy_name'] = $vacancy_name;
             $_SESSION['positions'] = $positions;
             $_SESSION['requirement'] = $requirement;
+            $_SESSION['skills_required'] = $skills_required;
+            $_SESSION['edu_requirement'] = $edu_required;
             $_SESSION['last_date'] = $last_date;
 
             require_once('include/connectors/sources/SourceFactory.php');
