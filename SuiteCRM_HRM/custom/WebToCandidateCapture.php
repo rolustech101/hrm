@@ -112,6 +112,7 @@ $candidate->primary_address_postalcode = $primary_address_postalcode;
 $candidate->primary_address_country = $primary_address_country;
 $candidate->currently_employed = $currently_employed;
 $candidate->current_employer = $current_employer;
+$candidate->years_of_experience = $years_of_experience;
 $candidate->us_citizen = $us_citizen;
 $candidate->education = $education;
 $candidate->visa_required = $visa_required;
