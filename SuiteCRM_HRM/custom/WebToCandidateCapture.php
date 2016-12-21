@@ -57,6 +57,8 @@ $is_attachment = false;
 $target_dir = __DIR__ . "/uploads/";
 $FileType = pathinfo(basename($_FILES["fileToUpload"]["name"]), PATHINFO_EXTENSION);
 $target_file = $target_dir . $email1 . '.' . $FileType; //basename($_FILES["fileToUpload"]["name"]);
+echo $target_file;
+die;
 $uploadOk = 1;
 clearstatcache();
 //if(isset($_POST["submit"])) {
