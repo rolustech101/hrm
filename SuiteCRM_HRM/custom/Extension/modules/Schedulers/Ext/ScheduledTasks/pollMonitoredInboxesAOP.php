@@ -95,8 +95,6 @@ function pollMonitoredInboxesAOP()
                                     $email_subject = strtolower(trim($email_subject));
                                     $sub_macro = strtolower(trim($sub_macro));
                                     if (strpos($email_subject, $sub_macro) !== false) {
-                                        ////
-                                        $GLOBALS['log']->fatal('It contains the ');
                                         $sql_sep = "select * from config where name = 'email_subject_separator' and category = 'system'";
                                         $res_sep = $GLOBALS['db']->query($sql_sep);
                                         if($res_sep->num_rows > 0){

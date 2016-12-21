@@ -9,7 +9,6 @@ function getEntitledHolidays(id) {
             $('#annual_leave_balance').val(result.annual);
             $('#casual_leave_balance').val(result.casual);
             $('#emp_date_of_joining').val(result.joining_date);
-            console.log(result);
         },
         error:function (res) {
           alert('Something wrong with the request');

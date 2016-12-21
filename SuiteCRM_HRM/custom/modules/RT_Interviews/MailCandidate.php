@@ -10,16 +10,12 @@ class MailCandidate
         $pp = $bean->fetched_row['date_of_interview'];
         $nn = $bean->date_of_interview;
 
-        $GLOBALS['log']->fatal($pp);
-        $GLOBALS['log']->fatal($nn);
         $GLOBALS['log']->fatal('mail_to_candidate HOOK!!!!!');
 
         if (!isset($bean->fetched_row['id']))
         {
             $bean->is_set = true;
             if($bean->status_c == 'scheduled'){
-                $GLOBALS['log']->fatal(print_r($bean,1));
-
                 $this->setjob('RT_Candidates',$bean->rt_candidate_name,$bean->rt_candidate_id,$bean->date_of_interview,'Interview notify candidate');
             }
         }

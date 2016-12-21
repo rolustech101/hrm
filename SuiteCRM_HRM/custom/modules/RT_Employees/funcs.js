@@ -7,7 +7,6 @@ function addSalary() {
             var sal_options = "<select name='label_salary[]' id = 'label_salary'>";
             for (var key in resp) {
                 if (resp.hasOwnProperty(key)) {
-                    console.log(key + " -> " + resp[key]);
                     sal_options += ("<option value=\"" + key + "\">" + resp[key] + "</option>");
                 }
             }
@@ -20,7 +19,6 @@ function addSalary() {
         },
         error: function (req, status, err) {
             alert('something went wrong', status, err);
-            console.log('something went wrong', status, err);
         }
     });
     k++;

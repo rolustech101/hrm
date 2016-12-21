@@ -1,7 +1,7 @@
 <?php
 function job_posted($job)
 {
-    $GLOBALS['log']->fatal('job_posted JOB!!!!!!!!!!!!!!!!');
+    $GLOBALS['log']->fatal('job_posted JOB!');
     $data = json_decode(html_entity_decode($job->data), true);
     if (!empty($data)) {
         $emailObj = new Email();
@@ -9,8 +9,6 @@ function job_posted($job)
         $template_name = $data['template_name'];
         $template = new EmailTemplate();
         $template->retrieve_by_string_fields(array('name' => $template_name, 'type' => 'email'));
-
-
         $sql_e = "select * from config where name = 'sm_email' and category = 'system'";
         $res_e = $GLOBALS['db']->query($sql_e);
         if($res_e->num_rows > 0){

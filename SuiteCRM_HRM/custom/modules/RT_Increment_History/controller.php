@@ -41,10 +41,6 @@ class RT_Increment_HistoryController extends SugarController{
 		$row_e = $GLOBALS['db']->fetchByAssoc($res_e);
 		$serialized_sal = $row_e['salary'];
 		$unserialized_sal = unserialize(html_entity_decode($serialized_sal));
-		$GLOBALS['log']->fatal('print_r($unserialized_sal,1)');
-		$GLOBALS['log']->fatal(print_r($unserialized_sal,1));
-		$GLOBALS['log']->fatal('print_r($inc_type,1)');
-		$GLOBALS['log']->fatal($inc_type);
 
 		$is_exists = false;
 		foreach ($unserialized_sal as $key => $value){
@@ -55,9 +51,6 @@ class RT_Increment_HistoryController extends SugarController{
 		}
 		if($is_exists){
 			$updated_serialize = serialize($unserialized_sal);
-
-			$GLOBALS['log']->fatal(print_r(serialize($unserialized_sal),1));
-
 			$sql_up = "update rt_employees set salary = '$updated_serialize'  where id = '$eid'";
 			$res_up = $GLOBALS['db']->query($sql_up);
 			echo 'yes';

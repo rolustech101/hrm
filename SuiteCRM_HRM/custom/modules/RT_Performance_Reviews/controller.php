@@ -6,43 +6,41 @@ class RT_Performance_ReviewsController extends SugarController
 {
     function action_create_form()
     {
-        if(isset($_REQUEST['show_all'])){
+        if (isset($_REQUEST['show_all'])) {
             $sql = "SELECT id,name FROM rt_review_forms";
             $result = $GLOBALS['db']->query($sql);
-            $forms  = array();
-            while ($row = $GLOBALS['db']->fetchByAssoc($result)){
+            $forms = array();
+            while ($row = $GLOBALS['db']->fetchByAssoc($result)) {
                 $forms[] = array(
                     'id' => $row['id'],
                     'name' => $row['name'],
                 );
             }
-            $GLOBALS['log']->fatal(print_r($forms,1));
             $this->view_object_map['form_data'] = $forms;
             $this->view = 'all_forms';
             return;
         }
         $this->view = 'performance_review';
-//		echo "Create form page";
     }
+
     public function action_submit_form()
     {
-        $GLOBALS['log']->fatal(print_r($_REQUEST,1));
         global $sugar_config;
         global $current_user;
         $user_id = $current_user->id;
         $form_name = $_REQUEST['form_name'];
         $questions = array();
 
-        if (isset($_REQUEST['total_count'])){
-            for ($x = 0;$x < $_REQUEST['total_count']; $x++){
-                if (isset($_REQUEST['label_question'.$x])){
+        if (isset($_REQUEST['total_count'])) {
+            for ($x = 0; $x < $_REQUEST['total_count']; $x++) {
+                if (isset($_REQUEST['label_question' . $x])) {
                     $questions[$x] = array(
-                        'question' => $_REQUEST['label_question'.$x],
-                        'type' => $_REQUEST['question_type'.$x],
+                        'question' => $_REQUEST['label_question' . $x],
+                        'type' => $_REQUEST['question_type' . $x],
                     );
-                    if (isset($_REQUEST['label_question'.$x.'_option'])){
-                        for ($i = 0; $i < count($_REQUEST['label_question'.$x.'_option']); $i++){
-                            $questions[$x]['options'][] = $_REQUEST['label_question'.$x.'_option'][$i];
+                    if (isset($_REQUEST['label_question' . $x . '_option'])) {
+                        for ($i = 0; $i < count($_REQUEST['label_question' . $x . '_option']); $i++) {
+                            $questions[$x]['options'][] = $_REQUEST['label_question' . $x . '_option'][$i];
                         }
                     }
                 }
@@ -55,13 +53,13 @@ class RT_Performance_ReviewsController extends SugarController
 
         $qq = "select * from rt_review_forms where name = '{$form_name}'";
         $rr = $GLOBALS['db']->query($qq);
-        if($rr->num_rows > 0){
-            if($rr->num_rows == 1){
+        if ($rr->num_rows > 0) {
+            if ($rr->num_rows == 1) {
                 $sql = "update `rt_review_forms` set form_meta = '$serialize_question', date_entered = '$date_entered'  WHERE name = '$form_name'";
-            }else{
+            } else {
                 die('more than one records exists');
             }
-        }else{
+        } else {
             $sql = "INSERT INTO  rt_review_forms(id, name, form_meta, date_entered,	user_id ) VALUES('$id','$form_name','$serialize_question','$date_entered','$user_id')";
         }
         $result = $GLOBALS['db']->query($sql);
@@ -72,14 +70,16 @@ class RT_Performance_ReviewsController extends SugarController
 
 
     }
-    public function action_edit_form(){
-        if(isset($_REQUEST['form_id'])){
+
+    public function action_edit_form()
+    {
+        if (isset($_REQUEST['form_id'])) {
             $id = $_REQUEST['form_id'];
             $sql = "SELECT form_meta FROM rt_review_forms WHERE id ='$id'";
             $result = $GLOBALS['db']->query($sql);
             $row = $GLOBALS['db']->fetchByAssoc($result);
             $meta = json_decode(html_entity_decode($row['form_meta']), true);
-            isset($_REQUEST['form_name'])? $name = $_REQUEST['form_name'] : $name = '';
+            isset($_REQUEST['form_name']) ? $name = $_REQUEST['form_name'] : $name = '';
             $this->view_object_map['form_data'] = $meta;
             $this->view_object_map['form_name'] = $name;
             $this->view = 'edit_form';
@@ -101,13 +101,10 @@ class RT_Performance_ReviewsController extends SugarController
     public function action_generate_form()
     {
         global $sugar_config;
-
-        $GLOBALS['log']->fatal(print_r($_REQUEST, 1));
-        ////
         isset($_REQUEST['rt_emp_id']) ? $emp_id = $_REQUEST['rt_emp_id'] : $emp_id = '';
         isset($_REQUEST['emp_name']) ? $emp_name = $_REQUEST['emp_name'] : $emp_name = '';
         isset($_REQUEST['form_name']) ? $form_name = $_REQUEST['form_name'] : $form_name = '';
-        $form_name = str_replace(' ','_',$form_name);
+        $form_name = str_replace(' ', '_', $form_name);
 
         $bean = BeanFactory::getBean('RT_Employees', $emp_id);
 
@@ -121,9 +118,7 @@ class RT_Performance_ReviewsController extends SugarController
             $row = $GLOBALS['db']->fetchByAssoc($result);
             $form_data = $row['form_meta'];
             $form_array = json_decode(html_entity_decode($form_data), true);
-            $GLOBALS['log']->fatal("form_array******");
-            $GLOBALS['log']->fatal($form_array);
-            $form_html = '<!DOCTYPE html><html><head><title>Performance Review</title></head><body><h2>Performance Review for '.$emp_name.' </h2>';
+            $form_html = '<!DOCTYPE html><html><head><title>Performance Review</title></head><body><h2>Performance Review for ' . $emp_name . ' </h2>';
             $form_html .= '<form id="give_review" name="give_review" action="../index.php?entryPoint=performance_review_form" method="post">';
             $form_html .= "<input type='hidden' name='emp_id' id='emp_id' value= '$emp_id'>";
             $form_html .= "<input type='hidden' name='emp_name' id='emp_name' value='$emp_name'>";
@@ -131,14 +126,14 @@ class RT_Performance_ReviewsController extends SugarController
             foreach ($form_array as $value) {
                 foreach ($value as $key => $val) {
                     if ($key == 'question') {
-                        $form_html .= '<input type="text" name="question'.$num.'" maxlength = "10000" value="' . $val . '" readonly /><br>';
+                        $form_html .= '<input type="text" name="question' . $num . '" maxlength = "10000" value="' . $val . '" readonly /><br>';
                     } elseif ($key == 'type') {
                         if ($val == 'mutliple_choice') {
                             foreach ($value['options'] as $op) {
                                 $form_html .= "<input type='radio' name='multi_$num' value= '$op' required>$op<br>";
                             }
                         } else {
-                            $form_html .= '<textarea name="answers'.$num.'" rows="4" cols="50" required></textarea><br>';
+                            $form_html .= '<textarea name="answers' . $num . '" rows="4" cols="50" required></textarea><br>';
                         }
                     }
                 }
@@ -148,10 +143,12 @@ class RT_Performance_ReviewsController extends SugarController
             $form_html .= '<input type="submit" value="Submit">';
             $form_html .= '</form>';
             $form_html .= '</body></html>';
-            if(is_link($_SERVER['DOCUMENT_ROOT'])){
-                $output = file_put_contents(readlink($_SERVER['DOCUMENT_ROOT']) . '/review_forms/review_' . $form_name . '.html', $form_html);
-            }else{
-                $output = file_put_contents($_SERVER['DOCUMENT_ROOT'] . '/SuiteCRM_HRM/review_forms/review_' . $form_name . '.html',  $form_html);
+            if (is_link($_SERVER['DOCUMENT_ROOT'])) {
+                $output = file_put_contents(readlink($_SERVER['DOCUMENT_ROOT']) . '/review_forms/review_' . $form_name . '.html',
+                    $form_html);
+            } else {
+                $output = file_put_contents($_SERVER['DOCUMENT_ROOT'] . '/SuiteCRM_HRM/review_forms/review_' . $form_name . '.html',
+                    $form_html);
             }
             if (!$output) {
                 $GLOBALS['log']->fatal('error occured while writing to the file!');
@@ -167,15 +164,12 @@ class RT_Performance_ReviewsController extends SugarController
             $sugar_email->FromName = $admin->settings['notify_fromname'];
             $template_name = 'Rolustech Email Template';
             $template = new EmailTemplate();
-            $template->retrieve_by_string_fields(array('name' => $template_name,'type'=>'email'));
-            $GLOBALS['log']->fatal(print_r(from_html($template->body_html),1));
-            $template->body_html = str_replace('{emp_name}',$emp_name,$template->body_html);
-            $template->body_html = str_replace('{link}',$sugar_config['site_url'] . '/review_forms/review_' . $form_name . '.html',$template->body_html);
-            $GLOBALS['log']->fatal('**************');
-            $GLOBALS['log']->fatal(print_r(from_html($template->body_html),1));
+            $template->retrieve_by_string_fields(array('name' => $template_name, 'type' => 'email'));
+            $template->body_html = str_replace('{emp_name}', $emp_name, $template->body_html);
+            $template->body_html = str_replace('{link}',
+                $sugar_config['site_url'] . '/review_forms/review_' . $form_name . '.html', $template->body_html);
 
             $sugar_email->Body = from_html($template->body_html);
-            $GLOBALS['log']->fatal($sugar_config['site_url'] . '/review_forms/review_' . $form_name . '.html');
             if ($supervisor_id) {//if supervisor exists
                 $sql = "select email_addresses.email_address FROM email_addresses LEFT OUTER JOIN email_addr_bean_rel ON email_addresses.id = email_addr_bean_rel.email_address_id WHERE email_addr_bean_rel.bean_id='" . $supervisor_id . "' AND email_addr_bean_rel.deleted='0' AND email_addresses.deleted ='0'";
                 $res = $GLOBALS['db']->query($sql);
@@ -204,18 +198,17 @@ class RT_Performance_ReviewsController extends SugarController
         $r_module = $_REQUEST['return_module'];
         $r_action = $_REQUEST['return_action'];
         SugarApplication::redirect("index.php?action=$r_action&module=$r_module");
-
-
     }
+
     public function action_check_existing()
     {
         ob_clean();
         $form_name = $_REQUEST['form_name'];
         $qq = "select * from rt_review_forms where name = '{$form_name}'";
         $rr = $GLOBALS['db']->query($qq);
-        if($rr->num_rows > 0){
+        if ($rr->num_rows > 0) {
             echo 'yes';
-        }else{
+        } else {
             echo 'no';
         }
         die;

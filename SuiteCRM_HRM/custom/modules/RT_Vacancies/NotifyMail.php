@@ -1,6 +1,8 @@
 <?php
 
-if (!defined('sugarEntry') || !sugarEntry) die('Not A Valid Entry Point');
+if (!defined('sugarEntry') || !sugarEntry) {
+    die('Not A Valid Entry Point');
+}
 require_once('include/SugarQueue/SugarJobQueue.php');
 
 class NotifyMail
@@ -10,12 +12,12 @@ class NotifyMail
         global $sugar_config;
         $base_url = $sugar_config['site_url'];
         global $current_user;
-        if($bean->status_c == 'new_position'){
+        if ($bean->status_c == 'new_position') {
             $job = new SchedulersJob();
             $job->name = "Notify About job Posting";
             $arr = [];
             $arr['posting_name'] = $bean->name;
-            $arr['link'] = $base_url."/index.php?module=RT_Vacancies&return_module=RT_Vacancies&action=DetailView&record={$bean->id}";
+            $arr['link'] = $base_url . "/index.php?module=RT_Vacancies&return_module=RT_Vacancies&action=DetailView&record={$bean->id}";
             $arr['template_name'] = 'Job Posting Alert';
             $job->data = json_encode($arr);
             $job->target = "function::job_posted";

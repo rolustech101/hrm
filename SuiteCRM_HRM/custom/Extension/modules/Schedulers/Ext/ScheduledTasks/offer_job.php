@@ -1,9 +1,7 @@
 <?php
 function offer_job($job)
 {
-    global $timedate;
-
-    $GLOBALS['log']->fatal('offer_job JOB!!!!!!!!!!!!!!!!');
+    $GLOBALS['log']->fatal('offer_job JOB!');
     $data = json_decode(html_entity_decode($job->data), true);
     if (!empty($data)) {
         $emailObj = new Email();
@@ -26,15 +24,14 @@ function offer_job($job)
 
         $sql_e = "select * from config where name = 'sm_email' and category = 'system'";
         $res_e = $GLOBALS['db']->query($sql_e);
-        if($res_e->num_rows > 0){
+        if ($res_e->num_rows > 0) {
             $row_e = $GLOBALS['db']->fetchByAssoc($res_e);
-            $sm_emails = explode(',',$row_e['value']);
-            foreach ($sm_emails as $item){
+            $sm_emails = explode(',', $row_e['value']);
+            foreach ($sm_emails as $item) {
                 $to[] = $item;
             }
         }
         $template->body_html = str_replace('{name}', $data['candidate_name'], $template->body_html);
-
         foreach ($to as $item) {
 
             $mail = new SugarPHPMailer();
@@ -49,7 +46,6 @@ function offer_job($job)
             $mail->Send();
         }
         return true;
-
     }
     return false;
 }

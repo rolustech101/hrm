@@ -21,8 +21,6 @@ class RT_CandidatesController extends SugarController{
 			if($job_application->load_relationship('rt_vacancies')){
 				$vacancies = $job_application->rt_vacancies->getBeans();
 
-				$GLOBALS['log']->fatal('print_r($vacancies)');
-				$GLOBALS['log']->fatal(print_r($vacancies));
 				if(!empty($vacancies)){
 					foreach ($vacancies as $vaca){
 						$vacancy_id = $vaca->id;

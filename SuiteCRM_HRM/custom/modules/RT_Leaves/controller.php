@@ -131,23 +131,15 @@ class RT_LeavesController extends SugarController{
 	}
 	public function action_validate_leaves(){
 		ob_clean();
-		$GLOBALS['log']->fatal('action_validate_leaves !!!!!!!!!!!!!!');
-		$GLOBALS['log']->fatal(print_r($_POST,1));
 		$emp_id = $_POST['emp_id'];
 		$leave_type = $_POST['leave_type'];
 		$no_of_days = $_POST['no_of_days'];
-		$GLOBALS['log']->fatal('before save leaves update entitiled');
-
 		$emp_bean = BeanFactory::getBean('RT_Employees', $emp_id);
 
 		if($leave_type == 'Annual'){
 			$annual_leaves = get_annual_balance($emp_id);
 			$annual_total = $annual_leaves + $no_of_days;
-			$GLOBALS['log']->fatal('count_days_c'.$no_of_days);
-			$GLOBALS['log']->fatal('annual_total'.$annual_total);
 			$entitled_annual = $emp_bean->entitled_annual_leaves_c;
-			$GLOBALS['log']->fatal('entitled_annual'.$entitled_annual);
-
 			if($annual_total > $entitled_annual){
 				echo json_encode(['statuss' => 'error']);
 				$GLOBALS['log']->fatal('You do not have sufficient balance for annual leaves');
@@ -158,11 +150,7 @@ class RT_LeavesController extends SugarController{
 		}else{
 			$casual_leaves = get_casual_balance($emp_id);
 			$casual_total = $casual_leaves + $no_of_days;
-			$GLOBALS['log']->fatal('count_days_c'.$no_of_days);
-			$GLOBALS['log']->fatal('casual_total'.$casual_total);
 			$entitled_casual = $emp_bean->entitled_casual_leaves_c;
-			$GLOBALS['log']->fatal('entitled_annual'.$entitled_casual);
-
 			if($casual_total > $entitled_casual){
 				echo json_encode(['statuss' => 'error']);
 				$GLOBALS['log']->fatal('You do not have sufficient balance for casual leaves');
@@ -171,7 +159,6 @@ class RT_LeavesController extends SugarController{
 				$GLOBALS['log']->fatal('has casual balance!!!');
 			}
 		}
-
 		echo json_encode(['statuss' => 'success']);
 		die;
 	}

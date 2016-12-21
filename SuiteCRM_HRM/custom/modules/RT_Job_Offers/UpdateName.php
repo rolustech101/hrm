@@ -11,9 +11,6 @@ class UpdateName
         $candidate = BeanFactory::getBean('RT_Candidates',$bean->rt_candidate_id);
         $job = BeanFactory::getBean('RT_Jobs',$bean->rt_job_id);
         $bean->name = 'Job Offered to '.$candidate->name.' as '.$job->name;
-        $GLOBALS['log']->fatal('JJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJ');
-
-
         if($bean->status == 'accepted'){
             $job = new SchedulersJob();
             $job->name = "Job Accepted";
@@ -42,8 +39,5 @@ class UpdateName
             $jq = new SugarJobQueue();
             $jobid = $jq->submitJob($job);
         }
-
-
-        $GLOBALS['log']->fatal('Queued JOBBB!!!!!!!!!!');
     }
 }

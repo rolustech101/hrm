@@ -11,7 +11,6 @@ class Salary
         $i = 0;
         $taxable_chk = $_REQUEST['taxable_status'];
          $taxable_chk = explode(',',$taxable_chk);
-        $GLOBALS['log']->fatal(print_r($taxable_chk,1));
         foreach ($bean->label_salary as $label) {
             $check = 0;
             if($taxable_chk[$i] == 'true'){
@@ -25,7 +24,6 @@ class Salary
             );
             $i++;
         }
-        $GLOBALS['log']->fatal(print_r($salary,1));
         $serialize_salary = serialize($salary);
         $bean->salary = $serialize_salary;
     }
