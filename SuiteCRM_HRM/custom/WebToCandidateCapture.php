@@ -60,7 +60,6 @@ $target_file = $target_dir . $email1 . '.' . $FileType; //basename($_FILES["file
 echo $target_file;
 $uploadOk = 1;
 clearstatcache();
-//if(isset($_POST["submit"])) {
 $check = filesize($_FILES["fileToUpload"]["tmp_name"]);
 if ($check !== false) {
 //    echo "File is an Valid - " . $check["mime"] . ".";

@@ -7,8 +7,6 @@ if (!session_id()) {
     session_start();
 }
 require_once('php-graph-sdk-5.4/src/Facebook/autoload.php');
-$GLOBALS['log']->fatal("hello in the send_post_facebook");
-
 
 isset($_SESSION['vacancy_name']) && !empty($_SESSION['vacancy_name']) ? $vacancy_name = $_SESSION['vacancy_name'] : $vacancy_name = 'n/a';
 isset($_SESSION['positions']) && !empty($_SESSION['positions']) ? $positions = $_SESSION['positions'] : $positions = 'n/a';
@@ -62,7 +60,6 @@ if (isset($accessToken)) {
         exit;
     }
 
-
     $response = $fb->get('/me/accounts', (string)$accessToken);
 
     foreach ($response->getDecodedBody() as $allPages) {
@@ -74,7 +71,6 @@ if (isset($accessToken)) {
             }
         }
     }
-
 
     try {
         $response = $fb->post(
@@ -91,7 +87,7 @@ if (isset($accessToken)) {
 
     // Success
     $postId = $response->getGraphNode();
-    echo $postId;
+//    echo $postId;
 
 } elseif ($helper->getError()) {
     var_dump($helper->getError());
@@ -100,8 +96,5 @@ if (isset($accessToken)) {
     var_dump($helper->getErrorDescription());
     exit;
 }
-
-
-$GLOBALS['log']->fatal("hello in the send_post_facebook after success");
 SugarApplication::redirect("index.php?action=index&module=RT_Vacancies");
 

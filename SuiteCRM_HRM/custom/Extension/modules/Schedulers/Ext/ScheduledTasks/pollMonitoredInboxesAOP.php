@@ -43,13 +43,9 @@ function pollMonitoredInboxesAOP()
                 if (!$ieX->isPop3Protocol()) {
                     $newMsgs = $ieX->getNewMessageIds();
                 }
-                $GLOBALS['log']->fatal('print_r($newMsgs,1)');
-                $GLOBALS['log']->fatal(print_r($newMsgs,1));
                 if (is_array($newMsgs)) {
                     $current = 1;
                     $total = count($newMsgs);
-                    $GLOBALS['log']->fatal('COUNT NEW MESSAGE');
-                    $GLOBALS['log']->fatal(count($newMsgs));
 
                     require_once("include/SugarFolders/SugarFolders.php");
                     $sugarFolder = new SugarFolder();
@@ -121,7 +117,7 @@ function pollMonitoredInboxesAOP()
                                         require_once('custom/include/custom_utils.php');
                                         handleCreateCandidate($ieX->email,$job_title); // customizations
                                     }
-                                    $ieX->handleCreateCase($ieX->email, $userId);
+                                    //$ieX->handleCreateCase($ieX->email, $userId); // un-comment to create case from inbound emails
                                 } // if
                             } // if
                         } else {

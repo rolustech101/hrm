@@ -34,8 +34,6 @@ class UpdateStatus
             }
 
             // initial setup
-            $GLOBALS['log']->fatal('IN THE UPDATE FACEBOOK STATUS!!!!');
-
             $fb = new Facebook\Facebook([
                 'app_id' => $app_id,
                 'app_secret' => $app_secret,
@@ -49,12 +47,7 @@ class UpdateStatus
             $base_url = $sugar_config['site_url'];
             $loginUrl = $helper->getLoginUrl("$base_url/index.php?entryPoint=send_post_facebook");
 
-//            header("location:$loginUrl");
             SugarApplication::redirect($loginUrl);
-//        echo '<a href="' . $loginUrl . '">Log in with Facebook!</a>';
-
-            $GLOBALS['log']->fatal('After Header!!!!');
-
         }
     }
 }
