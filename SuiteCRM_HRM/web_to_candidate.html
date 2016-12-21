@@ -5,12 +5,11 @@
     <!--<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">-->
     <title>Title</title>
     <script type="text/javascript">
-        function ValidateEmail(mail)
-        {
+        function ValidateEmail(mail) {
             var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-            if(re.test(mail)){
+            if (re.test(mail)) {
                 return true;
-            }else {
+            } else {
                 alert("You have entered an invalid email address!");
                 return false;
             }
@@ -20,143 +19,145 @@
 </head>
 <body>
 <style type="text/css">
-form#WebToCandidateForm, form#WebToCandidateForm * {
-    margin: 0;
-    padding: 0;
-    border: none;
-    color: #333;
-    font-size: 12px;
-    line-height: 1.6em;
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-}
+    form#WebToCandidateForm, form#WebToCandidateForm * {
+        margin: 0;
+        padding: 0;
+        border: none;
+        color: #333;
+        font-size: 12px;
+        line-height: 1.6em;
+        font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    }
 
-form#WebToCandidateForm {
-    float: left;
-    border: 1px solid #ccc;
-    margin: 10px;
-}
+    form#WebToCandidateForm {
+        float: left;
+        border: 1px solid #ccc;
+        margin: 10px;
+    }
 
-form#WebToCandidateForm h1 {
-    font-size: 32px;
-    font-weight: bold;
-    background-color: rgb(60, 141, 188);
-    color: rgb(247, 247, 247);
-    padding: 10px 20px;
-}
+    form#WebToCandidateForm h1 {
+        font-size: 32px;
+        font-weight: bold;
+        background-color: rgb(60, 141, 188);
+        color: rgb(247, 247, 247);
+        padding: 10px 20px;
+    }
 
-form#WebToCandidateForm h2 {
-    font-size: 24px;
-    font-weight: bold;
-    background-color: rgb(60, 141, 188);
-    color: rgb(247, 247, 247);
-    padding: 10px 20px;
-}
+    form#WebToCandidateForm h2 {
+        font-size: 24px;
+        font-weight: bold;
+        background-color: rgb(60, 141, 188);
+        color: rgb(247, 247, 247);
+        padding: 10px 20px;
+    }
 
-form#WebToCandidateForm h3 {
-    font-size: 12px;
-    font-weight: bold;
-    padding: 10px 20px;
-}
+    form#WebToCandidateForm h3 {
+        font-size: 12px;
+        font-weight: bold;
+        padding: 10px 20px;
+    }
 
-form#WebToCandidateForm h4 {
-    font-size: 10px;
-    font-weight: bold;
-    padding: 10px 20px;
-}
+    form#WebToCandidateForm h4 {
+        font-size: 10px;
+        font-weight: bold;
+        padding: 10px 20px;
+    }
 
-form#WebToCandidateForm h5 {
-    font-size: 8px;
-    font-weight: bold;
-    padding: 10px 20px;
-}
+    form#WebToCandidateForm h5 {
+        font-size: 8px;
+        font-weight: bold;
+        padding: 10px 20px;
+    }
 
-form#WebToCandidateForm h6 {
-    font-size: 6px;
-    font-weight: bold;
-    padding: 10px 20px;
-}
+    form#WebToCandidateForm h6 {
+        font-size: 6px;
+        font-weight: bold;
+        padding: 10px 20px;
+    }
 
-form#WebToCandidateForm p {
-    padding: 10px 20px;
-}
+    form#WebToCandidateForm p {
+        padding: 10px 20px;
+    }
 
-form#WebToCandidateForm input,
-form#WebToCandidateForm select,
-form#WebToCandidateForm textarea {
-    border: 1px solid #ccc;
-    display: block;
-    float: left;
-    min-width: 170px;
-    padding: 5px;
-}
+    form#WebToCandidateForm input,
+    form#WebToCandidateForm select,
+    form#WebToCandidateForm textarea {
+        border: 1px solid #ccc;
+        display: block;
+        float: left;
+        min-width: 170px;
+        padding: 5px;
+    }
 
-form#WebToCandidateForm select {
-    background-color: white;
-}
+    form#WebToCandidateForm select {
+        background-color: white;
+    }
 
-form#WebToCandidateForm input[type="button"],
-form#WebToCandidateForm input[type="submit"] {
-    display: inline;
-    float: none;
-    padding: 5px 10px;
-    width: auto;
-    min-width: auto;
-}
+    form#WebToCandidateForm input[type="button"],
+    form#WebToCandidateForm input[type="submit"] {
+        display: inline;
+        float: none;
+        padding: 5px 10px;
+        width: auto;
+        min-width: auto;
+    }
 
-form#WebToCandidateForm input[type="checkbox"],
-form#WebToCandidateForm input[type="radio"] {
-    width: 18px;
-    min-width: auto;
-}
+    form#WebToCandidateForm input[type="checkbox"],
+    form#WebToCandidateForm input[type="radio"] {
+        width: 18px;
+        min-width: auto;
+    }
 
-form#WebToCandidateForm div.col {
-    display: block;
-    float: left;
-    width: 330px;
-    padding: 10px 20px;
-}
-form#WebToCandidateForm div.panel {
-    font-size: 18px;
-    font-weight: bold;
-    background-color: rgba(6, 6, 6, 0.61);
-    color: rgb(247, 247, 247);
-    padding: 8px 16px;
-}
+    form#WebToCandidateForm div.col {
+        display: block;
+        float: left;
+        width: 330px;
+        padding: 10px 20px;
+    }
 
-form#WebToCandidateForm div.clear {
-    display: block;
-    float: none;
-    clear: both;
-    height: 0px;
-    overflow: hidden;
-}
+    form#WebToCandidateForm div.panel {
+        font-size: 18px;
+        font-weight: bold;
+        background-color: rgba(6, 6, 6, 0.61);
+        color: rgb(247, 247, 247);
+        padding: 8px 16px;
+    }
 
-form#WebToCandidateForm div.center {
-    text-align: center;
-}
+    form#WebToCandidateForm div.clear {
+        display: block;
+        float: none;
+        clear: both;
+        height: 0px;
+        overflow: hidden;
+    }
 
-form#WebToCandidateForm div.buttons {
-    padding: 10px 0;
-    border-top: 1px solid #ccc;
-    background-color: #f7f7f7
-}
+    form#WebToCandidateForm div.center {
+        text-align: center;
+    }
 
-form#WebToCandidateForm label {
-    display: block;
-    float: left;
-    width: 160px;
-    font-weight: bold;
-}
+    form#WebToCandidateForm div.buttons {
+        padding: 10px 0;
+        border-top: 1px solid #ccc;
+        background-color: #f7f7f7
+    }
 
-form#WebToCandidateForm span.required {
-    color: #FF0000;
-}
+    form#WebToCandidateForm label {
+        display: block;
+        float: left;
+        width: 160px;
+        font-weight: bold;
+    }
+
+    form#WebToCandidateForm span.required {
+        color: #FF0000;
+    }
 
 </style>
 
 <form id="WebToCandidateForm"
       action="https://staging3.rolustech.com:4203/index.php?entryPoint=WebToCandidateCapture"
-      method="POST" name="WebToCandidateForm" enctype="multipart/form-data" onsubmit="return ValidateEmail(document.getElementById('email1').value)">
+      method="POST" name="WebToCandidateForm" enctype="multipart/form-data"
+      onsubmit="return ValidateEmail(document.getElementById('email1').value)">
     <h2>Job Application Form</h2>
     <p>Please fill The form fields</p>
     <div class="panel">Contact Information</div>
@@ -183,9 +184,11 @@ form#WebToCandidateForm span.required {
         <div class="col"><label>Do Not Call: </label><input name="do_not_call" id="do_not_call" type="checkbox"/></div>
         <div class="clear">�</div>
     </div>
-<div class="panel">Email</div>
+    <div class="panel">Email</div>
     <div class="row">
-        <div class="col"><label>Email Address: <span class="required">*</span></label><input name="email1" id="email1" type="email" required=""/></div>
+        <div class="col"><label>Email Address: <span class="required">*</span></label><input name="email1" id="email1"
+                                                                                             type="email" required=""/>
+        </div>
         <div class="col"><label>Other Email: </label><input name="email2" id="email2" type="email"/></div>
         <div class="clear">�</div>
     </div>
@@ -193,42 +196,519 @@ form#WebToCandidateForm span.required {
 
     <div class="row">
         <div class="col"><label>Address Street: </label><input name="primary_address_street" id="primary_address_street"
-                                                                   type="text"/></div>
+                                                               type="text"/></div>
         <div class="col"><label>Address City: </label><input name="primary_address_city"
-                                                                     id="primary_address_city" type="text"/></div>
+                                                             id="primary_address_city" type="text"/></div>
         <div class="clear">�</div>
     </div>
     <div class="row">
         <div class="col"><label>Address State: </label><input name="primary_address_state" id="primary_address_state"
-                                                                  type="text"/></div>
-        <div class="col"><label>Address Postalcode: </label><input name="primary_address_postalcode" id="primary_address_postalcode" type="text"/>
+                                                              type="text"/></div>
+        <div class="col"><label>Address Postalcode: </label><input name="primary_address_postalcode"
+                                                                   id="primary_address_postalcode" type="text"/>
             <div class="clear">�</div>
         </div>
     </div>
     <div class="row">
         <div class="col">�</div>
-        <div class="col"><label>Primary Address Country: </label><input name="primary_address_country"
-                                                                        id="primary_address_country" type="text"/></div>
+        <div class="col"><label>Primary Address Country: </label>
+            <select name="primary_address_country" id="primary_address_country">
+                <option value=""></option>
+
+                <option value="ABU DHABI">ABU DHABI</option>
+
+                <option value="ADEN">ADEN</option>
+
+                <option value="AFGHANISTAN">AFGHANISTAN</option>
+
+                <option value="ALBANIA">ALBANIA</option>
+
+                <option value="ALGERIA">ALGERIA</option>
+
+                <option value="AMERICAN SAMOA">AMERICAN SAMOA</option>
+
+                <option value="ANDORRA">ANDORRA</option>
+
+                <option value="ANGOLA">ANGOLA</option>
+
+                <option value="ANTARCTICA">ANTARCTICA</option>
+
+                <option value="ANTIGUA">ANTIGUA</option>
+
+                <option value="ARGENTINA">ARGENTINA</option>
+
+                <option value="ARMENIA">ARMENIA</option>
+
+                <option value="ARUBA">ARUBA</option>
+
+                <option value="AUSTRALIA">AUSTRALIA</option>
+
+                <option value="AUSTRIA">AUSTRIA</option>
+
+                <option value="AZERBAIJAN">AZERBAIJAN</option>
+
+                <option value="BAHAMAS">BAHAMAS</option>
+
+                <option value="BAHRAIN">BAHRAIN</option>
+
+                <option value="BANGLADESH">BANGLADESH</option>
+
+                <option value="BARBADOS">BARBADOS</option>
+
+                <option value="BELARUS">BELARUS</option>
+
+                <option value="BELGIUM">BELGIUM</option>
+
+                <option value="BELIZE">BELIZE</option>
+
+                <option value="BENIN">BENIN</option>
+
+                <option value="BERMUDA">BERMUDA</option>
+
+                <option value="BHUTAN">BHUTAN</option>
+
+                <option value="BOLIVIA">BOLIVIA</option>
+
+                <option value="BOSNIA">BOSNIA</option>
+
+                <option value="BOTSWANA">BOTSWANA</option>
+
+                <option value="BOUVET ISLAND">BOUVET ISLAND</option>
+
+                <option value="BRAZIL">BRAZIL</option>
+
+                <option value="BRITISH ANTARCTICA TERRITORY">BRITISH ANTARCTICA TERRITORY</option>
+
+                <option value="BRITISH INDIAN OCEAN TERRITORY">BRITISH INDIAN OCEAN TERRITORY</option>
+
+                <option value="BRITISH VIRGIN ISLANDS">BRITISH VIRGIN ISLANDS</option>
+
+                <option value="BRITISH WEST INDIES">BRITISH WEST INDIES</option>
+
+                <option value="BRUNEI">BRUNEI</option>
+
+                <option value="BULGARIA">BULGARIA</option>
+
+                <option value="BURKINA FASO">BURKINA FASO</option>
+
+                <option value="BURUNDI">BURUNDI</option>
+
+                <option value="CAMBODIA">CAMBODIA</option>
+
+                <option value="CAMEROON">CAMEROON</option>
+
+                <option value="CANADA">CANADA</option>
+
+                <option value="CANAL ZONE">CANAL ZONE</option>
+
+                <option value="CANARY ISLAND">CANARY ISLAND</option>
+
+                <option value="CAPE VERDI ISLANDS">CAPE VERDI ISLANDS</option>
+
+                <option value="CAYMAN ISLANDS">CAYMAN ISLANDS</option>
+
+                <option value="CEVLON">CEVLON</option>
+
+                <option value="CHAD">CHAD</option>
+
+                <option value="CHANNEL ISLAND UK">CHANNEL ISLAND UK</option>
+
+                <option value="CHILE">CHILE</option>
+
+                <option value="CHINA">CHINA</option>
+
+                <option value="CHRISTMAS ISLAND">CHRISTMAS ISLAND</option>
+
+                <option value="COCOS (KEELING) ISLAND">COCOS (KEELING) ISLAND</option>
+
+                <option value="COLOMBIA">COLOMBIA</option>
+
+                <option value="COMORO ISLANDS">COMORO ISLANDS</option>
+
+                <option value="CONGO">CONGO</option>
+
+                <option value="CONGO KINSHASA">CONGO KINSHASA</option>
+
+                <option value="COOK ISLANDS">COOK ISLANDS</option>
+
+                <option value="COSTA RICA">COSTA RICA</option>
+
+                <option value="CROATIA">CROATIA</option>
+
+                <option value="CUBA">CUBA</option>
+
+                <option value="CURACAO">CURACAO</option>
+
+                <option value="CYPRUS">CYPRUS</option>
+
+                <option value="CZECH REPUBLIC">CZECH REPUBLIC</option>
+
+                <option value="DAHOMEY">DAHOMEY</option>
+
+                <option value="DENMARK">DENMARK</option>
+
+                <option value="DJIBOUTI">DJIBOUTI</option>
+
+                <option value="DOMINICA">DOMINICA</option>
+
+                <option value="DOMINICAN REPUBLIC">DOMINICAN REPUBLIC</option>
+
+                <option value="DUBAI">DUBAI</option>
+
+                <option value="ECUADOR">ECUADOR</option>
+
+                <option value="EGYPT">EGYPT</option>
+
+                <option value="EL SALVADOR">EL SALVADOR</option>
+
+                <option value="EQUATORIAL GUINEA">EQUATORIAL GUINEA</option>
+
+                <option value="ESTONIA">ESTONIA</option>
+
+                <option value="ETHIOPIA">ETHIOPIA</option>
+
+                <option value="FAEROE ISLANDS">FAEROE ISLANDS</option>
+
+                <option value="FALKLAND ISLANDS">FALKLAND ISLANDS</option>
+
+                <option value="FIJI">FIJI</option>
+
+                <option value="FINLAND">FINLAND</option>
+
+                <option value="FRANCE">FRANCE</option>
+
+                <option value="FRENCH GUIANA">FRENCH GUIANA</option>
+
+                <option value="FRENCH POLYNESIA">FRENCH POLYNESIA</option>
+
+                <option value="GABON">GABON</option>
+
+                <option value="GAMBIA">GAMBIA</option>
+
+                <option value="GEORGIA">GEORGIA</option>
+
+                <option value="GERMANY">GERMANY</option>
+
+                <option value="GHANA">GHANA</option>
+
+                <option value="GIBRALTAR">GIBRALTAR</option>
+
+                <option value="GREECE">GREECE</option>
+
+                <option value="GREENLAND">GREENLAND</option>
+
+                <option value="GUADELOUPE">GUADELOUPE</option>
+
+                <option value="GUAM">GUAM</option>
+
+                <option value="GUATEMALA">GUATEMALA</option>
+
+                <option value="GUINEA">GUINEA</option>
+
+                <option value="GUYANA">GUYANA</option>
+
+                <option value="HAITI">HAITI</option>
+
+                <option value="HONDURAS">HONDURAS</option>
+
+                <option value="HONG KONG">HONG KONG</option>
+
+                <option value="HUNGARY">HUNGARY</option>
+
+                <option value="ICELAND">ICELAND</option>
+
+                <option value="IFNI">IFNI</option>
+
+                <option value="INDIA">INDIA</option>
+
+                <option value="INDONESIA">INDONESIA</option>
+
+                <option value="IRAN">IRAN</option>
+
+                <option value="IRAQ">IRAQ</option>
+
+                <option value="IRELAND">IRELAND</option>
+
+                <option value="ISRAEL">ISRAEL</option>
+
+                <option value="ITALY">ITALY</option>
+
+                <option value="IVORY COAST">IVORY COAST</option>
+
+                <option value="JAMAICA">JAMAICA</option>
+
+                <option value="JAPAN">JAPAN</option>
+
+                <option value="JORDAN">JORDAN</option>
+
+                <option value="KAZAKHSTAN">KAZAKHSTAN</option>
+
+                <option value="KENYA">KENYA</option>
+
+                <option value="KOREA">KOREA</option>
+
+                <option value="KOREA, SOUTH">KOREA, SOUTH</option>
+
+                <option value="KUWAIT">KUWAIT</option>
+
+                <option value="KYRGYZSTAN">KYRGYZSTAN</option>
+
+                <option value="LAOS">LAOS</option>
+
+                <option value="LATVIA">LATVIA</option>
+
+                <option value="LEBANON">LEBANON</option>
+
+                <option value="LEEWARD ISLANDS">LEEWARD ISLANDS</option>
+
+                <option value="LESOTHO">LESOTHO</option>
+
+                <option value="LIBYA">LIBYA</option>
+
+                <option value="LIECHTENSTEIN">LIECHTENSTEIN</option>
+
+                <option value="LITHUANIA">LITHUANIA</option>
+
+                <option value="LUXEMBOURG">LUXEMBOURG</option>
+
+                <option value="MACAO">MACAO</option>
+
+                <option value="MACEDONIA">MACEDONIA</option>
+
+                <option value="MADAGASCAR">MADAGASCAR</option>
+
+                <option value="MALAWI">MALAWI</option>
+
+                <option value="MALAYSIA">MALAYSIA</option>
+
+                <option value="MALDIVES">MALDIVES</option>
+
+                <option value="MALI">MALI</option>
+
+                <option value="MALTA">MALTA</option>
+
+                <option value="MARTINIQUE">MARTINIQUE</option>
+
+                <option value="MAURITANIA">MAURITANIA</option>
+
+                <option value="MAURITIUS">MAURITIUS</option>
+
+                <option value="MELANESIA">MELANESIA</option>
+
+                <option value="MEXICO">MEXICO</option>
+
+                <option value="MOLDOVIA">MOLDOVIA</option>
+
+                <option value="MONACO">MONACO</option>
+
+                <option value="MONGOLIA">MONGOLIA</option>
+
+                <option value="MOROCCO">MOROCCO</option>
+
+                <option value="MOZAMBIQUE">MOZAMBIQUE</option>
+
+                <option value="MYANAMAR">MYANAMAR</option>
+
+                <option value="NAMIBIA">NAMIBIA</option>
+
+                <option value="NEPAL">NEPAL</option>
+
+                <option value="NETHERLANDS">NETHERLANDS</option>
+
+                <option value="NETHERLANDS ANTILLES">NETHERLANDS ANTILLES</option>
+
+                <option value="NETHERLANDS ANTILLES NEUTRAL ZONE">NETHERLANDS ANTILLES NEUTRAL ZONE</option>
+
+                <option value="NEW CALADONIA">NEW CALADONIA</option>
+
+                <option value="NEW HEBRIDES">NEW HEBRIDES</option>
+
+                <option value="NEW ZEALAND">NEW ZEALAND</option>
+
+                <option value="NICARAGUA">NICARAGUA</option>
+
+                <option value="NIGER">NIGER</option>
+
+                <option value="NIGERIA">NIGERIA</option>
+
+                <option value="NORFOLK ISLAND">NORFOLK ISLAND</option>
+
+                <option value="NORWAY">NORWAY</option>
+
+                <option value="OMAN">OMAN</option>
+
+                <option value="OTHER">OTHER</option>
+
+                <option value="PACIFIC ISLAND">PACIFIC ISLAND</option>
+
+                <option value="PAKISTAN">PAKISTAN</option>
+
+                <option value="PANAMA">PANAMA</option>
+
+                <option value="PAPUA NEW GUINEA">PAPUA NEW GUINEA</option>
+
+                <option value="PARAGUAY">PARAGUAY</option>
+
+                <option value="PERU">PERU</option>
+
+                <option value="PHILIPPINES">PHILIPPINES</option>
+
+                <option value="POLAND">POLAND</option>
+
+                <option value="PORTUGAL">PORTUGAL</option>
+
+                <option value="PORTUGUESE TIMOR">EAST TIMOR</option>
+
+                <option value="PUERTO RICO">PUERTO RICO</option>
+
+                <option value="QATAR">QATAR</option>
+
+                <option value="REPUBLIC OF BELARUS">REPUBLIC OF BELARUS</option>
+
+                <option value="REPUBLIC OF SOUTH AFRICA">REPUBLIC OF SOUTH AFRICA</option>
+
+                <option value="REUNION">REUNION</option>
+
+                <option value="ROMANIA">ROMANIA</option>
+
+                <option value="RUSSIA">RUSSIA</option>
+
+                <option value="RWANDA">RWANDA</option>
+
+                <option value="RYUKYU ISLANDS">RYUKYU ISLANDS</option>
+
+                <option value="SABAH">SABAH</option>
+
+                <option value="SAN MARINO">SAN MARINO</option>
+
+                <option value="SAUDI ARABIA">SAUDI ARABIA</option>
+
+                <option value="SENEGAL">SENEGAL</option>
+
+                <option value="SERBIA">SERBIA</option>
+
+                <option value="SEYCHELLES">SEYCHELLES</option>
+
+                <option value="SIERRA LEONE">SIERRA LEONE</option>
+
+                <option value="SINGAPORE">SINGAPORE</option>
+
+                <option value="SLOVAKIA">SLOVAKIA</option>
+
+                <option value="SLOVENIA">SLOVENIA</option>
+
+                <option value="SOMALILIAND">SOMALILIAND</option>
+
+                <option value="SOUTH AFRICA">SOUTH AFRICA</option>
+
+                <option value="SOUTH YEMEN">SOUTH YEMEN</option>
+
+                <option value="SPAIN">SPAIN</option>
+
+                <option value="SPANISH SAHARA">SPANISH SAHARA</option>
+
+                <option value="SRI LANKA">SRI LANKA</option>
+
+                <option value="ST. KITTS AND NEVIS">ST. KITTS AND NEVIS</option>
+
+                <option value="ST. LUCIA">ST. LUCIA</option>
+
+                <option value="SUDAN">SUDAN</option>
+
+                <option value="SURINAM">SURINAM</option>
+
+                <option value="SW AFRICA">SW AFRICA</option>
+
+                <option value="SWAZILAND">SWAZILAND</option>
+
+                <option value="SWEDEN">SWEDEN</option>
+
+                <option value="SWITZERLAND">SWITZERLAND</option>
+
+                <option value="SYRIA">SYRIA</option>
+
+                <option value="TAIWAN">TAIWAN</option>
+
+                <option value="TAJIKISTAN">TAJIKISTAN</option>
+
+                <option value="TANZANIA">TANZANIA</option>
+
+                <option value="THAILAND">THAILAND</option>
+
+                <option value="TONGA">TONGA</option>
+
+                <option value="TRINIDAD">TRINIDAD</option>
+
+                <option value="TUNISIA">TUNISIA</option>
+
+                <option value="TURKEY">TURKEY</option>
+
+                <option value="UGANDA">UGANDA</option>
+
+                <option value="UKRAINE">UKRAINE</option>
+
+                <option value="UNITED ARAB EMIRATES">UNITED ARAB EMIRATES</option>
+
+                <option value="UNITED KINGDOM">UNITED KINGDOM</option>
+
+                <option value="UPPER VOLTA">UPPER VOLTA</option>
+
+                <option value="URUGUAY">URUGUAY</option>
+
+                <option value="US PACIFIC ISLAND">US PACIFIC ISLAND</option>
+
+                <option value="US VIRGIN ISLANDS">US VIRGIN ISLANDS</option>
+
+                <option value="USA">USA</option>
+
+                <option value="UZBEKISTAN">UZBEKISTAN</option>
+
+                <option value="VANUATU">VANUATU</option>
+
+                <option value="VATICAN CITY">VATICAN CITY</option>
+
+                <option value="VENEZUELA">VENEZUELA</option>
+
+                <option value="VIETNAM">VIETNAM</option>
+
+                <option value="WAKE ISLAND">WAKE ISLAND</option>
+
+                <option value="WEST INDIES">WEST INDIES</option>
+
+                <option value="WESTERN SAHARA">WESTERN SAHARA</option>
+
+                <option value="YEMEN">YEMEN</option>
+
+                <option value="ZAIRE">ZAIRE</option>
+
+                <option value="ZAMBIA">ZAMBIA</option>
+
+                <option value="ZIMBABWE">ZIMBABWE</option>
+
+            </select>
+        </div>
         <div class="clear">�</div>
     </div>
     <div class="panel">Emloyement</div>
 
     <div class="row">
-        <div class="col"><label>Currently Employed: </label><input name="currently_employed" id="currently_employed" type="checkbox"/></div>
+        <div class="col"><label>Currently Employed: </label><input name="currently_employed" id="currently_employed"
+                                                                   type="checkbox"/></div>
         <div class="col"><label>Current Employer: </label><input name="current_employer"
-                                                                        id="current_employer" type="text"/></div>
+                                                                 id="current_employer" type="text"/></div>
         <div class="clear">�</div>
     </div>
     <div class="row">
         <div class="col">�</div>
         <div class="col"><label>Years of Experience: </label><input name="years_of_experience"
-                                                                 id="years_of_experience" type="text"/></div>
+                                                                    id="years_of_experience" type="text"/></div>
         <div class="clear">�</div>
     </div>
     <div class="panel">Additional Details</div>
     <div class="row">
         <div class="col"><label>US Citizen: </label><input name="us_citizen" id="us_citizen" type="checkbox"/></div>
-        <div class="col"><label>Visa Required: </label><input name="visa_required" id="visa_required" type="checkbox"/></div>
+        <div class="col"><label>Visa Required: </label><input name="visa_required" id="visa_required" type="checkbox"/>
+        </div>
     </div>
     <div class="row">
         <div class="col">
