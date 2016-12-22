@@ -142,22 +142,8 @@ if ($is_attachment) {
     $destFile = "upload://{$newNote->id}";
     copy($srcFile, $destFile);
 }
-//send email to candidate
-/*$GLOBALS['log']->fatal('ABOUT TO QUEUE!!!');
-global $current_user;
-$job = new SchedulersJob();
-$job->name = "JA Submitted";
-$arr = [];
+
 $candi_name = $first_name . ' ' . $last_name;
-$arr['email_address'] = $email1;
-$arr['template_name'] = 'Notify Candidate JA';
-$job->data = json_encode($arr);
-$job->target = "function::candidate_ja_notify";
-$job->assigned_user_id = $current_user->id;
-$jq = new SugarJobQueue();
-$jobid = $jq->submitJob($job);*/
-
-
 
 $emailObj = new Email();
 $defaults = $emailObj->getSystemDefaultEmail();
