@@ -143,19 +143,46 @@ if ($is_attachment) {
     copy($srcFile, $destFile);
 }
 //send email to candidate
-$GLOBALS['log']->fatal('ABOUT TO QUEUE!!!');
+/*$GLOBALS['log']->fatal('ABOUT TO QUEUE!!!');
 global $current_user;
 $job = new SchedulersJob();
 $job->name = "JA Submitted";
 $arr = [];
-$arr['candidate_name'] = $first_name . ' ' . $last_name;
+$candi_name = $first_name . ' ' . $last_name;
 $arr['email_address'] = $email1;
 $arr['template_name'] = 'Notify Candidate JA';
 $job->data = json_encode($arr);
 $job->target = "function::candidate_ja_notify";
 $job->assigned_user_id = $current_user->id;
 $jq = new SugarJobQueue();
-$jobid = $jq->submitJob($job);
+$jobid = $jq->submitJob($job);*/
+
+
+
+$emailObj = new Email();
+$defaults = $emailObj->getSystemDefaultEmail();
+$template_name = 'Notify Candidate JA';
+$email_address = $email1;
+$template = new EmailTemplate();
+$template->retrieve_by_string_fields(array('name' => $template_name, 'type' => 'email'));
+
+$template->body_html = str_replace('{name}', $candi_name, $template->body_html);
+$template->body_html = str_replace('{position}', 'N/A', $template->body_html);
+$mail = new SugarPHPMailer();
+$mail->IsHTML(true);
+$mail->setMailerForSystem();
+$mail->From = $defaults['email'];
+$mail->FromName = $defaults['name'];
+$mail->Subject = $template->subject;
+$mail->Body = from_html($template->body_html);
+$mail->prepForOutbound();
+$mail->AddAddress($email_address);
+$send = $mail->Send();
+if (!$send) {
+    $GLOBALS['log']->fatal("Could not send Mail:  " . $mail->ErrorInfo);
+}
+
+
 
 // send email to HR
 send_email($candidate->id, $new_job_application->id, $vacancy_id);
