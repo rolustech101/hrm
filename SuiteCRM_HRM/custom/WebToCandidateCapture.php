@@ -160,11 +160,11 @@ send_email($candidate->id, $new_job_application->id, $vacancy_id);
 
 $vacancy_bean = BeanFactory::getBean('RT_Vacancies',$vacancy_id);
 if($vacancy_bean->status_c == 'closed_filled'){
-    $position_name = $vacancy_bean->name;
-    $template->body_html = str_replace('{position}', $position_name, $template->body_html);
+    $template->body_html = str_replace('{position}', 'N/A', $template->body_html);
     echo "The job you applied for has been closed but we submitted your application for further considerations";
 }else{
-    $template->body_html = str_replace('{position}', 'N/A', $template->body_html);
+    $position_name = $vacancy_bean->name;
+    $template->body_html = str_replace('{position}', $position_name, $template->body_html);
     echo "Your Application is Submitted!\nThank You, For Your Time...";
 }
 
