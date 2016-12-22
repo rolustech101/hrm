@@ -6,8 +6,6 @@ if (!defined('sugarEntry') || !sugarEntry) {
 require_once 'custom/include/custom_utils.php';
 require_once('include/SugarQueue/SugarJobQueue.php');
 
-
-
 !empty($_REQUEST['first_name']) ? $first_name = $_REQUEST['first_name'] : $first_name = '';
 !empty($_REQUEST['last_name']) ? $last_name = $_REQUEST['last_name'] : $last_name = '';
 !empty($_REQUEST['mobile_phone']) ? $mobile_phone = $_REQUEST['mobile_phone'] : $mobile_phone = '';
@@ -90,7 +88,7 @@ if ($uploadOk == 0) {
 } else {
     if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
         $is_attachment = true;
-        echo "The file " . basename($_FILES["fileToUpload"]["name"]) . " has been uploaded.";
+        // echo "The file " . basename($_FILES["fileToUpload"]["name"]) . " has been uploaded.";
     } else {
         echo "Sorry, there was an error uploading your file.";
         die;
@@ -145,12 +143,12 @@ if ($is_attachment) {
     copy($srcFile, $destFile);
 }
 // send email to HR
-send_email($candidate->id,$new_job_application->id,$vacancy_id);
+send_email($candidate->id, $new_job_application->id, $vacancy_id);
 
 $job = new SchedulersJob();
 $job->name = "Job Accepted";
 $arr = [];
-$arr['candidate_name'] = $first_name.' '.$last_name;
+$arr['candidate_name'] = $first_name . ' ' . $last_name;
 $arr['email_address'] = $email1;
 $arr['template_name'] = 'Notify Candidate JA';
 $job->data = json_encode($arr);
@@ -158,7 +156,7 @@ $job->target = "function::candidate_ja_notify";
 $job->assigned_user_id = $current_user->id;
 $jq = new SugarJobQueue();
 $jobid = $jq->submitJob($job);
-echo "Thank You! For Your Time...";
+echo "Your Application is Submitted!\nThank You, For Your Time...";
 
 
 

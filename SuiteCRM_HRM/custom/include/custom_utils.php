@@ -71,7 +71,7 @@ function get_non_filling_countries()
 function getCandidate($email)
 {
 //    $sql = "select * from rt_candidates where last_name = '$email'";
-    $sql = "select * from (select cand.id as cand_id, cand.phone_mobile,cand.phone_work,cand.phone_other,cand.phone_home,cand.phone_fax, e_add.id as e_id, e_add.email_address_id,e_add.bean_id from rt_candidates as cand inner join email_addr_bean_rel as e_add on e_add.bean_id = cand.id where cand.deleted = 0 AND e_add.deleted = 0 ) as tt inner join email_addresses as addresses on addresses.id = tt.email_address_id where addresses.email_address = '$email' AND addresses.deleted = 0";
+    $sql = "select * from (select cand.id as cand_id, cand.phone_mobile,cand.phone_work,cand.phone_other,cand.phone_home,cand.phone_fax, e_add.id as e_id, e_add.email_address_id,e_add.bean_id from rt_candidates as cand inner join email_addr_bean_rel as e_add on e_add.bean_id = cand.id where cand.deleted = 0 AND e_add.deleted = 0 ) as tt inner join email_addresses as addresses on addresses.id = tt.email_address_id where addresses.email_address = '$email' and addresses.invalid_email = 0 AND addresses.opt_out = 0 AND addresses.deleted = 0";
     $res = $GLOBALS['db']->query($sql);
     if ($res->num_rows > 1) {
         $GLOBALS['log']->fatal('Duplicate candidates exists please delete there should be unique names!');
@@ -107,7 +107,7 @@ function send_interview_mail($module, $name, $id, $date, $template, $job_app_id 
     $sugar_email->Subject = $template->subject;
     $GLOBALS['log']->fatal(print_r(from_html($template->body_html), 1));
     if ($module == 'RT_Candidates') {
-        $sql = "select * from (select cand.id as cand_id, cand.phone_mobile,cand.phone_work,cand.phone_other,cand.phone_home,cand.phone_fax, e_add.id as e_id, e_add.email_address_id,e_add.bean_id from rt_candidates as cand inner join email_addr_bean_rel as e_add on e_add.bean_id = cand.id where cand.deleted = 0 AND e_add.deleted = 0 ) as tt inner join email_addresses as addresses on addresses.id = tt.email_address_id where cand_id = '$id' and addresses.deleted = 0";
+        $sql = "select * from (select cand.id as cand_id, cand.phone_mobile,cand.phone_work,cand.phone_other,cand.phone_home,cand.phone_fax, e_add.id as e_id, e_add.email_address_id,e_add.bean_id from rt_candidates as cand inner join email_addr_bean_rel as e_add on e_add.bean_id = cand.id where cand.deleted = 0 AND e_add.deleted = 0 ) as tt inner join email_addresses as addresses on addresses.id = tt.email_address_id where cand_id = '$id' and addresses.invalid_email = 0 AND addresses.opt_out = 0 and addresses.deleted = 0";
         $res = $GLOBALS['db']->query($sql);
         if ($res->num_rows > 1) {
             $GLOBALS['log']->fatal('candidate has many emails');
@@ -121,7 +121,7 @@ function send_interview_mail($module, $name, $id, $date, $template, $job_app_id 
         $template->body_html = str_replace('{date}', $date, $template->body_html);
 //        $GLOBALS['log']->fatal(print_r(from_html($template->body_html),1));
     } elseif ($module == 'RT_Employees') {
-        $sql = "select * from (select emp.id as emp_id, e_add.id as e_id, e_add.email_address_id,e_add.bean_id from rt_employees as emp inner join email_addr_bean_rel as e_add on e_add.bean_id = emp.id where emp.deleted = 0 AND e_add.deleted = 0 ) as tt inner join email_addresses as addresses on addresses.id = tt.email_address_id where emp_id = '$id' and addresses.deleted = 0";
+        $sql = "select * from (select emp.id as emp_id, e_add.id as e_id, e_add.email_address_id,e_add.bean_id from rt_employees as emp inner join email_addr_bean_rel as e_add on e_add.bean_id = emp.id where emp.deleted = 0 AND e_add.deleted = 0 ) as tt inner join email_addresses as addresses on addresses.id = tt.email_address_id where emp_id = '$id' and addresses.invalid_email = 0 AND addresses.opt_out = 0 and addresses.deleted = 0";
         $res = $GLOBALS['db']->query($sql);
         if ($res->num_rows > 1) {
             $GLOBALS['log']->fatal('Employee has many emails');
@@ -306,7 +306,6 @@ function handleCreateCandidate($email, $job_title)
     global $current_user, $mod_strings, $current_language;
     $mod_strings = return_module_language($current_language, "Emails");
 
-    $GLOBALS['log']->fatal('AOP GOING TO create case!!!!');
     $GLOBALS['log']->debug('retrieveing email');
     $email->retrieve($email->id);
 
