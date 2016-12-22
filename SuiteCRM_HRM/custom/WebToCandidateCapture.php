@@ -4,6 +4,8 @@ if (!defined('sugarEntry') || !sugarEntry) {
     die('Not A Valid Entry Point');
 }
 require_once 'custom/include/custom_utils.php';
+require_once('include/SugarQueue/SugarJobQueue.php');
+
 
 
 !empty($_REQUEST['first_name']) ? $first_name = $_REQUEST['first_name'] : $first_name = '';
@@ -57,7 +59,6 @@ $is_attachment = false;
 $target_dir = __DIR__ . "/uploads/";
 $FileType = pathinfo(basename($_FILES["fileToUpload"]["name"]), PATHINFO_EXTENSION);
 $target_file = $target_dir . $email1 . '.' . $FileType; //basename($_FILES["fileToUpload"]["name"]);
-echo $target_file;
 $uploadOk = 1;
 clearstatcache();
 $check = filesize($_FILES["fileToUpload"]["tmp_name"]);
@@ -146,7 +147,17 @@ if ($is_attachment) {
 // send email to HR
 send_email($candidate->id,$new_job_application->id,$vacancy_id);
 
-
+$job = new SchedulersJob();
+$job->name = "Job Accepted";
+$arr = [];
+$arr['candidate_name'] = $first_name.' '.$last_name;
+$arr['email_address'] = $email1;
+$arr['template_name'] = 'Notify Candidate JA';
+$job->data = json_encode($arr);
+$job->target = "function::candidate_ja_notify";
+$job->assigned_user_id = $current_user->id;
+$jq = new SugarJobQueue();
+$jobid = $jq->submitJob($job);
 echo "Thank You! For Your Time...";
 
 
