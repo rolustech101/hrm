@@ -19,6 +19,13 @@ $hook_array['before_save'][] = array(
     'UpdateName',
     'name_update'
 );
+$hook_array['before_save'][] = array(
+    3,
+    'Interview Status',
+    'custom/modules/RT_Interviews/InterviewStatus.php',
+    'InterviewStatus',
+    'iv_status'
+);
 
 $hook_array['after_relationship_add'] = Array();
 $hook_array['after_relationship_add'][] = Array(

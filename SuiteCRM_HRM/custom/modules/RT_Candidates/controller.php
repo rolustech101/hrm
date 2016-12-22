@@ -14,7 +14,7 @@ class RT_CandidatesController extends SugarController{
 					$application_id = $app->id;
 				}
 			}else{
-				echo 'collection is empty';
+				echo 'error404';
 				die;
 			}
 			$job_application = BeanFactory::getBean('RT_Job_Application',$application_id);
@@ -26,7 +26,7 @@ class RT_CandidatesController extends SugarController{
 						$vacancy_id = $vaca->id;
 					}
 				}else{
-					echo 'Collection is empty';
+					echo 'error404';
 					die;
 				}
 				$rt_vacancy = BeanFactory::getBean('RT_Vacancies',$vacancy_id);
@@ -37,7 +37,7 @@ class RT_CandidatesController extends SugarController{
 							$job_id = $job->id;
 						}
 					}else{
-						echo 'Collection is empty';
+						echo 'error404';
 						die;
 					}
 					$offer = BeanFactory::newBean('RT_Job_Offers');

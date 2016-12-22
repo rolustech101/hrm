@@ -3,7 +3,7 @@
 $mod_strings = array (
   'LBL_DATE_OF_INTERVIEW' => 'Date of Interview',
   'LBL_COMMENTS' => 'Comments',
-  'LBL_NAME' => 'NAME',
+  'LBL_NAME' => 'Name',
   'LBL_RT_INTERVIEWS_RT_CANDIDATES_FROM_RT_CANDIDATES_TITLE' => 'Candidate',
   'LBL_RT_EMPLOYEES_RT_INTERVIEWS_FROM_RT_EMPLOYEES_TITLE' => 'Interviewer',
   'LBL_RT_DEPARTMENTS_RT_INTERVIEWS_FROM_RT_DEPARTMENTS_TITLE' => 'Department',
@@ -14,7 +14,7 @@ $mod_strings = array (
   'LBL_JOB' => 'Job',
   'LBL_STATUS' => 'Status',
   'LBL_SCORE' => 'Score out of 10',
-  'LBL_VACANCY_NAME' => 'Vacancy',
+  'LBL_VACANCY_NAME' => 'Job Posting',
   'LBL_INTERVIEWER_ID' => 'interviewer id',
 );
 ?>
