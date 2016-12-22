@@ -142,11 +142,11 @@ if ($is_attachment) {
     $destFile = "upload://{$newNote->id}";
     copy($srcFile, $destFile);
 }
-// send email to HR
-send_email($candidate->id, $new_job_application->id, $vacancy_id);
+//send email to candidate
+$GLOBALS['log']->fatal('ABOUT TO QUEUE!!!');
 global $current_user;
 $job = new SchedulersJob();
-$job->name = "Job Accepted";
+$job->name = "JA Submitted";
 $arr = [];
 $arr['candidate_name'] = $first_name . ' ' . $last_name;
 $arr['email_address'] = $email1;
@@ -156,6 +156,10 @@ $job->target = "function::candidate_ja_notify";
 $job->assigned_user_id = $current_user->id;
 $jq = new SugarJobQueue();
 $jobid = $jq->submitJob($job);
+
+// send email to HR
+send_email($candidate->id, $new_job_application->id, $vacancy_id);
+
 echo "Your Application is Submitted!\nThank You, For Your Time...";
 
 
