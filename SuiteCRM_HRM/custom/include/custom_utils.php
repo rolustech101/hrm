@@ -161,6 +161,8 @@ function send_interview_mail($module, $name, $id, $date, $template, $job_app_id 
 function send_email($cand_id, $job_app_id, $job_post_id)
 {
     global $sugar_config;
+    $cand_bean = BeanFactory::getBean('RT_Candidates',$cand_id);
+    $name_candidate = $cand_bean->name;
     $base_url = $sugar_config['site_url'];
     $candidate = $base_url . "/index.php?module=RT_Candidates&return_module=RT_Candidates&action=DetailView&record=$cand_id";
     $job_application = $base_url . "/index.php?module=RT_Job_Application&return_module=RT_Job_Application&action=DetailView&record=$job_app_id";
@@ -184,7 +186,7 @@ function send_email($cand_id, $job_app_id, $job_post_id)
     $template->retrieve_by_string_fields(array('name' => $template_name, 'type' => 'email'));
     $sugar_email->Subject = $template->subject;
     $GLOBALS['log']->fatal(print_r(from_html($template->body_html), 1));
-    $template->body_html = str_replace('{cand}', "<a href='$candidate'>Candidate</a>", $template->body_html);
+    $template->body_html = str_replace('{cand}', "<a href='$candidate'>$name_candidate</a>", $template->body_html);
     $template->body_html = str_replace('{posting}', "<a href='$job_posting'>Job Posting</a>", $template->body_html);
     $template->body_html = str_replace('{job_app}', "<a href='$job_application'>Job Application</a>",
         $template->body_html);
