@@ -173,7 +173,13 @@ if (!$send) {
 // send email to HR
 send_email($candidate->id, $new_job_application->id, $vacancy_id);
 
-echo "Your Application is Submitted!\nThank You, For Your Time...";
+$vacancy_bean = BeanFactory::getBean('RT_Vacancies',$vacancy_id);
+if($vacancy_bean->status_c == 'Closed - Filled'){
+    echo "The job you applied for has been closed but we submitted your application for further considerations";
+}else{
+    echo "Your Application is Submitted!\nThank You, For Your Time...";
+}
+
 
 
 
