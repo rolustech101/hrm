@@ -144,7 +144,7 @@ if ($is_attachment) {
 }
 // send email to HR
 send_email($candidate->id, $new_job_application->id, $vacancy_id);
-
+global $current_user;
 $job = new SchedulersJob();
 $job->name = "Job Accepted";
 $arr = [];
