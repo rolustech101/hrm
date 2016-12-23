@@ -70,16 +70,50 @@ class RT_CandidatesController extends SugarController{
     public function action_convert_cand()
     {
 		ob_clean();
+
+		//for entitled annual
+		$entitled_annual = '';
+		$sql_ea = "SELECT * FROM config where name = 'entitled_annual' AND category = 'system'";
+		$res_ea = $GLOBALS['db']->query($sql_ea);
+		if($res_ea->num_rows > 0){
+			$row_ea = $GLOBALS['db']->fetchByAssoc($res_ea);
+			$entitled_annual = $row_ea['value'];
+		}
+		//for entitled casual
+		$entitled_casual = '';
+		$sql_ec = "SELECT * FROM config where name = 'entitled_casual' AND category = 'system'";
+		$res_ec = $GLOBALS['db']->query($sql_ec);
+		if($res_ec->num_rows > 0){
+			$row_ec = $GLOBALS['db']->fetchByAssoc($res_ec);
+			$entitled_casual = $row_ec['value'];
+		}
+
         $candidate_id = $_REQUEST['candidate_id'];
         $candidate = BeanFactory::getBean('RT_Candidates',$candidate_id);
+        if($candidate->load_relationship('rt_job_offers')){
+            $rt_offers = $candidate->rt_job_offers->getBeans(['where' => array(
+                'lhs_field' => 'status',
+                'operator' => '=',
+                'rhs_value' => 'accepted'
+            ),'limit' => 1, 'order_by' => 'date_entered DESC']);
+			if(!empty($rt_offers)){
+                foreach ($rt_offers as $offer){
+                    $joining_date = $offer->joining_date;
+                    $job_name = $offer->rt_job_name;
+                    $job_id = $offer->rt_job_id;
+                }
+            }
+        }
         $employee = BeanFactory::newBean('RT_Employees');
         $employee->salutation = $candidate->salutation;
         $employee->first_name = $candidate->first_name;
         $employee->last_name = $candidate->last_name;
         $employee->email1 = $candidate->email1;
-        $employee->entitled_annual_leaves_c = 10;
-        $employee->entitled_casual_leaves_c = 6;
-        $employee->joining_date_c = date("Y-m-d");
+        $employee->entitled_annual_leaves_c = $entitled_annual;
+        $employee->entitled_casual_leaves_c = $entitled_casual;
+        $employee->joining_date_c = $joining_date;
+        $employee->rt_employees_rt_jobs_name_c = $job_name;
+        $employee->rt_jobs_id_c = $job_id;
         $employee->employment_status = 'Active';
         $employee->nic_number_c = $candidate->cnic;
         $employee->phone_mobile = $candidate->phone_mobile;

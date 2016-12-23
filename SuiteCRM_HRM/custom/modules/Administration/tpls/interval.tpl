@@ -24,6 +24,22 @@
             </tr>
             <tr>
                 <td>
+                    Entitled Annual Leaves:
+                </td>
+                <td>
+                    <input type="number" required name="entitled_annual" id="entitled_annual" value="{$entitled_annual}" size="5">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Entitled Casual Leaves:
+                </td>
+                <td>
+                    <input type="number" required name="entitled_casual" id="entitled_casual" value="{$entitled_casual}" size="5">
+                </td>
+            </tr>
+            <tr>
+                <td>
                     Notification Receiver's email address:
                 </td>
                 <td>

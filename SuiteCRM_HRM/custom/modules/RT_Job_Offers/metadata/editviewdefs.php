@@ -2,7 +2,6 @@
 /*********************************************************************************
  * SugarCRM Community Edition is a customer relationship management program developed by
  * SugarCRM, Inc. Copyright (C) 2004-2013 SugarCRM Inc.
-
  * SuiteCRM is an extension to SugarCRM Community Edition developed by Salesagility Ltd.
  * Copyright (C) 2011 - 2014 Salesagility Ltd.
  *
@@ -39,40 +38,61 @@
 
 $module_name = 'RT_Job_Offers';
 $viewdefs[$module_name]['EditView'] = array(
-    'templateMeta' => array('maxColumns' => '2', 
-                            'widths' => array(
-                                            array('label' => '10', 'field' => '30'), 
-                                            array('label' => '10', 'field' => '30')
-                                            ),                                                                                                                                    
-                                            ),
-                                            
-                                            
- 'panels' =>array (
-  'default' => 
-  array (
-    
-    array (
-      'rt_candidate_name',
-      '',
+    'templateMeta' => array(
+        'maxColumns' => '2',
+        'form' =>
+            array (
+                'enctype' => 'multipart/form-data',
+                'buttons' =>
+                    array (
+                        0 => array (
+                            'customCode' => '<input type="submit" name="save" id="save" onClick="var _form = document.getElementById(\'EditView\');_form.action.value = \'Save\';  return check_joining_date(\'EditView\',_form);" value="Save">',
+                        ),
+                    ),
+            ),
+        'widths' => array(
+            array('label' => '10', 'field' => '30'),
+            array('label' => '10', 'field' => '30')
+        ),
+        'includes' =>
+            array(
+                array(
+                    'file' => 'custom/modules/RT_Job_Offers/funcs.js',
+                ),
+            ),
     ),
-    array(
-        'rt_job_name',
-        '',
+
+
+    'panels' => array(
+        'default' =>
+            array(
+
+                array(
+                    'rt_candidate_name',
+                    '',
+                ),
+                array(
+                    'rt_job_name',
+                    '',
+                ),
+                array(
+                    'date_offered',
+                    '',
+                ),
+                array(
+                    'status',
+                    '',
+                ),
+                array(
+                    'joining_date',
+                    '',
+                ),
+                array(
+                    'description',
+                ),
+            ),
+
     ),
-      array(
-        'date_offered',
-        '',
-    ),
-    array(
-        'status',
-        '',
-    ),
-    array (
-      'description',
-    ),
-  ),
-                                                    
-),
-                        
+
 );
 ?>

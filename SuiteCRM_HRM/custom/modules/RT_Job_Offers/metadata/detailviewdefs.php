@@ -48,11 +48,12 @@ $viewdefs[$module_name]['DetailView'] = array(
                                         array('label' => '10', 'field' => '30')
                                         ),
     'includes' =>
-        array (
-                array (
-                    'file' => 'custom/modules/RT_Job_Offers/funcs.js',
-                ),
+        array(
+            array(
+                'file' => 'custom/modules/RT_Job_Offers/funcs_detail.js',
+            ),
         ),
+
                         ),
 
 'panels' =>array (
@@ -66,7 +67,10 @@ $viewdefs[$module_name]['DetailView'] = array(
     'status',
   ),
     array(
-        'status',
+        array(
+            'name' => 'joining_date',
+            'label' => 'LBL_JOINING_DATE'
+        ),
         'date_offered',
     ),
 

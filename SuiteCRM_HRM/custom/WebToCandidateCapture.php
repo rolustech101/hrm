@@ -29,9 +29,8 @@ require_once('include/SugarQueue/SugarJobQueue.php');
 
 function getCand($email, $phone)
 {
-
     if (isset($email) && !empty($email)) {
-        $sql = "select * from (select cand.id as cand_id, cand.phone_mobile,cand.phone_work,cand.phone_other,cand.phone_home,cand.phone_fax, e_add.id as e_id, e_add.email_address_id,e_add.bean_id from rt_candidates as cand inner join email_addr_bean_rel as e_add on e_add.bean_id = cand.id where cand.deleted = 0 AND e_add.deleted = 0 ) as tt inner join email_addresses as addresses on addresses.id = tt.email_address_id where addresses.email_address = '$email' AND addresses.deleted = 0";
+        $sql = "select * from (select cand.id as cand_id, cand.phone_mobile,cand.phone_work,cand.phone_other,cand.phone_home,cand.phone_fax, e_add.id as e_id, e_add.email_address_id,e_add.bean_id from rt_candidates as cand inner join email_addr_bean_rel as e_add on e_add.bean_id = cand.id where cand.deleted = 0 AND e_add.deleted = 0 ) as tt inner join email_addresses as addresses on addresses.id = tt.email_address_id where addresses.email_address = '$email' and addresses.invalid_email = 0 AND addresses.opt_out = 0  AND addresses.deleted = 0";
         $res = $GLOBALS['db']->query($sql);
         if ($res->num_rows > 1) {
             $GLOBALS['log']->fatal('Duplicate candidates exists please delete there should be unique names!');

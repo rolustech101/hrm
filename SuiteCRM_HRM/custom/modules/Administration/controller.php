@@ -4,6 +4,20 @@ class CustomAdministrationController extends AdministrationController
 {
     function action_set_increment_interval()
     {
+        //for entitled annual
+        $sql_ea = "SELECT * FROM config where name = 'entitled_annual' AND category = 'system'";
+        $res_ea = $GLOBALS['db']->query($sql_ea);
+        if($res_ea->num_rows > 0){
+            $row_ea = $GLOBALS['db']->fetchByAssoc($res_ea);
+            $this->view_object_map['entitled_annual'] = $row_ea['value'];
+        }
+        //for entitled casual
+        $sql_ec = "SELECT * FROM config where name = 'entitled_casual' AND category = 'system'";
+        $res_ec = $GLOBALS['db']->query($sql_ec);
+        if($res_ec->num_rows > 0){
+            $row_ec = $GLOBALS['db']->fetchByAssoc($res_ec);
+            $this->view_object_map['entitled_casual'] = $row_ec['value'];
+        }
         //for provident fund
         $sql = "SELECT * FROM config where name = 'provident_fund' AND category = 'system'";
         $res = $GLOBALS['db']->query($sql);
@@ -78,6 +92,28 @@ class CustomAdministrationController extends AdministrationController
         }else{
             $sql_p = "INSERT INTO config(category, name, value) VALUES('system', 'provident_fund', '$fund')";
             $result_p = $GLOBALS['db']->query($sql_p);
+        }
+        //for entitled annual
+        $entitled_annual = $_REQUEST['entitled_annual'];
+        $test_ea = "SELECT * FROM config where name = 'entitled_annual' and category = 'system'";
+        $test_res_ea = $GLOBALS['db']->query($test_ea);
+        if($test_res_ea->num_rows > 0){
+            $sql_update_ea = "UPDATE config SET value = '$entitled_annual' where name = 'entitled_annual' and category = 'system' ";
+            $res_update_ea = $GLOBALS['db']->query($sql_update_ea);
+        }else{
+            $sql_ea = "INSERT INTO config(category, name, value) VALUES('system', 'entitled_annual', '$entitled_annual')";
+            $result_ea = $GLOBALS['db']->query($sql_ea);
+        }
+        // for entitled casual
+        $entitled_casual = $_REQUEST['entitled_casual'];
+        $test_ec = "SELECT * FROM config where name = 'entitled_casual' and category = 'system'";
+        $test_res_ec = $GLOBALS['db']->query($test_ec);
+        if($test_res_ec->num_rows > 0){
+            $sql_update_ec = "UPDATE config SET value = '$entitled_casual' where name = 'entitled_casual' and category = 'system' ";
+            $res_update_ec = $GLOBALS['db']->query($sql_update_ec);
+        }else{
+            $sql_ec = "INSERT INTO config(category, name, value) VALUES('system', 'entitled_casual', '$entitled_casual')";
+            $result_ec = $GLOBALS['db']->query($sql_ec);
         }
 
         // for notify email address

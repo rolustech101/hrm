@@ -41,7 +41,28 @@ if(isset($_POST['emp_id']) && !empty($_POST['emp_id'])){
 
 $bean->save(); // save performance review
 
+$emailObj = new Email();
+$defaults = $emailObj->getSystemDefaultEmail();
+$template_name = 'Appraisal Submitted';
+$email_address = $email1;
+$template = new EmailTemplate();
+$template->retrieve_by_string_fields(array('name' => $template_name, 'type' => 'email'));
+$emp_name = $_POST['emp_name'];
+$template->body_html = str_replace('{name}', $emp_name, $template->body_html);
+
+$mail = new SugarPHPMailer();
+$mail->IsHTML(true);
+$mail->setMailerForSystem();
+$mail->From = $defaults['email'];
+$mail->FromName = $defaults['name'];
+$mail->Subject = $template->subject;
+$mail->Body = from_html($template->body_html);
+$mail->prepForOutbound();
+$mail->AddAddress($email_address);
+$send = $mail->Send();
+if (!$send) {
+    $GLOBALS['log']->fatal("Could not send Mail:  " . $mail->ErrorInfo);
+}
+
 echo "Thank You! for the Review";
-
-
 

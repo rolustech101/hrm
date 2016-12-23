@@ -22,6 +22,8 @@ class AdministrationViewIncrement_Interval extends SugarView {
         $this->ss->assign('provident_fund', $this->view_object_map['p_fund']);
         $this->ss->assign('noty_receiver_email', $this->view_object_map['noty_email']);
         $this->ss->assign('email_subject',$this->view_object_map['email_subject']);
+        $this->ss->assign('entitled_casual',$this->view_object_map['entitled_casual']);
+        $this->ss->assign('entitled_annual',$this->view_object_map['entitled_annual']);
         /////////////////////////
 //        $this->ss->assign('sm_email',$this->view_object_map['sm_email']);
         $emails = $this->view_object_map['sm_email'];
