@@ -40,13 +40,12 @@ if(isset($_POST['emp_id']) && !empty($_POST['emp_id'])){
 
 
 $bean->save(); // save performance review
+
 $template_name = 'Appraisal Submitted';
 $template = new EmailTemplate();
 $template->retrieve_by_string_fields(array('name' => $template_name, 'type' => 'email'));
 $emp_name = $_POST['emp_name'];
 $template->body_html = str_replace('{name}', $emp_name, $template->body_html);
-
-
 
 $to = [];
 $sql_hr = "select * from config where name = 'notification_receiver_email' and category = 'system'";
