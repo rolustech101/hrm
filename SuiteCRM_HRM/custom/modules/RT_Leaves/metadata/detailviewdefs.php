@@ -95,7 +95,18 @@ array (
             'label' => 'LBL_COMMENTS',
           ),
         ),
-        6 => 
+          6 =>
+        array (
+          0 =>
+          array (
+            'name' => 'assigned_user_name',
+          ),
+          1 =>
+          array (
+            '',
+          ),
+        ),
+        7 =>
         array (
           0 => '',
           1 => '',

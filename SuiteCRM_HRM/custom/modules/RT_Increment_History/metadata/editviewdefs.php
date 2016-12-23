@@ -60,7 +60,15 @@ array (
           ),
           1 => '',
         ),
-        4 =>
+          4 =>
+        array (
+          0 =>
+          array (
+            'name' => 'assigned_user_name',
+          ),
+          1 => '',
+        ),
+        5 =>
         array (
           0 => 'description',
         ),

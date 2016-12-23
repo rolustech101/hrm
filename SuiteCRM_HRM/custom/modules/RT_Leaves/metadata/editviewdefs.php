@@ -147,7 +147,14 @@ array (
             'label' => 'LBL_STATUS',
           ),
         ),
-        8 =>
+          8 =>
+        array (
+          0 =>
+          array (
+            'name' => 'assigned_user_name',
+          ),
+        ),
+        9 =>
         array (
           0 => 
           array (

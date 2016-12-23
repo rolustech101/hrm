@@ -94,7 +94,14 @@ array (
             'label' => 'LBL_NEXT_INCREMENT',
           ),
         ),
-        6 =>
+          6 =>
+        array (
+          0 =>
+          array (
+            'name' => 'assigned_user_name',
+          ),
+        ),
+        7 =>
         array (
           0 => 'description',
         ),

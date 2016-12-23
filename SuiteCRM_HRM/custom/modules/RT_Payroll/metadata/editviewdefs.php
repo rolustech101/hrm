@@ -66,6 +66,13 @@ array (
             'label' => 'LBL_YEAR',
           ),
         ),
+          3 =>
+        array (
+          0 =>
+          array (
+            'name' => 'assigned_user_name',
+          ),
+        ),
       ),
     ),
   ),

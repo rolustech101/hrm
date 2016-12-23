@@ -43,6 +43,14 @@ array (
           ),
           1 => '',
         ),
+          1 =>
+        array (
+          0 =>
+          array (
+            'name' => 'assigned_user_name',
+          ),
+          1 => '',
+        ),
       ),
       'lbl_detailview_panel2' => 
       array (

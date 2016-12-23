@@ -61,7 +61,14 @@ array (
             'label' => 'LBL_DATE',
           ),
         ),
-        3 => 
+          3 =>
+        array (
+          0 =>
+          array (
+            'name' => 'assigned_user_name',
+          ),
+        ),
+        4 =>
         array (
           0 => 'description',
         ),

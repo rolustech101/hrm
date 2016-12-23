@@ -61,7 +61,9 @@ array (
         ),
         1 => 
         array (
-          0 => '',
+          0 => array(
+              'name' => 'assigned_user_name',
+          ),
           1 => '',
         ),
       ),
