@@ -1,6 +1,5 @@
 function check_joining_date(view, formm) {
     var joining_date = $('#joining_date').val();
-    alert(joining_date);
     if (check_form('EditView')) {
         var visibility_status = $('#joining_date').parent().parent().parent().css('display');
         if(visibility_status == 'block'){

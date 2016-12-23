@@ -47,12 +47,6 @@ $viewdefs[$module_name]['DetailView'] = array(
                                         array('label' => '10', 'field' => '30'),
                                         array('label' => '10', 'field' => '30')
                                         ),
-    'includes' =>
-        array(
-            array(
-                'file' => 'custom/modules/RT_Job_Offers/funcs_detail.js',
-            ),
-        ),
 
                         ),
 
