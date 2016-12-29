@@ -169,9 +169,13 @@ class MySugar{
 		        $current_user->setPreference('dashlets', $dashlets, 0, $this->type);
 		    }
 
-		    require_once($dashlets[$id]['fileLocation']);
+			$GLOBALS['log']->fatal($dashlets[$id]['fileLocation']);
+			require_once($dashlets[$id]['fileLocation']);
+			$GLOBALS['log']->fatal('file location');
 		    $dashlet = new $dashlets[$id]['className']($id, (isset($dashlets[$id]['options']) ? $dashlets[$id]['options'] : array()));
-		    if(!empty($_REQUEST['configure']) && $_REQUEST['configure']) { // save settings
+			$GLOBALS['log']->fatal('new dashlet!!!!');
+
+			if(!empty($_REQUEST['configure']) && $_REQUEST['configure']) { // save settings
 		        $dashletDefs[$id]['options'] = $dashlet->saveOptions($_REQUEST);
 		        $current_user->setPreference('dashlets', $dashletDefs, 0, $this->type);
 		    }

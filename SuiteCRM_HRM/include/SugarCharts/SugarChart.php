@@ -222,7 +222,7 @@ class SugarChart {
 	function xmlYAxis(){
 		$this->chart_yAxis['yStep'] = '100';
 		$this->chart_yAxis['yLog'] = '1';
-		$this->chart_yAxis['yMax'] = $this->is_currency ? $this->convertCurrency($this->chart_yAxis['yMax']) : $this->chart_yAxis['yMax'];
+//		$this->chart_yAxis['yMax'] = $this->is_currency ? $this->convertCurrency($this->chart_yAxis['yMax']) : $this->chart_yAxis['yMax'];
 		$max = $this->chart_yAxis['yMax'];
 		$exp = ($max == 0) ? 1 : floor(log10($max));
 		$baseval = $max / pow(10, $exp);
@@ -259,6 +259,10 @@ class SugarChart {
 
 		$yAxis .= $this->tab("</yAxis>" ,1);
 
+		$GLOBALS['log']->fatal('Y axis!!!!!!');
+		$GLOBALS['log']->fatal(print_r($this->chart_yAxis,1));
+		$GLOBALS['log']->fatal('$yAxis hello');
+		$GLOBALS['log']->fatal(print_r($yAxis,1));
 		return $yAxis;
 	}
 

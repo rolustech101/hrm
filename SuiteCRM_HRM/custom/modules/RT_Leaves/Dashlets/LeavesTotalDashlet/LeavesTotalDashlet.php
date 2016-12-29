@@ -2,51 +2,49 @@
 if(!defined('sugarEntry') || !sugarEntry) die('Not A Valid Entry Point');
 /*********************************************************************************
  * SugarCRM Community Edition is a customer relationship management program developed by
- * SugarCRM, Inc. Copyright (C) 2004-2013 SugarCRM Inc.
-
- * SuiteCRM is an extension to SugarCRM Community Edition developed by Salesagility Ltd.
- * Copyright (C) 2011 - 2014 Salesagility Ltd.
- *
+ * SugarCRM, Inc. Copyright (C) 2004-2011 SugarCRM Inc.
+ * 
  * This program is free software; you can redistribute it and/or modify it under
  * the terms of the GNU Affero General Public License version 3 as published by the
  * Free Software Foundation with the addition of the following permission added
  * to Section 15 as permitted in Section 7(a): FOR ANY PART OF THE COVERED WORK
  * IN WHICH THE COPYRIGHT IS OWNED BY SUGARCRM, SUGARCRM DISCLAIMS THE WARRANTY
  * OF NON INFRINGEMENT OF THIRD PARTY RIGHTS.
- *
+ * 
  * This program is distributed in the hope that it will be useful, but WITHOUT
  * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
  * FOR A PARTICULAR PURPOSE.  See the GNU Affero General Public License for more
  * details.
- *
+ * 
  * You should have received a copy of the GNU Affero General Public License along with
  * this program; if not, see http://www.gnu.org/licenses or write to the Free
  * Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA
  * 02110-1301 USA.
- *
+ * 
  * You can contact SugarCRM, Inc. headquarters at 10050 North Wolfe Road,
  * SW2-130, Cupertino, CA 95014, USA. or at email address contact@sugarcrm.com.
- *
+ * 
  * The interactive user interfaces in modified source and object code versions
  * of this program must display Appropriate Legal Notices, as required under
  * Section 5 of the GNU Affero General Public License version 3.
- *
+ * 
  * In accordance with Section 7(b) of the GNU Affero General Public License version 3,
  * these Appropriate Legal Notices must retain the display of the "Powered by
- * SugarCRM" logo and "Supercharged by SuiteCRM" logo. If the display of the logos is not
- * reasonably feasible for  technical reasons, the Appropriate Legal Notices must
- * display the words  "Powered by SugarCRM" and "Supercharged by SuiteCRM".
+ * SugarCRM" logo. If the display of the logo is not reasonably feasible for
+ * technical reasons, the Appropriate Legal Notices must display the words
+ * "Powered by SugarCRM".
  ********************************************************************************/
 
 
 
 
 
+if(!defined('sugarEntry') || !sugarEntry) die('Not A Valid Entry Point');
 require_once('include/Dashlets/DashletGenericChart.php');
+class LeavesTotalDashlet extends DashletGenericChart
 
-
-class OutcomeByMonthDashlet extends DashletGenericChart
 {
+
     public $obm_ids = array();
     public $obm_date_start;
     public $obm_date_end;
@@ -54,7 +52,7 @@ class OutcomeByMonthDashlet extends DashletGenericChart
     /**
      * @see DashletGenericChart::$_seedName
      */
-    protected $_seedName = 'Opportunities';
+    protected $_seedName = 'RT_Leaves';
 
     /**
      * @see DashletGenericChart::__construct()
@@ -73,6 +71,9 @@ class OutcomeByMonthDashlet extends DashletGenericChart
             $options['obm_date_end'] = $timedate->asDbDate($timedate->getNow()->modify("+6 months"));
 
         parent::__construct($id,$options);
+        require_once('custom/modules/RT_Leaves/Dashlets/LeavesTotalDashlet/LeavesTotalDashlet.data.php');
+        $this->_searchFields = $dashletData['LeavesTotalDashlet']['searchFields'];
+
     }
 
     /**
@@ -83,6 +84,7 @@ class OutcomeByMonthDashlet extends DashletGenericChart
         if (!isset($this->obm_ids) || count($this->obm_ids) == 0)
             $this->_searchFields['obm_ids']['input_name0'] = array_keys(get_user_array(false));
 
+        $this->_configureTpl = 'custom/include/Dashlets/DashletGenericChartConfigure.tpl';
         return parent::displayOptions();
     }
 
@@ -99,7 +101,7 @@ class OutcomeByMonthDashlet extends DashletGenericChart
             $currency_symbol = $currency->symbol;
         }
         $thousands_symbol = translate('LBL_OPP_THOUSANDS', 'Charts');
-        $module = 'Opportunities';
+        $module = 'RT_Leaves';
         $action = 'index';
         $query = 'true';
         $searchFormTab = 'advanced_search';
@@ -109,13 +111,9 @@ class OutcomeByMonthDashlet extends DashletGenericChart
         $data = $this->getChartData($this->constructQuery());
 
         //I have taken out the sort as this will throw off the labels we have calculated
-        $data = $this->sortData($data,'m', false, 'sales_stage', true, true);
-        $GLOBALS['log']->fatal('oppertunity data!!!');
-        $GLOBALS['log']->fatal(print_r($data,1));
+        $data = $this->sortData($data,'m', false, 'sales_stage', false, true);
 
-        $chartReadyData = $this->prepareChartData($data, $currency_symbol, $thousands_symbol);
-        $GLOBALS['log']->fatal('opper tuntit by month !!!1');
-        $GLOBALS['log']->fatal(print_r($chartReadyData,1));
+        $chartReadyData = $this->prepareChartData($data,'','');
         $canvasId = 'rGraphOutcomeByMonth'.uniqid();
         $chartWidth     = 900;
         $chartHeight    = 500;
@@ -152,8 +150,8 @@ class OutcomeByMonthDashlet extends DashletGenericChart
                 textSize:10,
                 labelsAbove: true,
                 //labelsAboveSize:10,
-                labelsAboveUnitsPre:'$currency_symbol',
-                labelsAboveUnitsPost:'$thousands_symbol',
+                labelsAboveUnitsPre:'',
+                labelsAboveUnitsPost:'',
                 labelsAbovedecimals: 2,
                 //linewidth: 2,
                 eventsClick:outcomeByMonthClick,
@@ -183,8 +181,8 @@ class OutcomeByMonthDashlet extends DashletGenericChart
                 //keyPositionY: 18,
                 //keyPositionGutterBoxed: true,
                 axisColor: '#ccc',
-                unitsPre:'$currency_symbol',
-                unitsPost:'$thousands_symbol',
+                unitsPre:'',
+                unitsPost:'',
                 keyHalign:'right',
                 tooltipsCssClass: 'rgraph_chart_tooltips_css',
                 noyaxis: true
@@ -223,7 +221,7 @@ class OutcomeByMonthDashlet extends DashletGenericChart
             id: '$canvasId',
             x: 10,
             y: 20,
-            text: 'Opportunity size in ${currency_symbol}1$thousands_symbol',
+            text: 'Opportunity size in 1',
             options: {
                 font: 'Arial',
                 bold: true,
@@ -245,18 +243,27 @@ EOD;
      */
     protected function constructQuery()
     {
-        $query = "SELECT sales_stage,".
-            db_convert('opportunities.date_closed','date_format',array("'%Y-%m'"),array("'YYYY-MM'"))." as m, ".
-            "sum(amount_usdollar/1000) as total, count(*) as opp_count FROM opportunities ";
-        $query .= " WHERE opportunities.date_closed >= ".db_convert("'".$this->obm_date_start."'",'date') .
-            " AND opportunities.date_closed <= ".db_convert("'".$this->obm_date_end."'",'date') .
-            " AND opportunities.deleted=0";
-        if (count($this->obm_ids) > 0)
-            $query .= " AND opportunities.assigned_user_id IN ('" . implode("','",$this->obm_ids) . "')";
-        $query .= " GROUP BY sales_stage,".
-            db_convert('opportunities.date_closed','date_format',array("'%Y-%m'"),array("'YYYY-MM'")) .
-            " ORDER BY m";
-
+        $emp_id = $this->rt_employees_rt_leaves_name[0];
+        $query = "select
+    sum(count_days_c) as total,date_format(from_date_c ,'%Y') as m, date_format(from_date_c, '%Y') as sales_stage
+from
+    rt_leaves_cstm as lcs
+        inner join
+    rt_leaves as lea ON lcs.id_c = lea.id
+where
+    id_c in (select
+            rt_employees_rt_leavesrt_leaves_idb
+        from
+            rt_employees_rt_leaves_c
+        where
+            rt_employees_rt_leavesrt_employees_ida = '$emp_id ')
+        and status_c = 'Taken'
+        and deleted = '0'
+group by m
+";
+        if(count($this->emp_year) > 0){
+            $query .= " having m in ('" . implode("','",$this->emp_year) . "')";
+        }
         return $query;
     }
 
@@ -288,4 +295,155 @@ EOD;
         }
         return $chart;
     }
+
+
+
+//
+//    public $obm_ids = array();
+//    public $obm_date_start;
+//    public $obm_date_end;
+//
+//
+//    /**
+//     * @see DashletGenericChart::$_seedName
+//     */
+//
+//    protected $_seedName = 'RT_Leaves';
+//
+//    /**
+//     * @see DashletGenericChart::__construct()
+//     */
+//
+//    public function __construct(
+//        $id,
+//        array $options = null
+//
+//    )
+//
+//    {
+//        require('custom/modules/RT_Leaves/Dashlets/LeavesTotalDashlet/LeavesTotalDashlet.data.php');
+//        global $timedate;
+//
+//        if(empty($options['obm_date_start']))
+//        $options['obm_date_start'] = $timedate->nowDbDate();
+//
+//        if(empty($options['obm_date_end']))
+//
+//        $options['obm_date_end'] = $timedate->asDbDate($timedate->getNow()->modify("+6 months"));
+//
+//        parent::__construct($id,$options);
+//
+//        $this->_searchFields = $dashletData['LeavesTotalDashlet']['searchFields'];
+//
+//    }
+//
+//    /**
+//     * @see DashletGenericChart::displayOptions()
+//     */
+//
+//    public function displayOptions()
+//
+//    {
+//
+//        if (!isset($this->obm_ids) || count($this->obm_ids) == 0)
+//            $this->_searchFields['obm_ids']['input_name0'] = array_keys(get_user_array(false));
+//        return parent::displayOptions();
+//
+//    }
+//
+//    /**
+//     * @see DashletGenericChart::display()
+//     */
+//
+//    public function display()
+//    {
+//
+//        $currency_symbol = $GLOBALS['sugar_config']['default_currency_symbol'];
+//        if ($GLOBALS['current_user']->getPreference('currency')){
+//            $currency = new Currency();
+//            $currency->retrieve($GLOBALS['current_user']->getPreference('currency'));
+//            $currency_symbol = $currency->symbol;
+//        }
+//
+//        require("modules/Charts/chartdefs.php");
+//        $chartsStrings = return_module_language($GLOBALS['current_language'], 'Charts');
+//        $mychartDefs = 	array(
+//            'outcome_by_month'=>
+//            array(	'type' => 'code',
+//                'id' => 'Chart_outcome_by_month',
+//                'label' => $chartsStrings['LBL_CHART_OUTCOME_BY_MONTH'],
+////                'chartUnits' => $chartsStrings['LBL_OPP_SIZE'] . ' $1' . $chartsStrings['LBL_OPP_THOUSANDS'] ,
+//                'chartType' => 'stacked group by chart',
+//                'groupBy' => array('m'),
+//                'base_url'=>
+//                    array( 'module' => 'RT_Leaves',
+//                        'action' => 'index',
+//                        'query' => 'true',
+//                        'searchFormTab' => 'advanced_search',
+//                    ),
+//                'url_params' => array('rt_employees_rt_leaves_name'),//array( 'sales_stage', 'date_closed' ),
+//            ),);
+//        $chartDef = $mychartDefs['outcome_by_month'];
+//
+//        require_once('include/SugarCharts/SugarChartFactory.php');
+//        $sugarChart = SugarChartFactory::getInstance();
+////        $sugarChart->setProperties('',
+////            translate('LBL_OPP_SIZE', 'Charts') . ' ' . $currency_symbol . '1' .translate('LBL_OPP_THOUSANDS', 'Charts'),
+// $sugarChart->setProperties("$this->name",'subtitle', $chartDef['chartType']);
+//        $sugarChart->base_url = $chartDef['base_url'];
+//        $sugarChart->group_by = $chartDef['groupBy'];
+//        $sugarChart->url_params = array();
+//        $sugarChart->getData($this->constructQuery());
+//        $sugarChart->is_currency = false;
+////        $sugarChart->data_set = $sugarChart->sortData($sugarChart->data_set, 'm', false);
+//        $sugarChart->data_set = $sugarChart->sortData($sugarChart->data_set);
+//        $GLOBALS['log']->fatal('data set!!!!!!!!!!!!!');
+//        $GLOBALS['log']->fatal($sugarChart->data_set);
+//        $GLOBALS['log']->fatal('rt_employees_rt_leaves_name');
+//        $GLOBALS['log']->fatal($this->rt_employees_rt_leaves_name);
+//        $xmlFile = $sugarChart->getXMLFileName($this->id);
+//        $GLOBALS['log']->fatal('XML FILE!!!!!!');
+//        $GLOBALS['log']->fatal(print_r($xmlFile,1));
+//        $GLOBALS['log']->fatal('This id !!!!!!');
+//        $GLOBALS['log']->fatal($this->id);
+//        $sugarChart->saveXMLFile($xmlFile, $sugarChart->generateXML());
+//
+//        return $this->getTitle('<div align="center"></div>') .
+//        '<div align="center">' . $sugarChart->display($this->id, $xmlFile, '100%', '480', false) . '</div>'. $this->processAutoRefresh();
+//
+//    }
+//
+//    /**
+//     * @see DashletGenericChart::constructQuery()
+//     */
+//
+//    protected function constructQuery()
+//    {
+//        $query = "select
+//    sum(count_days_c) as total,date_format(from_date_c ,'%Y') as m
+//from
+//    rt_leaves_cstm as lcs
+//        inner join
+//    rt_leaves as lea ON lcs.id_c = lea.id
+//where
+//    id_c in (select
+//            rt_employees_rt_leavesrt_leaves_idb
+//        from
+//            rt_employees_rt_leaves_c
+//        where
+//            rt_employees_rt_leavesrt_employees_ida = '3d81a36b-d82b-6e8a-357e-585a6b67c379')
+//        and status_c = 'Taken'
+//        and deleted = '0'
+//group by m
+//";
+////        $this->getSeedBean()->add_team_security_where_clause($query);
+////        $this->getSeedBean()->add_team_security_where_clause($query);
+////        if(!empty($this->name)){
+////            $query .= "Where name = '$this->name'";
+////        }
+//
+//        return $query;
+//
+//    }
+
 }

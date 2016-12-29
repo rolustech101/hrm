@@ -1,6 +1,10 @@
+<?php
+if (!defined('sugarEntry') || !sugarEntry) {
+    die('Not A Valid Entry Point');
+}
 /*********************************************************************************
  * SugarCRM Community Edition is a customer relationship management program developed by
- * SugarCRM, Inc. Copyright (C) 2004-2013 SugarCRM Inc.
+ * SugarCRM, Inc. Copyright (C) 2004-2011 SugarCRM Inc.
  *
  * This program is free software; you can redistribute it and/or modify it under
  * the terms of the GNU Affero General Public License version 3 as published by the
@@ -32,38 +36,29 @@
  * technical reasons, the Appropriate Legal Notices must display the words
  * "Powered by SugarCRM".
  ********************************************************************************/
-SUGAR.dashlets = function () {
-    return {
-        postForm: function (theForm, callback) {
-            var success = function (data) {
-                if (data) {
-                    callback(data.responseText);
-                }
-            }
-            YAHOO.util.Connect.setForm(theForm);
-            var cObj = YAHOO.util.Connect.asyncRequest('POST', 'index.php', {success: success, failure: success});
-            return false;
-        }, callMethod: function (dashletId, methodName, postData, refreshAfter, callback) {
-            ajaxStatus.showStatus(SUGAR.language.get('app_strings', 'LBL_SAVING'));
-            response = function (data) {
-                ajaxStatus.hideStatus();
-                if (refreshAfter)SUGAR.mySugar.retrieveDashlet(dashletId);
-                if (callback) {
-                    callback(data.responseText);
-                }
-            }
-            post = 'to_pdf=1&module=Home&action=CallMethodDashlet&method=' + methodName + '&id=' + dashletId + '&' + postData;
-            var cObj = YAHOO.util.Connect.asyncRequest('POST', 'index.php', {
-                success: response,
-                failure: response
-            }, post);
-        }
-    };
-}();
-if (SUGAR.util.isTouchScreen() && typeof iScroll == 'undefined') {
-    with (document.getElementsByTagName("head")[0].appendChild(document.createElement("script"))) {
-        setAttribute("id", "newScript", 0);
-        setAttribute("type", "text/javascript", 0);
-        setAttribute("src", "include/javascript/iscroll.js", 0);
-    }
-}
+
+
+global $current_user;
+
+$dashletData['CandidateScoreDashlet']['searchFields'] = array(
+    'rt_vacancy_name' => array(
+        'default' => '',
+        'multiple' => false
+    ),
+    'candidates_list' => array(
+        'default' => '',
+    ),
+
+);
+$dashletData['CandidateScoreDashlet']['columns'] = array(
+    'rt_vacancy_name' => array(
+        'width' => '40',
+        'label' => 'LBL_RT_VACANCY_NAME',
+        'link' => true,
+    ),
+    'candidates_list' => array(
+        'width' => '8',
+        'label' => 'LBL_CANDIDATES_LIST'
+    ),
+);
+?>
