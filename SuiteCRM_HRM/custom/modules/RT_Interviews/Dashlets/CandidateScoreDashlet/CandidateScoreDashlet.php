@@ -116,12 +116,8 @@ class CandidateScoreDashlet extends DashletGenericChart
 
         //I have taken out the sort as this will throw off the labels we have calculated
         $data = $this->sortData($data,'m', false, 'sales_stage', false, true);
-        $GLOBALS['log']->fatal('candidate data !!!! here!!!!');
-        $GLOBALS['log']->fatal(print_r($data,1));
 
         $chartReadyData = $this->prepareChartData($data, '', '');
-        $GLOBALS['log']->fatal('Candaites charts!!!!!!!');
-        $GLOBALS['log']->fatal(print_r($chartReadyData,1));
         $canvasId = 'rGraphOutcomeByMonth' . uniqid();
         $chartWidth = 900;
         $chartHeight = 500;

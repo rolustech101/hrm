@@ -258,11 +258,6 @@ class SugarChart {
 		}
 
 		$yAxis .= $this->tab("</yAxis>" ,1);
-
-		$GLOBALS['log']->fatal('Y axis!!!!!!');
-		$GLOBALS['log']->fatal(print_r($this->chart_yAxis,1));
-		$GLOBALS['log']->fatal('$yAxis hello');
-		$GLOBALS['log']->fatal(print_r($yAxis,1));
 		return $yAxis;
 	}
 

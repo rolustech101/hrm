@@ -103,19 +103,15 @@ class OutcomeByMonthDashlet extends DashletGenericChart
         $action = 'index';
         $query = 'true';
         $searchFormTab = 'advanced_search';
-        $groupBy = array( 'm', 'sales_stage');
+        $groupBy = array( 'm', 'sales_stage', );
 
 
         $data = $this->getChartData($this->constructQuery());
 
         //I have taken out the sort as this will throw off the labels we have calculated
         $data = $this->sortData($data,'m', false, 'sales_stage', true, true);
-        $GLOBALS['log']->fatal('oppertunity data!!!');
-        $GLOBALS['log']->fatal(print_r($data,1));
 
         $chartReadyData = $this->prepareChartData($data, $currency_symbol, $thousands_symbol);
-        $GLOBALS['log']->fatal('opper tuntit by month !!!1');
-        $GLOBALS['log']->fatal(print_r($chartReadyData,1));
         $canvasId = 'rGraphOutcomeByMonth'.uniqid();
         $chartWidth     = 900;
         $chartHeight    = 500;
