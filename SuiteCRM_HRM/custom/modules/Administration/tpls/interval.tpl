@@ -1,4 +1,4 @@
-<h1>Employees Salary Increment Interval</h1>
+<h1>HRM Miscellaneous Settings</h1>
 {*<script type="text/javascript" src="custom/modules/Administration/funcs.js"></script>*}
 <script type="text/javascript" src="custom/modules/Administration/funcs.js"></script>
 
@@ -9,7 +9,7 @@
                 <td>Increment Interval:</td>
                 <td>
                     <select name = "increment_interval">
-                        <option value="by_annual">By Annual</option>
+                        <option value="by_annual">Bi Annual</option>
                         <option value="annual">Annual</option>
                     </select>
                 </td>

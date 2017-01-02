@@ -44,7 +44,7 @@ function addOptions(aftr, idd, option_id) {
     var j = $('table#option_table > tbody >').children().length;
     var r_j = 'mop' + j
     /*$('table#salary_table > tbody > tr:last')*/
-    $(aftr).after('<tr id="' + r_j + '" class="muti-options' + option_id + '"><td><table id="option_table"><tr><td width="12.5%" valign="top" scope="row">Option Label: </td><td width="33.5%" valign="top" colspan="3"><input type="text" name="' + idd + '_option[]" id="label_option" value=""></td></tr><tr><td><input type="button" onclick="removeTr(\'' + r_j + '\');" id="remove_tr" value="Remove tr"></td></tr></table></td></tr>');
+    $(aftr).after('<tr id="' + r_j + '" class="muti-options' + option_id + '"><td><table id="option_table"><tr><td width="12.5%" valign="top" scope="row">Option Label: </td><td width="33.5%" valign="top" colspan="3"><input type="text" name="' + idd + '_option[]" id="label_option" value=""></td></tr><tr><td><input type="button" onclick="removeTr(\'' + r_j + '\');" id="remove_tr" value="Remove option"></td></tr></table></td></tr>');
 }
 $(document).ready(function () {
     $('#submit-btn').click(function () {
