@@ -44,20 +44,22 @@ array (
                'name' => 'rtemployee_id',
            ),
             1 => array(),
-          2 =>
-          array (
-            'name' => 'first_name',
-            'comment' => 'First name of the contact',
-            'label' => 'LBL_FIRST_NAME',
-          ),
-          3 =>
-          array (
-            'name' => 'last_name',
-            'comment' => 'Last name of the contact',
-            'label' => 'LBL_LAST_NAME',
-          ),
         ),
-        1 => 
+          1 => array(
+              0 =>
+                  array (
+                      'name' => 'first_name',
+                      'comment' => 'First name of the contact',
+                      'label' => 'LBL_FIRST_NAME',
+                  ),
+              1 =>
+                  array (
+                      'name' => 'last_name',
+                      'comment' => 'Last name of the contact',
+                      'label' => 'LBL_LAST_NAME',
+                  ),
+          ),
+        2 =>
         array (
           0 => 
           array (
@@ -72,7 +74,7 @@ array (
             'label' => 'LBL_MARITAL_STATUS',
           ),
         ),
-        2 => 
+        3 =>
         array (
           0 => 
           array (
@@ -85,15 +87,16 @@ array (
             'label' => 'LBL_NTN_NUMBER',
           ),
         ),
-        3 => 
+        4 =>
         array (
           0 => 
           array (
             'name' => 'date_of_birth_c',
             'label' => 'LBL_DATE_OF_BIRTH',
           ),
+            1 => array(),
         ),
-        4 => 
+        5 =>
         array (
           0 => 
           array (
@@ -107,15 +110,16 @@ array (
             'type' => 'images',
           ),
         ),
-        5 => 
+        6 =>
         array (
           0 => 
           array (
             'name' => 'account_name_c',
             'label' => 'LBL_ACCOUNT_NAME',
           ),
+            1 => array(),
         ),
-        6 => 
+        7 =>
         array (
           0 => 
           array (
@@ -123,13 +127,15 @@ array (
             'studio' => 'visible',
             'label' => 'LBL_BANK_NAME',
           ),
+            1 => array(),
         ),
-        7 => 
+        8 =>
         array (
           0 => 
           array (
             'name' => 'rt_departments_rt_employees_name',
           ),
+            1 => array(),
         ),
       ),
       'lbl_detailview_panel3' => 
@@ -141,6 +147,7 @@ array (
             'name' => 'phone_home',
             'label' => 'LBL_HOME_PHONE',
           ),
+            1 => array(),
         ),
         1 => 
         array (
@@ -148,6 +155,7 @@ array (
           array (
             'name' => 'phone_work',
           ),
+            1 => array(),
         ),
         2 => 
         array (
@@ -157,6 +165,7 @@ array (
             'comment' => 'Phone Extension',
             'label' => 'LBL_PHONE_EXTENSION',
           ),
+            1 => array(),
         ),
         3 => 
         array (
@@ -164,11 +173,13 @@ array (
           array (
             'name' => 'phone_mobile',
           ),
+            1 => array(),
         ),
         4 => 
         array (
           0 => 'email1',
         ),
+          1 => array(),
         5 => 
         array (
           0 => 
@@ -181,6 +192,7 @@ array (
               'key' => 'primary',
             ),
           ),
+            1 => array(),
         ),
       ),
       'lbl_detailview_panel4' => 
@@ -268,14 +280,6 @@ array (
           array (
             'name' => 'casual_leave_balance',
             'label' => 'LBL_CASUAL_LEAVE_BALANCE',
-          ),
-        ),
-        7 => 
-        array (
-          0 => 
-          array (
-            'name' => 'balance_update_date_c',
-            'label' => 'LBL_BALANCE_UPDATE_DATE',
           ),
         ),
       ),

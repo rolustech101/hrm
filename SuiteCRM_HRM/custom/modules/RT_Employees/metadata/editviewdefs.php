@@ -56,14 +56,16 @@ array (
                 'name' => 'rtemployee_id',
             ),
             1 => array(),
-          2 =>
-          array (
-            'name' => 'first_name',
-            'customCode' => '{html_options name="salutation" id="salutation" options=$fields.salutation.options selected=$fields.salutation.value}&nbsp;<input name="first_name"  id="first_name" size="25" maxlength="25" type="text" value="{$fields.first_name.value}">',
-          ),
-          3 => 'last_name',
         ),
-        1 => 
+          1 => array(
+              0 =>
+                  array (
+                      'name' => 'first_name',
+                      'customCode' => '{html_options name="salutation" id="salutation" options=$fields.salutation.options selected=$fields.salutation.value}&nbsp;<input name="first_name"  id="first_name" size="25" maxlength="25" type="text" value="{$fields.first_name.value}">',
+                  ),
+              1 => 'last_name',
+          ),
+        2 =>
         array (
           0 => 
           array (
@@ -78,7 +80,7 @@ array (
             'label' => 'LBL_MARITAL_STATUS',
           ),
         ),
-        2 => 
+        3 =>
         array (
           0 => 
           array (
@@ -95,39 +97,43 @@ array (
             'label' => 'LBL_PHOTO',
           ),
         ),
-        3 => 
+        4 =>
         array (
           0 => 
           array (
             'name' => 'ntn_number_c',
             'label' => 'LBL_NTN_NUMBER',
           ),
+            1 => array(),
         ),
-        4 => 
+        5 =>
         array (
           0 => 
           array (
             'name' => 'date_of_birth_c',
             'label' => 'LBL_DATE_OF_BIRTH',
           ),
+            1 => array(),
         ),
-        5 => 
+        6 =>
         array (
           0 => 
           array (
             'name' => 'bank_account_c',
             'label' => 'LBL_BANK_ACCOUNT',
           ),
+            1 => array(),
         ),
-        6 => 
+        7 =>
         array (
           0 => 
           array (
             'name' => 'account_name_c',
             'label' => 'LBL_ACCOUNT_NAME',
           ),
+            1 => array(),
         ),
-        7 => 
+        8 =>
         array (
           0 => 
           array (
@@ -135,15 +141,17 @@ array (
             'studio' => 'visible',
             'label' => 'LBL_BANK_NAME',
           ),
+            1 => array(),
         ),
-        8 => 
+        9 =>
         array (
           0 => 
           array (
             'name' => 'rt_departments_rt_employees_name',
           ),
+            1 => array(),
         ),
-          9 => array(
+          10 => array(
             0 => array(
                 'name' => 'filling_status',
             ),
@@ -155,10 +163,12 @@ array (
         0 => 
         array (
           0 => 'phone_home',
+            1 => array(),
         ),
         1 => 
         array (
           0 => 'phone_work',
+            1 => array(),
         ),
         2 => 
         array (
@@ -168,10 +178,12 @@ array (
             'comment' => 'Phone Extension',
             'label' => 'LBL_PHONE_EXTENSION',
           ),
+            1 => array(),
         ),
         3 => 
         array (
           0 => 'phone_mobile',
+            1 => array(),
         ),
         4 => 
         array (
@@ -188,10 +200,12 @@ array (
               'maxlength' => 150,
             ),
           ),
+            1 => array(),
         ),
         5 => 
         array (
           0 => 'email1',
+            1 => array(),
         ),
       ),
       'lbl_editview_panel1' => 
@@ -244,6 +258,7 @@ array (
             'name' => 'rt_employees_rt_employees_name',
             'label' => 'LBL_RT_EMPLOYEES_RT_EMPLOYEES_NAME',
           ),
+            1 => array(),
         ),
         5 => 
         array (
@@ -252,6 +267,7 @@ array (
             'name' => 'entitled_annual_leaves_c',
             'label' => 'LBL_ENTITLED_ANNUAL_LEAVES',
           ),
+            1 => array(),
         ),
         6 => 
         array (
@@ -260,6 +276,7 @@ array (
             'name' => 'entitled_casual_leaves_c',
             'label' => 'LBL_ENTITLED_CASUAL_LEAVES',
           ),
+            1 => array(),
         ),
         7 => 
         array (
@@ -269,6 +286,7 @@ array (
             'comment' => 'Full text of the note',
             'label' => 'LBL_DESCRIPTION',
           ),
+            1 => array(),
         ),
       ),
     ),
