@@ -1,8 +1,8 @@
 <?php
 
-$modules_exempt_from_availability_check['Accounts'] = 'Accounts';
-$moduleList[] = 'Accounts';
-$beanFiles['Accounts'] = 'modules/Accounts/Account.php';
+//$modules_exempt_from_availability_check['Accounts'] = 'Accounts';
+//$moduleList[] = 'Accounts';
+//$beanFiles['Accounts'] = 'modules/Accounts/Account.php';
 
 $modInvisList[] = 'Accounts';
 $modInvisList[] = 'Contacts';
