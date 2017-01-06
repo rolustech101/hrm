@@ -7,7 +7,7 @@ function check_joining_date(view, formm) {
                 SUGAR.ajaxUI.submitForm(formm);
                 return true;
             }else{
-                alert('Please Enter Joining Date!'+joining_date);
+                swal("Please Enter Joining Date!");
                 return false;
             }
         }else{

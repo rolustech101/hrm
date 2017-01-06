@@ -14,7 +14,12 @@ function getEmployees()
 
 		if(o.responseText !== undefined)
 		{
-			alert("Everything failed");
+			swal({
+				title: "Error!",
+				text: "Something wrong with the request!",
+				type: "error",
+				confirmButtonText: "OK"
+			});
 		}
 	};
 	

@@ -4,8 +4,14 @@ function applyincrement(rid, eid, inc_date,inc_type){
 		if(o.responseText !== undefined)
 		{
 			if(o.responseText == 'no'){
-				alert(inc_type+" Salary Type is not defined for this Employee!\n" +
-					"Tip:Please try any other type or define this type in employee");
+
+				swal({
+					title: "Error!",
+					text: inc_type+" Salary Type is not defined for this Employee!\n" +
+					"Tip:Please try any other type or define this type in employee",
+					type: "error",
+					confirmButtonText: "OK"
+				});
 				return false;
 			}
 			window.location.reload();
@@ -16,7 +22,12 @@ function applyincrement(rid, eid, inc_date,inc_type){
 	{
 		if(o.responseText !== undefined)
 		{
-			alert("Everything failed");
+			swal({
+				title: "Error!",
+				text: "Something wrong with the request!",
+				type: "error",
+				confirmButtonText: "OK"
+			});
 		}
 	};
 	

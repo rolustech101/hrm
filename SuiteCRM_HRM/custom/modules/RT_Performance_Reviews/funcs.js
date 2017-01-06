@@ -56,7 +56,7 @@ $(document).ready(function () {
                         $('#total_count').val(501);
                         document.getElementById("create_pr_form").submit();
                     } else {
-                        alert('form is not submitted!');
+                            swal("form is not submitted!");
                     }
                 } else if (o.responseText == 'no') {
                     var total = $('table#salary_table > tbody >').children().length;
@@ -69,7 +69,12 @@ $(document).ready(function () {
 
         var handleFailure = function (o) {
             if (o.responseText !== undefined) {
-                alert("Everything failed");
+                swal({
+                    title: "Error!",
+                    text: "Something wrong with the request!",
+                    type: "error",
+                    confirmButtonText: "OK"
+                });
             }
         };
 

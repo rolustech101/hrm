@@ -11,7 +11,12 @@ function getEntitledHolidays(id) {
             $('#emp_date_of_joining').val(result.joining_date);
         },
         error:function (res) {
-          alert('Something wrong with the request');
+            swal({
+                title: "Error!",
+                text: "Something wrong with the request!",
+                type: "error",
+                confirmButtonText: "OK"
+            });
         }
     });
 }
@@ -65,7 +70,12 @@ function count_no_of_days() {
 
 
     if(duration<0){
-        alert('Number of days cannot be Negative');
+        swal({
+            title: "Error!",
+            text: "Number of days cannot be Negative!",
+            type: "error",
+            confirmButtonText: "OK"
+        });
         return false;
     }
     document.getElementById('count_days_c').value = duration+1;
@@ -88,7 +98,7 @@ function custom_function(view,formm) {
     if((from_date > year_start && from_date < year_end) && (to_date > year_start && to_date < year_end)){
 
     }else {
-        alert('You can only create Leaves for Employee\'s Current year');
+        swal("You can only create Leaves for Employee Current year");
         return false;
     }
     if (check_form('EditView')) {
@@ -111,7 +121,12 @@ function custom_function(view,formm) {
                 }
             },
             error:function (res) {
-                alert('Something wrong with the request');
+                swal({
+                    title: "Error!",
+                    text: "Something wrong with the request!",
+                    type: "error",
+                    confirmButtonText: "OK"
+                });
                 return false;
             }
         });

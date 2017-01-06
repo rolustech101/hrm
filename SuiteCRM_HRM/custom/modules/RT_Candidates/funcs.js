@@ -5,14 +5,25 @@ function create_job_offer(candidate_id) {
         url: "index.php?module=RT_Candidates&action=create_offer&candidate_id="+candidate_id,
         success: function(result){
             if(result == 'error404'){
-                alert('Job Application OR Job Posting is not associated with the candidate!')
+                swal({
+                    title: "Error!",
+                    text: "Job Application OR Job Posting is not associated with the candidate!",
+                    type: "error",
+                    confirmButtonText: "OK"
+                });
                 return false;
             }
-         alert('Successfully Offered the Job!');
+
+            swal("Success!", "Successfully Offered the Job!", "success");
             location.reload();
         },
         error:function (res) {
-            alert('Something wrong with the request');
+            swal({
+                title: "Error!",
+                text: "Something wrong with the request!",
+                type: "error",
+                confirmButtonText: "OK"
+            });
         }
     });
     
@@ -41,11 +52,16 @@ function convert_candidate(candidate_id) {
         type: "POST",
         url: "index.php?module=RT_Candidates&action=convert_cand&candidate_id="+candidate_id,
         success: function(result){
-            alert('Successfully Converted to Employee!');
+            swal("Success!", "Successfully Converted to Employee!", "success");
             location.reload();
         },
         error:function (res) {
-            alert('Something wrong with the request');
+            swal({
+                title: "Error!",
+                text: "Something wrong with the request!",
+                type: "error",
+                confirmButtonText: "OK"
+            });
         },
         done:function (res) {
             SUGAR.ajaxUI.loadingPanel.hide();

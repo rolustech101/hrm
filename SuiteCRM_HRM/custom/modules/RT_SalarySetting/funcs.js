@@ -64,7 +64,7 @@ function checksalaryfrom(id) {
                 var val = document.getElementById("sal_from" + j).value;
                 var toval = document.getElementById("sal_to" + j).value;
                 if (val.trim() == currentval.trim() || toval.trim() == currentval.trim()) {
-                    alert(currentval + " has already been entered");
+                    swal(currentval + " has already been entered");
                     document.getElementById("sal_from" + id).value = "";
                     return;
                 }
@@ -95,7 +95,7 @@ function checksalaryto(id) {
                 var val = document.getElementById("sal_to" + j).value;
                 var fromval = document.getElementById("sal_from" + j).value;
                 if (val.trim() == currentval.trim() || fromval.trim() == currentval.trim()) {
-                    alert(currentval + " has already been entered");
+                    swal(currentval + " has already been entered");
                     document.getElementById("sal_to" + id).value = "";
                     return;
                 }
@@ -128,14 +128,19 @@ function deleteRow(id) {
     var status = $('#filling_status').val();
     var handleSuccess = function (o) {
         if (o.responseText !== undefined) {
-            alert('Successfully Deleted');
+            swal("Success!", "Successfully Deleted!", "success");
             window.location.reload();
         }
     };
 
     var handleFailure = function (o) {
         if (o.responseText !== undefined) {
-            alert("Everything failed");
+            swal({
+                title: "Error!",
+                text: "Something wrong with the request!",
+                type: "error",
+                confirmButtonText: "OK"
+            });
         }
     };
 
@@ -172,7 +177,12 @@ $(document).ready(function () {
 
         var handleFailure = function (o) {
             if (o.responseText !== undefined) {
-                alert("Everything failed");
+                swal({
+                    title: "Error!",
+                    text: "Something wrong with the request!",
+                    type: "error",
+                    confirmButtonText: "OK"
+                });
             }
         };
 
@@ -202,7 +212,12 @@ $(document).ready(function () {
 
         var handleFailure = function (o) {
             if (o.responseText !== undefined) {
-                alert("Everything failed");
+                swal({
+                    title: "Error!",
+                    text: "Something wrong with the request!",
+                    type: "error",
+                    confirmButtonText: "OK"
+                });
             }
         };
 

@@ -18,7 +18,12 @@ function addSalary() {
 
         },
         error: function (req, status, err) {
-            alert('something went wrong', status, err);
+            swal({
+                title: "Error!",
+                text: "Something wrong with the request!",
+                type: "error",
+                confirmButtonText: "OK"
+            });
         }
     });
     k++;
@@ -37,12 +42,12 @@ function calculateTax() {
         file_status = 'any';
     } else {
         if (file_status == '') {
-            alert('Please Select Filling Status!');
+            swal("Please Select Filling Status!");
             return false;
         }
     }
     if ($country == '') {
-        alert('please select country first!');
+        swal("please select country first!");
         return false;
     }
     var taxable_salary = 0;
@@ -56,13 +61,18 @@ function calculateTax() {
             var obj = arr[i];
             taxable_salary += parseInt(obj.value);
             if (isNaN(taxable_salary)) {
-                alert('Please Enter a valid number!');
+                swal("Please Enter a valid number!");
                 return false;
             }
         }
     }
     if (isNaN(tax_amount)) {
-        alert('This salary range do not fit with the current ranges for country OR you did not define ranges for ' + $country);
+        swal({
+            title: "Error!",
+            text: "This salary range do not fit with the current ranges for country OR you did not define ranges for"  + $country,
+            type: "error",
+            confirmButtonText: "OK"
+        });
         return false;
     }
     var handleSuccess = function (o) {
@@ -73,7 +83,12 @@ function calculateTax() {
             // tax_amount = tax_amount/12;
             tax_amount = tax_amount.toFixed(2);
             if (isNaN(tax_amount)) {
-                alert('This salary range do not fit with the current ranges for country OR you did not define ranges for ' + $country);
+                swal({
+                    title: "Error!",
+                    text: "This salary range do not fit with the current ranges for country OR you did not define ranges for"  + $country,
+                    type: "error",
+                    confirmButtonText: "OK"
+                });
             } else {
                 document.getElementById("tax").value = tax_amount;
             }
@@ -82,7 +97,12 @@ function calculateTax() {
 
     var handleFailure = function (o) {
         if (o.responseText !== undefined) {
-            alert("Everything failed");
+            swal({
+                title: "Error!",
+                text: "Something wrong with the request!",
+                type: "error",
+                confirmButtonText: "OK"
+            });
         }
     };
 
@@ -110,7 +130,7 @@ function set_taxable(arg, formm) {
             file_status = 'any';
         } else {
             if (file_status == '') {
-                alert('Please Select Filling Status!');
+                swal("Please Select Filling Status!");
                 return false;
             }
         }
@@ -129,7 +149,7 @@ function set_taxable(arg, formm) {
             }
         }
         if (reportDuplicate.length > 0) {
-            alert('Salary Labels Must be unique!');
+            swal("Salary Labels Must be unique!");
             return false;
         }
         if (collec.length > 0) {
