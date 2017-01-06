@@ -35,6 +35,14 @@ $hook_array['after_relationship_add'][] = Array(
     'MailInterviewer',
     'mail_to_interviewer'
 );
+$hook_array['process_record'] = array();
+$hook_array['process_record'][] = array(
+    1,
+    'add module name',
+    'custom/modules/RT_Interviews/AddName_RT_Interviews.php',
+    'AddName_RT_Interviews',
+    'add_name'
+);
 
 
 ?>

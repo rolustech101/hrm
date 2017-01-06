@@ -3,4 +3,5 @@
 $mod_strings = array (
   'LBL_EDITVIEW_PANEL1' => 'New Panel 1',
   'LBL_EMP_NAME' => 'Employee Name',
+  'LBL_FORM_PATH' => 'form',
 );

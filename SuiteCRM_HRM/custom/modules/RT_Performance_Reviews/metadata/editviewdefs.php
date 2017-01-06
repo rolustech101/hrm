@@ -37,20 +37,21 @@ array (
         0 => 
         array (
           0 => 'name',
-          1 => '',
+          1 => 'status',
         ),
         1 => 
         array (
-          0 => 'description',
+            0 =>
+            array (
+                'name' => 'emp_name',
+                'label' => 'LBL_EMP_NAME',
+            ),
+            1 => '',
         ),
         2 => 
         array (
-          0 => 
-          array (
-            'name' => 'emp_name',
-            'label' => 'LBL_EMP_NAME',
-          ),
-          1 => '',
+            0 => 'description',
+
         ),
       ),
     ),

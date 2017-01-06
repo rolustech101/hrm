@@ -9,5 +9,11 @@ array (
     'default' => true,
     'link' => true,
   ),
+  'STATUS' =>
+    array(
+        'width' => '20%',
+        'label' => 'LBL_STATUS',
+        'default' => true,
+    )
 );
 ?>

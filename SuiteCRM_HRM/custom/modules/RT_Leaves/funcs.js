@@ -35,16 +35,40 @@ function set_custom_return(popupReplyData) {
 function count_no_of_days() {
     var from_date = document.getElementById('from_date_c').value;
     var to_date = document.getElementById('to_date_c').value;
+    //
+    // alert(from_date);
+    // alert(to_date);
+    // return false;
+    var dateto = new Date(to_date);
+    var datefrom = new Date(from_date);
+    var date1_to = dateto.getFullYear() + "-" + (dateto.getMonth() + 1) + "-" + dateto.getDate();
+    var date2_from = datefrom.getFullYear() + "-" + (datefrom.getMonth() + 1) + "-" + datefrom.getDate();
+    // // alert("from: "+date2+"\nTo: "+date1);
+    // var to = moment(to_date).format('MM-DD-YYYY');
+    // var from = moment(from_date).format('MM-DD-YYYY');
+    //
+    // /* using diff */
+    // var duration = to.diff(from, 'days');
+    //
+    // alert(duration);
+    // return false;
 
-    var date1 = new Date(from_date);
-    var date2 = new Date(to_date);
-    var timeDiff = date2.getTime() - date1.getTime();
-    var diffDays = Math.ceil(timeDiff / (1000 * 3600 * 24));
-    if(diffDays<0){
+    var dateB = moment(date1_to);
+    var dateC = moment(date2_from);
+
+    var dur = dateB.diff(dateC, 'days');
+    alert(dur);
+    console.log('Difference is ', dateB.diff(dateC), 'milliseconds');
+    console.log('Difference is ', dateB.diff(dateC, 'days'), 'days');
+    console.log('Difference is ', dateB.diff(dateC, 'months'), 'months');
+
+
+
+    if(duration<0){
         alert('Number of days cannot be Negative');
         return false;
     }
-    document.getElementById('count_days_c').value = diffDays+1;
+    document.getElementById('count_days_c').value = duration+1;
 }
 function custom_function(view,formm) {
 
@@ -96,7 +120,7 @@ function custom_function(view,formm) {
 
 }
 $(document).ready(function(){
-    $('#count_days_c').val('2');
+    // $('#count_days_c').val('2');
     $('#count_days_c').prop('readonly',true);
     $('#annual_leave_balance').prop('readonly',true);
     $('#casual_leave_balance').prop('readonly',true);

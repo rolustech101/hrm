@@ -1,9 +1,10 @@
 <?php
-if(!defined('sugarEntry') || !sugarEntry) die('Not A Valid Entry Point'); 
+if (!defined('sugarEntry') || !sugarEntry) {
+    die('Not A Valid Entry Point');
+}
 /*********************************************************************************
  * SugarCRM Community Edition is a customer relationship management program developed by
  * SugarCRM, Inc. Copyright (C) 2004-2013 SugarCRM Inc.
-
  * SuiteCRM is an extension to SugarCRM Community Edition developed by Salesagility Ltd.
  * Copyright (C) 2011 - 2014 Salesagility Ltd.
  *
@@ -40,6 +41,20 @@ if(!defined('sugarEntry') || !sugarEntry) die('Not A Valid Entry Point');
 
 
 global $mod_strings, $app_strings, $sugar_config;
- 
-if(ACLController::checkAccess('RT_Performance_Reviews', 'edit', true))$module_menu[]=Array("index.php?module=RT_Performance_Reviews&action=EditView&return_module=RT_Performance_Reviews&return_action=DetailView", $mod_strings['LNK_NEW_RECORD'],"Add", 'RT_Performance_Reviews');
-if(ACLController::checkAccess('RT_Performance_Reviews', 'list', true))$module_menu[]=Array("index.php?module=RT_Performance_Reviews&action=index&return_module=RT_Performance_Reviews&return_action=DetailView", $mod_strings['LNK_LIST'],"View", 'RT_Performance_Reviews');
+
+if (ACLController::checkAccess('RT_Performance_Reviews', 'edit', true)) {
+    $module_menu[] = Array(
+        "index.php?module=RT_Performance_Reviews&action=EditView&return_module=RT_Performance_Reviews&return_action=DetailView",
+        $mod_strings['LNK_NEW_RECORD'],
+        "Add",
+        'RT_Performance_Reviews'
+    );
+}
+if (ACLController::checkAccess('RT_Performance_Reviews', 'list', true)) {
+    $module_menu[] = Array(
+        "index.php?module=RT_Performance_Reviews&action=index&return_module=RT_Performance_Reviews&return_action=DetailView",
+        $mod_strings['LNK_LIST'],
+        "View",
+        'RT_Performance_Reviews'
+    );
+}

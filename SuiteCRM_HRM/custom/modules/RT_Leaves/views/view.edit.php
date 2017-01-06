@@ -53,17 +53,18 @@ class RT_LeavesViewEdit extends ViewEdit
  	 * We are overridding the display method to manipulate the sectionPanels.
  	 * If portal is not enabled then don't show the Portal Information panel.
  	 */
- 	public function display() 
+ 	public function display()
  	{
 		$id = $this->bean->rt_employees_rt_leavesrt_employees_ida;
-        $GLOBALS['log']->fatal('in view');
-        $GLOBALS['log']->fatal($id);
 		$bean_emp = BeanFactory::getBean('RT_Employees', $id);
 		$this->bean->annual_leave_balance = $bean_emp->annual_leave_balance;
 		$this->bean->casual_leave_balance = $bean_emp->casual_leave_balance;
-        $GLOBALS['log']->fatal($this->bean->annual_leave_balance);
-        $GLOBALS['log']->fatal($this->bean->annual_leave_balance);
 
+//		$todate = $this->bean->to_date_c; // or your date as well
+//		$your_date = strtotime("2010-01-01");
+//		$datediff = $now - $your_date;
+//
+//		echo floor($datediff / (60 * 60 * 24));
         parent::display();
 
  	}

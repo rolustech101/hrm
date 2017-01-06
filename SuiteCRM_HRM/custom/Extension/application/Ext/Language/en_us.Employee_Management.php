@@ -37,7 +37,6 @@
  * display the words  "Powered by SugarCRM" and "Supercharged by SuiteCRM".
  ********************************************************************************/
 
-
 $app_list_strings['moduleList']['RT_Increment_History'] = 'Increment History';
 $app_list_strings['moduleList']['RT_Payroll'] = 'Payroll';
 $app_list_strings['moduleList']['RT_Employees'] = 'Employees';
@@ -59,3 +58,4 @@ $app_list_strings['rt_payroll_status_dom']['FAQ'] = 'FAQ';
 $app_list_strings['rt_payroll_status_dom']['Expired'] = 'Expired';
 $app_list_strings['rt_payroll_status_dom']['Under Review'] = 'Under Review';
 $app_list_strings['rt_payroll_status_dom']['Pending'] = 'Pending';
+$app_strings['LBL_DATE_OF_ACTIVITY'] = 'Date of Activity';

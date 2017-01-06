@@ -1,9 +1,10 @@
 <?php
-if(!defined('sugarEntry') || !sugarEntry) die('Not A Valid Entry Point'); 
+if (!defined('sugarEntry') || !sugarEntry) {
+    die('Not A Valid Entry Point');
+}
 /*********************************************************************************
  * SugarCRM Community Edition is a customer relationship management program developed by
  * SugarCRM, Inc. Copyright (C) 2004-2013 SugarCRM Inc.
-
  * SuiteCRM is an extension to SugarCRM Community Edition developed by Salesagility Ltd.
  * Copyright (C) 2011 - 2014 Salesagility Ltd.
  *
@@ -40,6 +41,35 @@ if(!defined('sugarEntry') || !sugarEntry) die('Not A Valid Entry Point');
 
 
 global $mod_strings, $app_strings, $sugar_config;
- 
-if(ACLController::checkAccess('RT_Employees', 'edit', true))$module_menu[]=Array("index.php?module=RT_Employees&action=EditView&return_module=RT_Employees&return_action=DetailView", $mod_strings['LNK_NEW_RECORD'],"Add", 'RT_Employees');
-if(ACLController::checkAccess('RT_Employees', 'edit', true))$module_menu[]=Array("index.php?module=RT_Employees&action=ImportVCard", $mod_strings['LNK_IMPORT_VCARD'],"Create_Contact_Vcard", 'RT_Employees');if(ACLController::checkAccess('RT_Employees', 'list', true))$module_menu[]=Array("index.php?module=RT_Employees&action=index&return_module=RT_Employees&return_action=DetailView", $mod_strings['LNK_LIST'],"View", 'RT_Employees');
+
+if (ACLController::checkAccess('RT_Employees', 'edit', true)) {
+    $module_menu[] = Array(
+        "index.php?module=RT_Employees&action=EditView&return_module=RT_Employees&return_action=DetailView",
+        $mod_strings['LNK_NEW_RECORD'],
+        "Add",
+        'RT_Employees'
+    );
+}
+if (ACLController::checkAccess('RT_Employees', 'edit', true)) {
+    $module_menu[] = Array(
+        "index.php?module=RT_Employees&action=ImportVCard",
+        $mod_strings['LNK_IMPORT_VCARD'],
+        "Create_Contact_Vcard",
+        'RT_Employees'
+    );
+}
+if (ACLController::checkAccess('RT_Employees', 'list', true)) {
+    $module_menu[] = Array(
+        "index.php?module=RT_Employees&action=index&return_module=RT_Employees&return_action=DetailView",
+        $mod_strings['LNK_LIST'],
+        "View",
+        'RT_Employees'
+    );
+}
+if(ACLController::checkAccess('RT_Employees', 'import', true))
+    $module_menu[]=Array(
+        "index.php?module=Import&action=Step1&import_module=RT_Employees&return_module=RT_Employees&return_action=index",
+        $app_strings['LBL_IMPORT'],
+        "Import",
+        'RT_Employees'
+    );

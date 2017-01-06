@@ -40,6 +40,9 @@ array (
         array (
           'file' => 'custom/modules/RT_Leaves/funcs.js',
         ),
+          1 => array(
+              'file' => 'custom/include/javascript/moment.js',
+          )
       ),
       'useTabs' => false,
       'tabDefs' => 

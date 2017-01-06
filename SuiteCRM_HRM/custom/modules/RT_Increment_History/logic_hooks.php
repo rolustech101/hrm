@@ -12,6 +12,14 @@ $hook_array['before_save'][] = array(
     'IncrementSalary',
     'increment'
 );
+$hook_array['process_record'] = array();
+$hook_array['process_record'][] = array(
+    1,
+    'add module name',
+    'custom/modules/RT_Increment_History/AddName_RT_Increment_History.php',
+    'AddName_RT_Increment_History',
+    'add_name'
+);
 
 
 ?>
