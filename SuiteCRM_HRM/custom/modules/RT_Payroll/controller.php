@@ -6,7 +6,7 @@ class RT_PayrollController extends SugarController
     function action_getemployees()
     {
         ob_clean();
-        $sql2 = "select * from rt_employees";
+        $sql2 = "select * from rt_employees where deleted = 0";
         $res2 = $GLOBALS['db']->query($sql2);
         $row2 = $GLOBALS['db']->fetchByAssoc($res2);
         while ($row2) {
@@ -21,10 +21,16 @@ class RT_PayrollController extends SugarController
     function action_save()
     {
         $ids = $_REQUEST['abc_c'];
+        print_r($ids);
+        echo "________________________________";
         global $current_user;
         $month = $_REQUEST['month'];
         $year = $_REQUEST['year'];
         $pieces = explode("^,^", $ids);
+
+        print_r($pieces);
+
+        die('end------->>>>>>');
         $pieces[0] = trim($pieces[0], "^");
         $size = sizeof($_REQUEST['abc_c']);
         $pieces[$size - 1] = trim($pieces[$size - 1], "^");
@@ -35,39 +41,67 @@ class RT_PayrollController extends SugarController
 
         for ($i = 0; $i < $size; $i++) {
             $id = $_REQUEST['abc_c'][$i];
-            $sqls = "select * from rt_employees, rt_employees_cstm where rt_employees_cstm.id_c =rt_employees.id AND rt_employees_cstm.id_c ='$id'";
+//            $sqls = "select * from rt_employees, rt_employees_cstm where rt_employees_cstm.id_c =rt_employees.id AND rt_employees_cstm.id_c ='$id'";
+            $sqls = "select 
+    *
+from
+    rt_employees
+        left outer join
+    rt_employees_cstm ON rt_employees_cstm.id_c = rt_employees.id
+where
+    rt_employees.id = '$id'
+        and rt_employees.deleted = 0";
+
+
             $ress = $GLOBALS['db']->query($sqls);
             $rows = $GLOBALS['db']->fetchByAssoc($ress);
-            $salary = unserialize(html_entity_decode(stripslashes($rows['salary'])));
-            $total_salary = 0;
-            $taxable_salary = 0;
-            foreach ($salary as $label => $detail) {
-                $amount = $detail['amount'];
-                $taxable = $detail['taxable'];
-                $total_salary += $amount;
-                if ($taxable == 'Yes') {
-                    $taxable_salary += $amount;
-                }
-            }
-            $net_salary = $taxable_salary;
-            $guid = create_guid();
-            $payroll_id = create_guid();
+            if ($rows['employment_type_c'] == 'Part_Time' && $rows['is_hourly'] && !empty($rows['hourly_rate'])) {
+                $hourly_rate = $rows['hourly_rate'];
+                $total_salary = $hourly_rate * 5;
+                $salary_paid = $total_salary;
+            } elseif ($rows['employment_type_c'] == 'Internship' && !empty($rows['stipend'])) {
+                $total_salary = $rows['stipend'];
+                $salary_paid = $total_salary;
 
-
-//			if($rows['deduct_provident'] && !empty($rows['provident_fund'])){
-//				$provident = $total_salary /100 * $rows['provident_fund'];
-//			}
-            $sql_pro = "SELECT * FROM config where name = 'provident_fund' AND category = 'system'";
-            $res_pro = $GLOBALS['db']->query($sql_pro);
-            if ($rows['deduct_provident'] && !empty($rows['provident_fund'])) {
-                $provident = $total_salary / 100 * $rows['provident_fund'];
-            } elseif ($res_pro->num_rows > 0) {
-                $row_pro = $GLOBALS['db']->fetchByAssoc($res_pro);
-                $p_fund = $row_pro['value'];
-                $provident = $total_salary / 100 * $p_fund;
             } else {
-                $provident = 0;
+                // full_time
+                $salary = unserialize(html_entity_decode(stripslashes($rows['salary'])));
+                $total_salary = 0;
+                $taxable_salary = 0;
+                foreach ($salary as $label => $detail) {
+                    $amount = $detail['amount'];
+                    $taxable = $detail['taxable'];
+                    $total_salary += $amount;
+                    if ($taxable == 'Yes') {
+                        $taxable_salary += $amount;
+                    }
+                }
+                $net_salary = $taxable_salary;
+                $guid = create_guid();
+                $payroll_id = create_guid();
+
+
+                //			if($rows['deduct_provident'] && !empty($rows['provident_fund'])){
+                //				$provident = $total_salary /100 * $rows['provident_fund'];
+                //			}
+                $sql_pro = "SELECT * FROM config where name = 'provident_fund' AND category = 'system'";
+                $res_pro = $GLOBALS['db']->query($sql_pro);
+                if ($rows['deduct_provident'] && !empty($rows['provident_fund'])) {
+                    $provident = $total_salary / 100 * $rows['provident_fund'];
+                } elseif ($res_pro->num_rows > 0) {
+                    $row_pro = $GLOBALS['db']->fetchByAssoc($res_pro);
+                    $p_fund = $row_pro['value'];
+                    $provident = $total_salary / 100 * $p_fund;
+                } else {
+                    $provident = 0;
+                }
+
+                $serialize_sal = serialize($salary);
+                $salary_paid = $total_salary - $rows['tax'] - $provident;
+                $tax = $rows['tax'];
             }
+
+
             $annual_salary = $total_salary * 12;
 
             //individual record save
@@ -95,13 +129,12 @@ class RT_PayrollController extends SugarController
             }
             $pay_track_id = create_guid();
             $date_entered = date("Y-m-d H:i:s");
-            $serialize_sal = serialize($salary);
+
             $annual_l = $rows['entitled_annual_leaves_c'];
             $casual_l = $rows['entitled_casual_leaves_c'];
             $casual_b = get_casual_b($id);
             $annual_b = get_annual_b($id);
-            $salary_paid = $total_salary - $rows['tax'] - $provident;
-            $tax = $rows['tax'];
+
             $p_track_sql = "INSERT INTO rt_pay_track(id, date_entered, employee_id, payroll_id, month, year, salary, bonus, tax, provident, casual_leaves, annual_leaves, casual_balance, annual_balance, salary_paid)
                                           VALUES('$pay_track_id', '$date_entered', '$id', '$payroll_id', '$month', '$year', '$serialize_sal', '$bonus_amount', '$tax', '$provident', '$casual_l', '$annual_l', '$casual_b', '$annual_b', '$salary_paid')";
             $GLOBALS['db']->query($p_track_sql);

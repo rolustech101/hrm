@@ -8,6 +8,7 @@ class MakeFile
     function genfile($bean, $event, $arguments)
     {
         $GLOBALS['log']->fatal('in RT payroll before save');
+        $GLOBALS['log']->fata(print_r($bean->abc_c,1));
         $ids = $bean->abc_c;
         global $current_user;
         $month = $bean->month;
@@ -24,7 +25,17 @@ class MakeFile
         $name = "";
         while ($i < $size) {
             $id = $pieces[$i];
-            $sqls = "select * from rt_employees, rt_employees_cstm where rt_employees_cstm.id_c =rt_employees.id AND rt_employees_cstm.id_c ='$id'";
+//            $sqls = "select * from rt_employees, rt_employees_cstm where rt_employees_cstm.id_c =rt_employees.id AND rt_employees_cstm.id_c ='$id'";
+            $sqls = "select 
+    *
+from
+    rt_employees
+        left outer join
+    rt_employees_cstm ON rt_employees_cstm.id_c = rt_employees.id
+where
+    rt_employees.id = '$id'
+        and rt_employees.deleted = 0
+";
             $ress = $GLOBALS['db']->query($sqls);
             $rows = $GLOBALS['db']->fetchByAssoc($ress);
             $salary = unserialize(html_entity_decode(stripslashes($rows['salary'])));

@@ -1,5 +1,7 @@
 <?php
-if (!defined('sugarEntry') || !sugarEntry) die('Not A Valid Entry Point');
+if (!defined('sugarEntry') || !sugarEntry) {
+    die('Not A Valid Entry Point');
+}
 /*********************************************************************************
  * SugarCRM Community Edition is a customer relationship management program developed by
  * SugarCRM, Inc. Copyright (C) 2004-2013 SugarCRM Inc.
@@ -93,6 +95,157 @@ $layout_defs['RT_Employees'] = array(
             'sort_by' => 'id',
             'title_key' => 'LBL_DOCUMENTS_LINK_FROM_DOCUMENTS_TITLE',
             'get_subpanel_data' => 'documents_link',
+            'top_buttons' =>
+                array(
+                    0 =>
+                        array(
+                            'widget_class' => 'SubPanelTopButtonQuickCreate',
+                        ),
+                    1 =>
+                        array(
+                            'widget_class' => 'SubPanelTopSelectButton',
+                            'mode' => 'MultiSelect',
+                        ),
+                ),
+        ),
+        'rt_employees_rt_bonus' => array(
+            'order' => 100,
+            'module' => 'RT_Bonus',
+            'subpanel_name' => 'default',
+            'sort_order' => 'asc',
+            'sort_by' => 'id',
+            'title_key' => 'LBL_RT_EMPLOYEES_RT_BONUS_FROM_RT_BONUS_TITLE',
+            'get_subpanel_data' => 'rt_employees_rt_bonus',
+            'top_buttons' =>
+                array(
+                    0 =>
+                        array(
+                            'widget_class' => 'SubPanelTopButtonQuickCreate',
+                        ),
+                    1 =>
+                        array(
+                            'widget_class' => 'SubPanelTopSelectButton',
+                            'mode' => 'MultiSelect',
+                        ),
+                ),
+        ),
+        'rt_employees_rt_employeesrt_employees_ida' => array(
+
+            'order' => 100,
+            'module' => 'RT_Employees',
+            'subpanel_name' => 'default',
+            'sort_order' => 'asc',
+            'sort_by' => 'id',
+            'title_key' => 'LBL_RT_EMPLOYEES_RT_EMPLOYEES_FROM_RT_EMPLOYEES_R_TITLE',
+            'get_subpanel_data' => 'rt_employees_rt_employeesrt_employees_ida',
+            'top_buttons' =>
+                array(
+                    0 =>
+                        array(
+                            'widget_class' => 'SubPanelTopButtonQuickCreate',
+                        ),
+                    1 =>
+                        array(
+                            'widget_class' => 'SubPanelTopSelectButton',
+                            'mode' => 'MultiSelect',
+                        ),
+                ),
+        ),
+        'rt_employees_rt_leaves' => array(
+
+            'order' => 100,
+            'module' => 'RT_Leaves',
+            'subpanel_name' => 'default',
+            'sort_order' => 'asc',
+            'sort_by' => 'id',
+            'title_key' => 'LBL_RT_EMPLOYEES_RT_LEAVES_FROM_RT_LEAVES_TITLE',
+            'get_subpanel_data' => 'rt_employees_rt_leaves',
+            'top_buttons' =>
+                array(
+                    0 =>
+                        array(
+                            'widget_class' => 'SubPanelTopButtonQuickCreate',
+                        ),
+                    1 =>
+                        array(
+                            'widget_class' => 'SubPanelTopSelectButton',
+                            'mode' => 'MultiSelect',
+                        ),
+                ),
+        ),
+        'rt_employees_rt_payroll' => array(
+
+            'order' => 100,
+            'module' => 'RT_Payroll',
+            'subpanel_name' => 'default',
+            'sort_order' => 'asc',
+            'sort_by' => 'id',
+            'title_key' => 'LBL_RT_EMPLOYEES_RT_PAYROLL_FROM_RT_EMPLOYEES_TITLE',
+            'get_subpanel_data' => 'rt_employees_rt_payroll',
+            'top_buttons' =>
+                array(
+                    0 =>
+                        array(
+                            'widget_class' => 'SubPanelTopButtonQuickCreate',
+                        ),
+                    1 =>
+                        array(
+                            'widget_class' => 'SubPanelTopSelectButton',
+                            'mode' => 'MultiSelect',
+                        ),
+                ),
+        ),
+        'rt_increment_history_rt_employees' => array(
+            'order' => 100,
+            'module' => 'RT_Increment_History',
+            'subpanel_name' => 'default',
+            'sort_order' => 'asc',
+            'sort_by' => 'id',
+            'title_key' => 'LBL_RT_INCREMENT_HISTORY_RT_EMPLOYEES_FROM_RT_INCREMENT_HISTORY_TITLE',
+            'get_subpanel_data' => 'rt_increment_history_rt_employees',
+            'top_buttons' =>
+                array (
+                    0 =>
+                        array (
+                            'widget_class' => 'SubPanelTopButtonQuickCreate',
+                        ),
+                    1 =>
+                        array (
+                            'widget_class' => 'SubPanelTopSelectButton',
+                            'mode' => 'MultiSelect',
+                        ),
+                ),
+        ),
+        'rt_interviews_rt_employees_1' => array(
+            'order' => 100,
+            'module' => 'RT_Interviews',
+            'subpanel_name' => 'default',
+            'sort_order' => 'asc',
+            'sort_by' => 'id',
+            'title_key' => 'LBL_RT_INTERVIEWS_RT_EMPLOYEES_1_FROM_RT_INTERVIEWS_TITLE',
+            'get_subpanel_data' => 'rt_interviews_rt_employees_1',
+            'top_buttons' =>
+                array (
+                    0 =>
+                        array (
+                            'widget_class' => 'SubPanelTopButtonQuickCreate',
+                        ),
+                    1 =>
+                        array (
+                            'widget_class' => 'SubPanelTopSelectButton',
+                            'mode' => 'MultiSelect',
+                        ),
+                ),
+        ),
+
+        'rt_qualifications' => array(
+            'order' => 100,
+            'module' => 'RT_Qualifications',
+            'subpanel_name' => 'default',
+            'sort_order' => 'asc',
+            'sort_by' => 'id',
+            'title_key' => 'LBL_RT_QUALIFICATIONS_FROM_QUALIFICATIONS_TITLE',
+            'get_subpanel_data' => 'rt_qualifications',
             'top_buttons' =>
                 array (
                     0 =>

@@ -17,4 +17,9 @@ $mod_strings['LBL_RTEMPLOYEE_ID'] = 'Employee ID';
 $mod_strings['LBL_RT_QUALIFICATIONS'] = 'Qualifications';
 $mod_strings['LBL_RT_QUALIFICATIONS_FROM_QUALIFICATIONS_TITLE'] = 'Qualifications';
 $mod_strings['LBL_FILLING_STATUS'] = 'Filling Status';
+$mod_strings['LBL_HOURLY_RATE'] = "Per Hour Rate<span class='required'>*</span>";
+$mod_strings['LBL_IS_FIXED_MONTHLY'] = 'Fixed Monthly';
+$mod_strings['LBL_IS_HOURLY'] = 'Hourly Rate';
+$mod_strings['LBL_STIPEND'] = "Stipend<span class='required'>*</span>";
+
 

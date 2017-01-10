@@ -69,7 +69,7 @@ function calculateTax() {
     if (isNaN(tax_amount)) {
         swal({
             title: "Error!",
-            text: "This salary range do not fit with the current ranges for country OR you did not define ranges for"  + $country,
+            text: "This salary range do not fit with the current ranges for country OR you did not define ranges for" + $country,
             type: "error",
             confirmButtonText: "OK"
         });
@@ -85,7 +85,7 @@ function calculateTax() {
             if (isNaN(tax_amount)) {
                 swal({
                     title: "Error!",
-                    text: "This salary range do not fit with the current ranges for country OR you did not define ranges for"  + $country,
+                    text: "This salary range do not fit with the current ranges for country OR you did not define ranges for" + $country,
                     type: "error",
                     confirmButtonText: "OK"
                 });
@@ -170,8 +170,110 @@ function set_taxable(arg, formm) {
     return false;
 
 }
+function show_salary_panel() {
+    $('#LBL_EDITVIEW_SALARY_INFO').show();
+    $('#LBL_EDITVIEW_TAX').show();
+}
+function hide_salary_panel() {
+    $('#LBL_EDITVIEW_SALARY_INFO').hide();
+    $('#LBL_EDITVIEW_TAX').hide();
+}
 $(document).ready(function () {
     $("#filling_status").hide();
+    $("#stipend").parent("div").parent("div").hide();
+    // $("#stipend").parent().parent().hide();
+    // $("#is_hourly").hide();
+    $("#is_hourly").parent("div").parent("div").hide();
+
+    // $("#is_fixed_monthly").hide();
+    $("#is_fixed_monthly").parent("div").parent("div").hide();
+
+    // $("#hourly_rate").hide();
+    $("#hourly_rate").parent("div").parent("div").hide();
+
+    $('#employment_type_c').change(function () {
+        var employement_status = $(this).val();
+        if (employement_status == 'Part_Time') {
+            removeFromValidate('EditView', 'stipend');
+            $('#is_hourly').prop('checked', false);
+            $('#is_fixed_monthly').prop('checked', true);
+            show_salary_panel();
+
+            // $("#stipend").hide();
+            $("#stipend").parent("div").parent("div").hide();
+
+            // $("#is_fixed_monthly").show();
+            $("#is_fixed_monthly").parent("div").parent("div").show();
+
+            // $("#is_hourly").show();
+            $("#is_hourly").parent("div").parent("div").show();
+
+
+            $("#is_hourly").change(function () {
+                if (this.checked) {
+                    if (!checkValidate('EditView', 'hourly_rate')) {
+                        addToValidate('EditView', 'hourly_rate', 'currency', true, SUGAR.language.languages.RT_Employees['LBL_HOURLY_RATE']);
+                    }
+                    $('#is_fixed_monthly').prop('checked', false);
+                    // $("#hourly_rate").show();
+                    $("#hourly_rate").parent("div").parent("div").show();
+
+                    hide_salary_panel();
+                } else {
+                    removeFromValidate('EditView', 'hourly_rate');
+                    // $("#hourly_rate").hide();
+                    $("#hourly_rate").parent("div").parent("div").hide();
+                    show_salary_panel();
+                }
+            });
+
+            $("#is_fixed_monthly").change(function () {
+                if (this.checked) {
+                    removeFromValidate('EditView', 'hourly_rate');
+                    show_salary_panel();
+                    $('#is_hourly').prop('checked', false);
+                    $("#hourly_rate").parent("div").parent("div").hide();
+
+                }
+            });
+
+
+        } else if (employement_status == 'Internship') {
+            $("#hourly_rate").parent("div").parent("div").hide();
+            $('#is_fixed_monthly').prop('checked', false);
+            if (!checkValidate('EditView', 'stipend')) {
+                addToValidate('EditView', 'stipend', 'currency', true, SUGAR.language.languages.RT_Employees['LBL_STIPEND']);
+            }
+            hide_salary_panel();
+            // $("#is_fixed_monthly").hide();
+            $("#is_fixed_monthly").parent("div").parent("div").hide();
+
+            // $("#is_hourly").hide();
+            $("#is_hourly").parent("div").parent("div").hide();
+
+            // $("#stipend").show();
+            $("#stipend").parent("div").parent("div").show();
+
+        } else {
+            removeFromValidate('EditView', 'stipend');
+
+            $('#is_fixed_monthly').prop('checked', false);
+            // $("#stipend").hide();
+            $("#stipend").parent("div").parent("div").hide();
+
+            // $("#is_hourly").hide();
+            $("#is_hourly").parent("div").parent("div").hide();
+
+            // $("#is_fixed_monthly").hide();
+            $("#is_fixed_monthly").parent("div").parent("div").hide();
+
+            // $("#hourly_rate").hide();
+            $("#hourly_rate").parent("div").parent("div").hide();
+            show_salary_panel();
+
+        }
+
+    });
     $('#primary_address_country').change(function () {
 
         var non_filling = get_non_filling_countries();
