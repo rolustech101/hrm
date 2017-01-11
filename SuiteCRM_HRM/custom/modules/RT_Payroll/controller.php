@@ -21,16 +21,11 @@ class RT_PayrollController extends SugarController
     function action_save()
     {
         $ids = $_REQUEST['abc_c'];
-        print_r($ids);
-        echo "________________________________";
         global $current_user;
         $month = $_REQUEST['month'];
         $year = $_REQUEST['year'];
         $pieces = explode("^,^", $ids);
 
-        print_r($pieces);
-
-        die('end------->>>>>>');
         $pieces[0] = trim($pieces[0], "^");
         $size = sizeof($_REQUEST['abc_c']);
         $pieces[$size - 1] = trim($pieces[$size - 1], "^");
@@ -56,15 +51,47 @@ where
             $ress = $GLOBALS['db']->query($sqls);
             $rows = $GLOBALS['db']->fetchByAssoc($ress);
             if ($rows['employment_type_c'] == 'Part_Time' && $rows['is_hourly'] && !empty($rows['hourly_rate'])) {
+                $emplyment_type = 'Part Time';
                 $hourly_rate = $rows['hourly_rate'];
-                $total_salary = $hourly_rate * 5;
-                $salary_paid = $total_salary;
+                $emp_bean = BeanFactory::getBean('RT_Employees', $id);
+                if ($emp_bean->load_relationship('rt_time_tracker_rt_employees')) {
+                    $time_entries = $emp_bean->rt_time_tracker_rt_employees->getBeans();
+                    if (!empty($time_entries)) {
+                        $total_hours = 0;
+                        $total_minutes = 0;
+                        foreach ($time_entries as $entry) {
+                            $check_in_date = $entry->date_start;
+                            $checkin_month = date('m', strtotime($check_in_date));
+                            $checkin_year = date('Y', strtotime($check_in_date));
+                            if ($checkin_month == $month && $checkin_year == $year) {
+                                if (!empty($entry->duration_hours)) {
+                                    $total_hours = $total_hours + $entry->duration_hours;
+                                    $total_minutes = $total_minutes + $entry->duration_minutes;
+                                }
+                            }
+                        }
+
+                        $total_minutes_of_month = $total_hours * 60;
+                        $total_minutes_of_month = $total_minutes_of_month + $total_minutes;
+                        $per_minute_rate = $hourly_rate / 60;
+                        $total_salary = $total_minutes_of_month * $per_minute_rate;
+                        $salary_paid = $total_salary; //no tax deductions yet
+                        $minutes_of_month = $total_minutes_of_month;
+                        $per_hour_rate = $hourly_rate;
+
+
+                    }
+                }
+
             } elseif ($rows['employment_type_c'] == 'Internship' && !empty($rows['stipend'])) {
+                $emplyment_type = 'Internship';
                 $total_salary = $rows['stipend'];
-                $salary_paid = $total_salary;
+                $salary_paid = $total_salary; // no tax deductions yet
+                $stipend = $salary_paid;
 
             } else {
                 // full_time
+                $emplyment_type = 'Full Time';
                 $salary = unserialize(html_entity_decode(stripslashes($rows['salary'])));
                 $total_salary = 0;
                 $taxable_salary = 0;
@@ -77,8 +104,6 @@ where
                     }
                 }
                 $net_salary = $taxable_salary;
-                $guid = create_guid();
-                $payroll_id = create_guid();
 
 
                 //			if($rows['deduct_provident'] && !empty($rows['provident_fund'])){
@@ -100,6 +125,8 @@ where
                 $salary_paid = $total_salary - $rows['tax'] - $provident;
                 $tax = $rows['tax'];
             }
+            $guid = create_guid();
+            $payroll_id = create_guid();
 
 
             $annual_salary = $total_salary * 12;
@@ -135,8 +162,8 @@ where
             $casual_b = get_casual_b($id);
             $annual_b = get_annual_b($id);
 
-            $p_track_sql = "INSERT INTO rt_pay_track(id, date_entered, employee_id, payroll_id, month, year, salary, bonus, tax, provident, casual_leaves, annual_leaves, casual_balance, annual_balance, salary_paid)
-                                          VALUES('$pay_track_id', '$date_entered', '$id', '$payroll_id', '$month', '$year', '$serialize_sal', '$bonus_amount', '$tax', '$provident', '$casual_l', '$annual_l', '$casual_b', '$annual_b', '$salary_paid')";
+            $p_track_sql = "INSERT INTO rt_pay_track(id, date_entered, employee_id, payroll_id, month, year, salary, bonus, tax, provident, casual_leaves, annual_leaves, casual_balance, annual_balance, salary_paid, total_minutes, per_hour_rate, stipend, employment_type)
+                                          VALUES('$pay_track_id', '$date_entered', '$id', '$payroll_id', '$month', '$year', '$serialize_sal', '$bonus_amount', '$tax', '$provident', '$casual_l', '$annual_l', '$casual_b', '$annual_b', '$salary_paid','$minutes_of_month','$per_hour_rate','$stipend', '$emplyment_type')";
             $GLOBALS['db']->query($p_track_sql);
 
         }

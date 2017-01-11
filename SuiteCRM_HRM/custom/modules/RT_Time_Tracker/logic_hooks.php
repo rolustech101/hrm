@@ -12,12 +12,13 @@ $hook_array['before_save'][] = array(
     'UpdateTracker',
     'update_name'
 );
-$hook_array['before_save'][] = array(
-    2,
-    'calculate total hours',
-    'custom/modules/RT_Time_Tracker/CalculateTotalHours.php',
-    'CalculateTotalHours',
-    'calculate_hours'
+$hook_array['process_record'] = array();
+$hook_array['process_record'][] = array(
+    1,
+    'Shows duration in the listview',
+    'custom/modules/RT_Time_Tracker/ShowDuration.php',
+    'ShowDuration',
+    'show'
 );
 
 

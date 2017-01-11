@@ -39,6 +39,12 @@ array (
 //          0 => 'name',
 //          1 => '',
 //        ),
+          0 => array(
+            0 =>      array (
+                'name' => 'rt_time_tracker_rt_employees_name',
+            ),
+              1 => array(),
+          ),
         1 =>
         array (
           0 =>
@@ -48,7 +54,7 @@ array (
                   'displayParams' =>
                       array (
                           'required' => true,
-                          'updateCallback' => 'SugarWidgetScheduler.update_time();',
+//                          'updateCallback' => 'SugarWidgetScheduler.update_time();',
                       ),
           ),
           1 => 
@@ -58,7 +64,7 @@ array (
               'displayParams' =>
                   array (
                       'required' => true,
-                      'updateCallback' => 'SugarWidgetScheduler.update_time();',
+//                      'updateCallback' => 'SugarWidgetScheduler.update_time();',
                   ),
           ),
         ),
@@ -84,9 +90,7 @@ array (
             ',
                   'customCodeReadOnly' => '{$fields.duration_hours.value}{$MOD.LBL_HOURS_ABBREV} {$fields.duration_minutes.value}{$MOD.LBL_MINSS_ABBREV} ',
               ),
-          array (
-            'name' => 'rt_time_tracker_rt_employees_name',
-          ),
+
           1 => 'assigned_user_name',
         ),
       ),

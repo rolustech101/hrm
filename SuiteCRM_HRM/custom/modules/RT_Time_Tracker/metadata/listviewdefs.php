@@ -9,14 +9,14 @@ array (
     'default' => true,
     'link' => true,
   ),
-  'CHECK_IN_TIME' => 
+  'DATE_START' =>
   array (
     'type' => 'datetimecombo',
     'label' => 'LBL_CHECK_IN_TIME',
     'width' => '10%',
     'default' => true,
   ),
-  'CHECKOUT_TIME' => 
+  'DATE_END' =>
   array (
     'type' => 'datetimecombo',
     'label' => 'LBL_CHECKOUT_TIME',
@@ -32,6 +32,34 @@ array (
     'width' => '10%',
     'default' => true,
   ),
+    'duration_hours' =>
+        array (
+            'type' => 'int',
+            'label' => 'LBL_DURATION_HOURS',
+            'width' => '10%',
+            'default' => false,
+        ),
+    'duration_minutes' =>
+        array (
+            'type' => 'int',
+            'label' => 'LBL_DURATION_MINUTES',
+            'width' => '10%',
+            'default' => false,
+        ),
+//    'DURATION' =>
+//        array (
+//            'type' => 'int',
+//            'label' => 'LBL_DURATION',
+//            'width' => '10%',
+//            'default' => true,
+//        ),
+    'TOTAL_HOURS' =>
+        array (
+            'type' => 'varchar',
+            'label' => 'LBL_TOTAL_HOURS',
+            'width' => '10%',
+            'default' => true,
+        ),
   'DATE_ENTERED' => 
   array (
     'type' => 'datetime',

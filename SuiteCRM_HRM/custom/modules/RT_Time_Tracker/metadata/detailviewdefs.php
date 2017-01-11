@@ -53,16 +53,27 @@ array (
         array (
           0 => 
           array (
-            'name' => 'check_in_time',
+            'name' => 'date_start',
             'label' => 'LBL_CHECK_IN_TIME',
           ),
           1 => 
           array (
-            'name' => 'checkout_time',
+            'name' => 'date_end',
             'label' => 'LBL_CHECKOUT_TIME',
           ),
         ),
-        2 => 
+
+          2 =>
+              array (
+                  0 => array(
+                      'name' => 'duration',
+                      'customCode' => '{$fields.duration_hours.value}{$MOD.LBL_HOURS_ABBREV} {$fields.duration_minutes.value}{$MOD.LBL_MINSS_ABBREV} ',
+                      'label' => 'LBL_DURATION',
+                  ),
+                  1 => '',
+              ),
+
+        3 =>
         array (
           0 => 
           array (
@@ -70,11 +81,7 @@ array (
           ),
           1 => 'assigned_user_name',
         ),
-        3 => 
-        array (
-          0 => '',
-          1 => '',
-        ),
+
       ),
     ),
   ),

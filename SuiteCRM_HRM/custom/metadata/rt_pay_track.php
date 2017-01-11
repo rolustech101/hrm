@@ -89,8 +89,32 @@ $dictionary["rt_pay_track"] = array (
                 ),
             14 =>
                 array (
+                    'name' => 'total_minutes',
+                    'type' => 'int',
+                    'len' => 255,
+                ),
+            15 =>
+                array (
+                    'name' => 'per_hour_rate',
+                    'type' => 'double',
+                    'len' => 255,
+                ),
+            16 =>
+                array (
+                    'name' => 'stipend',
+                    'type' => 'int',
+                    'len' => 255,
+                ),
+            17 =>
+                array (
                     'name' => 'salary_paid',
                     'type' => 'int',
+                    'len' => 100,
+                ),
+            18 =>
+                array (
+                    'name' => 'employment_type',
+                    'type' => 'varchar',
                     'len' => 100,
                 ),
         ),

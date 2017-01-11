@@ -62,14 +62,11 @@ function count_no_of_days() {
     var dateC = moment(date2_from);
 
     var dur = dateB.diff(dateC, 'days');
-    alert(dur);
-    console.log('Difference is ', dateB.diff(dateC), 'milliseconds');
-    console.log('Difference is ', dateB.diff(dateC, 'days'), 'days');
-    console.log('Difference is ', dateB.diff(dateC, 'months'), 'months');
+    // console.log('Difference is ', dateB.diff(dateC), 'milliseconds');
+    // console.log('Difference is ', dateB.diff(dateC, 'days'), 'days');
+    // console.log('Difference is ', dateB.diff(dateC, 'months'), 'months');
 
-
-
-    if(duration<0){
+    if(dur<0){
         swal({
             title: "Error!",
             text: "Number of days cannot be Negative!",
@@ -78,7 +75,8 @@ function count_no_of_days() {
         });
         return false;
     }
-    document.getElementById('count_days_c').value = duration+1;
+
+    document.getElementById('count_days_c').value = dur+1;
 }
 function custom_function(view,formm) {
 
