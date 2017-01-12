@@ -39,6 +39,46 @@ class MailReviewer
                 $form_name = $row['name'];
                 $form_array = json_decode(html_entity_decode($form_data), true);
                 $form_html = '<html><head><title>Performance Review</title></head><body><h2>Performance Review for ' . $employee_name . ' </h2>';
+                $form_html = '<style>
+    html, * {
+        box-sizing: border-box;
+        font-family: arial;
+    }
+
+    #give_review, .review-form {
+        max-width: 480px;
+        margin: 0 auto;
+    }
+
+    #give_review textarea {
+        border: 1px solid #ccc;
+        float: left;
+        min-width: 100%;
+        padding: 5px;
+        margin: 0 0 30px;
+        overflow: hidden;
+        display: block;
+    }
+
+    #give_review input[type="text"] {
+        display: block;
+        font-weight: bold;
+        border: none;
+        margin: 0;
+        overflow: hidden;
+    }
+
+    #give_review input[type="submit"] {
+        padding: 8px 15px;
+        width: auto;
+        min-width: auto;
+        background: #2982F0;
+        border: none;
+        color: #fff;
+        cursor: pointer;
+        margin-top: 20px;
+    }
+</style>';
                 $form_html .= '<form id="give_review" name="give_review" method="post" action="../index.php?entryPoint=performance_review_form&reviewer_id='.$reviewer_id.'"';
 
                 $form_html .= "<input type='hidden' name='emp_id' id='emp_id' value= '$employee_id'>";
