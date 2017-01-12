@@ -39,7 +39,7 @@ class MailReviewer
                 $form_name = $row['name'];
                 $form_array = json_decode(html_entity_decode($form_data), true);
                 $form_html = '<html><head><title>Performance Review</title></head><body><h2>Performance Review for ' . $employee_name . ' </h2>';
-                $form_html = '<style>
+                $form_html .= '<style>
     html, * {
         box-sizing: border-box;
         font-family: arial;
