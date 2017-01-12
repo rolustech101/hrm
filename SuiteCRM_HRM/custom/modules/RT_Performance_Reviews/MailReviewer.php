@@ -76,7 +76,8 @@ class MailReviewer
                     }
                     $output = file_put_contents(readlink($_SERVER['DOCUMENT_ROOT']) . '/review_forms/review_' . $form_name . '_' . $employee_id.'_'.$time. '.php',
                         $form_html);
-                    $file_location = readlink($_SERVER['DOCUMENT_ROOT']) . '/review_forms/review_' . $form_name . '_' . $employee_id .'_'.$time. '.php';
+//                    $file_location = readlink($_SERVER['DOCUMENT_ROOT']) . '/review_forms/review_' . $form_name . '_' . $employee_id .'_'.$time. '.php';
+                    $file_location =  $sugar_config['site_url'] . '/review_forms/review_' . $form_name . '_' . $employee_id .'_'.$time. '.php';
                 } else {
                     if (!file_exists($_SERVER['DOCUMENT_ROOT'] . '/' . $sugar_config['instance_url'] . '/review_forms')) {
                         mkdir($_SERVER['DOCUMENT_ROOT'] . '/' . $sugar_config['instance_url'] . '/review_forms', 0777,
