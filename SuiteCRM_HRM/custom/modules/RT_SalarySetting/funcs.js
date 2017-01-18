@@ -6,11 +6,13 @@ function addRow() {
     if ($.inArray(country, non_filling_countries) != -1) {
         var v = $('#tax_settings tr').length - 4;
         var table = document.getElementById("tax_settings");
+        var table = $('#tax_settings');
         var rowCount = table.rows.length;
         rowCount = rowCount - 3;
         var row = table.insertRow(rowCount);
+        row.id = 'n_' + v;
         var cell1 = row.insertCell(0);
-        cell1.innerHTML = "  Tax Rate:";
+        cell1.innerHTML = "Tax Rate:";
 
         var cell2 = row.insertCell(1);
         cell2.innerHTML = '<input type="text" required name="tax_rate[]" id="tax_rate' + v + '" value="0" size="5">%';
@@ -22,19 +24,18 @@ function addRow() {
         cell4.innerHTML = 'Salary To:  <input type="text" required name="sal_to[]" id="sal_to' + v + '" value=""  onchange="checksalaryto(' + v + ');">';
 
         var cell5 = row.insertCell(4);
-        cell5.innerHTML = 'Fix Amount:  <input type="text" name="fix_amount[]" id="fix_amount' + v + '" value="0"  >&nbsp;&nbsp;&nbsp;&nbsp;<input type="button" name="delete_row" value="Delete" onClick="deleteRow(' + v + ')">';
+        cell5.innerHTML = 'Fix Amount:  <input type="text" name="fix_amount[]" id="fix_amount' + v + '" value="0"  >&nbsp;&nbsp;&nbsp;&nbsp;<input type="button" name="delete_row" id="del_' + v + '" value="Delete" onClick="deleteRow(' + v + ')">';
     } else {
-        var k = $('#tt tr').length;
+        var k = $('#tt tr').length + 1;
         // var table = document.getElementById("tax_settings");
 
         var tr = '<td>Tax Rate:</td><td> <input type="text" required name="tax_rate[]" id="tax_rate' + k + '" value="0" size="5">%</td>';
         tr = tr + '<td>Salary From: <input type="text" required name="sal_from[]" id="sal_from' + k + '" value="0"  onchange="checksalaryfrom(' + k + ');" ></td>';
         tr = tr + '<td> Salary To: <input type="text" required name="sal_to[]" id="sal_to' + k + '" value=""  onchange="checksalaryto(' + k + ');"  ></td>';
-        tr = tr + '<td> Fix Amount: <input type="text" name="fix_amount[]" id="fix_amount' + k + '" value="0"  > &nbsp;&nbsp;&nbsp;&nbsp;<input type="button" name="delete_row" value="Delete" onClick="deleteRow(' + k + ')" ></td>';
-        $('#tt tr:last').after('<tr>' + tr + '</tr>');
+        tr = tr + '<td> Fix Amount: <input type="text" name="fix_amount[]" id="fix_amount' + k + '" value="0"  > &nbsp;&nbsp;&nbsp;&nbsp;<input type="button" name="delete_row" id="del_' + k + '" value="Delete" onClick="deleteRow(' + k + ')" ></td>';
+        $('#tt tr:last').after('<tr id="n_' + k + '">' + tr + '</tr>');
 
     }
-
 }
 function get_filling_countries() {
     return ['USA', 'GERMANY', 'AUSTRALIA'];
@@ -126,33 +127,123 @@ function deleteRow(id) {
     var sal_to = document.getElementById("sal_to" + id).value;
     var tax = document.getElementById("tax_rate" + id).value;
     var status = $('#filling_status').val();
-    var handleSuccess = function (o) {
-        if (o.responseText !== undefined) {
-            swal("Success!", "Successfully Deleted!", "success");
-            window.location.reload();
-        }
-    };
+    swal({
+            title: "Are you sure?",
+            text: "You will not be able to recover this!",
+            type: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#DD6B55",
+            confirmButtonText: "Yes, delete it!",
+            closeOnConfirm: false
+        },
+        function () {
 
-    var handleFailure = function (o) {
-        if (o.responseText !== undefined) {
-            swal({
-                title: "Error!",
-                text: "Something wrong with the request!",
-                type: "error",
-                confirmButtonText: "OK"
-            });
-        }
-    };
+            var handleSuccess = function (o) {
+                if (o.responseText !== undefined) {
+                    var tr_id = $('#del_' + id).closest("tr").prop("id");
+                    $('#' + tr_id).remove();
+                    var non_filling_countries = get_non_filling_countries();
+                    if ($.inArray(country, non_filling_countries) != -1) {
+                        var table = document.getElementById("tax_settings");
+                        var rowLength = table.rows.length;
 
-    var callback =
-    {
-        success: handleSuccess,
-        failure: handleFailure,
-    };
-    var url = 'index.php?module=RT_SalarySetting&action=delete_range&rangefrom=' + sal_from + '&rangeto=' + sal_to + '&tax_country=' + country + '&file_status=' + status + '&tax_rate=' + tax;
-    var request = YAHOO.util.Connect.asyncRequest('GET', url, callback);
+                        var count_no = 1;
+                        for (var i = 2; i < rowLength - 3; i += 1) {
+                            var row = table.rows[i];
+                            row.id = "r_" + count_no;
+                            var cellLength = row.cells.length;
+                            for (var y = 0; y < cellLength; y += 1) {
+                                var cell = row.cells[y];
+                                if (y == 1) {
+                                    $(cell).find('input[name="tax_rate[]"]').prop('id', 'tax_rate' + count_no);
+
+                                } else if (y == 2) {
+                                    $(cell).find('input[name="sal_from[]"]').prop('id', 'sal_from' + count_no);
+                                    $(cell).find('input[name="sal_from[]"]').attr('onchange', 'checksalaryfrom(' + count_no + ')');
+
+                                } else if (y == 3) {
+                                    $(cell).find('input[name="sal_to[]"]').prop('id', 'sal_to' + count_no);
+                                    $(cell).find('input[name="sal_to[]"]').attr('onchange', 'checksalaryto(' + count_no + ')');
+
+                                } else if (y == 4) {
+                                    $(cell).find('input[name="fix_amount[]"]').prop('id', 'fix_amount' + count_no);
+                                    $(cell).find('input[name="delete_row"]').prop('id', 'del_' + count_no);
+                                    $(cell).find('input[name="delete_row"]').attr('onclick', 'deleteRow(' + count_no + ')');
+
+                                }
+                            }
+                            count_no++;
+                        }
+                    } else {
+                        var table = document.getElementById("tt");
+                        var rowLength = table.rows.length;
+
+                        var count_no = 1;
+                        for (var i = 0; i < rowLength; i += 1) {
+                            var row = table.rows[i];
+                            row.id = "r_" + count_no;
+                            var cellLength = row.cells.length;
+                            for (var y = 0; y < cellLength; y += 1) {
+                                // if(i == 1){
+                                //     continue;
+                                // }
+                                var cell = row.cells[y];
+                                if (y == 1) {
+                                    $(cell).find('input[name="tax_rate[]"]').prop('id', 'tax_rate' + count_no);
+
+                                } else if (y == 2) {
+                                    $(cell).find('input[name="sal_from[]"]').prop('id', 'sal_from' + count_no);
+                                    $(cell).find('input[name="sal_from[]"]').attr('onchange', 'checksalaryfrom(' + count_no + ')');
+
+                                } else if (y == 3) {
+                                    $(cell).find('input[name="sal_to[]"]').prop('id', 'sal_to' + count_no);
+                                    $(cell).find('input[name="sal_to[]"]').attr('onchange', 'checksalaryto(' + count_no + ')');
+
+                                } else if (y == 4) {
+                                    $(cell).find('input[name="fix_amount[]"]').prop('id', 'fix_amount' + count_no);
+                                    $(cell).find('input[name="delete_row"]').prop('id', 'del_' + count_no);
+                                    $(cell).find('input[name="delete_row"]').attr('onclick', 'deleteRow(' + count_no + ')');
+                                }
+                            }
+                            count_no++;
+                        }
+                    }
+
+
+                    swal("Deleted!", "Successfully Deleted!", "success");
+                    //window.location.reload(); // no need
+                }
+            };
+
+            var handleFailure = function (o) {
+                if (o.responseText !== undefined) {
+                    swal({
+                        title: "Error!",
+                        text: "Something wrong with the request!",
+                        type: "error",
+                        confirmButtonText: "OK"
+                    });
+                }
+            };
+
+            var callback =
+            {
+                success: handleSuccess,
+                failure: handleFailure,
+            };
+            var url = 'index.php?module=RT_SalarySetting&action=delete_range&rangefrom=' + sal_from + '&rangeto=' + sal_to + '&tax_country=' + country + '&file_status=' + status + '&tax_rate=' + tax;
+            var request = YAHOO.util.Connect.asyncRequest('GET', url, callback);
+        });
 }
 $(document).ready(function () {
+    /*
+     $(document).on('click', 'input[name = "delete_row"]', function () {
+
+     alert('in the remove');
+     var tr_id = $(this).closest("tr").prop("id");
+     $('#'+tr_id).remove();
+
+     });*/
     $(document).on('click', '#save-btn', function () {
 
         var non_filling_countries = get_non_filling_countries();

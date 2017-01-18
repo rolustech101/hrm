@@ -7,12 +7,7 @@ class MailCandidate
 {
     function mail_to_candidate($bean, $event, $arguments)
     {
-        $pp = $bean->fetched_row['date_of_interview'];
-        $nn = $bean->date_of_interview;
-
-        $GLOBALS['log']->fatal('mail_to_candidate HOOK!!!!!');
-
-        if (!isset($bean->fetched_row['id']))
+        if (isNewBean($bean))
         {
             $bean->is_set = true;
             if($bean->status_c == 'scheduled'){
@@ -21,9 +16,6 @@ class MailCandidate
         }
         else
         {
-            /*if($bean->status_c == 'scheduled' && $bean->fetched_row['is_set'] == true){
-                $this->setjob('RT_Candidates',$bean->rt_candidate_name,$bean->rt_candidate_id,$bean->date_of_interview,'Interview notify candidate');
-            }*/
             if($bean->fetched_row['date_of_interview'] != $bean->date_of_interview){
                 if($bean->status_c == 'scheduled'){
                     $this->setjob('RT_Candidates',$bean->rt_candidate_name,$bean->rt_candidate_id,$bean->date_of_interview,'Interview notify candidate');
@@ -36,13 +28,13 @@ class MailCandidate
         global $current_user;
         $job = new SchedulersJob();
         $job->name = "Interview Candidate";
-        $arr = [];
-        $arr['id'] = $candidate_id;
-        $arr['module'] = $module_name;
-        $arr['interview_date'] = $interview_date;
-        $arr['template_name'] = $template_name;
-        $arr['candidate_name'] = $candidate_name;
-        $job->data = json_encode($arr);
+        $data = [];
+        $data['id'] = $candidate_id;
+        $data['module'] = $module_name;
+        $data['interview_date'] = $interview_date;
+        $data['template_name'] = $template_name;
+        $data['candidate_name'] = $candidate_name;
+        $job->data = json_encode($data);
         $job->target = "function::interview_job";
         //user the job runs as
         $job->assigned_user_id = $current_user->id;
@@ -50,5 +42,4 @@ class MailCandidate
         $jobid = $jq->submitJob($job);
     }
 }
-
 ?>

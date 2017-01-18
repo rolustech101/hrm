@@ -20,12 +20,12 @@ class InterviewStatus
         $base_url = $sugar_config['site_url'];
         $job = new SchedulersJob();
         $job->name = "Interview Status";
-        $arr = [];
-        $arr['link'] = $base_url . "/index.php?module=RT_Interviews&return_module=RT_Interviews&action=DetailView&record={$interview_id}";
-        $arr['template_name'] = $template_name;
-        $arr['candidate_name'] = $candidate_name;
-        $arr['status'] = $status;
-        $job->data = json_encode($arr);
+        $data = [];
+        $data['link'] = $base_url . "/index.php?module=RT_Interviews&return_module=RT_Interviews&action=DetailView&record={$interview_id}";
+        $data['template_name'] = $template_name;
+        $data['candidate_name'] = $candidate_name;
+        $data['status'] = $status;
+        $job->data = json_encode($data);
         $job->target = "function::interview_status";
         //user the job runs as
         $job->assigned_user_id = $current_user->id;

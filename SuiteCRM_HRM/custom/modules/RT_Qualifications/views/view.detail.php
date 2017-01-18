@@ -45,7 +45,6 @@ class RT_QualificationsViewDetail extends ViewDetail {
  	function RT_QualificationsViewDetail(){
  		parent::ViewDetail();
  	}
-
  	function display(){
 				
 		if(empty($this->bean->id)){

@@ -1,3 +1,4 @@
+{if $show_salary_panel == 1}
 <div id='LBL_DETAILVIEW_SALARY_INFO' class='detail view'>
     <h4>{$MOD.LBL_EDITVIEW_SALARY_INFO}</h4>
     {foreach from=$salary key=k item=v}
@@ -42,3 +43,4 @@
         </tr>
     </table>
 </div>
+{/if}

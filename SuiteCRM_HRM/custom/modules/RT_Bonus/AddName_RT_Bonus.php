@@ -7,7 +7,7 @@ class AddName_RT_Bonus
 {
     function add_name($bean, $event, $arguments = null)
     {
-        $bean->module_name = 'Bonus';
+        $bean->module_name2 = 'Bonus';
 
     }
 }

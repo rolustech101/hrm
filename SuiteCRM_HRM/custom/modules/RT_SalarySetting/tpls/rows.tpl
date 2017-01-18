@@ -2,7 +2,7 @@
 {foreach from=$row item=rrow}
     {assign var=tax_rate value=$rrow.tax_rate}
     {assign var=provident_fund value=$rrow.provident_fund}
-            <tr>
+            <tr id="e_{$i}">
                 <td valign="top" >
                     Tax Rate:
                 </td>
@@ -16,9 +16,9 @@
                     Salary To:  <input type="text" required name="sal_to[]" id="sal_to{$i}" value="{$rrow.sal_to}">
                 </td>
                 <td valign="top" >
-                    Fix Amount:  <input type="text" name="fix_amount[]" id="fix_amount{$i}" value="{if !empty($rrow.fix_amount)} {$rrow.fix_amount} {else} 0 {/if}">&nbsp;&nbsp;&nbsp;&nbsp;<input type="button" name="delete_row" value="Delete" onClick="deleteRow('{$i}')">
+                    Fix Amount:  <input type="text" name="fix_amount[]" id="fix_amount{$i}" value="{if !empty($rrow.fix_amount)} {$rrow.fix_amount} {else} 0 {/if}">&nbsp;&nbsp;&nbsp;&nbsp;<input type="button" name="delete_row" id="del_{$i}" value="Delete" onClick="deleteRow('{$i}')">
                 </td>
             </tr>
-    {if $i == 1}<tr></tr>{/if}
+    {*{if $i == 1}<tr></tr>{/if}*}
     {assign var=i value=$i+1}
 {/foreach}

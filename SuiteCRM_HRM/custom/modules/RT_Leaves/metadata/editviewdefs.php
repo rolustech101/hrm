@@ -105,7 +105,7 @@ array (
         array (
           0 => 
           array (
-            'name' => 'from_date_c',
+            'name' => 'leave_start_date_c',
             'label' => 'LBL_FROM_DATE',
           ),
           1 => '',

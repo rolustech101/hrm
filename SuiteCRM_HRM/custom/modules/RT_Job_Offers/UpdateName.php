@@ -14,12 +14,12 @@ class UpdateName
         if($bean->status == 'accepted'){
             $job = new SchedulersJob();
             $job->name = "Job Accepted";
-            $arr = [];
-            $arr['id'] = $bean->rt_candidate_id;
-            $arr['candidate_name'] = $candidate->name;
-            $arr['status'] = 'Accepted';
-            $arr['template_name'] = 'Job Accepted';
-            $job->data = json_encode($arr);
+            $data = [];
+            $data['id'] = $bean->rt_candidate_id;
+            $data['candidate_name'] = $candidate->name;
+            $data['status'] = 'Accepted';
+            $data['template_name'] = 'Job Accepted';
+            $job->data = json_encode($data);
             $job->target = "function::offer_status";
             $job->assigned_user_id = $current_user->id;
             $jq = new SugarJobQueue();
@@ -28,12 +28,12 @@ class UpdateName
 
             $job = new SchedulersJob();
             $job->name = "Job Accepted";
-            $arr = [];
-            $arr['id'] = $bean->rt_candidate_id;
-            $arr['candidate_name'] = $candidate->name;
-            $arr['status'] = 'Rejected';
-            $arr['template_name'] = 'Job Accepted';
-            $job->data = json_encode($arr);
+            $data = [];
+            $data['id'] = $bean->rt_candidate_id;
+            $data['candidate_name'] = $candidate->name;
+            $data['status'] = 'Rejected';
+            $data['template_name'] = 'Job Accepted';
+            $job->data = json_encode($data);
             $job->target = "function::offer_status";
             $job->assigned_user_id = $current_user->id;
             $jq = new SugarJobQueue();

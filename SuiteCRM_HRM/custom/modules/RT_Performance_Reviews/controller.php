@@ -67,8 +67,6 @@ class RT_Performance_ReviewsController extends SugarController
         $r_module = $_REQUEST['return_module'];
         $r_action = $_REQUEST['return_action'];
         SugarApplication::redirect("index.php?action=$r_action&module=$r_module");
-
-
     }
 
     public function action_edit_form()
@@ -115,10 +113,7 @@ class RT_Performance_ReviewsController extends SugarController
         ob_clean();
         if (isset($_REQUEST['form_id']) || !empty($_REQUEST['form_id'])) {
             $id = $_REQUEST['form_id'];
-           
-//            $date_entered = date("Y-m-d H:i:s");
             $pr = BeanFactory::newBean('RT_Performance_Reviews');
-//            $date_entered = $pr->date_entered;
             global $timedate;
             $timedate->getInstance()->userTimezone();
             $CurrenrDateTime1 = $timedate->now();

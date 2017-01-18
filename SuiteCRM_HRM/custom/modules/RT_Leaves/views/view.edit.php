@@ -59,12 +59,6 @@ class RT_LeavesViewEdit extends ViewEdit
 		$bean_emp = BeanFactory::getBean('RT_Employees', $id);
 		$this->bean->annual_leave_balance = $bean_emp->annual_leave_balance;
 		$this->bean->casual_leave_balance = $bean_emp->casual_leave_balance;
-
-//		$todate = $this->bean->to_date_c; // or your date as well
-//		$your_date = strtotime("2010-01-01");
-//		$datediff = $now - $your_date;
-//
-//		echo floor($datediff / (60 * 60 * 24));
         parent::display();
 
  	}

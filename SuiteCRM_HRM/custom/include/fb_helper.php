@@ -15,8 +15,6 @@ function send_curl($post_url,$data)
     curl_setopt($ch, CURLOPT_POSTFIELDS, $data);
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
     $resp = curl_exec($ch);
-    $GLOBALS['log']->fatal('print_r($resp,1)');
-    $GLOBALS['log']->fatal(print_r($resp,1));
     if(!$resp){
         die('Error: "' . curl_error($ch) . '" - Code: ' . curl_errno($ch));
     }

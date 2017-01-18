@@ -9,7 +9,7 @@ $subpanel_layout['list_fields'] = array (
     'vname' => 'LBL_LEAVE_TYPE',
     'width' => '10%',
   ),
-  'from_date_c' => 
+  'leave_start_date_c' =>
   array (
     'type' => 'date',
     'default' => true,

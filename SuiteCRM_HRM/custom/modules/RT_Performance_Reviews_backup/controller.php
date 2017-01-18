@@ -12,8 +12,6 @@ class RT_Performance_ReviewsController extends SugarController
 
     public function action_submit_form()
     {
-        $GLOBALS['log']->fatal(print_r($_REQUEST,1));
-        
         global $sugar_config;
         global $current_user;
         $user_id = $current_user->id;

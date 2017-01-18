@@ -14,7 +14,6 @@ class RT_SalarySettingController extends SugarController
         while ($row = $GLOBALS['db']->fetchByAssoc($res)) {
             $list[] = $row;
         }
-//        $row = $GLOBALS['db']->fetchByAssoc($res);
         $this->view_object_map['row'] = $list;
         $this->view = 'sal_settings';
     }
@@ -77,7 +76,7 @@ class RT_SalarySettingController extends SugarController
             }
         }
         $GLOBALS['db']->query($sql);
-        SugarApplication::redirect("index.php?action=index&module=Administration");
+//        SugarApplication::redirect("index.php?action=index&module=Administration");
     }
 
     function action_save()

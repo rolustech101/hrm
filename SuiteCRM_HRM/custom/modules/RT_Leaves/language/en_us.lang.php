@@ -16,4 +16,5 @@ $mod_strings = array (
   'LBL_CASUAL_BALANCE' => 'Casual Leave Balance',
   'LBL_ANNUAL_BALANCE' => 'Annual Leave Balance',
   'LBL_COUNT_DAYS' => 'No of Days',
+  'LBL_YEAR_OF_LEAVE' => 'Year of leave',
 );

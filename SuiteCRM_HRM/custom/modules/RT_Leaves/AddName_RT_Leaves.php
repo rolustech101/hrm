@@ -7,7 +7,7 @@ class AddName_RT_Leaves
 {
     function add_name($bean, $event, $arguments = null)
     {
-        $bean->module_name = 'Leaves';
+        $bean->module_name2 = 'Leaves';
 
     }
 }

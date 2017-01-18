@@ -7,7 +7,7 @@ function birthday_job()
     $sql = "select concat(first_name,' ',last_name) as name , date_format(date_of_birth_c ,'%m-%d') as birthday from rt_employees_cstm as emp_cstm inner join rt_employees as emp ON id_c = id where date_format(date_of_birth_c ,'%m-%d') = date_format(now() ,'%m-%d')";
     $res = $GLOBALS['db']->query($sql);
     while ($row = $GLOBALS['db']->fetchByAssoc($res)) {
-        $GLOBALS['log']->fatal('birthday run!!!');
+        $GLOBALS['log']->info('birthday job run!');
         $name = $row['name'];
         $sugar_email = new SugarPHPMailer();
         $sugar_email->IsHTML(true);

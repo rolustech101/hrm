@@ -15,6 +15,4 @@ $hook_array['process_record'][] = array(
     'AddName_RT_Bonus',
     'add_name'
 );
-
-
 ?>

@@ -8,7 +8,6 @@ class MailInterviewer
     function mail_to_interviewer($bean, $event, $arguments)
     {
         global $current_user;
-        $GLOBALS['log']->fatal('mail_to_interviewer HOOK!!!!!');
         if($arguments['related_module'] == 'RT_Employees' && $arguments['link'] == 'rt_interviews_rt_employees_1' ){
             $cand_id = $bean->rt_candidate_id;
             $cand_bean = BeanFactory::getBean('RT_Candidates',$cand_id);
@@ -29,15 +28,15 @@ class MailInterviewer
             $emp_name = $arguments['related_bean']->name;
             $job = new SchedulersJob();
             $job->name = "Interview Alert Job";
-            $arr = [];
-            $arr['id'] = $emp_id;
-            $arr['job_id'] = $job_id;
-            $arr['module'] = 'RT_Employees';
-            $arr['interview_date'] = $interview_date;
-            $arr['template_name'] = 'Interview notify interviewer';
-            $arr['employee_name'] = $emp_name;
-            $arr['candidate_name'] = $bean->rt_candidate_name;
-            $job->data = json_encode($arr);
+            $data = [];
+            $data['id'] = $emp_id;
+            $data['job_id'] = $job_id;
+            $data['module'] = 'RT_Employees';
+            $data['interview_date'] = $interview_date;
+            $data['template_name'] = 'Interview notify interviewer';
+            $data['employee_name'] = $emp_name;
+            $data['candidate_name'] = $bean->rt_candidate_name;
+            $job->data = json_encode($data);
             $job->target = "function::interview_job";
             $job->assigned_user_id = $current_user->id;
             $jq = new SugarJobQueue();

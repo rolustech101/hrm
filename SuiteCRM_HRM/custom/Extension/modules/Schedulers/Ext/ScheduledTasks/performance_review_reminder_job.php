@@ -7,7 +7,7 @@ function performance_review_reminder_job()
     $sql = "select emp.*, concat(emp.first_name,' ',emp.last_name) as name,emp_cstm.*  from rt_employees as emp inner join rt_employees_cstm as emp_cstm on id_c = id where emp.deleted = 0";
     $res = $GLOBALS['db']->query($sql);
     while ($row = $GLOBALS['db']->fetchByAssoc($res)) {
-        $GLOBALS['log']->fatal('performance_review_reminder_job run!');
+        $GLOBALS['log']->info('performance_review_reminder_job run!');
         $name = $row['name'];
         $appraisal_date = $row['appraisal_date'];
         if (!isset($appraisal_date) || empty($appraisal_date)) {

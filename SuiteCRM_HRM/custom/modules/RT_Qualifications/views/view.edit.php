@@ -48,16 +48,6 @@ class RT_QualificationsViewEdit extends ViewEdit
  	
  	public function display() 
  	{
-      /*  $this->ev->process();
-		
-		echo '<script type="text/javascript" src="custom/modules/RT_Qualifications/funcs.js"></script>';
-		echo '<script language="javascript">window.onload=showHidePanel;</script>';
-		
-		echo $this->ev->display($this->showTitle);*/
-
-		/*unset($this->ev->defs['panels']['lbl_editview_panel2']);
-		$th = new TemplateHandler();
-		$th->clearCache($this->module);*/
 		echo '<script type="text/javascript" src="custom/modules/RT_Qualifications/funcs.js"></script>';
 		echo '<script language="javascript">window.onload=showHidePanel;</script>';
 		parent::display();

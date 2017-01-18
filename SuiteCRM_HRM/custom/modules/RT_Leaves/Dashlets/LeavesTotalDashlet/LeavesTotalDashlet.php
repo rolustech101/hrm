@@ -154,7 +154,7 @@ class LeavesTotalDashlet extends DashletGenericChart
                 labelsAboveUnitsPost:'',
                 labelsAbovedecimals: 2,
                 //linewidth: 2,
-                eventsClick:outcomeByMonthClick,
+                eventsClick:employeesleavesClick,
                 //textSize:10,
                 strokestyle: 'white',
                 //colors: ['Gradient(#4572A7:#66f)','Gradient(#AA4643:white)','Gradient(#89A54E:white)'],
@@ -188,25 +188,6 @@ class LeavesTotalDashlet extends DashletGenericChart
                 noyaxis: true
             }
         }).draw();
-        /*.on('draw', function (obj)
-        {
-            for (var i=0; i<obj.coords.length; ++i) {
-                obj.context.fillStyle = 'black';
-                if(obj.data_arr[i] > 0)
-                {
-                RGraph.Text2(obj.context, {
-                    font:'Arial',
-                    'size':10,
-                    'x':obj.coords[i][0] + (obj.coords[i][2] / 2),
-                    'y':obj.coords[i][1] + (obj.coords[i][3] / 2),
-                    'text':obj.data_arr[i].toString(),
-                    'valign':'center',
-                    'halign':'center'
-                });
-                }
-            }
-        }).draw();
-        */
 
         bar.canvas.onmouseout = function (e)
         {
@@ -216,22 +197,6 @@ class LeavesTotalDashlet extends DashletGenericChart
             // Redraw the canvas so that any highlighting is gone
             RGraph.redraw();
         }
-/*
-         var sizeIncrement = new RGraph.Drawing.Text({
-            id: '$canvasId',
-            x: 10,
-            y: 20,
-            text: 'Opportunity size in 1',
-            options: {
-                font: 'Arial',
-                bold: true,
-                //halign: 'left',
-                //valign: 'bottom',
-                colors: ['black'],
-                size: 10
-            }
-        }).draw();
-*/
 </script>
 EOD;
         return $chart;
@@ -245,7 +210,7 @@ EOD;
     {
         $emp_id = $this->rt_employees_rt_leaves_name[0];
         $query = "select
-    sum(count_days_c) as total,date_format(from_date_c ,'%Y') as m, date_format(from_date_c, '%Y') as sales_stage
+    sum(count_days_c) as total,date_format(leave_start_date_c ,'%Y') as m, date_format(leave_start_date_c, '%Y') as sales_stage
 from
     rt_leaves_cstm as lcs
         inner join
@@ -269,6 +234,14 @@ group by m
 
     protected function prepareChartData($data,$currency_symbol, $thousands_symbol)
     {
+        $e_id = $this->rt_employees_rt_leaves_name[0];
+        $emp = BeanFactory::getBean('RT_Employees',$e_id);
+        $name_of_employee = '';
+        if(!empty($emp->first_name)){
+            $name_of_employee .= $emp->first_name.' '.$emp->last_name;
+        }else{
+            $name_of_employee .= $emp->last_name;
+        }
         //Use the  lead_source to categorise the data for the charts
         $chart['labels'] = array();
         $chart['data'] = array();
@@ -291,7 +264,7 @@ group by m
 
             $formattedFloat = (float)number_format((float)$i["total"], 2, '.', '');
             $chart['data'][count($chart['data'])-1][] = $formattedFloat;
-            $chart['tooltips'][]="<div><input type='hidden' class='stage' value='$stage_dom_option'><input type='hidden' class='date' value='$key'></div>".$stage.'('.$currency_symbol.$formattedFloat.$thousands_symbol.') '.$key;
+            $chart['tooltips'][]="<div><input type='hidden' class='stage' value='$stage_dom_option'><input type='hidden' class='emp_name' value='$name_of_employee'><input type='hidden' class='date' value='$key'></div>".$stage.'('.$currency_symbol.$formattedFloat.$thousands_symbol.') '.$key;
         }
         return $chart;
     }

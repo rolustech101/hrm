@@ -81,7 +81,6 @@ class RT_InterviewsViewEdit extends ViewEdit
                     }
                 }
                 if ($candidate) {
-
                     $cand = BeanFactory::getBean('RT_Candidates', $candidate);
                     $this->bean->rt_candidate_id = $candidate;
                     $this->bean->rt_candidate_name = $cand->name;
@@ -93,7 +92,6 @@ class RT_InterviewsViewEdit extends ViewEdit
                 }
             }
         }
-
         $this->ev->process();
         echo $this->ev->display($this->showTitle);
 

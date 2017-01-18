@@ -1,7 +1,7 @@
 <?php
 function candi_inter($job)
 {
-    $GLOBALS['log']->fatal('INTERVIEW JOB!');
+    $GLOBALS['log']->info('INTERVIEW JOB!');
     $data = json_decode(html_entity_decode($job->data), true);
 
     if (!empty($data)) {

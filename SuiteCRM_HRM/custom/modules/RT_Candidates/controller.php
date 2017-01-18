@@ -125,10 +125,8 @@ class RT_CandidatesController extends SugarController{
 			$candidate->employee_id = $employee->id;
 			$candidate->save();
 		}
-
 		echo json_encode('result from controller!!!');
 		die;
-
     }
 }
 	

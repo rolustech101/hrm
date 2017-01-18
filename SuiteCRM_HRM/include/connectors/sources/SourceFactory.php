@@ -52,8 +52,6 @@ class SourceFactory{
 	 * @return source
 	 */
 	public static function getSource($class, $call_init = true) {
-		$GLOBALS['log']->fatal('CLASS NAME');
-		$GLOBALS['log']->fatal($class);
 		$dir = str_replace('_','/',$class);
 		$parts = explode("/", $dir);
 		$file = $parts[count($parts)-1];

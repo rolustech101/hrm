@@ -1,3 +1,20 @@
+{if $show_salary == 1}
+    {literal}
+    <style>
+        #LBL_EDITVIEW_SALARY_INFO, #LBL_EDITVIEW_TAX{
+            display: block;
+        }
+    </style>
+{/literal}
+{else}
+    {literal}
+    <style>
+        #LBL_EDITVIEW_SALARY_INFO, #LBL_EDITVIEW_TAX{
+            display: none;
+        }
+    </style>
+{/literal}
+{/if}
 <script type="text/javascript" src="custom/modules/RT_Employees/funcs.js"></script>
 <input type="hidden" name="taxable_status" id="taxable_status" value="">
 <div id="LBL_EDITVIEW_SALARY_INFO">

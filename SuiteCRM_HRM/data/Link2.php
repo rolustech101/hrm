@@ -288,6 +288,7 @@ class Link2 {
      * @return string "LHS" or "RHS" depending on the side of the relationship this link represents
      */
     public function getSide() {
+
         //First try the relationship
         if ($this->relationship->getLHSLink() == $this->name &&
             ($this->relationship->getLHSModule() == $this->focus->module_name)
@@ -314,6 +315,7 @@ class Link2 {
                 return REL_RHS;
             }
         }
+
         //Next try using the id_name and relationship join keys
         else if (!empty($this->def['id_name']))
         {
@@ -322,8 +324,7 @@ class Link2 {
             else if (isset($this->relationship->def['join_key_rhs']) && $this->def['id_name'] == $this->relationship->def['join_key_rhs'])
                 return REL_LHS;
         }
-
-        $GLOBALS['log']->error("Unable to get proper side for link {$this->name}");
+        $GLOBALS['log']->fatal("Unable to get proper side for link {$this->name}");
     }
 
     /**
@@ -472,6 +473,7 @@ class Link2 {
      * @return boolean|array          Return true if all relationships were added.  Return an array with the failed keys if any of them failed.
      */
     function add($rel_keys,$additional_values=array()) {
+
         if (!is_array($rel_keys))
             $rel_keys = array($rel_keys);
 
@@ -483,7 +485,7 @@ class Link2 {
             if (!($key instanceof SugarBean)) {
                 $key = $this->getRelatedBean($key);
                 if (!($key instanceof SugarBean)) {
-                    $GLOBALS['log']->error("Unable to load related bean by id");
+                    $GLOBALS['log']->fatal("Unable to load related bean by id");
                     return false;
                 }
             }

@@ -27,13 +27,13 @@
             <tr>
                 <td>
                     <table id="tt">
-                        <tr><td></td></tr>
+                        {*<tr><td></td></tr>*}
                     </table>
                 </td>
             </tr>
 
             <tr><td></td><td></td><td></td><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input title="Click to add another salary range" class="button" type="button" name="addrow" value="Add Another Range" onclick="addRow();"></td></tr>
-            <tr>
+            {*<tr>*}
                 {*<td valign="top" id='_label' class="dataLabel">*}
                     {*Provident Fund:*}
                 {*</td>*}
@@ -41,7 +41,7 @@
                     {*Provident Fund:*}
                     {*<input type="text" name="provident_fund" id="provident_fund" required value="{$provident_fund}" size="5">%*}
                 {*</td>*}
-            </tr>
+            {*</tr>*}
             <tr>
                 <td><input type="submit" id="save-btn" name="save-btn" value="Save"/>&nbsp;<input type="button" value="  Cancel  " name="cancel" class="button" onclick="document.location.href='index.php?module=Administration&amp;action=index'" title=""></td>
                 <td></td>

@@ -36,12 +36,12 @@ function getCand($email, $phone)
             $GLOBALS['log']->fatal('Duplicate candidates exists please delete there should be unique names!');
             return '';
         } elseif ($res->num_rows > 0 && $res->num_rows == 1) {
-            $GLOBALS['log']->fatal('use existing candidate');
+            $GLOBALS['log']->info('using existing candidate');
             $row = $GLOBALS['db']->fetchByAssoc($res);
             $cid = $row['cand_id'];
             $c = BeanFactory::getBean('RT_Candidates', $cid);
         } else {
-            $GLOBALS['log']->fatal('creating new candidate');
+            $GLOBALS['log']->info('creating new candidate');
             $c = BeanFactory::newBean('RT_Candidates');
         }
         return $c;
@@ -116,7 +116,7 @@ $candidate->visa_required = $visa_required;
 $candidate->save();
 
 // create new job_application
-$GLOBALS['log']->fatal('create new job application');
+$GLOBALS['log']->info('create new job application');
 
 $new_job_application = BeanFactory::newBean('RT_Job_Application');
 $new_job_application->status = 'new';

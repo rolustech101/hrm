@@ -45,8 +45,6 @@ class RT_VacanciesViewDetail extends ViewDetail{
  	}
 	
  	function display(){
-
-
 		$start  = strtotime($this->bean->open_date);
 		$end = strtotime($this->bean->close_date);
 		$difference = $end-$start;
@@ -55,7 +53,5 @@ class RT_VacanciesViewDetail extends ViewDetail{
 		$this->bean->days_open = $days;
 		parent::display();
 	}
-
 }
- 
 ?>

@@ -1,9 +1,10 @@
 <?php
-if(!defined('sugarEntry') || !sugarEntry) die('Not A Valid Entry Point');
+if (!defined('sugarEntry') || !sugarEntry) {
+    die('Not A Valid Entry Point');
+}
 /*********************************************************************************
  * SugarCRM Community Edition is a customer relationship management program developed by
  * SugarCRM, Inc. Copyright (C) 2004-2013 SugarCRM Inc.
-
  * SuiteCRM is an extension to SugarCRM Community Edition developed by Salesagility Ltd.
  * Copyright (C) 2011 - 2014 Salesagility Ltd.
  *
@@ -39,68 +40,79 @@ if(!defined('sugarEntry') || !sugarEntry) die('Not A Valid Entry Point');
  ********************************************************************************/
 
 
-
 $module_name = 'RT_Candidates';
 $listViewDefs[$module_name] = array(
-	'NAME' => array(
-		'width' => '20%', 		
-		'label' => 'LBL_NAME', 
-		'link' => true,
-		'orderBy' => 'last_name',
+    'NAME' => array(
+        'width' => '20%',
+        'label' => 'LBL_NAME',
+        'link' => true,
+        'orderBy' => 'last_name',
         'default' => true,
         'related_fields' => array('first_name', 'last_name', 'salutation'),
-		),
-	'PHONE_MOBILE' => array(
-		'width' => '10',
-		'label' => 'LBL_MOBILE_PHONE',
-		'default' => true,
-		),
-	'PHONE_WORK' => array(
-		'width' => '15%', 
-		'label' => 'LBL_OFFICE_PHONE',
-        'default' => false),
-	'EMAIL1' => array(
-		'width' => '15%',
-		'label' => 'LBL_EMAIL_ADDRESS',
-		'sortable' => false,
-		'link' => true,
-		'customCode' => '{$EMAIL1_LINK}{$EMAIL1}</a>',
+    ),
+    'PHONE_MOBILE' => array(
+        'width' => '10',
+        'label' => 'LBL_MOBILE_PHONE',
+        'default' => true,
+    ),
+    'PHONE_WORK' => array(
+        'width' => '15%',
+        'label' => 'LBL_OFFICE_PHONE',
+        'default' => false
+    ),
+    'EMAIL1' => array(
+        'width' => '15%',
+        'label' => 'LBL_EMAIL_ADDRESS',
+        'sortable' => false,
+        'link' => true,
+        'customCode' => '{$EMAIL1_LINK}{$EMAIL1}</a>',
         'default' => true
-		),
-	'date_entered' => array(
-		'width' => '9',
-		'label' => 'LBL_DATE_ENTERED',
-		'default' => true),
+    ),
+    'date_entered' => array(
+        'width' => '9',
+        'label' => 'LBL_DATE_ENTERED',
+        'default' => true
+    ),
     'DO_NOT_CALL' => array(
-        'width' => '10', 
-        'label' => 'LBL_DO_NOT_CALL'),
+        'width' => '10',
+        'label' => 'LBL_DO_NOT_CALL'
+    ),
     'PHONE_HOME' => array(
-        'width' => '10', 
-        'label' => 'LBL_HOME_PHONE'),
+        'width' => '10',
+        'label' => 'LBL_HOME_PHONE'
+    ),
 
     'PHONE_OTHER' => array(
-        'width' => '10', 
-        'label' => 'LBL_WORK_PHONE'),
+        'width' => '10',
+        'label' => 'LBL_WORK_PHONE'
+    ),
     'PHONE_FAX' => array(
-        'width' => '10', 
-        'label' => 'LBL_FAX_PHONE'),
+        'width' => '10',
+        'label' => 'LBL_FAX_PHONE'
+    ),
     'ADDRESS_STREET' => array(
-        'width' => '10', 
-        'label' => 'LBL_PRIMARY_ADDRESS_STREET'),
+        'width' => '10',
+        'label' => 'LBL_PRIMARY_ADDRESS_STREET'
+    ),
     'ADDRESS_CITY' => array(
-        'width' => '10', 
-        'label' => 'LBL_PRIMARY_ADDRESS_CITY'),
+        'width' => '10',
+        'label' => 'LBL_PRIMARY_ADDRESS_CITY'
+    ),
     'ADDRESS_STATE' => array(
-        'width' => '10', 
-        'label' => 'LBL_PRIMARY_ADDRESS_STATE'),
+        'width' => '10',
+        'label' => 'LBL_PRIMARY_ADDRESS_STATE'
+    ),
     'ADDRESS_POSTALCODE' => array(
-        'width' => '10', 
-        'label' => 'LBL_PRIMARY_ADDRESS_POSTALCODE'),
+        'width' => '10',
+        'label' => 'LBL_PRIMARY_ADDRESS_POSTALCODE'
+    ),
     'DATE_ENTERED' => array(
-        'width' => '10', 
-        'label' => 'LBL_DATE_ENTERED'),
+        'width' => '10',
+        'label' => 'LBL_DATE_ENTERED'
+    ),
     'CREATED_BY_NAME' => array(
-        'width' => '10', 
-        'label' => 'LBL_CREATED'),
+        'width' => '10',
+        'label' => 'LBL_CREATED'
+    ),
 );
 ?>

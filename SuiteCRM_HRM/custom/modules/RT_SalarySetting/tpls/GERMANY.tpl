@@ -29,14 +29,14 @@
                 </td>
             </tr>
             {assign var=i value=0}
-            {foreach from=$row item=rrow}
+   {*         {foreach from=$row item=rrow}
 
                 {assign var=tax_rate value=$rrow.tax_rate}
                 {assign var=provident_fund value=$rrow.provident_fund}
 
                 <tr>
                     <td valign="top" >
-                        Tax Rate:
+                        Tax Rate asdasd:
                     </td>
                     <td valign="top" >
                         <input type="text" required name="tax_rate[]" id="tax_rate{$i}" value=" {if !empty($rrow.tax_rate)} {$rrow.tax_rate} {else} 0 {/if}" size="5">%
@@ -53,7 +53,7 @@
                 </tr>
 
                 {assign var=i value=$i+1}
-            {/foreach}
+            {/foreach}*}
 
             <tr><td></td><td></td><td></td><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input title="Click to add another salary range" class="button" type="button" name="addrow" value="Add Another Range" onclick="addRow();"></td></tr>
             <tr>

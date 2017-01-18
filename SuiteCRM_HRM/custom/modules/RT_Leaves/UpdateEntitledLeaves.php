@@ -8,7 +8,7 @@ class UpdateEntitledLeaves
 {
     function update_leaves($bean, $event, $arguments)
     {
-        if (!isset($bean->fetched_row['id'])) {
+        if(isNewBean($bean)) {
             //for new
             if ($bean->status_c == 'Taken') {
                 $this->detuct_leaves($bean);
@@ -25,8 +25,6 @@ class UpdateEntitledLeaves
     {
         $id = $bean->rt_employees_rt_leavesrt_employees_ida;
         $emp_bean = BeanFactory::getBean('RT_Employees', $id);
-        $GLOBALS['log']->fatal('in leave Hook!!!');
-        $GLOBALS['log']->fatal(print_r($emp_bean,1));
         if ($bean->leave_type_c == 'Annual') {
             $annual_leaves = get_annual_balance($id);
             $annual_total = $annual_leaves + $bean->count_days_c;
@@ -71,10 +69,6 @@ class UpdateEntitledLeaves
         }
 
         $emp_bean->save();
-        $GLOBALS['log']->fatal('in leave Hook!!! AFTER SAVE EMPLOYEEE!!!!!!!!!!!!!');
-        $GLOBALS['log']->fatal(print_r($emp_bean,1));
-
-
     }
 }
 

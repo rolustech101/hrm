@@ -4,10 +4,7 @@ if (!defined('sugarEntry') || !sugarEntry) {
 }
 $hook_version = 1;
 $hook_array = array();
-//$hook_array['after_retrieve'] = array();	 
-//$hook_array['after_retrieve'][] = array(1, 'count_leave', 'custom/modules/RT_Employees/CountLeave.php', 'CountLeave', 'count_leave');
 $hook_array['before_save'] = array();
-//$hook_array['before_save'][] = array(1, 'entitleleaves', 'custom/modules/RT_Employees/LeavesEntitled.php', 'LeavesEntitled', 'entitleleaves');
 $hook_array['before_save'][] = array(
     1,
     'serialize_salary',

@@ -1,7 +1,7 @@
 <?php
 function offer_status($job)
 {
-    $GLOBALS['log']->fatal('offer_status JOB!');
+    $GLOBALS['log']->info('offer_status JOB!');
     $data = json_decode(html_entity_decode($job->data), true);
     if (!empty($data)) {
         $template_name = $data['template_name'];

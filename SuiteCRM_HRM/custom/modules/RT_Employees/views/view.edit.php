@@ -54,16 +54,11 @@ class RT_EmployeesViewEdit extends ViewEdit
  	 */
  	public function display() 
  	{
-//        $this->ev->process();
 		$this->ss->assign("ID", $this->bean->id);
 		$this->ss->assign("TAX", $this->bean->tax);
 		if(!empty($this->bean->salary)){
 			$this->ss->assign("salary", $this->bean->salary);
 		}
-		/////////////
-
-
-		/////////////////
 		$salaries = $this->bean->salary;
 		$tax = $this->bean->tax;
 		global $mod_strings;
@@ -75,7 +70,6 @@ class RT_EmployeesViewEdit extends ViewEdit
             $list = get_salary_selectlist();
             $sal_options = "<select name='label_salary[]' id = 'label_salary'>";
             foreach ($list as $keyy => $valuee) {
-                $GLOBALS['log']->fatal($keyy.' => '.$valuee);
                 if($key == $keyy){
                     $sal_options .= ("<option value='$keyy' selected>". $valuee ."</option>");
                 }else{
@@ -83,8 +77,6 @@ class RT_EmployeesViewEdit extends ViewEdit
                 }
             }
             $sal_options .= "</select>";
-//            print_r($salaries);
-//            echo '________________________________________________________';
 			$checked = '';
 			if($value['taxable'] == 1){
 				$checked = 'checked';
@@ -115,10 +107,16 @@ EOQ;
 			$counter++;
 		}
 
-//		$this->ss->fetch("custom/modules/RT_Employees/tpls/Editfooter.tpl");
         $this->ss->assign("tr_table", $tr_table);
-//        echo $this->ev->display($this->showTitle);
+		if($this->bean->employment_type_c == 'Full_Time' || ($this->bean->employment_type_c == 'Part_Time' && $this->bean->is_fixed_monthly)){
+			$this->ss->assign("show_salary", 1);
+		}else{
+			$this->ss->assign("show_salary", 0);
+		}
 		parent::display();
 
-    }
+
+
+
+	}
 }

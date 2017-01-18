@@ -9,7 +9,5 @@ class SalaryUpdate
     {
         $bean->salary_c = array_sum($bean->amount_salary);
     }
-
 }
-
 ?>

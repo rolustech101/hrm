@@ -2,7 +2,6 @@
 /*********************************************************************************
  * SugarCRM Community Edition is a customer relationship management program developed by
  * SugarCRM, Inc. Copyright (C) 2004-2013 SugarCRM Inc.
-
  * SuiteCRM is an extension to SugarCRM Community Edition developed by Salesagility Ltd.
  * Copyright (C) 2011 - 2014 Salesagility Ltd.
  *
@@ -39,164 +38,172 @@
 
 $module_name = 'RT_Candidates';
 $viewdefs[$module_name]['DetailView'] = array(
-'templateMeta' => array('form' => array(
-    'buttons'=>array('EDIT', 'DUPLICATE', 'DELETE', 'FIND_DUPLICATES',
-    array (
-        'customCode' => '{if $fields.is_offered.value == 0}<input title="Click to Offer Job" class="button" type="button" name="offer_job" value="Offer Job" onclick="create_job_offer(\'{$fields.id.value}\')">{/if}',
+    'templateMeta' => array(
+        'form' => array(
+            'buttons' => array(
+                'EDIT',
+                'DUPLICATE',
+                'DELETE',
+                'FIND_DUPLICATES',
+                array(
+                    'customCode' => '{if $fields.is_offered.value == 0}<input title="Click to Offer Job" class="button" type="button" name="offer_job" value="Offer Job" onclick="create_job_offer(\'{$fields.id.value}\')">{/if}',
+                ),
+                array(
+                    'customCode' => '{if $fields.is_offered.value == 1 && $fields.is_converted.value == 0}<input title="Convert Candidate into Employee" class="button" type="button" name="convert_btn" value="Convert Candidate" onclick="convert_candidate(\'{$fields.id.value}\')">{/if}',
+                ),
+            ),
+            'headerTpl' => 'custom/modules/RT_Candidates/tpls/DetailViewHeader.tpl',
+        ),
+        'maxColumns' => '2',
+        'widths' => array(
+            array('label' => '10', 'field' => '30'),
+            array('label' => '10', 'field' => '30')
+        ),
+        'includes' =>
+            array(
+                0 =>
+                    array(
+                        'file' => 'custom/modules/RT_Candidates/funcs.js',
+                    ),
+            ),
     ),
-    array (
-        'customCode' => '{if $fields.is_offered.value == 1 && $fields.is_converted.value == 0}<input title="Convert Candidate into Employee" class="button" type="button" name="convert_btn" value="Convert Candidate" onclick="convert_candidate(\'{$fields.id.value}\')">{/if}',
-    ),
-                                                        ),
-    'headerTpl' => 'custom/modules/RT_Candidates/tpls/DetailViewHeader.tpl',
-                                       ),
-                        'maxColumns' => '2', 
-                        'widths' => array(
-                                        array('label' => '10', 'field' => '30'), 
-                                        array('label' => '10', 'field' => '30')
-                                        ),
-    'includes' =>
-        array (
-            0 =>
-                array (
-                    'file' => 'custom/modules/RT_Candidates/funcs.js',
-                ),
-        ),
-                        ),
-'panels' =>array (
+    'panels' => array(
 
-    'lbl_contact_information' =>
-        array(
-            array (
-
-                array (
-                    'name' => 'full_name',
-                    'label' => 'LBL_NAME',
-                ),
-
-                //'full_name',
-                array (
-                    'name' => 'phone_work',
-                ),
-            ),
-
-            array (
-                'title',
-
-                array (
-                    'name' => 'phone_mobile',
-                ),
-            ),
-
-            array (
-                'department',
-
-                array (
-                    'name' => 'phone_home',
-                    'label' => 'LBL_HOME_PHONE',
-                ),
-            ),
-
-            array (
-                array (
-                    'name' => 'phone_other',
-                    'label' => 'LBL_OTHER_PHONE',
-                ),
-                array(
-                    'name' => 'ssn'
-                )
-            ),
-
-            array (
-                array (
-                    'name' => 'date_entered',
-                    'customCode' => '{$fields.date_entered.value} {$APP.LBL_BY} {$fields.created_by_name.value}',
-                    'label' => 'LBL_DATE_ENTERED',
-                ),
-                array (
-                    'name' => 'phone_fax',
-                    'label' => 'LBL_FAX_PHONE',
-                ),
-            ),
-
-            array (
-                array (
-                    'name' => 'date_modified',
-                    'customCode' => '{$fields.date_modified.value} {$APP.LBL_BY} {$fields.modified_by_name.value}',
-                    'label' => 'LBL_DATE_MODIFIED',
-                ),
-                'do_not_call',
-            ),
-            array('cnic', ''),
-
-            array(
-                'email1'),
-
-            array (
-                array (
-                    'name' => 'primary_address_street',
-                    'label'=> 'LBL_PRIMARY_ADDRESS',
-                    'type' => 'address',
-                    'displayParams'=>array('key'=>'primary'),
-                ),
-                array (
-                    'name' => 'alt_address_street',
-                    'label'=> 'LBL_ALT_ADDRESS',
-                    'type' => 'address',
-                    'displayParams'=>array('key'=>'alt'),
-                ),
-            ),
-
-            array (
-                'description',
-            ),
-        ),
-
-    'lbl_employement_information' =>
-        array (
-
-            array (
-                array (
-                    'name' => 'currently_employed',
-                    'label' => 'LBL_CURRENTLY_EMPLOYED',
-                ),
-                array(
-                    'name' => 'current_employer',
-                    'label' => 'LBL_CURRENT_EMPLOYER',
-
-                ),),
+        'lbl_contact_information' =>
             array(
                 array(
-                    'name' => 'years_of_experience',
-                    'label' => 'LBL_YEARS_OF_EXPERIENCE',
 
+                    array(
+                        'name' => 'full_name',
+                        'label' => 'LBL_NAME',
+                    ),
+
+                    //'full_name',
+                    array(
+                        'name' => 'phone_work',
+                    ),
                 ),
-                array(),
+
+                array(
+                    'title',
+
+                    array(
+                        'name' => 'phone_mobile',
+                    ),
+                ),
+
+                array(
+                    'department',
+
+                    array(
+                        'name' => 'phone_home',
+                        'label' => 'LBL_HOME_PHONE',
+                    ),
+                ),
+
+                array(
+                    array(
+                        'name' => 'phone_other',
+                        'label' => 'LBL_OTHER_PHONE',
+                    ),
+                    array(
+                        'name' => 'ssn'
+                    )
+                ),
+
+                array(
+                    array(
+                        'name' => 'date_entered',
+                        'customCode' => '{$fields.date_entered.value} {$APP.LBL_BY} {$fields.created_by_name.value}',
+                        'label' => 'LBL_DATE_ENTERED',
+                    ),
+                    array(
+                        'name' => 'phone_fax',
+                        'label' => 'LBL_FAX_PHONE',
+                    ),
+                ),
+
+                array(
+                    array(
+                        'name' => 'date_modified',
+                        'customCode' => '{$fields.date_modified.value} {$APP.LBL_BY} {$fields.modified_by_name.value}',
+                        'label' => 'LBL_DATE_MODIFIED',
+                    ),
+                    'do_not_call',
+                ),
+                array('cnic', ''),
+
+                array(
+                    'email1'
+                ),
+
+                array(
+                    array(
+                        'name' => 'primary_address_street',
+                        'label' => 'LBL_PRIMARY_ADDRESS',
+                        'type' => 'address',
+                        'displayParams' => array('key' => 'primary'),
+                    ),
+                    array(
+                        'name' => 'alt_address_street',
+                        'label' => 'LBL_ALT_ADDRESS',
+                        'type' => 'address',
+                        'displayParams' => array('key' => 'alt'),
+                    ),
+                ),
+
+                array(
+                    'description',
+                ),
             ),
 
-        ),
-    'lbl_additional_detail_information' =>
-        array (
-            array (
-                array (
-                    'name' => 'us_citizen',
-                    'label' => 'LBL_US_CITIZEN',
+        'lbl_employement_information' =>
+            array(
+
+                array(
+                    array(
+                        'name' => 'currently_employed',
+                        'label' => 'LBL_CURRENTLY_EMPLOYED',
+                    ),
+                    array(
+                        'name' => 'current_employer',
+                        'label' => 'LBL_CURRENT_EMPLOYER',
+
+                    ),
                 ),
                 array(
-                    'name' => 'education',
-                    'label' => 'LBL_EDUCATION',
+                    array(
+                        'name' => 'years_of_experience',
+                        'label' => 'LBL_YEARS_OF_EXPERIENCE',
 
-                ),),
+                    ),
+                    array(),
+                ),
+
+            ),
+        'lbl_additional_detail_information' =>
             array(
                 array(
-                    'name' => 'visa_required',
-                    'label' => 'LBL_VISA_REQUIRED',
+                    array(
+                        'name' => 'us_citizen',
+                        'label' => 'LBL_US_CITIZEN',
+                    ),
+                    array(
+                        'name' => 'education',
+                        'label' => 'LBL_EDUCATION',
 
+                    ),
                 ),
-                array(),
+                array(
+                    array(
+                        'name' => 'visa_required',
+                        'label' => 'LBL_VISA_REQUIRED',
+
+                    ),
+                    array(),
+                ),
             ),
-        ),
-)
- 
+    )
+
 );
 ?>

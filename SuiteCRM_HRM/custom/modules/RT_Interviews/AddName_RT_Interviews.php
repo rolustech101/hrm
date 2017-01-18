@@ -7,11 +7,9 @@ class AddName_RT_Interviews
 {
     function add_name($bean, $event, $arguments = null)
     {
-        $bean->module_name = 'Interview';
+        $bean->module_name2 = 'Interview';
 
     }
 }
 
 ?>
-	
-	

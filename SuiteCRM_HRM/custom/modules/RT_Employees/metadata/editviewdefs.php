@@ -39,11 +39,6 @@ $viewdefs [$module_name] =
                                     ),
                             ),
                         'useTabs' => false,
-//      'form' =>
-//      array (
-//        'enctype' => 'multipart/form-data',
-//        'footerTpl' => 'custom/modules/RT_Employees/tpls/EditFooter.tpl',
-//      ),
                     ),
                 'panels' =>
                     array(

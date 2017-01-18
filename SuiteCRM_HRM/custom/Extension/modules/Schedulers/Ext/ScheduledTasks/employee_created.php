@@ -1,7 +1,7 @@
 <?php
 function employee_created($job)
 {
-    $GLOBALS['log']->fatal('employee_created JOB!');
+    $GLOBALS['log']->info('employee_created JOB!');
     $data = json_decode(html_entity_decode($job->data), true);
     if (!empty($data)) {
         $emailObj = new Email();

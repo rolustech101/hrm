@@ -7,8 +7,7 @@ class MakeFile
 {
     function genfile($bean, $event, $arguments)
     {
-        $GLOBALS['log']->fatal('in RT payroll before save');
-        $GLOBALS['log']->fata(print_r($bean->abc_c,1));
+        $GLOBALS['log']->fata(print_r($bean->abc_c, 1));
         $ids = $bean->abc_c;
         global $current_user;
         $month = $bean->month;

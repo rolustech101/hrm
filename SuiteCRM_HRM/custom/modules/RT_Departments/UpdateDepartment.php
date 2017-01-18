@@ -7,7 +7,6 @@ class UpdateDepartment
 {
     function update_department($bean, $event, $arguments)
     {
-        $GLOBALS['log']->fatal('after retrieve department');
         $sql = "select * from rt_departments where id ='" . $bean->id . "'";
         $res = $GLOBALS['db']->query($sql);
         $row = $GLOBALS['db']->fetchByAssoc($res);

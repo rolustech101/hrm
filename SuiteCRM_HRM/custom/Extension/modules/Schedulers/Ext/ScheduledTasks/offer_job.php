@@ -1,7 +1,7 @@
 <?php
 function offer_job($job)
 {
-    $GLOBALS['log']->fatal('offer_job JOB!');
+    $GLOBALS['log']->info('offer_job JOB!');
     $data = json_decode(html_entity_decode($job->data), true);
     if (!empty($data)) {
         $emailObj = new Email();

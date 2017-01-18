@@ -1,7 +1,7 @@
 <?php
 function send_form_to_interviewer($job)
 {
-    $GLOBALS['log']->fatal('send_form_to_interviewer JOB!');
+    $GLOBALS['log']->info('send_form_to_interviewer JOB!');
     $data = json_decode(html_entity_decode($job->data), true);
     if (!empty($data)) {
         $emailObj = new Email();

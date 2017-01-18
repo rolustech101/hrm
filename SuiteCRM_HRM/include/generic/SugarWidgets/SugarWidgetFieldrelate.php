@@ -116,6 +116,7 @@ class SugarWidgetFieldRelate extends SugarWidgetReportField
      */
     public function queryFilterStarts_With($layout_def, $rename_columns = true)
     {
+        $GLOBALS['log']->fatal('in the queryFilterStarts_With');
         $ids = array();
 
         $relation = new Relationship();

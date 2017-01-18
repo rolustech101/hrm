@@ -20,7 +20,7 @@ function create_job_offer(candidate_id) {
         error:function (res) {
             swal({
                 title: "Error!",
-                text: "Something wrong with the request!",
+                text: SUGAR.language.languages.app_strings['LBL_HRM_AJAX_ERROR'],
                 type: "error",
                 confirmButtonText: "OK"
             });
@@ -58,7 +58,7 @@ function convert_candidate(candidate_id) {
         error:function (res) {
             swal({
                 title: "Error!",
-                text: "Something wrong with the request!",
+                text: SUGAR.language.languages.app_strings['LBL_HRM_AJAX_ERROR'],
                 type: "error",
                 confirmButtonText: "OK"
             });

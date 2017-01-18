@@ -3,7 +3,7 @@ function interview_job($job)
 {
     global $timedate;
 
-    $GLOBALS['log']->fatal('INTERVIEW JOB!');
+    $GLOBALS['log']->info('INTERVIEW JOB!');
     $data = json_decode(html_entity_decode($job->data), true);
     if (!empty($data)) {
         $emailObj = new Email();
@@ -49,7 +49,6 @@ function interview_job($job)
             }
 
             $db_date = $data['interview_date'];
-            $GLOBALS['log']->fatal($data['interview_date']);
             $newDate = date("F j, Y, g:i a", strtotime($db_date));
             $template->body_html = str_replace('{emp_name}', $data['employee_name'], $template->body_html);
             $template->body_html = str_replace('{date}', $newDate, $template->body_html);

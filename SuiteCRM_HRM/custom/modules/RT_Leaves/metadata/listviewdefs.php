@@ -9,10 +9,10 @@ array (
     'default' => true,
     'link' => true,
   ),
-  'A_EMPLOYEES_A_LEAVES_NAME' => 
+  'RT_EMPLOYEES_RT_LEAVES_NAME' =>
   array (
     'type' => 'relate',
-    'link' => 'a_employees_a_leaves',
+    'link' => 'rt_employees_rt_leaves',
     'label' => 'LBL_A_EMPLOYEES_A_LEAVES_FROM_A_EMPLOYEES_TITLE',
     'width' => '10%',
     'default' => true,
@@ -25,7 +25,7 @@ array (
     'label' => 'LBL_LEAVE_TYPE',
     'width' => '10%',
   ),
-  'FROM_DATE_C' => 
+  'LEAVE_START_DATE_C' =>
   array (
     'type' => 'date',
     'default' => true,
@@ -39,7 +39,7 @@ array (
     'label' => 'LBL_TO_DATE',
     'width' => '10%',
   ),
-  'NUMBER_OF_DAYS_C' => 
+  'COUNT_DAYS_C' =>
   array (
     'type' => 'int',
     'default' => true,

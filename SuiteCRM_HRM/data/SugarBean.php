@@ -2456,6 +2456,7 @@ class SugarBean
     protected function handle_request_relate($new_rel_id, $new_rel_link)
     {
         if (!empty($new_rel_id)) {
+
             if ($this->load_relationship($new_rel_link)) {
                 return $this->$new_rel_link->add($new_rel_id);
             } else {

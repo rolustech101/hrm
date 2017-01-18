@@ -1,7 +1,7 @@
 <?php
 function appraisal_submitted($job)
 {
-    $GLOBALS['log']->fatal('appraisal_submitted JOB!');
+    $GLOBALS['log']->info('appraisal_submitted JOB!');
     $data = json_decode(html_entity_decode($job->data), true);
     if (!empty($data)) {
         $template_name = $data['template_name'];

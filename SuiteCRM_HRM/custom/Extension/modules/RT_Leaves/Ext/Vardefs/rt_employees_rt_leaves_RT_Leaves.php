@@ -14,6 +14,7 @@ $dictionary["RT_Leaves"]["fields"]["rt_employees_rt_leaves_name"] = array (
   'name' => 'rt_employees_rt_leaves_name',
   'type' => 'relate',
   'source' => 'non-db',
+  'required' => true,
   'vname' => 'LBL_RT_EMPLOYEES_RT_LEAVES_FROM_RT_EMPLOYEES_TITLE',
   'save' => true,
   'id_name' => 'rt_employees_rt_leavesrt_employees_ida',

@@ -22,7 +22,7 @@ class RT_EmployeesController extends SugarController{
 				$tax_data['fix_amount'] = $taxes['fix_amount'];
 				$tax_data['salary_exceed'] = $annual_taxable_salary - $taxes['sal_from'];
 			}else{
-				$GLOBALS['log']->fatal('This salary range do not fit with the current ranges for country OR you did not define ranges for '.$country. ' having filling status '.$filling_status);
+				$GLOBALS['log']->error('This salary range do not fit with the current ranges for country OR you did not define ranges for '.$country. ' having filling status '.$filling_status);
 			}
 		}
 		echo json_encode($tax_data);

@@ -17,10 +17,9 @@ function create_candidate_from_email()
     $ie = new AOPInboundEmail();
     $emailUI = new EmailUI();
     $r = $ie->db->query('SELECT id, name FROM inbound_email WHERE is_personal = 0 AND deleted=0 AND status=\'Active\' AND mailbox_type != \'bounce\'');
-    $GLOBALS['log']->fatal('Just got Result from get all Inbounds of Inbound Emails husnain');
+    $GLOBALS['log']->info('Just got Result from get all Inbounds of Inbound Emails in the HRM');
 
     while ($a = $ie->db->fetchByAssoc($r)) {
-        $GLOBALS['log']->fatal('In while loop of Inbound Emails husnain');
         $ieX = new AOPInboundEmail();
         $ieX->retrieve($a['id']);
         $mailboxes = $ieX->mailboxarray;
@@ -38,15 +37,13 @@ function create_candidate_from_email()
                 $connectToMailServer = true;
             } // if
 
-            $GLOBALS['log']->fatal('Trying to connect to mailserver for [ ' . $a['name'] . ' ] husnain');
+            $GLOBALS['log']->info('Trying to connect to mailserver for [ ' . $a['name'] . ' ] husnain');
             if ($connectToMailServer) {
-                $GLOBALS['log']->fatal('Connected to mailserver husnain');
+                $GLOBALS['log']->info('Connected to mailserver');
                 if (!$ieX->isPop3Protocol()) {
                     $newMsgs = $ieX->getNewMessageIds();
-                    $GLOBALS['log']->fatal('isPop3Protocol to mailserver husnain');
                 }
                 if (is_array($newMsgs)) {
-                    $GLOBALS['log']->fatal('newMsgs to mailserver husnain');
                     $current = 1;
                     $total = count($newMsgs);
                     require_once("include/SugarFolders/SugarFolders.php");
@@ -55,18 +52,15 @@ function create_candidate_from_email()
                     $isGroupFolderExists = false;
                     $users = array();
                     if ($groupFolderId != null && $groupFolderId != "") {
-                        $GLOBALS['log']->fatal('groupFolderId to mailserver husnain');
                         $sugarFolder->retrieve($groupFolderId);
                         $isGroupFolderExists = true;
                     } // if
                     $messagesToDelete = array();
                     if ($ieX->isMailBoxTypeCreateCase()) {
-                        $GLOBALS['log']->fatal('isMailBoxTypeCreateCase to mailserver husnain');
                         /* require_once 'modules/AOP_Case_Updates/AOPAssignManager.php';
                          $assignManager = new AOPAssignManager($ieX);*/
                     }
                     foreach ($newMsgs as $k => $msgNo) {
-                        $GLOBALS['log']->fatal('foreach llop to mailserver husnain');
                         $uid = $msgNo;
                         if ($ieX->isPop3Protocol()) {
                             $uid = $msgNoToUIDL[$msgNo];
@@ -74,7 +68,6 @@ function create_candidate_from_email()
                             $uid = imap_uid($ieX->conn, $msgNo);
                         } // else
                         if ($isGroupFolderExists) {
-                            $GLOBALS['log']->fatal('Group folder exists husnain');
 
                             if ($ieX->importOneEmail($msgNo, $uid)) {
                                 // add to folder
@@ -88,18 +81,14 @@ function create_candidate_from_email()
 
                                   /*  $userId = $assignManager->getNextAssignedUser();
                                     $GLOBALS['log']->debug('userId [ ' . $userId . ' ]');*/
-                                    $GLOBALS['log']->fatal('Going to call handlecreate canddate husnain');
-                                    $GLOBALS['log']->fatal('NAMEEE EMAILLLL');
-                                    $GLOBALS['log']->fatal($ieX->email->name);
                                     $email_subject = $ieX->email->name;
                                     $email_subject = strtolower($email_subject);
                                     if (strpos($email_subject, 'job application') !== false) {
-                                        handleCreateCandidate($ieX->email);////////////////////////////////
+                                        handleCreateCandidate($ieX->email);
                                     }
                                 } // if
                             } // if
                         } else {
-                            $GLOBALS['log']->fatal('else not exist to mailserver husnain');
                             if ($ieX->isAutoImport()) {
                                 $ieX->importOneEmail($msgNo, $uid);
                             } else {
@@ -121,39 +110,30 @@ function create_candidate_from_email()
                                 $ieX->handleAutoresponse($email, $contactAddr);
                             } // else
                         } // else
-                        $GLOBALS['log']->fatal('***** On message [ ' . $current . ' of ' . $total . ' ] ***** husnain');
+                        $GLOBALS['log']->info('***** On message [ ' . $current . ' of ' . $total . ' ] ***** ');
                         $current++;
                     } // foreach
                     // update Inbound Account with last robin
 
                 } // if
                 if ($isGroupFolderExists) {
-                    $GLOBALS['log']->fatal('$isGroupFolderExists husnain');
-
                     $leaveMessagesOnMailServer = $ieX->get_stored_options("leaveMessagesOnMailServer", 0);
                     if (!$leaveMessagesOnMailServer) {
-                        $GLOBALS['log']->fatal('leaveMessagesOnMailServer husnain');
                         if ($ieX->isPop3Protocol()) {
-                            $GLOBALS['log']->fatal(' asd isPop3Protocol husnain');
                             $ieX->deleteMessageOnMailServerForPop3(implode(",", $messagesToDelete));
                         } else {
-                            $GLOBALS['log']->fatal(' else as isPop3Protocol husnain');
-                            $GLOBALS['log']->fatal('leaveMessagesOnMailServer husnain');
                             $ieX->deleteMessageOnMailServer(implode($app_strings['LBL_EMAIL_DELIMITER'], $messagesToDelete));
                         }
                     }
                 }
             } else {
-                $GLOBALS['log']->fatal(' LAst else husnain');
-                $GLOBALS['log']->fatal("SCHEDULERS: could not get an IMAP connection resource for ID [ {$a['id']} ]. Skipping mailbox [ {$a['name']} ].");
+                $GLOBALS['log']->info("SCHEDULERS: could not get an IMAP connection resource for ID [ {$a['id']} ]. Skipping mailbox [ {$a['name']} ].");
                 // cn: bug 9171 - continue while
             } // else
         } // foreach
         imap_expunge($ieX->conn);
         imap_close($ieX->conn, CL_EXPUNGE);
-        $GLOBALS['log']->fatal(' in the while itration husnain');
 
     } // while
-    $GLOBALS['log']->fatal(' before return true.... husnain');
     return true;
 }

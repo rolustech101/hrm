@@ -30,53 +30,35 @@ function set_custom_return(popupReplyData) {
             /* just ignore */
         } else {
             var displayValue = nameToValueArray[theKey].replace(/&amp;/gi, '&').replace(/&lt;/gi, '<').replace(/&gt;/gi, '>').replace(/&#039;/gi, '').replace(/&quot;/gi, '"');
-            document.getElementById(theKey).value = displayValue;
+            $('#'+theKey).val(displayValue);
         }
     }
     var id = $('#rt_employees_rt_leavesrt_employees_ida').val();
+    
     getEntitledHolidays(id);
 }
 
 function count_no_of_days() {
-    var from_date = document.getElementById('from_date_c').value;
-    var to_date = document.getElementById('to_date_c').value;
-    //
-    // alert(from_date);
-    // alert(to_date);
-    // return false;
+
+    var from_date = $('#leave_start_date_c').val();
+    var to_date = $('#to_date_c').val();
     var dateto = new Date(to_date);
     var datefrom = new Date(from_date);
     var date1_to = dateto.getFullYear() + "-" + (dateto.getMonth() + 1) + "-" + dateto.getDate();
     var date2_from = datefrom.getFullYear() + "-" + (datefrom.getMonth() + 1) + "-" + datefrom.getDate();
-    // // alert("from: "+date2+"\nTo: "+date1);
-    // var to = moment(to_date).format('MM-DD-YYYY');
-    // var from = moment(from_date).format('MM-DD-YYYY');
-    //
-    // /* using diff */
-    // var duration = to.diff(from, 'days');
-    //
-    // alert(duration);
-    // return false;
-
     var dateB = moment(date1_to);
     var dateC = moment(date2_from);
-
     var dur = dateB.diff(dateC, 'days');
-    // console.log('Difference is ', dateB.diff(dateC), 'milliseconds');
-    // console.log('Difference is ', dateB.diff(dateC, 'days'), 'days');
-    // console.log('Difference is ', dateB.diff(dateC, 'months'), 'months');
-
     if(dur<0){
         swal({
             title: "Error!",
-            text: "Number of days cannot be Negative!",
+            text: "Number of days cannot be Empty OR Negative!",
             type: "error",
             confirmButtonText: "OK"
         });
         return false;
     }
-
-    document.getElementById('count_days_c').value = dur+1;
+    $('#count_days_c').val(dur+1);
 }
 function custom_function(view,formm) {
 
@@ -89,11 +71,13 @@ function custom_function(view,formm) {
     var no_of_days = $('#count_days_c').val();
     var leave_status = $('#status_c').val();
     var join_date = $('#emp_date_of_joining').val();
-    var year_start = new Date(join_date.replace(join_date.substr(6),new Date().getFullYear()));
-    var year_end = new Date(join_date.replace(join_date.substr(6),new Date().getFullYear()+1));
-    var from_date = new Date(document.getElementById('from_date_c').value);
+    var join_date_object = new Date(join_date);
+    var year_start = join_date_object.setFullYear(new Date().getFullYear());
+    var year_end = join_date_object.setFullYear(new Date().getFullYear()+1);
+
+    var from_date = new Date(document.getElementById('leave_start_date_c').value);
     var to_date = new Date(document.getElementById('to_date_c').value);
-    if((from_date > year_start && from_date < year_end) && (to_date > year_start && to_date < year_end)){
+    if((moment(from_date).isAfter(year_start) && moment(from_date).isBefore(year_end)) && (moment(to_date).isAfter(year_start) && moment(to_date).isBefore(year_end))){
 
     }else {
         swal("You can only create Leaves for Employee Current year");

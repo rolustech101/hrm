@@ -1,7 +1,7 @@
 <?php
 function interview_status($job)
 {
-    $GLOBALS['log']->fatal('interview_status JOB!');
+    $GLOBALS['log']->info('interview_status JOB!');
     $data = json_decode(html_entity_decode($job->data), true);
     if (!empty($data)) {
         $emailObj = new Email();

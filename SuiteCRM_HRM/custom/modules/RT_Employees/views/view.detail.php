@@ -87,10 +87,15 @@ EOQ;
 		$this->ss->assign("tr_table", $tr_table);
 		if(!empty($this->bean->salary)){			
 			$this->ss->assign("salary", $this->bean->salary);
-			$this->ss->fetch("custom/modules/RT_Employees/tpls/Detailfooter.tpl");
+		}
+		if($this->bean->employment_type_c == 'Full_Time' || ($this->bean->employment_type_c == 'Part_Time' && $this->bean->is_fixed_monthly)){
+			$this->ss->assign("show_salary_panel", 1);
+		}else{
+			$this->ss->assign("show_salary_panel", 0);
 		}
 
 		parent::display();
+
 	}
 
 }

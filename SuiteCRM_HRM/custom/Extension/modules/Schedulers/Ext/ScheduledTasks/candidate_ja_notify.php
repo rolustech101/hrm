@@ -1,7 +1,7 @@
 <?php
 function candidate_ja_notify($job)
 {
-    $GLOBALS['log']->fatal('candidate_ja_notify JOB!');
+    $GLOBALS['log']->info('candidate_ja_notify JOB!');
     $data = json_decode(html_entity_decode($job->data), true);
     if (!empty($data)) {
         $emailObj = new Email();

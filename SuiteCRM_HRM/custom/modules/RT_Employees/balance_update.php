@@ -7,8 +7,7 @@ class BalanceUpdate
 {
     function update_balance($bean, $event, $arguments = null)
     {
-        if (!isset($bean->fetched_row['id'])) //check if it is the new record
-        {
+        if(isNewBean($bean)){
             // update balance fields
             $bean->annual_leave_balance = $bean->entitled_annual_leaves_c;
             $bean->casual_leave_balance = $bean->entitled_casual_leaves_c;

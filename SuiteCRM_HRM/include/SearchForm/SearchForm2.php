@@ -1292,8 +1292,14 @@ require_once('include/EditView/EditView2.php');
         //grab the values between the select and from
         $select = stripos($subquery, 'select');
         $from = stripos($subquery, 'from');
+        $GLOBALS['log']->fatal('SBUQUERY>>>'.$subquery);
+        $GLOBALS['log']->fatal('SELECT>>>'.$select);
+        $GLOBALS['log']->fatal('FROM>>>'.$from);
         if ($select !==false && $from!==false && $select+6 < $from) {
+            $GLOBALS['log']->fatal('in the iff QUERYYY');
             $selectCol = substr($subquery, $select+6, $from-$select-6);
+            $GLOBALS['log']->fatal('in the iff QUERYYY>>>>>>>'.$selectCol);
+
         }
         //remove table names if they exist
         $columns = explode(',', $selectCol);
@@ -1306,6 +1312,9 @@ require_once('include/EditView/EditView2.php');
             $i++;
         }
         $selectCol = implode(',', $columns);
+        $GLOBALS['log']->fatal('***************************************************>>>>>>>>>>>>>>>>>>>>'.$selectCol);
+        $GLOBALS['log']->fatal($selectCol);
+        $GLOBALS['log']->fatal('$selectCol');
         return $selectCol;
     }
  }

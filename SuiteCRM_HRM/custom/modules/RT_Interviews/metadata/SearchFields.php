@@ -1,5 +1,5 @@
 <?php
-// created: 2017-01-10 10:37:11
+// created: 2017-01-18 15:29:10
 $searchFields['RT_Interviews'] = array (
   'name' => 
   array (

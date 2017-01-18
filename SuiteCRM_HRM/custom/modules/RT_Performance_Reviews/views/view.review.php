@@ -24,8 +24,6 @@ class RT_Performance_ReviewsViewReview extends SugarView {
      */
 
     public function display() {
-
-//        $this->ss->assign("test", "test text for");
         $this->ss->assign('drop_options', $this->view_object_map['d_options']);
 //        $this->ss->assign('data_form', $this->view_object_map['form_data']);
         echo $this->ss->fetch("custom/modules/RT_Performance_Reviews/tpls/Review_from.tpl");

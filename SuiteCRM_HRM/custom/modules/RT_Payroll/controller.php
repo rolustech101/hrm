@@ -166,7 +166,6 @@ where
             $p_track_sql = "INSERT INTO rt_pay_track(id, date_entered, employee_id, payroll_id, month, year, salary, bonus, tax, provident, casual_leaves, annual_leaves, casual_balance, annual_balance, salary_paid, total_minutes, per_hour_rate, stipend, employment_type)
                                           VALUES('$pay_track_id', '$date_entered', '$id', '$payroll_id', '$month', '$year', '$serialize_sal', $bonus_amount, $tax, $provident, $casual_l, $annual_l, $casual_b, $annual_b, $salary_paid,$minutes_of_month,$per_hour_rate,$stipend, '$emplyment_type')";
             $GLOBALS['db']->query($p_track_sql);
-
         }
 
         $r_module = $_REQUEST['return_module'];

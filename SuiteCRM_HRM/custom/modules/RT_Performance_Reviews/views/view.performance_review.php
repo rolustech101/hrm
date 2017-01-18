@@ -20,7 +20,6 @@ class RT_Performance_ReviewsViewPerformance_Review extends SugarView {
 
     public function display() {
         echo $this->ss->fetch("custom/modules/RT_Performance_Reviews/tpls/Create_from.tpl");
-//        echo "ny custom view";
     }
 }
 ?>

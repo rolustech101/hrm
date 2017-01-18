@@ -7,7 +7,7 @@ class AddName_RT_Increment_History
 {
     function add_name($bean, $event, $arguments = null)
     {
-        $bean->module_name = 'Increment History';
+        $bean->module_name2 = 'Increment History';
 
     }
 }

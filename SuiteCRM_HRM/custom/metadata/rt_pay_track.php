@@ -96,14 +96,12 @@ $dictionary["rt_pay_track"] = array (
             15 =>
                 array (
                     'name' => 'per_hour_rate',
-                    'type' => 'double',
-                    'len' => 255,
+                    'type' => 'currency',
                 ),
             16 =>
                 array (
                     'name' => 'stipend',
-                    'type' => 'int',
-                    'len' => 255,
+                    'type' => "currency",
                 ),
             17 =>
                 array (

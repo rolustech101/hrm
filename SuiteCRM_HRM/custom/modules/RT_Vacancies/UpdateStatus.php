@@ -35,7 +35,7 @@ class UpdateStatus
             $app_id = $source->getProperty('appid');
             $app_secret = $source->getProperty('secret');
             if (empty($app_id) || empty($app_secret)) {
-                $GLOBALS['log']->fatal('App Secret OR APP ID is Empty!');
+                $GLOBALS['log']->error('App Secret OR APP ID is Empty!');
                 return false;
             }
 

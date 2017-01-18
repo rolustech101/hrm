@@ -1,8 +1,4 @@
 <h1>Performance Review Form edit</h1>
-{*<pre>
-    {$form_meta|print_r}
-    {$form_meta|@count}
-    </pre>*}
 <script type="text/javascript" src="custom/modules/RT_Performance_Reviews/funcs.js"></script>
 
 <div id="main_container">

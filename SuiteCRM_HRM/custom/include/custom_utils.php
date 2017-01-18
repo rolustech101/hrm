@@ -12,13 +12,11 @@ function get_annual_balance($id)
     $emp_joining_date = $emp_row['joining_date_c'];
     $date_start = substr_replace($emp_joining_date, date('Y'), 0, 4);
     $futureDate = date('Y-m-d', strtotime('+1 year', strtotime($date_start)));
-    $GLOBALS['log']->fatal($date_start . ' => ' . $futureDate);
     $sql = "select sum(count_days_c) as total_days from rt_leaves_cstm as lcs inner join rt_leaves as lea ON lcs.id_c = lea.id  where id_c in (
-    select rt_employees_rt_leavesrt_leaves_idb from rt_employees_rt_leaves_c where rt_employees_rt_leavesrt_employees_ida = '$id') and leave_type_c = 'Annual' and status_c = 'Taken' and deleted = '0' and  from_date_c BETWEEN '$date_start' and '$futureDate'";
+    select rt_employees_rt_leavesrt_leaves_idb from rt_employees_rt_leaves_c where rt_employees_rt_leavesrt_employees_ida = '$id') and leave_type_c = 'Annual' and status_c = 'Taken' and deleted = '0' and  leave_start_date_c BETWEEN '$date_start' and '$futureDate'";
     $res = $GLOBALS['db']->query($sql);
     $row = $GLOBALS['db']->fetchByAssoc($res);
     $no_of_days = $row['total_days'];
-    $GLOBALS['log']->fatal('total_days' . $no_of_days);
     return $no_of_days;
 }
 
@@ -31,11 +29,10 @@ function get_casual_balance($id)
     $date_start = substr_replace($emp_joining_date, date('Y'), 0, 4);
     $futureDate = date('Y-m-d', strtotime('+1 year', strtotime($date_start)));
     $sql = "select sum(count_days_c) as total_days from rt_leaves_cstm as lcs inner join rt_leaves as lea ON lcs.id_c = lea.id  where id_c in (
-    select rt_employees_rt_leavesrt_leaves_idb from rt_employees_rt_leaves_c where rt_employees_rt_leavesrt_employees_ida = '$id') and leave_type_c = 'Casual' and status_c = 'Taken' and deleted = '0' and  from_date_c BETWEEN '$date_start' and '$futureDate'";
+    select rt_employees_rt_leavesrt_leaves_idb from rt_employees_rt_leaves_c where rt_employees_rt_leavesrt_employees_ida = '$id') and leave_type_c = 'Casual' and status_c = 'Taken' and deleted = '0' and  leave_start_date_c BETWEEN '$date_start' and '$futureDate'";
     $res = $GLOBALS['db']->query($sql);
     $row = $GLOBALS['db']->fetchByAssoc($res);
     $no_of_days = $row['total_days'];
-    $GLOBALS['log']->fatal('total_days' . $no_of_days);
     return $no_of_days;
 }
 
@@ -77,12 +74,12 @@ function getCandidate($email)
         $GLOBALS['log']->fatal('Duplicate candidates exists please delete there should be unique names!');
         return '';
     } elseif ($res->num_rows > 0 && $res->num_rows == 1) {
-        $GLOBALS['log']->fatal('use existing candidate');
+        $GLOBALS['log']->info('using existing candidate');
         $row = $GLOBALS['db']->fetchByAssoc($res);
         $cid = $row['cand_id'];
         $c = BeanFactory::getBean('RT_Candidates', $cid);
     } else {
-        $GLOBALS['log']->fatal('creating new candidate');
+        $GLOBALS['log']->info('creating new candidate');
         $c = BeanFactory::newBean('RT_Candidates');
     }
     return $c;
@@ -90,8 +87,6 @@ function getCandidate($email)
 
 function send_interview_mail($module, $name, $id, $date, $template, $job_app_id = '')
 {
-    $GLOBALS['log']->fatal('MODULEEEEEEEEE NAMEEEEEEEEEEEEE');
-    $GLOBALS['log']->fatal($module);
     $sugar_email = new SugarPHPMailer();
     $sugar_email->IsHTML(true);
     $admin = new Administration();
@@ -105,7 +100,6 @@ function send_interview_mail($module, $name, $id, $date, $template, $job_app_id 
     $template = new EmailTemplate();
     $template->retrieve_by_string_fields(array('name' => $template_name, 'type' => 'email'));
     $sugar_email->Subject = $template->subject;
-    $GLOBALS['log']->fatal(print_r(from_html($template->body_html), 1));
     if ($module == 'RT_Candidates') {
         $sql = "select * from (select cand.id as cand_id, cand.phone_mobile,cand.phone_work,cand.phone_other,cand.phone_home,cand.phone_fax, e_add.id as e_id, e_add.email_address_id,e_add.bean_id from rt_candidates as cand inner join email_addr_bean_rel as e_add on e_add.bean_id = cand.id where cand.deleted = 0 AND e_add.deleted = 0 ) as tt inner join email_addresses as addresses on addresses.id = tt.email_address_id where cand_id = '$id' and addresses.invalid_email = 0 AND addresses.opt_out = 0 and addresses.deleted = 0";
         $res = $GLOBALS['db']->query($sql);
@@ -119,7 +113,6 @@ function send_interview_mail($module, $name, $id, $date, $template, $job_app_id 
         }
         $template->body_html = str_replace('{cand_name}', $name, $template->body_html);
         $template->body_html = str_replace('{date}', $date, $template->body_html);
-//        $GLOBALS['log']->fatal(print_r(from_html($template->body_html),1));
     } elseif ($module == 'RT_Employees') {
         $sql = "select * from (select emp.id as emp_id, e_add.id as e_id, e_add.email_address_id,e_add.bean_id from rt_employees as emp inner join email_addr_bean_rel as e_add on e_add.bean_id = emp.id where emp.deleted = 0 AND e_add.deleted = 0 ) as tt inner join email_addresses as addresses on addresses.id = tt.email_address_id where emp_id = '$id' and addresses.invalid_email = 0 AND addresses.opt_out = 0 and addresses.deleted = 0";
         $res = $GLOBALS['db']->query($sql);
@@ -128,8 +121,6 @@ function send_interview_mail($module, $name, $id, $date, $template, $job_app_id 
         } elseif ($res->num_rows > 0 && $res->num_rows == 1) {
             $row = $GLOBALS['db']->fetchByAssoc($res);
             $iv_mail = $row['email_address'];
-            $GLOBALS['log']->fatal('$iv_mail');
-            $GLOBALS['log']->fatal($iv_mail);
 
         } else {
             $GLOBALS['log']->fatal('Employee does not have the Email Address');
@@ -185,13 +176,10 @@ function send_email($cand_id, $job_app_id, $job_post_id)
     $template = new EmailTemplate();
     $template->retrieve_by_string_fields(array('name' => $template_name, 'type' => 'email'));
     $sugar_email->Subject = $template->subject;
-    $GLOBALS['log']->fatal(print_r(from_html($template->body_html), 1));
     $template->body_html = str_replace('{cand}', "<a href='$candidate'>$name_candidate</a>", $template->body_html);
     $template->body_html = str_replace('{posting}', "<a href='$job_posting'>Job Posting</a>", $template->body_html);
     $template->body_html = str_replace('{job_app}', "<a href='$job_application'>Job Application</a>",
         $template->body_html);
-    $GLOBALS['log']->fatal('**************');
-    $GLOBALS['log']->fatal(print_r(from_html($template->body_html), 1));
 
     $sugar_email->Body = from_html($template->body_html);
 
@@ -241,8 +229,6 @@ function get_salary_selectlist()
     }
     $sal_options = "<select name='label_salary[]' id = 'label_salary'>";
     foreach ($list as $key => $value) {
-        $GLOBALS['log']->fatal($key.' => '.$value);
-
         $sal_options .= ("<option value='$key'>". $value ."</option>");
     }
     $sal_options .= "</select>";
@@ -300,11 +286,15 @@ function get_tax_calculation($emp_id)
     }
     $GLOBALS['log']->fatal('Employee Does not exits!');
 }
+function isNewBean(SugarBean $bean) {
+    if(empty($bean->fetched_row['id'])) {
+        return true;
+    }
+    return false;
+}
 
 function handleCreateCandidate($email, $job_title)
 {
-
-    $GLOBALS['log']->fatal('in the handleCreateCandidate AOP husnain UTILS');
     global $current_user, $mod_strings, $current_language;
     $mod_strings = return_module_language($current_language, "Emails");
 
@@ -335,8 +325,6 @@ function handleCreateCandidate($email, $job_title)
     foreach ($notes as $note) {
         $noteIds[] = $note->id;
     }
-    $GLOBALS['log']->fatal('print_r($notes,1)');
-    $GLOBALS['log']->fatal(print_r($notes, 1));
     if ($email->description_html) {
 //            $c->description = $this->processImageLinks(SugarCleaner::cleanHtml($email->description_html),$noteIds);
         $c->description = $email->description;
@@ -385,11 +373,6 @@ function handleCreateCandidate($email, $job_title)
 
 
     foreach ($notes as $note) {
-
-        $GLOBALS['log']->fatal('create new note husnain');
-        $GLOBALS['log']->fatal('MIMEEEEEEEEE TYPEEEEE:::::::::::');
-        $GLOBALS['log']->fatal($note->file_mime_type);
-
         $newNote = BeanFactory::newBean('Notes');
         $newNote->name = $note->name;
 
@@ -402,8 +385,6 @@ function handleCreateCandidate($email, $job_title)
         $destFile = "upload://{$newNote->id}";
         copy($srcFile, $destFile);
     }
-    echo "End of handle create Candidate\n";
-    $GLOBALS['log']->fatal('END of handle create husnain');
 //    send_email($c->id, $new_job_application->id, $vacancy_bean->id);
     send_email($c->id, $new_job_application->id, $vacancy_id);
 

@@ -11,7 +11,7 @@ function balance_update_job()
         $id = $row['id'];
         $u_sql = "UPDATE rt_employees set annual_leave_balance = '$entilted_annual',casual_leave_balance = '$entilted_casual' where id = '$id'";
         $result = $GLOBALS['db']->query($u_sql);
-        $GLOBALS['log']->fatal('scheduler run and updated => ' . $id);
+        $GLOBALS['log']->info('scheduler run and updated => ' . $id);
     }
     return true;
 }

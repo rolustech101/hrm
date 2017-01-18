@@ -59,3 +59,4 @@ $app_list_strings['rt_payroll_status_dom']['Expired'] = 'Expired';
 $app_list_strings['rt_payroll_status_dom']['Under Review'] = 'Under Review';
 $app_list_strings['rt_payroll_status_dom']['Pending'] = 'Pending';
 $app_strings['LBL_DATE_OF_ACTIVITY'] = 'Date of Activity';
+$app_strings['LBL_HRM_AJAX_ERROR'] = 'Something wrong with the request!';
