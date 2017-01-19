@@ -4,8 +4,6 @@ if (!defined('sugarEntry') || !sugarEntry) {
 }
 $hook_version = 1;
 $hook_array = array();
-$hook_array['before_save'] = array();
-$hook_array['before_save'][] = array(1, 'genfile', 'custom/modules/RT_Payroll/MakeFile.php', 'MakeFile', 'genfile');
 $hook_array['process_record'] = array();
 $hook_array['process_record'][] = array(
     1,
