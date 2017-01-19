@@ -79,8 +79,7 @@ where
                         $salary_paid = $total_salary; //no tax deductions yet
                         $minutes_of_month = $total_minutes_of_month;
                         $per_hour_rate = $hourly_rate;
-
-
+                        $tax = 0;
                     }
                 }
 
@@ -89,10 +88,15 @@ where
                 $total_salary = $rows['stipend'];
                 $salary_paid = $total_salary; // no tax deductions yet
                 $stipend = $salary_paid;
+                $tax = 0;
 
             } else {
                 // full_time
-                $emplyment_type = 'Full Time';
+                if ($rows['is_fixed_monthly'] == 1) {
+                    $emplyment_type = 'Part Time';
+                } else {
+                    $emplyment_type = 'Full Time';
+                }
                 $salary = unserialize(html_entity_decode(stripslashes($rows['salary'])));
                 $total_salary = 0;
                 $taxable_salary = 0;
@@ -100,7 +104,9 @@ where
                     $amount = $detail['amount'];
                     $taxable = $detail['taxable'];
                     $total_salary += $amount;
+                    $GLOBALS['log']->fatal('TAXABLE___________________'.$taxable);
                     if ($taxable == 'Yes') {
+                        $GLOBALS['log']->fatal('YES TAXABLE SALARY>>>>>>'.$taxable);
                         $taxable_salary += $amount;
                     }
                 }
@@ -157,7 +163,6 @@ where
             }
             $pay_track_id = create_guid();
             $date_entered = date("Y-m-d H:i:s");
-
             $annual_l = $rows['entitled_annual_leaves_c'];
             $casual_l = $rows['entitled_casual_leaves_c'];
             $casual_b = get_casual_b($id);

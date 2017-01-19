@@ -30,10 +30,8 @@ while ($i < $size) {
 
     $ss->assign("TYPE_OF_EMPLOYMENT", $rows['employment_type']);
     if($employee->employment_type_c == 'Part_Time' && $employee->is_hourly){
-        $employement_type = 'Part_Time';
         $pay_type = 'hourly';
         $total_salary = $rows['salary_paid'];
-        $ss->assign("EMPLOYMENT_TYPE", $employement_type);
         $ss->assign("PAY_TYPE", $pay_type);
         $ss->assign("PER_HOUR_RATE", $rows['per_hour_rate']);
         $emp_minutes = $rows['total_minutes'];
@@ -43,21 +41,12 @@ while ($i < $size) {
 
 
     }elseif ($employee->employment_type_c == 'Part_Time' && $employee->is_fixed_monthly) {
-        $employement_type = 'Part_Time';
         $pay_type = 'fixed_monthly';
 //        $total_salary = $rows['salary_paid'];
-
-        $new_tax = get_tax_calculation($id);
-//		$tax = $rows['tax']*12;
-        $tax = $new_tax * 12;
-
+		$tax = $rows['tax']*12;
         $ss->assign("PROVIDENT", $rows['provident']);
         $ss->assign("TAX", $tax);
-
-//		$pmtax = $rows['tax'];
-        $pmtax = $new_tax;
-
-        $ss->assign("EMPLOYMENT_TYPE", $employement_type);
+        $pmtax = $rows['tax'];
         $ss->assign("PAY_TYPE", $pay_type);
 
         $salary = unserialize(html_entity_decode($rows['salary']));
@@ -67,38 +56,23 @@ while ($i < $size) {
         }
     }
     elseif ($employee->employment_type_c == 'Internship'){
-        $employement_type = 'Internship';
         $pay_type = 'stipend';
         $total_salary = $rows['salary_paid'];
         $ss->assign("EMP_STIPEND", $rows['stipend']);
-
-
-        $ss->assign("EMPLOYMENT_TYPE", $employement_type);
         $ss->assign("PAY_TYPE", $pay_type);
     }else{
-        $employement_type = 'Full_Time';
         $pay_type = 'regular';
-        $new_tax = get_tax_calculation($id);
-//		$tax = $rows['tax']*12;
-        $tax = $new_tax * 12;
-
+        $pmtax = $rows['tax'];
+        $tax = $rows['tax']*12;
         $ss->assign("PROVIDENT", $rows['provident']);
         $ss->assign("TAX", $tax);
-
-        $ss->assign("EMPLOYMENT_TYPE", $employement_type);
         $ss->assign("PAY_TYPE", $pay_type);
-
-//		$pmtax = $rows['tax'];
-        $pmtax = $new_tax;
-
         $salary = unserialize(html_entity_decode($rows['salary']));
         foreach ($salary as $label => $detail) {
             $amount = $detail['amount'];
             $total_salary += $amount;
         }
     }
-
-
     $emp = BeanFactory::getBean('RT_Employees', $id);
 
     $ss->assign("CASUAL", $rows['casual_leaves']);
@@ -109,15 +83,11 @@ while ($i < $size) {
     $ss->assign("JOINING", $emp->joining_date_c);
     $ss->assign("GROSS_PAY", $total_salary);
     $ss->assign("SALARY", $salary);
-
     $net_salary = $rows['salary_paid'];
     $ss->assign("NET_SALARY", $net_salary);
-
     $ss->assign("PMTAX", $pmtax);
-
     $annual_balance = $rows['annual_balance'];
     $casual_balance = $rows['casual_balance'];
-
     $ss->assign("ANNUAL_BALANCE", $annual_balance);
     $ss->assign("CASUAL_BALANCE", $casual_balance);
 
