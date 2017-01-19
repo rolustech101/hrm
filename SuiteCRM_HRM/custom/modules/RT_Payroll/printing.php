@@ -43,17 +43,18 @@ while ($i < $size) {
     }elseif ($employee->employment_type_c == 'Part_Time' && $employee->is_fixed_monthly) {
         $pay_type = 'fixed_monthly';
 //        $total_salary = $rows['salary_paid'];
-		$tax = $rows['tax']*12;
         $ss->assign("PROVIDENT", $rows['provident']);
-        $ss->assign("TAX", $tax);
-        $pmtax = $rows['tax'];
         $ss->assign("PAY_TYPE", $pay_type);
 
         $salary = unserialize(html_entity_decode($rows['salary']));
+        $new_tax = get_tax_calculation($id,$salary);
+        $pmtax = $new_tax;
+        $tax = $new_tax*12;
         foreach ($salary as $label => $detail) {
             $amount = $detail['amount'];
             $total_salary += $amount;
         }
+        $ss->assign("TAX", $tax);
     }
     elseif ($employee->employment_type_c == 'Internship'){
         $pay_type = 'stipend';
@@ -62,16 +63,17 @@ while ($i < $size) {
         $ss->assign("PAY_TYPE", $pay_type);
     }else{
         $pay_type = 'regular';
-        $pmtax = $rows['tax'];
-        $tax = $rows['tax']*12;
         $ss->assign("PROVIDENT", $rows['provident']);
-        $ss->assign("TAX", $tax);
         $ss->assign("PAY_TYPE", $pay_type);
         $salary = unserialize(html_entity_decode($rows['salary']));
+        $new_tax = get_tax_calculation($id,$salary);
+        $pmtax = $new_tax;
+        $tax = $new_tax*12;
         foreach ($salary as $label => $detail) {
             $amount = $detail['amount'];
             $total_salary += $amount;
         }
+        $ss->assign("TAX", $tax);
     }
     $emp = BeanFactory::getBean('RT_Employees', $id);
 

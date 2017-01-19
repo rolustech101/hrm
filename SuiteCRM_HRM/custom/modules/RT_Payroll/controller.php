@@ -104,12 +104,11 @@ where
                     $amount = $detail['amount'];
                     $taxable = $detail['taxable'];
                     $total_salary += $amount;
-                    $GLOBALS['log']->fatal('TAXABLE___________________'.$taxable);
-                    if ($taxable == 'Yes') {
-                        $GLOBALS['log']->fatal('YES TAXABLE SALARY>>>>>>'.$taxable);
+                    if ($taxable == 1) {
                         $taxable_salary += $amount;
                     }
                 }
+
                 $net_salary = $taxable_salary;
 
 

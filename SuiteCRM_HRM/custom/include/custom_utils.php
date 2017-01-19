@@ -235,18 +235,17 @@ function get_salary_selectlist()
 
 }
 
-function get_tax_calculation($emp_id)
+function get_tax_calculation($emp_id,$salary)
 {
-    $sql = "select * from rt_employees where id = '$emp_id'";
+    $sql = "select * from rt_employees where id = '$emp_id' AND deleted = 0";
     $res = $GLOBALS['db']->query($sql);
     if ($res->num_rows > 0) {
         $row = $GLOBALS['db']->fetchByAssoc($res);
-        $serialized_sal = $row['salary'];
+//        $serialized_sal = $row['salary'];
         $country = $row['primary_address_country'];
         $filling_status = $row['filling_status'];
-        $unserialized_sal = unserialize(html_entity_decode($serialized_sal));
-        $GLOBALS['log']->fatal('$unserialized_sal');
-        $GLOBALS['log']->fatal(print_r($unserialized_sal, 1));
+//        $unserialized_sal = unserialize(html_entity_decode($serialized_sal));
+        $unserialized_sal = $salary;
         $taxable_amount = 0;
         foreach ($unserialized_sal as $key => $value) {
             if ($unserialized_sal[$key]['taxable'] == 1) {
