@@ -15,5 +15,5 @@ $mod_strings['LBL_EDUCATIONAL_RQUIREMENT'] = 'Educational Requirement';
 $mod_strings['LBL_EDITVIEW_PANEL1'] = 'Compensation';
 $mod_strings['LBL_JOB_TYPE'] = 'Type';
 $mod_strings['LBL_JOB_APP_NAME_NAME'] = 'Job Application Name';
-$mod_strings['LBL_RT_JOB_APPLICATION_RT_VACANCIES_FROM_RT_JOB_APPLICATION_TITLE'] = 'Job Applications';
+$mod_strings['LBL_RT_JOB_APPLICATION_RT_VACANCIES_FROM_RT_JOB_APPLICATION_TITLE'] = 'Candidates';
 $mod_strings['LBL_JOB_NAME'] = 'Job Name';

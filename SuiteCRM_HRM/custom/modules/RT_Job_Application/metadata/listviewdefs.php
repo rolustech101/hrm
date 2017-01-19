@@ -66,23 +66,13 @@ $listViewDefs[$module_name] = array(
 			'width' => '10%',
 			'default' => true,
 		),
-	'PARENT_NAME' =>
+	'CANDIDATE_NAME' =>
 		array(
-			'type' => 'parent',
-			'studio' => 'visible',
-			'label' => 'LBL_RT_JOB_APPLICATION_C',
-			'link' => true,
-			'sortable' => false,
-			'ACLTag' => 'PARENT',
-			'dynamic_module' => 'PARENT_TYPE',
-			'id' => 'PARENT_ID',
-			'related_fields' =>
-				array(
-					0 => 'parent_id',
-					1 => 'parent_type',
-				),
-			'width' => '10%',
+			'width' => '32%',
 			'default' => true,
+			'label' => 'LBL_CANDIDATE_NAME',
+			'link' => true,
+			'type' => 'relate',
 		),
 
 	'date_entered' => array(

@@ -58,7 +58,7 @@ $viewdefs[$module_name]['DetailView'] = array(
     ),
     array('vacancy_name'),
   array (
-    'parent_name',
+    'candidate_name',
       'status',
   ),
 

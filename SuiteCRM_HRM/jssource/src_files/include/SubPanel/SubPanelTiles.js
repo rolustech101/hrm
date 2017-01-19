@@ -95,7 +95,7 @@ function subp_nav(m,i,a,t,r){
 * a = action (detail/edit)
 * This is done to minimize page size
 * */
-function sub_p_rem(sp,lf,li,rp){
+function sub_p_rem(sp,lf,li,rp) {
 
 	return_url = "index.php?module="+get_module_name()+"&action=SubPanelViewer&subpanel="+sp+"&record="+get_record_id()+"&sugar_body_only=1&inline=1";
 

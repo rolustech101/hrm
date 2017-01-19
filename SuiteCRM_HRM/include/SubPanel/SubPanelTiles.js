@@ -43,13 +43,17 @@ if(a=='d'){a='DetailView';}else{a='EditView';}
 url="index.php?module="+m+"&action="+a+"&record="+i+"&parent_module="+get_module_name()+"&parent_id="+get_record_id()+"&return_module="+get_module_name()+"&return_id="+get_record_id()+"&return_action=DetailView";if(r)
 {url+="&return_relationship="+r;}
 t.href=url;}
-function sub_p_rem(sp,lf,li,rp){return_url="index.php?module="+get_module_name()+"&action=SubPanelViewer&subpanel="+sp+"&record="+get_record_id()+"&sugar_body_only=1&inline=1";remove_url="index.php?module="+get_module_name()
-+"&action=DeleteRelationship"
-+"&record="+get_record_id()
-+"&linked_field="+lf
-+"&linked_id="+li
-+"&return_url="+escape(escape(return_url))
-+"&refresh_page="+rp;showSubPanel(sp,remove_url,true);}
+function sub_p_rem(sp, lf, li, rp) {
+    return_url = "index.php?module=" + get_module_name() + "&action=SubPanelViewer&subpanel=" + sp + "&record=" + get_record_id() + "&sugar_body_only=1&inline=1";
+    remove_url = "index.php?module=" + get_module_name()
+        + "&action=DeleteRelationship"
+        + "&record=" + get_record_id()
+        + "&linked_field=" + lf
+        + "&linked_id=" + li
+        + "&return_url=" + escape(escape(return_url))
+        + "&refresh_page=" + rp;
+    showSubPanel(sp, remove_url, true);
+}
 function sp_rem_conf(){return confirm(SUGAR.language.get('app_strings','NTC_REMOVE_CONFIRMATION'))}
 function sub_p_del(sp,submod,subrec,rp){return_url="index.php?module="+get_module_name()+"&action=SubPanelViewer&subpanel="+sp+"&record="+get_record_id()+"&sugar_body_only=1&inline=1";remove_url="index.php?module="+submod
 +"&action=delete"

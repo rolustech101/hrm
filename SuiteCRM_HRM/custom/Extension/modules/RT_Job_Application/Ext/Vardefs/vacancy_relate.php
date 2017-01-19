@@ -36,11 +36,11 @@ $dictionary['RT_Job_Application']['fields']['rt_vacancies'] = array(
     'vname'         => 'LBL_RT_VACANCIES',
 );
 $dictionary['RT_Job_Application']['relationships']['rt_job_application_rt_vacancies'] = array(
-    'lhs_module'		=> 'RT_Job_Application',
-    'lhs_table'			=> 'rt_job_application',
-    'lhs_key'			=> 'rt_vacancy_id',
-    'rhs_module'		=> 'RT_Vacancies',
-    'rhs_table'			=> 'rt_vacancies',
-    'rhs_key'			=> 'id',
+    'lhs_module'		=> 'RT_Vacancies',
+    'lhs_table'			=> 'rt_vacancies',
+    'lhs_key'			=> 'id',
+    'rhs_module'		=> 'RT_Job_Application',
+    'rhs_table'			=> 'rt_job_application',
+    'rhs_key'			=> 'rt_vacancy_id',
     'relationship_type'	=> 'one-to-many',
 );

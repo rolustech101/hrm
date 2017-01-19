@@ -1,4 +1,5 @@
 <?php
+if(!defined('sugarEntry') || !sugarEntry) die('Not A Valid Entry Point');
 /*********************************************************************************
  * SugarCRM Community Edition is a customer relationship management program developed by
  * SugarCRM, Inc. Copyright (C) 2004-2013 SugarCRM Inc.
@@ -37,34 +38,44 @@
  * display the words  "Powered by SugarCRM" and "Supercharged by SuiteCRM".
  ********************************************************************************/
 
-$module_name = 'RT_Job_Application';
-$viewdefs[$module_name]['EditView'] = array(
-    'templateMeta' => array('maxColumns' => '2', 
-                            'widths' => array(
-                                            array('label' => '10', 'field' => '30'), 
-                                            array('label' => '10', 'field' => '30')
-                                            ),                                                                                                                                    
-                                            ),
-                                            
-                                            
- 'panels' =>array (
-  'default' => 
-  array (
-    
-    array (
-      'candidate_name',
-      'status',
-    ),
-      array(
-          'vacancy_name',
-      ),
-    
-    array (
-      'description',
-    ),
-  ),
-                                                    
-),
-                        
+
+$module_name='RT_Job_Application';
+$subpanel_layout = array(
+	'top_buttons' => array(
+		array('widget_class' => 'SubPanelTopCreateButton'),
+		array('widget_class' => 'SubPanelTopSelectButton', 'popup_module' => $module_name),
+	),
+
+	'where' => '',
+
+	'list_fields' => array(
+		'candidate_name'=>array(
+	 		'vname' => 'LBL_CANDIDATE_NAME',
+//			'widget_class' => 'SubPanelDetailViewLink',
+			'link' => true,
+	 		'width' => '45%',
+		),
+		'status'=>array(
+	 		'vname' => 'LBL_STATUS',
+	 		'width' => '20%',
+		),
+		'date_modified'=>array(
+	 		'vname' => 'LBL_DATE_MODIFIED',
+	 		'width' => '45%',
+		),
+		'edit_button'=>array(
+            'vname' => 'LBL_EDIT_BUTTON',
+			'widget_class' => 'SubPanelEditButton',
+		 	'module' => $module_name,
+	 		'width' => '4%',
+		),
+		'remove_button'=>array(
+            'vname' => 'LBL_REMOVE',
+			'widget_class' => 'SubPanelRemoveButton',
+		 	'module' => $module_name,
+			'width' => '5%',
+		),
+	),
 );
+
 ?>
