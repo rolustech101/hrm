@@ -57,7 +57,11 @@ function interview_job($job)
             $job_id = $data['job_id'];
             global $sugar_config;
             $base_url = $sugar_config['site_url'];
-            $job_application = $base_url . "/index.php?module=RT_Job_Application&return_module=RT_Job_Application&action=DetailView&record=$job_id";
+            if(empty($job_id)){
+                $job_application = $base_url . "/index.php?module=RT_Job_Application&action=index";
+            }else{
+                $job_application = $base_url . "/index.php?module=RT_Job_Application&return_module=RT_Job_Application&action=DetailView&record=$job_id";
+            }
             $link = "<a href='$job_application'>Job Apllication</a>";
             $template->body_html = str_replace('{job_app}', $link, $template->body_html);
         } else {
