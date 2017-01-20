@@ -134,6 +134,8 @@ if ($is_attachment) {
     $cand->file_mime_type = $_FILES["fileToUpload"]["type"];
     $cand->filename = $_FILES["fileToUpload"]["name"];
     $cand->save();
+    $file_upload = new UploadFile();
+    $file_upload->upload_doc($cand,$cand->id,$cand->file_mime_type,$cand->filename,$cand->file_mime_type);
 //    $newNote->parent_type = 'RT_Job_Application';
 //    $newNote->parent_id = $new_job_application->id;
 //    $newNote->save();
