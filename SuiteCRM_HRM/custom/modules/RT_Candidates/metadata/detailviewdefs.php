@@ -136,6 +136,7 @@ $viewdefs[$module_name]['DetailView'] = array(
                 array(
                     'email1'
                 ),
+
                 array(
                     array(
                         'name' => 'primary_address_street',
