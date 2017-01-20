@@ -127,18 +127,20 @@ $new_job_application->save();
 
 if ($is_attachment) {
     $GLOBALS['log']->fatal('create new note husnain');
-
-    $newNote = BeanFactory::newBean('Notes');
-    $newNote->name = $_FILES["fileToUpload"]["name"];
-    $newNote->file_mime_type = $_FILES["fileToUpload"]["type"];
-    $newNote->filename = $_FILES["fileToUpload"]["name"];
-    $newNote->parent_type = 'RT_Job_Application';
-    $newNote->parent_id = $new_job_application->id;
-    $newNote->save();
+//
+//    $newNote = BeanFactory::newBean('Notes');
+//    $newNote->name = $_FILES["fileToUpload"]["name"];
+    $cand = BeanFactory::getBean('RT_Candidates',$candidate->id);
+    $cand->file_mime_type = $_FILES["fileToUpload"]["type"];
+    $cand->filename = $_FILES["fileToUpload"]["name"];
+    $cand->save();
+//    $newNote->parent_type = 'RT_Job_Application';
+//    $newNote->parent_id = $new_job_application->id;
+//    $newNote->save();
 //    $srcFile = "upload://{$note->id}";
-    $srcFile = "$target_file";
-    $destFile = "upload://{$newNote->id}";
-    copy($srcFile, $destFile);
+//    $srcFile = "$target_file";
+//    $destFile = "upload://{$newNote->id}";
+//    copy($srcFile, $destFile);
 }
 
 $candi_name = $first_name . ' ' . $last_name;

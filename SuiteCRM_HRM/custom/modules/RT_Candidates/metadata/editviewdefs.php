@@ -39,6 +39,10 @@
 $module_name = 'RT_Candidates';
 $viewdefs[$module_name]['EditView'] = array(
     'templateMeta' => array(
+        'form' =>
+            array (
+                'enctype' => 'multipart/form-data',
+            ),
         'maxColumns' => '2',
         'widths' => array(
             array('label' => '10', 'field' => '30'),
@@ -82,9 +86,14 @@ $viewdefs[$module_name]['EditView'] = array(
                     'cnic',
                     'do_not_call',
                 ),
+                array(
+                    'filename',
+                    '',
+                ),
 
                 array(
                     'description',
+                    '',
                 ),
 
             ),

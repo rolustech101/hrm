@@ -136,7 +136,6 @@ $viewdefs[$module_name]['DetailView'] = array(
                 array(
                     'email1'
                 ),
-
                 array(
                     array(
                         'name' => 'primary_address_street',
@@ -151,9 +150,14 @@ $viewdefs[$module_name]['DetailView'] = array(
                         'displayParams' => array('key' => 'alt'),
                     ),
                 ),
+                array(
+                    'filename',
+                    '',
+                ),
 
                 array(
                     'description',
+                    '',
                 ),
             ),
 
