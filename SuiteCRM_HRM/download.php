@@ -139,7 +139,7 @@ else {
             die();
         }else {
             echo 'hello';
-            print_r($image_field,1);
+            print_r($image_field);
             die($app_strings['ERR_INVALID_FILE_REFERENCE']);
         }
     } else {
