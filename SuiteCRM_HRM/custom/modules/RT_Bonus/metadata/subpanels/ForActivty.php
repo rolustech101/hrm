@@ -1,4 +1,5 @@
 <?php
+if(!defined('sugarEntry') || !sugarEntry) die('Not A Valid Entry Point');
 /*********************************************************************************
  * SugarCRM Community Edition is a customer relationship management program developed by
  * SugarCRM, Inc. Copyright (C) 2004-2013 SugarCRM Inc.
@@ -37,33 +38,33 @@
  * display the words  "Powered by SugarCRM" and "Supercharged by SuiteCRM".
  ********************************************************************************/
 
-$app_list_strings['moduleList']['RT_Increment_History'] = 'Increment History';
-$app_list_strings['moduleList']['RT_Payroll'] = 'Payroll';
-$app_list_strings['moduleList']['RT_Employees'] = 'Employees';
-$app_list_strings['moduleList']['RT_Bonus'] = 'Bonus';
-$app_list_strings['moduleList']['RT_Leaves'] = 'Leaves';
-$app_list_strings['moduleList']['RT_Deductables'] = 'Loan/Deductables';
-$app_list_strings['moduleList']['RT_Appraisals'] = 'Appraisal';
-$app_list_strings['rt_payroll_category_dom'][''] = '';
-$app_list_strings['rt_payroll_category_dom']['Marketing'] = 'Marketing';
-$app_list_strings['rt_payroll_category_dom']['Knowledege Base'] = 'Knowledge Base';
-$app_list_strings['rt_payroll_category_dom']['Sales'] = 'Sales';
-$app_list_strings['rt_payroll_subcategory_dom'][''] = '';
-$app_list_strings['rt_payroll_subcategory_dom']['Marketing Collateral'] = 'Marketing Collateral';
-$app_list_strings['rt_payroll_subcategory_dom']['Product Brochures'] = 'Product Brochures';
-$app_list_strings['rt_payroll_subcategory_dom']['FAQ'] = 'FAQ';
-$app_list_strings['rt_payroll_status_dom']['Active'] = 'Active';
-$app_list_strings['rt_payroll_status_dom']['Draft'] = 'Draft';
-$app_list_strings['rt_payroll_status_dom']['FAQ'] = 'FAQ';
-$app_list_strings['rt_payroll_status_dom']['Expired'] = 'Expired';
-$app_list_strings['rt_payroll_status_dom']['Under Review'] = 'Under Review';
-$app_list_strings['rt_payroll_status_dom']['Pending'] = 'Pending';
-$app_strings['LBL_DATE_OF_ACTIVITY'] = 'Date of Activity';
-$app_strings['LBL_ID_FF_HIRED'] = 'Hired';
-$app_strings['LBL_ID_FF_NEW'] = 'New';
-$app_strings['LBL_ID_FF_REVIEW_RESUME'] = 'Review Resume';
-$app_strings['LBL_ID_FF_PHONE_SCREEN'] = 'Phone Screen';
-$app_strings['LBL_ID_FF_EXTEND_AN_OFFER'] = 'Extend an offer';
-$app_strings['LBL_ID_FF_REJECTED'] = 'Rejected';
-$app_strings['LBL_ID_FF_SCHEDULE_INTERVIEW'] = 'Schedule Interview';
-$app_strings['LBL_HRM_AJAX_ERROR'] = 'Something wrong with the request!';
+
+$module_name='RT_Bonus';
+$subpanel_layout = array(
+	'top_buttons' => array(
+		array('widget_class' => 'SubPanelTopCreateButton'),
+		array('widget_class' => 'SubPanelTopSelectButton', 'popup_module' => $module_name),
+	),
+
+	'where' => '',
+
+	'list_fields' => array(
+		'name'=>array(
+	 		'vname' => 'LBL_NAME',
+			'widget_class' => 'SubPanelDetailViewLink',
+	 		'width' => '45%',
+		),
+		'module_name2' => array(
+			'vname' => 'LBL_MODULE_NAME',
+			'width' => '10%',
+		),
+		'date_entered' =>
+			array (
+				'type' => 'datetime',
+				'vname' => 'LBL_DATE_OF_ACTIVITY',
+				'width' => '10%',
+			),
+	),
+);
+
+?>

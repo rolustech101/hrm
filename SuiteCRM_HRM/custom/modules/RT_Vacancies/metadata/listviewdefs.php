@@ -31,6 +31,13 @@ array (
     'label' => 'LBL_POSITIONS',
     'width' => '10%',
   ),
+   'NO_OF_APPLICANT' =>
+  array (
+    'type' => 'int',
+    'default' => true,
+    'label' => 'LBL_NO_OF_APPLICANT',
+    'width' => '10%',
+  ),
   'STATUS_C' => 
   array (
     'type' => 'enum',

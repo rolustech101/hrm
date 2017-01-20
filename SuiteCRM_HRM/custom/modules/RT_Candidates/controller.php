@@ -124,9 +124,39 @@ class RT_CandidatesController extends SugarController{
 			$candidate->is_converted = true;
 			$candidate->employee_id = $employee->id;
 			$candidate->save();
+			if($candidate->load_relationship('rt_job_application_c')){
+				$job_application = $candidate->rt_job_application_c->getBeans(['where' => array(
+					'lhs_field' => 'status',
+					'operator' => '=',
+					'rhs_value' => 'hired'
+				),'limit' => 1, 'order_by' => 'date_modified DESC']);
+				if(!empty($job_application)){
+					$GLOBALS['log']->fatal('HELLO JOB_APP>>>>>'.print_r($job_application,1));
+					foreach ($job_application as $job_app ){
+						$vacany_id =  $job_app->rt_vacancy_id;
+						$rt_vacancy =  BeanFactory::getBean('RT_Vacancies',$vacany_id);
+						$rt_vacancy->positions_c = $rt_vacancy->positions_c -1;
+						$rt_vacancy->save();
+					}
+				}
+			}
 		}
-		echo json_encode('result from controller!!!');
+		echo 'result from controller!';
 		die;
     }
+
+	public function action_change_status()
+	{
+		ob_clean();
+
+		$id = $_REQUEST['candidate_id'];
+		$status = $_REQUEST['status'];
+		$job_app = BeanFactory::getBean('RT_Job_Application',$id);
+		$job_app->status = $status;
+		$job_app->save();
+
+		die;
+
+	}
 }
 	

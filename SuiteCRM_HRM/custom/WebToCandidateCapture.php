@@ -120,8 +120,7 @@ $GLOBALS['log']->info('create new job application');
 
 $new_job_application = BeanFactory::newBean('RT_Job_Application');
 $new_job_application->status = 'new';
-$new_job_application->parent_type = 'RT_Candidates';
-$new_job_application->parent_id = $candidate->id;
+$new_job_application->rt_candidate_id = $candidate->id;
 $new_job_application->rt_vacancy_id = $vacancy_id;
 $new_job_application->save();
 

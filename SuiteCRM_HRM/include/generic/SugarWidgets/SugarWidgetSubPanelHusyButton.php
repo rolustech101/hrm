@@ -1,9 +1,11 @@
 <?php
-if(!defined('sugarEntry') || !sugarEntry) die('Not A Valid Entry Point');
+if (!defined('sugarEntry') || !sugarEntry) {
+    die('Not A Valid Entry Point');
+}
+
 /*********************************************************************************
  * SugarCRM Community Edition is a customer relationship management program developed by
  * SugarCRM, Inc. Copyright (C) 2004-2013 SugarCRM Inc.
-
  * SuiteCRM is an extension to SugarCRM Community Edition developed by Salesagility Ltd.
  * Copyright (C) 2011 - 2014 Salesagility Ltd.
  *
@@ -37,92 +39,93 @@ if(!defined('sugarEntry') || !sugarEntry) die('Not A Valid Entry Point');
  * reasonably feasible for  technical reasons, the Appropriate Legal Notices must
  * display the words  "Powered by SugarCRM" and "Supercharged by SuiteCRM".
  ********************************************************************************/
-
-
-
-
-
-
 class SugarWidgetSubPanelHusyButton extends SugarWidgetField
 {
-	function displayHeaderCell($layout_def)
-	{
-		return '&nbsp;';
-	}
+    function displayHeaderCell($layout_def)
+    {
+        return '&nbsp;';
+    }
 
-	function displayList($layout_def)
-	{
-		
-		global $app_strings;
+    function displayList($layout_def)
+    {
+        global $app_strings;
         global $subpanel_item_count;
+        $candidate_id = $layout_def['fields']['ID'];
+        //based on listview since that lets you select records
+        if ($layout_def['ListView']) {
+            if ($layout_def['name'] == 'hired_button') {
+                $icon_remove_text = mb_strtolower($app_strings['LBL_ID_FF_HIRED'], 'UTF-8');
+                $unique_id = $layout_def['subpanel_id'] . "_hired_" . $subpanel_item_count; //bug 51512
+                $retStr = "<a href=\"javascript:change_applicant_status('$candidate_id', 'hired');\""
+                    . ' class="listViewTdToolsS1"'
+                    . "id=$unique_id"
+                    . ">$icon_remove_text</a>";
+                return $retStr;
+            } elseif ($layout_def['name'] == 'new_button') {
+                $icon_remove_text = mb_strtolower($app_strings['LBL_ID_FF_NEW'], 'UTF-8');
 
-		$unique_id = $layout_def['subpanel_id']."_remove_".$subpanel_item_count; //bug 51512
-		
-		$parent_record_id = $_REQUEST['record'];
-		$parent_module = $_REQUEST['module'];
+                $unique_id = $layout_def['subpanel_id'] . "_new_" . $subpanel_item_count; //bug 51512
+                $retStr = "<a href=\"javascript:change_applicant_status('$candidate_id', 'new');\""
+                    . ' class="listViewTdToolsS1"'
+                    . "id=$unique_id"
+                    . ">$icon_remove_text</a>";
+                return $retStr;
 
-		$action = 'DeleteRelationship';
-		$record = $layout_def['fields']['ID'];
-		$GLOBALS['log']->fatal('THIS IS FROM SUBPANEL::::'.$record);
-		$GLOBALS['log']->fatal('$layout_def::::'.print_r($layout_def,1));
-		$current_module=$layout_def['module'];
-		//in document revisions subpanel ,users are now allowed to 
-		//delete the latest revsion of a document. this will be tested here
-		//and if the condition is met delete button will be removed.
-		$hideremove=false;
-		if ($current_module=='DocumentRevisions') {
-			if ($layout_def['fields']['ID']==$layout_def['fields']['LATEST_REVISION_ID']) {
-				$hideremove=true;
-			}
-		}
-		// Implicit Team-memberships are not "removeable" 
-		elseif ($_REQUEST['module'] == 'Teams' && $current_module == 'Users') {
-			if($layout_def['fields']['UPLINE'] != translate('LBL_TEAM_UPLINE_EXPLICIT', 'Users')) {
-				$hideremove = true;
-			}	
-			
-			//We also cannot remove the user whose private team is set to the parent_record_id value
-			$user = new User();
-			$user->retrieve($layout_def['fields']['ID']);
-			if($parent_record_id == $user->getPrivateTeamID())
-			{
-			    $hideremove = true;
-			}
-		}
-		
-		
-		$return_module = $_REQUEST['module'];
-		$return_action = 'SubPanelViewer';
-		$subpanel = $layout_def['subpanel_id'];
-		$return_id = $_REQUEST['record'];
-		if (isset($layout_def['linked_field_set']) && !empty($layout_def['linked_field_set'])) {
-			$linked_field= $layout_def['linked_field_set'] ;
-		} else {
-			$linked_field = $layout_def['linked_field'];
-		}
-		$refresh_page = 0;
-		if(!empty($layout_def['refresh_page'])){
-			$refresh_page = 1;
-		}
-		$return_url = "index.php?module=$return_module&action=$return_action&subpanel=$subpanel&record=$return_id&sugar_body_only=1&inline=1";
+            } elseif ($layout_def['name'] == 'review_resume_button') {
+                $icon_remove_text = mb_strtolower($app_strings['LBL_ID_FF_REVIEW_RESUME'], 'UTF-8');
 
-//		$icon_remove_text = mb_strtolower($app_strings['LBL_ID_FF_REMOVE'], 'UTF-8');
-		$icon_remove_text = 'Hired Button';
+                $unique_id = $layout_def['subpanel_id'] . "_reviewresume_" . $subpanel_item_count; //bug 51512
+                $retStr = "<a href=\"javascript:change_applicant_status('$candidate_id', 'review_resume');\""
+                    . ' class="listViewTdToolsS1"'
+                    . "id=$unique_id"
+                    . ">$icon_remove_text</a>";
+                return $retStr;
 
-         if($linked_field == 'get_emails_by_assign_or_link')
-            $linked_field = 'emails';
-		//based on listview since that lets you select records
-		if($layout_def['ListView'] && !$hideremove) {
-            $retStr = "<a href=\"javascript:sub_p_rem('$subpanel', '$linked_field'" 
-                    .", '$record', $refresh_page);\"" 
-			. ' class="listViewTdToolsS1"'
-            . "id=$unique_id"
-			. " onclick=\"alert(123);\""
-			. ">$icon_remove_text</a>";
-        return $retStr;
-            
-		}else{
-			return '';
-		}
-	}
+            } elseif ($layout_def['name'] == 'phone_screen_button') {
+                $icon_remove_text = mb_strtolower($app_strings['LBL_ID_FF_PHONE_SCREEN'], 'UTF-8');
+
+                $unique_id = $layout_def['subpanel_id'] . "_phonescreen_" . $subpanel_item_count; //bug 51512
+                $retStr = "<a href=\"javascript:change_applicant_status('$candidate_id', 'phone_screen');\""
+                    . ' class="listViewTdToolsS1"'
+                    . "id=$unique_id"
+                    . ">$icon_remove_text</a>";
+                return $retStr;
+
+            } elseif ($layout_def['name'] == 'schedule_interviews_button') {
+                $icon_remove_text = mb_strtolower($app_strings['LBL_ID_FF_SCHEDULE_INTERVIEW'], 'UTF-8');
+
+                $unique_id = $layout_def['subpanel_id'] . "_scheduleinterviews_" . $subpanel_item_count; //bug 51512
+                $retStr = "<a href=\"javascript:change_applicant_status('$candidate_id', 'schedule_interviews');\""
+                    . ' class="listViewTdToolsS1"'
+                    . "id=$unique_id"
+                    . ">$icon_remove_text</a>";
+                return $retStr;
+
+            } elseif ($layout_def['name'] == 'extend_an_offer_button') {
+                $icon_remove_text = mb_strtolower($app_strings['LBL_ID_FF_EXTEND_AN_OFFER'], 'UTF-8');
+
+                $unique_id = $layout_def['subpanel_id'] . "_extendanoffer_" . $subpanel_item_count; //bug 51512
+                $retStr = "<a href=\"javascript:change_applicant_status('$candidate_id', 'extend_an_offer');\""
+                    . ' class="listViewTdToolsS1"'
+                    . "id=$unique_id"
+                    . ">$icon_remove_text</a>";
+                return $retStr;
+
+            } elseif ($layout_def['name'] == 'rejected_button') {
+                $icon_remove_text = mb_strtolower($app_strings['LBL_ID_FF_REJECTED'], 'UTF-8');
+                $unique_id = $layout_def['subpanel_id'] . "_rejected_" . $subpanel_item_count; //bug 51512
+                $retStr = "<a href=\"javascript:change_applicant_status('$candidate_id', 'rejected');\""
+                    . ' class="listViewTdToolsS1"'
+                    . "id=$unique_id"
+                    . ">$icon_remove_text</a>";
+                return $retStr;
+
+            } else {
+                return '';
+            }
+
+        } else {
+            return '';
+        }
+    }
 }

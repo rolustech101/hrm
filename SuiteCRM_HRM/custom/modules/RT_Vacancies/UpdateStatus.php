@@ -10,8 +10,7 @@ class UpdateStatus
 {
     function post_to_page($bean, $event, $arguments)
     {
-        if ($bean->status_c == 'new_position') {
-
+        if(isNewBean($bean) && $bean->status_c == 'new_position') {
             $vacancy_name = $bean->name;
             $last_date = $bean->close_date;
             $positions = $bean->positions_c;

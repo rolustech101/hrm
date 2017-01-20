@@ -75,6 +75,48 @@ $subpanel_layout = array(
 		 	'module' => $module_name,
 			'width' => '5%',
 		),
+		'hired_button' => array(
+			'vname' => 'LBL_CAND_HIRED_BUTTON',
+			'widget_class' => 'SubPanelHusyButton',
+			'module' => $module_name,
+			'width' => '10%',
+		),
+		'new_button' => array(
+			'vname' => 'LBL_CAND_HIRED_BUTTON',
+			'widget_class' => 'SubPanelHusyButton',
+			'module' => $module_name,
+			'width' => '10%',
+		),
+		'review_resume_button' => array(
+			'vname' => 'LBL_CAND_HIRED_BUTTON',
+			'widget_class' => 'SubPanelHusyButton',
+			'module' => $module_name,
+			'width' => '10%',
+		),
+		'phone_screen_button' => array(
+			'vname' => 'LBL_CAND_HIRED_BUTTON',
+			'widget_class' => 'SubPanelHusyButton',
+			'module' => $module_name,
+			'width' => '10%',
+		),
+		'schedule_interviews_button' => array(
+			'vname' => 'LBL_CAND_HIRED_BUTTON',
+			'widget_class' => 'SubPanelHusyButton',
+			'module' => $module_name,
+			'width' => '15%',
+		),
+		'extend_an_offer_button' => array(
+			'vname' => 'LBL_CAND_HIRED_BUTTON',
+			'widget_class' => 'SubPanelHusyButton',
+			'module' => $module_name,
+			'width' => '10%',
+		),
+		'rejected_button' => array(
+			'vname' => 'LBL_CAND_HIRED_BUTTON',
+			'widget_class' => 'SubPanelHusyButton',
+			'module' => $module_name,
+			'width' => '10%',
+		),
 	),
 );
 

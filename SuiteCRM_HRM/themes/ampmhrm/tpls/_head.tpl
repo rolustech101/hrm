@@ -53,7 +53,7 @@
     <link href="themes/SuiteP/css/grid.css" rel="stylesheet" type="text/css"/>
     <link href="themes/SuiteP/css/footable.core.css" rel="stylesheet" type="text/css"/>
     <script src="custom/include/javascript/sweetalert-master/dist/sweetalert.min.js"></script>
-    <script src="custom/include/javascript/husy12.js"></script>
+    <script src="custom/include/javascript/ampm.js"></script>
 
     <link rel="stylesheet" type="text/css" href="custom/include/javascript/sweetalert-master/dist/sweetalert.css">
 

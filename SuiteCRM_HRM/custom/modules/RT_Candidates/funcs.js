@@ -49,13 +49,14 @@ function convert_candidate(candidate_id) {
     SUGAR.ajaxUI.loadingPanel.show();
 
     $.ajax({
-        type: "POST",
+        type: "GET",
         url: "index.php?module=RT_Candidates&action=convert_cand&candidate_id="+candidate_id,
         success: function(result){
             swal("Success!", "Successfully Converted to Employee!", "success");
             location.reload();
         },
         error:function (res) {
+            console.log(res);
             swal({
                 title: "Error!",
                 text: SUGAR.language.languages.app_strings['LBL_HRM_AJAX_ERROR'],

@@ -503,7 +503,8 @@ function process_dynamic_listview($source_module, $sugarbean,$subpanel_def)
 		                $this->xTemplate->parse($xtemplateSection.".row.cell");
                 	} elseif (preg_match("/button/i", $list_field['name'])) {
                         $GLOBALS['log']->fatal('>>>>>>>>>>LIST'.$list_field['name']);
-                        if ((($list_field['name'] === 'edit_button' && $field_acl['EditView']) || ($list_field['name'] === 'hired_button' && $field_acl['EditView'])  || ($list_field['name'] === 'close_button' && $field_acl['EditView']) || ($list_field['name'] === 'remove_button' && $field_acl['Delete'])) && '' != ($_content = $layout_manager->widgetDisplay($list_field)) )
+                        $custom_status_buttons = ['hired_button','new_button','review_resume_button','phone_screen_button','schedule_interviews_button','extend_an_offer_button','rejected_button'];
+                        if ((($list_field['name'] === 'edit_button' && $field_acl['EditView']) || (in_array($list_field['name'],$custom_status_buttons) && $field_acl['EditView'])  || ($list_field['name'] === 'close_button' && $field_acl['EditView']) || ($list_field['name'] === 'remove_button' && $field_acl['Delete'])) && '' != ($_content = $layout_manager->widgetDisplay($list_field)) )
                         {
                             $button_contents[] = $_content;
                             unset($_content);

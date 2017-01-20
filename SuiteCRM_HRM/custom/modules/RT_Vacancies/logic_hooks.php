@@ -20,6 +20,14 @@ $hook_array['before_save'][] = array(
     'NotifyMail',
     'send_notification'
 );
+$hook_array['process_record'] = array();
+$hook_array['process_record'][] = array(
+    1,
+    'shows the number of applications against job postings',
+    'custom/modules/RT_Vacancies/ShowApplicants.php',
+    'ShowApplicants',
+    'show_no_of_applicants'
+);
 
 
 ?>
