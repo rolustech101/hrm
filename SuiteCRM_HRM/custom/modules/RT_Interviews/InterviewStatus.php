@@ -8,8 +8,12 @@ class InterviewStatus
 {
     function iv_status($bean, $event, $arguments)
     {
-        if($bean->status_c == 'Approved' || $bean->status_c == 'Rejected' || $bean->status_c == 'Forwarded'){
+        if(isNewBean($bean) && $bean->status_c == 'Approved' || $bean->status_c == 'Rejected' || $bean->status_c == 'Forwarded') {
             $this->queue_job($bean->id,'IV Status',$bean->rt_candidate_name,$bean->status_c);
+        }else{
+            if($bean->status_c != $bean->fetched_row['status_c'] && $bean->status_c != 'scheduled'){
+                $this->queue_job($bean->id,'IV Status',$bean->rt_candidate_name,$bean->status_c);
+            }
         }
     }
 

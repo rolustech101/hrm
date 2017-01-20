@@ -17,6 +17,6 @@ $mod_strings = array (
   'LBL_VACANCY_NAME' => 'Job Posting',
   'LBL_INTERVIEWER_ID' => 'interviewer id',
   'LBL_RT_CANDIDATE_NAME' => 'Candidate Name',
-  'LBL_RT_VACANCY_NAME:' => 'Job Posting',
+  'LBL_RT_VACANCY_NAME' => 'Job Posting',
 );
 ?>
