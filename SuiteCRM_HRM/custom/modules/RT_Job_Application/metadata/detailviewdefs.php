@@ -61,6 +61,10 @@ $viewdefs[$module_name]['DetailView'] = array(
     'candidate_name',
       'status',
   ),
+    array(
+        'filename',
+        '',
+    ),
 
   array (
 	array (

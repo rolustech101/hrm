@@ -140,10 +140,16 @@ if($candidate == ''){
 
     $new_job_application = BeanFactory::newBean('RT_Job_Application');
     $new_job_application->status = 'new';
+    $new_job_application->file_mime_type = $_FILES["fileToUpload"]["type"];
+    $new_job_application->filename = $_FILES["fileToUpload"]["name"];
     $new_job_application->rt_candidate_id = $candidate->id;
     $new_job_application->rt_vacancy_id = $vacancy_id;
     $new_job_application->save();
 
+    $target_file_job_app = $target_dir .'/'.$new_job_application->id;
+    $srcFile = "upload://{$candidate->id}";
+    $destFile = "upload://{$new_job_application->id}";
+    copy($srcFile, $destFile);
     $candi_name = $first_name . ' ' . $last_name;
 
     $emailObj = new Email();

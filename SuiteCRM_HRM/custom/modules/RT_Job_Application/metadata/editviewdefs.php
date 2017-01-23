@@ -39,7 +39,11 @@
 
 $module_name = 'RT_Job_Application';
 $viewdefs[$module_name]['EditView'] = array(
-    'templateMeta' => array('maxColumns' => '2', 
+    'templateMeta' => array('maxColumns' => '2',
+        'form' =>
+            array (
+                'enctype' => 'multipart/form-data',
+            ),
                             'widths' => array(
                                             array('label' => '10', 'field' => '30'), 
                                             array('label' => '10', 'field' => '30')
@@ -57,6 +61,10 @@ $viewdefs[$module_name]['EditView'] = array(
     ),
       array(
           'vacancy_name',
+      ),
+      array(
+          'filename',
+          '',
       ),
     
     array (

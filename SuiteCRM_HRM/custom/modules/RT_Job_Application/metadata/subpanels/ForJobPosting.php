@@ -59,6 +59,10 @@ $subpanel_layout = array(
 	 		'vname' => 'LBL_STATUS',
 	 		'width' => '20%',
 		),
+		'filename' => array(
+			'vname' => 'LBL_FILENAME',
+			'width' => '20%',
+		),
 		'date_modified'=>array(
 	 		'vname' => 'LBL_DATE_MODIFIED',
 	 		'width' => '45%',
