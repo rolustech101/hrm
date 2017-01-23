@@ -142,7 +142,6 @@ class MailReviewer
                 $jobid = $jq->submitJob($job);
             }
         }
-
     }
 }
 

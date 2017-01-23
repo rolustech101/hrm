@@ -42,8 +42,21 @@ $viewdefs[$module_name]['EditView'] = array(
         'form' =>
             array (
                 'enctype' => 'multipart/form-data',
+                'buttons' =>
+                    array(
+                        0 => array(
+                            'customCode' => '<input type="submit" name="save" id="save" onClick="var _form = document.getElementById(\'EditView\');_form.action.value = \'Save\';  return is_email_unique(\'EditView\',_form);" value="Save">',
+                        ),
+                    ),
             ),
         'maxColumns' => '2',
+        'includes' =>
+            array(
+                0 =>
+                    array(
+                        'file' => 'custom/modules/RT_Candidates/funcs.js',
+                    ),
+            ),
         'widths' => array(
             array('label' => '10', 'field' => '30'),
             array('label' => '10', 'field' => '30'),

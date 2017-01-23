@@ -13,4 +13,5 @@ $mod_strings['LBL_RT_JOB_OFFERS_RT_CANDIDATES_JOB_OFFERS_TITLE'] = 'Job Offers';
 $mod_strings['LBL_CNIC'] = 'CNIC';
 $mod_strings['LBL_RT_QUALIFICATIONS_FROM_QUALIFICATIONS_TITLE'] = 'Qualifications';
 $mod_strings['LBL_RT_INTERVIEW_RT_CANDIDATE_SUBPANEL'] = 'Interviews';
+$mod_strings['LBL_FILENAME'] = 'Resume';
 

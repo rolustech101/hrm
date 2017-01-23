@@ -72,3 +72,45 @@ function convert_candidate(candidate_id) {
     });
 
 }
+
+function is_email_unique(view,formm) {
+
+    if (check_form('EditView')) {
+        var trs = $('tr[id^="RT_Candidates0emailAddressRow"]');
+        var email_address = [];
+        for(i=0;i<trs.length;i++){
+            email_address.push($(trs[i]).find('input[type="text"]').val());
+        }
+        $.ajax({
+            type: "POST",
+            datatype: "json",
+            data:{data:email_address},
+            url: "index.php?module=RT_Candidates&action=is_unique_email",
+            success: function(result){
+                if(result == 'no'){
+                    swal({
+                        title: "Error!",
+                        text: 'Email Already exists',
+                        type: "error",
+                        confirmButtonText: "OK"
+                    });
+                    return false;
+                }
+                SUGAR.ajaxUI.submitForm(formm);
+                return true;
+            },
+            error:function (res) {
+                swal({
+                    title: "Error!",
+                    text: SUGAR.language.languages.app_strings['LBL_HRM_AJAX_ERROR'],
+                    type: "error",
+                    confirmButtonText: "OK"
+                });
+                return false;
+            }
+        });
+
+    }
+    return false;
+
+}

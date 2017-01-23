@@ -238,7 +238,6 @@ function process_dynamic_listview($source_module, $sugarbean,$subpanel_def)
  */
  function process_dynamic_listview_rows($data,$parent_data, $xtemplateSection, $html_varName, $subpanel_def)
  {
-     $GLOBALS['log']->fatal('in the STOCCK LISTVIEW');
     global $subpanel_item_count;
     global $odd_bg;
     global $even_bg;
@@ -404,7 +403,6 @@ function process_dynamic_listview($source_module, $sugarbean,$subpanel_def)
         $field_acl['EditView'] = $aItem->ACLAccess('EditView',$aclaccess_is_owner,$aclaccess_in_group);
         $field_acl['Delete'] = $aItem->ACLAccess('Delete',$aclaccess_is_owner,$aclaccess_in_group);
 		/* END - SECURITY GROUPS */
-        $GLOBALS['log']->fatal('GET_FIELD_LIST>>>>>>>>>>>>'.print_r($thepanel->get_list_fields(),1));
         foreach($thepanel->get_list_fields() as $field_name=>$list_field)
         {
             //add linked field attribute to the array.
@@ -425,8 +423,6 @@ function process_dynamic_listview($source_module, $sugarbean,$subpanel_def)
             }else if($usage != 'query_only')
             {
                 $list_field['name']=$field_name;
-                $GLOBALS['log']->fatal('NAME_OF_FIELD)))))))'.$list_field['name']);
-
                 $module_field = $field_name.'_mod';
                 $owner_field = $field_name.'_owner';
                 if(!empty($aItem->$module_field)) {
@@ -502,7 +498,6 @@ function process_dynamic_listview($source_module, $sugarbean,$subpanel_def)
 		                $this->xTemplate->assign('CELL', $widget_contents);
 		                $this->xTemplate->parse($xtemplateSection.".row.cell");
                 	} elseif (preg_match("/button/i", $list_field['name'])) {
-                        $GLOBALS['log']->fatal('>>>>>>>>>>LIST'.$list_field['name']);
                         $custom_status_buttons = ['hired_button','new_button','review_resume_button','phone_screen_button','schedule_interviews_button','extend_an_offer_button','rejected_button'];
                         if ((($list_field['name'] === 'edit_button' && $field_acl['EditView']) || (in_array($list_field['name'],$custom_status_buttons) && $field_acl['EditView'])  || ($list_field['name'] === 'close_button' && $field_acl['EditView']) || ($list_field['name'] === 'remove_button' && $field_acl['Delete'])) && '' != ($_content = $layout_manager->widgetDisplay($list_field)) )
                         {

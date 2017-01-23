@@ -157,5 +157,48 @@ class RT_CandidatesController extends SugarController{
 		die;
 
 	}
+	public function action_is_unique_email()
+	{
+		ob_clean();
+		$emails = $_POST['data'];
+		$sql = "select 
+    *
+from
+    (select 
+        cand.id as cand_id,
+            cand.phone_mobile,
+            cand.phone_work,
+            cand.phone_other,
+            cand.phone_home,
+            cand.phone_fax,
+            e_add.id as e_id,
+            e_add.email_address_id,
+            e_add.bean_id
+    from
+        rt_candidates as cand
+    inner join email_addr_bean_rel as e_add ON e_add.bean_id = cand.id
+    where
+        cand.deleted = 0 AND e_add.deleted = 0 ) as tt
+        inner join
+    email_addresses as addresses ON addresses.id = tt.email_address_id";
+
+		if (!empty($emails)) {
+			$sql .= " where ";
+			foreach ($emails as $email) {
+				$sql .= "addresses.email_address = '$email' OR ";
+			}
+		}
+		$sql = rtrim($sql,'OR ');
+		$sql .= " AND addresses.deleted = 0";
+
+
+        $res = $GLOBALS['db']->query($sql);
+        if($res->num_rows > 0){
+            echo 'no';
+        }else{
+            echo 'yes';
+        }
+		die;
+	}
 }
 	
