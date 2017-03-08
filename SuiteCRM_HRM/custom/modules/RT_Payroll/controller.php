@@ -143,7 +143,8 @@ where
             $doc_name = "Payroll of " . $individual_name . " " . $date;
             $query2 = "insert into rt_payroll (id, modified_user_id, created_by, document_name,month,year) values ('" . $payroll_id . "', '" . $current_user->id . "','" . $current_user->id . "', '" . $doc_name . "','" . $month . "','" . $year . "')";
             $query3 = "insert into rt_payroll_cstm (id_c, abc_c) values ('" . $payroll_id . "', '" . $id . "')";
-            $query4 = "insert into rt_employees_rt_payroll_c (id, date_modified, rt_employees_rt_payrollrt_employees_ida, rt_employees_rt_payrollrt_payroll_idb) values ('" . $guid2 . "', '" . $date . "', '" . $id . "', '" . $payroll_id . "')";
+            $query4 = "insert into rt_employees_rt_payroll_c (id, rt_employees_rt_payrollrt_employees_ida, rt_employees_rt_payrollrt_payroll_idb) values ('" . $guid2 . "', '" . $id . "', '" . $payroll_id . "')";
+            $GLOBALS['log']->fatal('HUSYHELLO>>>>'.$query4);
             $GLOBALS['db']->query($query2);
             $GLOBALS['db']->query($query3);
             $GLOBALS['db']->query($query4);
